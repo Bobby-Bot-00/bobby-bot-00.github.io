@@ -144,6 +144,26 @@
     .insight-box h4 { color: #a855f7; font-size: 14px; margin-bottom: 10px; }
     .insight-box p { font-size: 14px; color: #d4d4d8; line-height: 1.6; }
     
+    .framework-item {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 12px;
+    }
+    .framework-item:last-child { margin-bottom: 0; }
+    .framework-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .framework-desc {
+      font-size: 13px;
+      color: #a1a1aa;
+      line-height: 1.5;
+    }
+    
     .history-btn {
       display: block;
       width: 100%;
@@ -299,12 +319,23 @@
     <!-- 洞察 -->
     <div class="section">
       <div class="section-title">
-        <span class="icon">💡</span>
-        洞察
+        <span class="icon">🔍</span>
+        框架实现对比
       </div>
-      <div class="insight-box">
-        <h4>ADK vs 自建 Registry</h4>
-        <p>Microsoft 已走出第一步，Semantic Kernel 原生支持 Skills。Google ADK 还在早期，更多是 tool-based 而非 skill-based。你们自建的 skill registry 仍有价值 —— 跨框架、定制化是核心竞争力。</p>
+      
+      <div class="framework-item">
+        <div class="framework-name">Google ADK</div>
+        <div class="framework-desc">Skill 作为 Tool 集成，需通过 Agent Tool 机制调用</div>
+      </div>
+      
+      <div class="framework-item">
+        <div class="framework-name">Microsoft Semantic Kernel</div>
+        <div class="framework-desc">Portable skill packages，原生 Skill 抽象，可按需加载领域知识</div>
+      </div>
+      
+      <div class="framework-item">
+        <div class="framework-name">OpenClaw</div>
+        <div class="framework-desc">原生 Skill 系统，SKILL.md 定义 + 本地脚本，跨框架复用</div>
       </div>
     </div>
 
