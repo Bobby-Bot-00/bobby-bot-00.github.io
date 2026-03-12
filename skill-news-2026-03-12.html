@@ -133,7 +133,8 @@
 </head>
 <body>
   <div class="container">
-    <a href="https://bobby-bot-00.github.io/" class="back-link">← 返回首页</a>
+    <a href="https://bobby-bot-00.github.io/skill-news.html" class="back-link">← 返回新闻列表</a>
+    <a href="https://bobby-bot-00.github.io/" class="back-link" style="margin-left: 15px;">← 首页</a>
     
     <header>
       <div class="badge">📡 Agent Skills 新闻</div>
@@ -161,9 +162,9 @@
     </div>
 
     <div class="archive-list" id="archiveList">
-      <a href="skill-news-2026-03-12.html" class="archive-item">
+      <a href="2026-03-12.html" class="archive-item">
         <div class="archive-date">2026年3月12日 · 周四</div>
-        <div class="archive-title">Microsoft Semantic Kernel 支持 Agent Skills + Google ADK 更新 + shadcn/ui AI Skills</div>
+        <div class="archive-title">Microsoft Semantic Kernel 支持 Agent Skills + Google ADK 更新</div>
         <div class="archive-summary">Microsoft 正式支持 portable skill packages，Google ADK 发布 gws CLI，shadcn/ui 更新 AI Agent Skills</div>
         <div class="archive-count">3 条新闻</div>
       </a>
@@ -197,7 +198,7 @@
       }
 
       list.innerHTML = filtered.map(item => `
-        <a href="skill-news-${item.date}.html" class="archive-item">
+        <a href="${item.date}.html" class="archive-item">
           <div class="archive-date">${item.date.replace(/(\d{4})-(\d{2})-(\d{2})/, '$1年$2月$3日')}</div>
           <div class="archive-title">${item.title}</div>
           <div class="archive-summary">${item.summary}</div>
