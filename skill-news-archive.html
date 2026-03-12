@@ -123,7 +123,7 @@
         <span class="filter-label">年份</span>
         <select id="yearFilter" onchange="filterArchive()">
           <option value="">全部</option>
-          <option value="2026" selected>2026</option>
+          <option value="2026">2026</option>
         </select>
       </div>
       <div class="filter-group">
@@ -132,8 +132,11 @@
           <option value="">全部</option>
           <option value="01">1月</option>
           <option value="02">2月</option>
-          <option value="03" selected>3月</option>
+          <option value="03">3月</option>
         </select>
+        <label style="margin-left: 15px;">
+          <input type="checkbox" id="freshOnly" onchange="filterArchive()" checked> 仅显示最近7天
+        </label>
       </div>
     </div>
 
@@ -159,12 +162,22 @@
     function filterArchive() {
       const year = document.getElementById('yearFilter').value;
       const month = document.getElementById('monthFilter').value;
+      const freshOnly = document.getElementById('freshOnly').checked;
       const list = document.getElementById('archiveList');
       
+      const now = new Date();
+      const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+      
       const filtered = archiveData.filter(item => {
+        const itemDate = new Date(item.date);
         const itemYear = item.date.substring(0, 4);
         const itemMonth = item.date.substring(5, 7);
-        return (!year || itemYear === year) && (!month || itemMonth === month);
+        
+        const freshCheck = !freshOnly || itemDate >= sevenDaysAgo;
+        const yearCheck = !year || itemYear === year;
+        const monthCheck = !month || itemMonth === month;
+        
+        return freshCheck && yearCheck && monthCheck;
       });
 
       if (filtered.length === 0) {
