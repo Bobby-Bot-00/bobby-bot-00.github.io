@@ -324,17 +324,17 @@
       
       <div class="framework-item">
         <div class="framework-name">Google ADK</div>
-        <div class="framework-desc">Skill 作为 Tool 集成，需通过 Agent Tool 机制调用</div>
+        <div class="framework-desc">Skill/Plugin → 通过 SkillToolset 加载，可从目录或 Python function 定义</div>
       </div>
       
       <div class="framework-item">
         <div class="framework-name">Microsoft Semantic Kernel</div>
-        <div class="framework-desc">Portable skill packages，原生 Skill 抽象，可按需加载领域知识</div>
+        <div class="framework-desc">Plugin → 通过 @kernel_function 装饰器定义，支持 Semantic Function (纯 prompt)</div>
       </div>
       
       <div class="framework-item">
         <div class="framework-name">OpenClaw</div>
-        <div class="framework-desc">原生 Skill 系统，SKILL.md 定义 + 本地脚本，跨框架复用</div>
+        <div class="framework-desc">SKILL.md + 本地脚本，跨框架复用</div>
       </div>
     </div>
 
