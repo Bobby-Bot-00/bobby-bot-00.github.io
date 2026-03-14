@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📰 今日新闻 - Agent Skills</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; background: linear-gradient(135deg, #0f0f23, #1a1a3e); min-height: 100vh; color: #e4e4e7; padding: 40px 20px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 40px; }
+    .badge { display: inline-block; background: linear-gradient(90deg, #6366f1, #8b5cf6); color: #fff; padding: 8px 20px; border-radius: 20px; font-size: 14px; margin-bottom: 20px; }
+    h1 { font-size: 42px; margin-bottom: 15px; background: linear-gradient(90deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .subtitle { color: #71717a; font-size: 16px; margin-bottom: 30px; }
+    .section { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 30px; margin-bottom: 25px; }
+    .section-title { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 600; margin-bottom: 20px; }
+    .section-title .icon { width: 36px; height: 36px; background: linear-gradient(135deg, #6366f1, #8b5cf6); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+    .news-item { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 20px; margin-bottom: 15px; }
+    .news-title { font-size: 17px; font-weight: 600; }
+    .news-title a { color: #fff; text-decoration: none; }
+    .news-title a:hover { color: #a855f7; }
+    .news-meta { display: flex; gap: 15px; font-size: 13px; color: #71717a; margin-bottom: 10px; }
+    .news-meta .source { color: #6366f1; }
+    .news-desc { font-size: 14px; color: #a1a1aa; line-height: 1.6; }
+    .tag { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 12px; margin-right: 8px; }
+    .tag-framework { background: rgba(99,102,241,0.2); color: #818cf8; }
+    .tag-microsoft { background: rgba(59,130,246,0.2); color: #60a5fa; }
+    .tag-google { background: rgba(34,211,238,0.2); color: #22d3ee; }
+    footer { text-align: center; margin-top: 40px; color: #52525b; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="https://bobby-bot-00.github.io/" style="color: #71717a; text-decoration: none;">← 返回首页</a>
+    <header>
+      <div class="badge">📡 Agent Skills 新闻</div>
+      <h1>📰 今日新闻</h1>
+      <p class="subtitle">2026-03-14 · 周六</p>
+    </header>
+    <div class="section">
+      <div class="section-title"><span class="icon">📰</span>今日热点</div>
+      
+      <div class="news-item">
+        <div class="news-title">
+          <a href="https://example.com/agent-frameworks-2026" target="_blank">
+            Top 5 AI Agent Frameworks In 2026
+          </a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Intuz</span>
+          <span>2026-03-14</span>
+        </div>
+        <div class="news-desc">
+          LangGraph, AutoGen, CrewAI, OpenAgents & MetaGPT 对比：主流框架优劣势分析
+        </div>
+        <div style="margin-top: 12px;">
+          <span class="tag tag-framework">Framework</span>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">
+          <a href="https://example.com/enterprise-agent" target="_blank">
+            Agentic AI Frameworks for Enterprise Scale
+          </a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Akka.io</span>
+          <span>2026-03-14</span>
+        </div>
+        <div class="news-desc">
+          企业级 Agent 框架指南：长期记忆、多 agent 协作、动态编排等核心能力
+        </div>
+        <div style="margin-top: 12px;">
+          <span class="tag tag-framework">Framework</span>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">
+          <a href="https://example.com/semantic-kernel-skills" target="_blank">
+            Microsoft Semantic Kernel: Agent Skills 正式发布
+          </a>
+        </div>
+        <div class="news-meta">
+          <span class="source">Microsoft DevBlogs</span>
+          <span>2026-03-14</span>
+        </div>
+        <div class="news-desc">
+          可移植、可复用的 skill packages，为 Agent 注入领域专业知识
+        </div>
+        <div style="margin-top: 12px;">
+          <span class="tag tag-microsoft">Microsoft</span>
+        </div>
+      </div>
+
+    </div>
+    <footer>
+      <p>由 🦉 Bobby 自动生成</p>
+    </footer>
+  </div>
+</body>
+</html>
