@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piada Kitchen - TEST</title>
+  <title>Piada Kitchen - FINE</title>
   <style>
     * { margin: 0; padding: 0; }
     html, body { width: 100%; height: 100%; background: #1a1a2e; overflow: hidden; }
@@ -14,31 +14,30 @@
 <body>
   <canvas id="g" width="800" height="480"></canvas>
   <script>
-    const chefImg = new Image(); chefImg.src = "iVBORw0KGgoAAAANSUhEUgAAAEAAAABQCAYAAACpv3NFAAAAyElEQVR4nO3X0RFBMRCF4ZMztwcqUQOVGCpQggoYlVCDSqginnkwY5KLO+f/nrOb5CHZXQkAAKQqY29Qa60985VSup7ZCmeFs8KVf3/zY/8JVjgrnBWuTO3N9/4TrHBWOCvc0Dvh/XLUN82Wm6Z4K5wVzgo39K67t/PhqS9YrPdv46+nnVrWMws0ssJZ4UprAmaBibPCWeHKpwGvdb53b9579pivtm/vaIWzwlnhrHBWOCucf30AAAAAAAAAAAAAAAAAAAAAjeQB918jfIkDF0kAAAAASUVORK5CYII=";
-    const waiterImg = new Image(); waiterImg.src = "iVBORw0KGgoAAAANSUhEUgAAAEAAAABQCAYAAACpv3NFAAAA6UlEQVR4nO3YMWpCQRSF4TMHF5HKKiuwcA92r0ptEUjICgTBQhCyghDBwjqVXfZg4QpSWWUXWtsIMpOXhPN/9dzDTDGXuSMBAIBUpXVgNxqe1KPd4Vh1BiucFc4KV/7bnW/dE6xwVjgr3KB14Ptqpj49z1+r6q1wVjgrXGkd+P35dvEuGD9dv6P79WXPuHX93eSFWaCGFc4KV2oDuuXX35oFFvfMArewwlnhrHBWOCucFW7QOrA7PqhPu+FHVb0VzgpnhSutA7ePo15ng+nmwH9ADSucf3sDAAAAAAAAAAAAAAAAAAAA+iFnU7cgQD7TYckAAAAASUVORK5CYII=";
-    const customerImg = new Image(); customerImg.src = "iVBORw0KGgoAAAANSUhEUgAAAEAAAABQCAYAAACpv3NFAAAA1klEQVR4nO3azQkCMRDF8ZeHPXhbsAmxIEHYCizBCgTBPmxBbELYk1ahZz0IknVXff/fOTNMDvmYEAkAAKQqfSe8bXXTgEpbNwcrnBXOCld+bc33vSdY4axwVrhJ3wmvs62GND23VfFWOCucFW7S97l7OTzeC+arzcv4026tmvH0ApWscFa4UptgeVx+VS+wX+zpBd5hhbPCWeGscFY4K5wVzgpnhfPYBQDAX/0PaJrm5ftA13VlzHzPrHBWOCucFc4KZ4Xz2AUAAAAAAAAAAAAAAADow+6fER6/OGt6RAAAAABJRU5ErkJggg==";
+    const chef = new Image(); chef.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAtCAYAAABRXm6KAAABB0lEQVR4nO2asQ3CMBQFbcQSocgc7ACLkAkYgQlgEdiBOVLAGKalACEk8P3Ed3UkWzm9J8c/OQWjlFJqrZVzzglmQW+gdRQAg0ewdu1EqyMTAKOAVisoQu1EqCMTAKOAlioocu1QdWQCYBQAowAYBcAoAGZJLXy/nFJUus2u2lomAEYBLQnIT6TA5Ir7NAEwCoDBqqDv+5f3Qtfj/q/rrofDx2fGcfQ6uhWsIBgFwCgARgEwTsQ+4ERs5lhBc6+gKQ7ia9aRCYBRAIwCYBQAo4A5DuXfnXyiDeK7isP3d5gAGAXM8UPsdj6WqVXBr6pytR2+eqcmAEYBrf6aGPl0VBMTAKOAxPIAP+8yoG4RmFUAAAAASUVORK5CYII=";
+    const waiter = new Image(); waiter.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAbCAYAAACDfYo6AAAA00lEQVR4nO3ZsQ3CMBAF0AtiDldM4BGYwFXqFKmYgCpFKiagSkFN5Qkywk2QyjU7wAKJ0iD/4/ivjuRIX/flXBoBSTG8xaispal11qHWQbSOAYBVGzXrtYOqI04AGAMAO4oB9/EKOfcy3ASNEwDGAMAYABgDAGMA/3QL0peYogbehxMAxgC874JCWN//xH4WS3Q67z5Tyvf3QpwAMAbgvYLSuPzcCnpLHk6sIG9YQR4/xLZqJ5VWLMnhiX4FTgAaK8jjLejRRzc3n25S/pT3jBUkWB8b3iNZgqmPhAAAAABJRU5ErkJggg==";
+    const customer = new Image(); customer.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAYCAYAAAAF6fiUAAAArklEQVR4nO2YoRGAMBAEPwwlYDBgKYGCUFRCBSgKSgloDIYeQDMDDnIh7MqY/8nOnXhnIvbRdosU15sLNSsLNQiuQYCYYFGLvXZUdUQCxCBATG4RsFajZG659KaGBIhBwJ8qqB6qy3evaaDbfc4sr+5AAsQgQAwCxCBADAJSvwV1vvvc/eeOqZ0e/y8SIAYBKVZQSrXzdh2RADEI+NMtaJs3+wJFUwSbRQLEIMC0HDGwF/0x1ZYmAAAAAElFTkSuQmCC";
     
     const c = document.getElementById('g');
     const x = c.getContext('2d');
     x.imageSmoothingEnabled = false;
     
-    const S = 4;
-    let st = { cx: 30, wx: 100, step: 0, tray: '', screen: '$0', f: 0 };
+    let st = { cx: 30, wx: 100, step: 0, screen: '$0', f: 0 };
     const P = { s: 30, p: 70, ch: 140, v: 210, ca: 330 };
     
     function rect(x, y, w, h, color) {
       x.fillStyle = color;
-      x.fillRect(Math.floor(x), Math.floor(y), Math.floor(w), Math.floor(h));
+      x.fillRect(x, y, w, h);
     }
     
-    function drawImg(img, dx, dy) {
-      if (img.complete) x.drawImage(img, dx*S, dy*S, 16*S, 20*S);
+    function drawImg(img, dx, dy, w, h) {
+      if (img.complete) x.drawImage(img, dx, dy, w, h);
     }
     
-    function txt(t, x, y, size=12, color='#fff') {
-      x.fillStyle = color;
-      x.font = size + 'px monospace';
-      x.fillText(t, x, y);
+    function txt(t, dx, dy, s=12, c='#fff') {
+      x.fillStyle = c;
+      x.font = s + 'px monospace';
+      x.fillText(t, dx, dy);
     }
     
     function draw() {
@@ -54,7 +53,7 @@
       
       [[60,'PASTA'],[130,'CHICKEN'],[200,'VEG']].forEach(([sx,label])=>{
         rect(sx-15, 160, 30, 25, '#8b5a2b');
-        txt(label, sx-12, 175, 14, '#aaa');
+        txt(label, sx-14, 178, 14, '#aaa');
       });
       
       [65,135,205].forEach(sx=>{
@@ -65,12 +64,13 @@
         }
       });
       
-      drawImg(chefImg, 80, 150);
-      drawImg(chefImg, 150, 150);
-      drawImg(chefImg, 220, 150);
-      drawImg(waiterImg, st.wx, 100);
-      drawImg(customerImg, st.cx, 60);
-      drawImg(waiterImg, 360, 60);
+      drawImg(chef, 80*4, 150*4, 32*4, 15*4);
+      drawImg(chef, 150*4, 150*4, 32*4, 15*4);
+      drawImg(chef, 220*4, 150*4, 32*4, 15*4);
+      
+      drawImg(waiter, st.wx*4, 120*4, 32*4, 9*4);
+      drawImg(customer, st.cx*4, 80*4, 32*4, 8*4);
+      drawImg(waiter, 360*4, 80*4, 32*4, 9*4);
       
       rect(345, 105, 40, 30, '#222');
       txt(st.screen, 350, 118, 10, '#4ade80');
@@ -82,32 +82,37 @@
       });
       
       if (st.step>0 && st.step<4) {
-        rect(st.cx+10, 40, 50, 18, '#fff');
-        txt(['PASTA','CHICKEN','VEG'][st.step-1], st.cx+15, 53, 8, '#000');
+        rect(st.cx*4+10, 40, 50, 18, '#fff');
+        txt(['PASTA','CHICKEN','VEG'][st.step-1], st.cx*4+15, 53, 8, '#000');
       }
       
-      txt('[ PIADA TEST ]', 300, 25, 14, '#ffd93d');
+      txt('[ PIADA FINE ]', 280, 25, 14, '#ffd93d');
       st.f++;
       requestAnimationFrame(draw);
     }
     
     async function run() {
       while (true) {
-        st.step=0; st.cx=P.s; st.wx=100; st.tray=''; st.screen='$0';
+        st.step=0; st.cx=P.s; st.wx=100; st.screen='$0';
         await sl(1000);
+        
         st.step=1;
         await mv('cx', P.p, 600); await mv('wx', P.p-10, 400);
         await sl(400);
+        
         st.step=2;
         await mv('cx', P.ch, 600); await mv('wx', P.ch-10, 400);
         await sl(400);
+        
         st.step=3;
         await mv('cx', P.v, 600); await mv('wx', P.v-10, 400);
         await sl(400);
+        
         st.step=4;
         await mv('cx', P.ca, 600); await mv('wx', P.ca-20, 400);
         st.screen='$25'; await sl(500);
         st.screen='OK!'; await sl(800);
+        
         await mv('cx', P.ca+30, 300);
         st.screen='$0'; await sl(500);
       }
