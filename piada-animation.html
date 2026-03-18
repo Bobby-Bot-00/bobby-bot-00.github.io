@@ -4,674 +4,380 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Piada Kitchen - Pixel Restaurant</title>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background: #1a1a2e;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'VT323', monospace;
     }
-    @font-face {
-      font-family: 'VT323';
-      src: url('https://fonts.gstatic.com/s/vt323/v17/pxiKyp0ihIEF2isQFjxG.woff2') format('woff2');
-    }
-    .container {
-      width: 100%;
-      max-width: 900px;
-      aspect-ratio: 16/10;
-      background: #2d2d44;
-      position: relative;
-      overflow: hidden;
+    #game-container {
       image-rendering: pixelated;
-      border: 4px solid #4a4a6a;
-      box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    }
-    
-    /* Title */
-    .title {
-      position: absolute;
-      top: 8px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #ffd93d;
-      font-size: 28px;
-      text-shadow: 2px 2px 0 #000;
-      z-index: 100;
-    }
-    
-    /* Progress bar */
-    .progress {
-      position: absolute;
-      top: 42px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-      z-index: 100;
-    }
-    .pbox {
-      width: 20px;
-      height: 20px;
-      background: #222;
-      border: 2px solid #444;
-    }
-    .pbox.active { background: #ffd93d; border-color: #ffaa00; }
-    .pbox.done { background: #4ade80; border-color: #22c55e; }
-    
-    /* Sky/wall background */
-    .bg {
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      height: 100px;
-      background: linear-gradient(180deg, #3d3d5c 0%, #4a4a6a 100%);
-    }
-    .bg::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: #5a5a7a;
-    }
-    
-    /* Floor tiles */
-    .floor {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 60%;
-      background-image: 
-        linear-gradient(30deg, #252538 12%, transparent 12.5%, transparent 87%, #252538 87.5%, #252538),
-        linear-gradient(150deg, #252538 12%, transparent 12.5%, transparent 87%, #252538 87.5%, #252538),
-        linear-gradient(30deg, #252538 12%, transparent 12.5%, transparent 87%, #252538 87.5%, #252538),
-        linear-gradient(150deg, #252538 12%, transparent 12.5%, transparent 87%, #252538 87.5%, #252538),
-        linear-gradient(60deg, #2d2d44 25%, transparent 25.5%, transparent 75%, #2d2d44 75%, #2d2d44),
-        linear-gradient(60deg, #2d2d44 25%, transparent 25.5%, transparent 75%, #2d2d44 75%, #2d2d44);
-      background-size: 40px 70px;
-      background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
-    }
-    
-    /* Counter (glass) */
-    .counter {
-      position: absolute;
-      top: 160px;
-      left: 5%;
-      right: 5%;
-      height: 12px;
-      background: #5a7a9a;
-      border-radius: 2px;
-    }
-    .counter-glass {
-      position: absolute;
-      top: 172px;
-      left: 5%;
-      right: 5%;
-      height: 60px;
-      background: linear-gradient(180deg, rgba(150,200,255,0.1) 0%, rgba(150,200,255,0.2) 100%);
-      border: 3px solid rgba(150,200,255,0.3);
-      border-top: none;
-    }
-    
-    /* Food display */
-    .food-shelf {
-      position: absolute;
-      top: 180px;
-      display: flex;
-      gap: 20px;
-    }
-    .food-item {
-      width: 50px;
-      height: 50px;
-      background: #8b4513;
-      border: 3px solid #6b3410;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .food-item .icon { font-size: 24px; }
-    .food-item .label { font-size: 10px; color: #aaa; margin-top: 2px; }
-    
-    /* Kitchen area */
-    .kitchen {
-      position: absolute;
-      bottom: 20px;
-      left: 5%;
-      right: 5%;
-      display: flex;
-      justify-content: space-around;
-    }
-    
-    /* Stove */
-    .stove {
-      width: 60px;
-      height: 50px;
-      position: relative;
-    }
-    .stove-top {
-      width: 60px;
-      height: 35px;
-      background: #444;
-      border: 2px solid #333;
-    }
-    .pot {
-      position: absolute;
-      top: -20px;
-      left: 10px;
-      width: 40px;
-      height: 25px;
-      background: #666;
-      border-radius: 0 0 8px 8px;
-    }
-    .pot-rim {
-      position: absolute;
-      top: -5px;
-      left: -2px;
-      width: 44px;
-      height: 8px;
-      background: #777;
-      border-radius: 3px;
-    }
-    .fire {
-      position: absolute;
-      bottom: -15px;
-      left: 15px;
-      width: 30px;
-      height: 15px;
-    }
-    .fire::before, .fire::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      background: linear-gradient(0deg, #ff6b35, #ffd93d);
-      border-radius: 50% 50% 20% 20%;
-      animation: fire 0.2s infinite alternate;
-    }
-    .fire::before { left: 5px; width: 10px; height: 15px; }
-    .fire::after { left: 15px; width: 8px; height: 12px; animation-delay: 0.1s; }
-    @keyframes fire {
-      0% { transform: scaleY(1); }
-      100% { transform: scaleY(1.2); }
-    }
-    .steam {
-      position: absolute;
-      top: -35px;
-      left: 15px;
-      font-size: 14px;
-      animation: steam 1s infinite;
-    }
-    @keyframes steam {
-      0% { transform: translateY(0); opacity: 0.8; }
-      100% { transform: translateY(-15px); opacity: 0; }
-    }
-    .stove-base {
-      width: 60px;
-      height: 12px;
-      background: #333;
-    }
-    
-    /* Pixel characters */
-    .character {
-      position: absolute;
-      width: 32px;
-      height: 40px;
-    }
-    
-    /* Chef pixel art */
-    .chef {
-      bottom: 60px;
-    }
-    .chef .head {
-      position: absolute;
-      top: 0;
-      left: 6px;
-      width: 20px;
-      height: 16px;
-      background: #deb887;
-    }
-    .chef .hat {
-      position: absolute;
-      top: -10px;
-      left: 4px;
-      width: 24px;
-      height: 14px;
-      background: #fff;
-    }
-    .chef .hat::after {
-      content: '';
-      position: absolute;
-      top: -6px;
-      left: 4px;
-      width: 16px;
-      height: 8px;
-      background: #fff;
-    }
-    .chef .body {
-      position: absolute;
-      top: 14px;
-      left: 2px;
-      width: 28px;
-      height: 20px;
-      background: #fff;
-    }
-    .chef .arm {
-      position: absolute;
-      top: 16px;
-      width: 8px;
-      height: 16px;
-      background: #deb887;
-    }
-    .chef:nth-of-type(1) .arm { left: -4px; animation: stir 0.3s infinite alternate; }
-    .chef:nth-of-type(2) .arm { right: -4px; animation: stir 0.3s infinite alternate 0.15s; }
-    .chef:nth-of-type(3) .arm { left: -4px; animation: stir 0.3s infinite alternate 0.1s; }
-    @keyframes stir {
-      0% { transform: rotate(-10deg); }
-      100% { transform: rotate(10deg); }
-    }
-    
-    /* Waiter */
-    .waiter {
-      bottom: 200px;
-      transition: left 0.8s ease-in-out;
-    }
-    .waiter .head {
-      position: absolute;
-      top: 2px;
-      left: 8px;
-      width: 16px;
-      height: 14px;
-      background: #deb887;
-    }
-    .waiter .hair {
-      position: absolute;
-      top: 0;
-      left: 6px;
-      width: 20px;
-      height: 8px;
-      background: #4a3728;
-      border-radius: 4px 4px 0 0;
-    }
-    .waiter .body {
-      position: absolute;
-      top: 14px;
-      left: 4px;
-      width: 24px;
-      height: 20px;
-      background: #2d2d44;
-    }
-    .waiter .apron {
-      position: absolute;
-      top: 20px;
-      left: 6px;
-      width: 20px;
-      height: 12px;
-      background: #8b4513;
-    }
-    .waiter .tray {
-      position: absolute;
-      top: -8px;
-      left: 4px;
-      width: 24px;
-      height: 6px;
-      background: #666;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-    }
-    
-    /* Customer */
-    .customer {
-      bottom: 300px;
-      transition: left 0.8s ease-in-out;
-    }
-    .customer .head {
-      position: absolute;
-      top: 2px;
-      left: 8px;
-      width: 16px;
-      height: 14px;
-      background: #f5deb3;
-    }
-    .customer .hair {
-      position: absolute;
-      top: 0;
-      left: 6px;
-      width: 20px;
-      height: 8px;
-      background: #4a3728;
-      border-radius: 4px 4px 0 0;
-    }
-    .customer .body {
-      position: absolute;
-      top: 14px;
-      left: 4px;
-      width: 24px;
-      height: 22px;
-      background: #4169e1;
-    }
-    .customer .legs {
-      position: absolute;
-      bottom: 0;
-      left: 6px;
-      width: 20px;
-      height: 6px;
-      display: flex;
-      justify-content: space-between;
-    }
-    .customer .legs span {
-      width: 8px;
-      height: 8px;
-      background: #333;
-    }
-    
-    /* Speech bubble */
-    .bubble {
-      position: absolute;
-      top: -30px;
-      left: -30px;
-      background: #fff;
-      padding: 4px 8px;
-      border-radius: 8px;
-      font-size: 12px;
-      white-space: nowrap;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .bubble::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 6px solid transparent;
-      border-top-color: #fff;
-    }
-    .bubble.show { opacity: 1; }
-    
-    /* Cashier */
-    .cashier {
-      bottom: 300px;
-      right: 8%;
-    }
-    .cashier .head {
-      position: absolute;
-      top: 2px;
-      left: 8px;
-      width: 16px;
-      height: 14px;
-      background: #ffd700;
-    }
-    .cashier .body {
-      position: absolute;
-      top: 14px;
-      left: 4px;
-      width: 24px;
-      height: 22px;
-      background: #228b22;
-    }
-    
-    /* Register */
-    .register {
-      position: absolute;
-      bottom: 270px;
-      right: 7%;
-      width: 45px;
-      height: 40px;
-      background: #333;
-      border: 2px solid #222;
-    }
-    .register-screen {
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      width: 37px;
-      height: 18px;
-      background: #0f380f;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: #4ade80;
-    }
-    .register-btns {
-      position: absolute;
-      bottom: 4px;
-      left: 6px;
-      display: flex;
-      gap: 4px;
-    }
-    .register-btns span {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-    }
-    
-    /* Zone labels */
-    .zone {
-      position: absolute;
-      bottom: 260px;
-      font-size: 12px;
-      color: #666;
-      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="title">🍝 PIADA KITCHEN</div>
-    
-    <div class="progress">
-      <div class="pbox" id="b1"></div>
-      <div class="pbox" id="b2"></div>
-      <div class="pbox" id="b3"></div>
-      <div class="pbox" id="b4"></div>
-    </div>
-    
-    <div class="bg"></div>
-    <div class="floor"></div>
-    
-    <!-- Counter -->
-    <div class="counter"></div>
-    <div class="counter-glass"></div>
-    
-    <!-- Food shelves -->
-    <div class="food-shelf" style="left: 8%;">
-      <div class="food-item">
-        <span class="icon">🍝</span>
-        <span class="label">PASTA</span>
-      </div>
-    </div>
-    <div class="food-shelf" style="left: 30%;">
-      <div class="food-item">
-        <span class="icon">🍗</span>
-        <span class="label">CHICKEN</span>
-      </div>
-    </div>
-    <div class="food-shelf" style="left: 52%;">
-      <div class="food-item">
-        <span class="icon">🥬</span>
-        <span class="label">VEGGIE</span>
-      </div>
-    </div>
-    
-    <!-- Kitchen -->
-    <div class="kitchen">
-      <div class="stove">
-        <div class="pot"><div class="pot-rim"></div></div>
-        <div class="fire"></div>
-        <div class="stove-top"></div>
-        <div class="stove-base"></div>
-      </div>
-      <div class="stove">
-        <span class="steam">♨</span>
-        <div class="pot" style="background:#555;"><div class="pot-rim"></div></div>
-        <div class="fire"></div>
-        <div class="stove-top"></div>
-        <div class="stove-base"></div>
-      </div>
-      <div class="stove">
-        <span class="steam">♨</span>
-        <div class="pot" style="background:#5a4a4a;"><div class="pot-rim"></div></div>
-        <div class="fire"></div>
-        <div class="stove-top"></div>
-        <div class="stove-base"></div>
-      </div>
-    </div>
-    
-    <!-- Chefs -->
-    <div class="character chef" style="left: 12%;">
-      <div class="hat"></div>
-      <div class="head"></div>
-      <div class="body"></div>
-      <div class="arm"></div>
-    </div>
-    <div class="character chef" style="left: 32%;">
-      <div class="hat"></div>
-      <div class="head"></div>
-      <div class="body"></div>
-      <div class="arm"></div>
-    </div>
-    <div class="character chef" style="left: 52%;">
-      <div class="hat"></div>
-      <div class="head"></div>
-      <div class="body"></div>
-      <div class="arm"></div>
-    </div>
-    
-    <!-- Waiter -->
-    <div class="character waiter" id="waiter">
-      <div class="tray" id="tray"></div>
-      <div class="hair"></div>
-      <div class="head"></div>
-      <div class="body"></div>
-      <div class="apron"></div>
-    </div>
-    
-    <!-- Customer -->
-    <div class="character customer" id="customer">
-      <div class="bubble" id="bubble"></div>
-      <div class="hair"></div>
-      <div class="head"></div>
-      <div class="body"></div>
-      <div class="legs">
-        <span></span><span></span>
-      </div>
-    </div>
-    
-    <!-- Cashier -->
-    <div class="character cashier" style="right: 8%;">
-      <div class="head"></div>
-      <div class="body"></div>
-    </div>
-    
-    <!-- Register -->
-    <div class="register">
-      <div class="register-screen" id="screen">$0</div>
-      <div class="register-btns">
-        <span style="background:#f00;"></span>
-        <span style="background:#0f0;"></span>
-        <span style="background:#00f;"></span>
-      </div>
-    </div>
-    
-    <!-- Zone labels -->
-    <div class="zone" style="left: 10%;">PASTA</div>
-    <div class="zone" style="left: 32%;">CHICKEN</div>
-    <div class="zone" style="left: 54%;">VEGGIE</div>
-    <div class="zone" style="right: 10%;">CASH</div>
-  </div>
+  <div id="game-container"></div>
 
   <script>
+    // Pixel art scene using Phaser
     const config = {
-      positions: { start: 50, pasta: 120, chicken: 250, veggie: 380, cashier: 620 },
-      foods: ['🍝', '🍗', '🥬'],
-      labels: ['Pasta!', 'Chicken!', 'Veggies!']
+      type: Phaser.AUTO,
+      width: 900,
+      height: 500,
+      parent: 'game-container',
+      backgroundColor: '#1a1a2e',
+      pixelArt: true,
+      scene: {
+        preload: preload,
+        create: create,
+        update: update
+      }
+    };
+
+    const game = new Phaser.Game(config);
+    
+    let customer, waiter, chefs = [];
+    let bubbles = [];
+    let tray = [];
+    let screen;
+    let step = 0;
+    let isAnimating = false;
+    
+    // Colors
+    const C = {
+      wall: 0x3d3d5c,
+      floor1: 0x2d2d44,
+      floor2: 0x252538,
+      glass: 0x5a7a9a,
+      wood: 0x8b4513,
+      pot: 0x4a4a5a,
+      fire: 0xff6b35,
+      chefWhite: 0xffffff,
+      chefSkin: 0xdeb887,
+      waiterBlack: 0x2d2d44,
+      waiterApron: 0x8b4513,
+      customerBlue: 0x4169e1,
+      customerSkin: 0xf5deb3,
+      cashierGold: 0xffd700,
+      cashierGreen: 0x228b22
     };
     
-    let state = { step: 0, customerX: 50, waiterX: 180, tray: '', bubble: '' };
-    
-    const customer = document.getElementById('customer');
-    const waiter = document.getElementById('waiter');
-    const bubble = document.getElementById('bubble');
-    const tray = document.getElementById('tray');
-    const screen = document.getElementById('screen');
-    
-    function updateDots() {
-      for (let i = 1; i <= 4; i++) {
-        const b = document.getElementById('b' + i);
-        b.className = 'pbox';
-        if (i < state.step) b.classList.add('done');
-        if (i === state.step) b.classList.add('active');
+    // Positions
+    const POS = {
+      start: 80,
+      pasta: 150,
+      chicken: 280,
+      veggie: 410,
+      cashier: 680,
+      waiterY: 220,
+      chefY: 340,
+      customerY: 180
+    };
+
+    function preload() {
+      // Create pixel textures programmatically
+    }
+
+    function create() {
+      const scene = this;
+      
+      // Background wall
+      scene.add.rectangle(450, 80, 900, 120, C.wall);
+      
+      // Floor with tile pattern
+      for (let y = 150; y < 500; y += 30) {
+        for (let x = 0; x < 900; x += 30) {
+          const color = ((x + y) % 60 < 30) ? C.floor1 : C.floor2;
+          scene.add.rectangle(x + 15, y + 15, 30, 30, color);
+        }
       }
+      
+      // Counter (glass)
+      scene.add.rectangle(450, 195, 800, 15, C.glass);
+      scene.add.rectangle(450, 210, 800, 50, 0x5a7a9a, 0.2);
+      
+      // Food shelves
+      const foods = [
+        { x: 150, icon: '🍝', label: 'PASTA' },
+        { x: 280, icon: '🍗', label: 'CHICKEN' },
+        { x: 410, icon: '🥬', label: 'VEGGIE' }
+      ];
+      
+      foods.forEach(f => {
+        const shelf = scene.add.rectangle(f.x, 200, 60, 50, C.wood);
+        const text = scene.add.text(f.x, 185, f.label, {
+          fontSize: '12px',
+          color: '#888888'
+        }).setOrigin(0.5);
+      });
+      
+      // Kitchen stoves
+      for (let i = 0; i < 3; i++) {
+        const x = 150 + i * 130;
+        // Stove
+        scene.add.rectangle(x, 380, 60, 30, 0x333333);
+        // Pot
+        scene.add.rectangle(x, 355, 40, 25, C.pot);
+        // Fire
+        const fire = scene.add.rectangle(x, 395, 20, 15, C.fire);
+        scene.tweens.add({
+          targets: fire,
+          scaleY: 1.3,
+          y: 393,
+          duration: 200,
+          yoyo: true,
+          repeat: -1
+        });
+      }
+      
+      // Create characters
+      createChef(scene, 150, POS.chefY);
+      createChef(scene, 280, POS.chefY);
+      createChef(scene, 410, POS.chefY);
+      
+      // Waiter
+      waiter = createCharacter(scene, 220, POS.waiterY, C.waiterBlack, C.waiterApron);
+      
+      // Customer
+      customer = createCharacter(scene, POS.start, POS.customerY, C.customerBlue, 0x2850a0);
+      customer.setDepth(10);
+      
+      // Cashier
+      createCharacter(scene, 780, POS.customerY, C.cashierGreen, 0x1e6a1e);
+      // Cashier head (gold)
+      scene.add.rectangle(780, POS.customerY - 25, 20, 16, C.cashierGold);
+      
+      // Register
+      scene.add.rectangle(760, POS.customerY + 30, 50, 40, 0x333333);
+      screen = scene.add.text(760, POS.customerY + 22, '$0', {
+        fontSize: '14px',
+        color: '#4ade80',
+        backgroundColor: '#0f380f'
+      }).setOrigin(0.5);
+      
+      // Progress dots
+      for (let i = 0; i < 4; i++) {
+        const dot = scene.add.rectangle(400 + i * 30, 30, 16, 16, 0x333333);
+        dot.setStrokeStyle(2, 0x555555);
+        dot.setData('index', i + 1);
+        bubbles.push(dot);
+      }
+      
+      // Zone labels
+      const labels = ['PASTA', 'CHICKEN', 'VEGGIE', 'CASH'];
+      const labelX = [170, 300, 430, 750];
+      labels.forEach((l, i) => {
+        scene.add.text(labelX[i], 480, l, {
+          fontSize: '12px',
+          color: '#666666'
+        }).setOrigin(0.5);
+      });
+      
+      // Title
+      scene.add.text(450, 20, '🍝 PIADA KITCHEN', {
+        fontSize: '24px',
+        color: '#ffd93d',
+        fontStyle: 'bold'
+      }).setOrigin(0.5);
+      
+      // Start animation
+      scene.time.delayedCall(1000, runAnimation, [], scene);
     }
     
-    function move(el, x) {
-      return new Promise(r => { el.style.left = x + 'px'; setTimeout(r, 800); });
+    function createChef(scene, x, y) {
+      const chef = scene.add.container(x, y);
+      chef.setDepth(5);
+      
+      // Hat
+      scene.add.rectangle(0, -35, 28, 14, C.chefWhite).setOrigin(0.5);
+      scene.add.rectangle(0, -42, 20, 10, C.chefWhite).setOrigin(0.5);
+      
+      // Head
+      scene.add.rectangle(0, -22, 20, 18, C.chefSkin).setOrigin(0.5);
+      
+      // Body
+      scene.add.rectangle(0, 0, 30, 28, C.chefWhite).setOrigin(0.5);
+      
+      // Arms (animated)
+      const armL = scene.add.rectangle(-18, 2, 10, 20, C.chefSkin).setOrigin(0.5);
+      const armR = scene.add.rectangle(18, 2, 10, 20, C.chefSkin).setOrigin(0.5);
+      
+      scene.tweens.add({
+        targets: armL,
+        angle: { from: -15, to: 15 },
+        duration: 300,
+        yoyo: true,
+        repeat: -1
+      });
+      
+      scene.tweens.add({
+        targets: armR,
+        angle: { from: 15, to: -15 },
+        duration: 300,
+        yoyo: true,
+        repeat: -1
+      });
+      
+      chefs.push(chef);
+      return chef;
     }
     
-    async function run() {
-      state = { step: 0, customerX: 50, waiterX: 180, tray: '', bubble: '' };
-      customer.style.left = state.customerX + 'px';
-      waiter.style.left = state.waiterX + 'px';
-      updateDots();
+    function createCharacter(scene, x, y, bodyColor, detailColor) {
+      const char = scene.add.container(x, y);
+      char.setDepth(10);
       
-      await new Promise(r => setTimeout(r, 1000));
+      // Hair
+      scene.add.rectangle(0, -32, 24, 10, 0x4a3728).setOrigin(0.5);
       
-      // Step 1
-      state.step = 1; updateDots();
-      await move(customer, config.positions.pasta);
-      bubble.textContent = config.labels[0]; bubble.classList.add('show');
-      state.tray = config.foods[0]; tray.textContent = state.tray;
-      await move(waiter, config.positions.pasta - 20);
-      await new Promise(r => setTimeout(r, 500));
+      // Head
+      scene.add.rectangle(0, -20, 22, 18, C.customerSkin).setOrigin(0.5);
       
-      // Step 2
-      state.step = 2; bubble.classList.remove('show');
-      await move(customer, config.positions.chicken);
-      bubble.textContent = config.labels[1]; bubble.classList.add('show');
-      state.tray += config.foods[1]; tray.textContent = state.tray;
-      await move(waiter, config.positions.chicken - 20);
-      await new Promise(r => setTimeout(r, 500));
+      // Body
+      scene.add.rectangle(0, 0, 28, 26, bodyColor).setOrigin(0.5);
+      if (detailColor) {
+        scene.add.rectangle(0, 3, 22, 20, detailColor).setOrigin(0.5);
+      }
       
-      // Step 3
-      state.step = 3; bubble.classList.remove('show');
-      await move(customer, config.positions.veggie);
-      bubble.textContent = config.labels[2]; bubble.classList.add('show');
-      state.tray += config.foods[2]; tray.textContent = state.tray;
-      await move(waiter, config.positions.veggie - 20);
-      await new Promise(r => setTimeout(r, 500));
+      // Legs
+      scene.add.rectangle(-6, 20, 8, 10, 0x333333).setOrigin(0.5);
+      scene.add.rectangle(6, 20, 8, 10, 0x333333).setOrigin(0.5);
       
-      // Step 4
-      state.step = 4; bubble.classList.remove('show');
-      await move(customer, config.positions.cashier);
-      await move(waiter, config.positions.cashier - 40);
-      
-      screen.textContent = '$25';
-      await new Promise(r => setTimeout(r, 600));
-      screen.textContent = 'OK!';
-      bubble.textContent = 'Thanks!'; bubble.classList.add('show');
-      await new Promise(r => setTimeout(r, 800));
-      
-      customer.style.opacity = '0';
-      bubble.classList.remove('show');
-      await new Promise(r => setTimeout(r, 500));
-      
-      customer.style.opacity = '1';
-      screen.textContent = '$0';
-      
-      await new Promise(r => setTimeout(r, 500));
-      run();
+      return char;
     }
     
-    run();
+    function showBubble(scene, text, x, y) {
+      const bubble = scene.add.text(x, y - 50, text, {
+        fontSize: '14px',
+        backgroundColor: '#ffffff',
+        color: '#000000',
+        padding: { x: 8, y: 4 },
+        borderRadius: 10
+      }).setOrigin(0.5);
+      
+      // Bubble tail
+      scene.add.triangle(x, y - 35, -5, 0, 5, 0, 0, 10, 0xffffff);
+      
+      scene.tweens.add({
+        targets: bubble,
+        alpha: 0,
+        delay: 600,
+        duration: 300,
+        onComplete: () => bubble.destroy()
+      });
+    }
+    
+    function updateDots(scene, currentStep) {
+      bubbles.forEach((dot, i) => {
+        const idx = dot.getData('index');
+        if (idx < currentStep) {
+          dot.fillColor = 0x4ade80;
+          dot.setStrokeStyle(2, 0x22c55e);
+        } else if (idx === currentStep) {
+          dot.fillColor = 0xffd93d;
+          dot.setStrokeStyle(2, 0xffaa00);
+        } else {
+          dot.fillColor = 0x333333;
+          dot.setStrokeStyle(2, 0x555555);
+        }
+      });
+    }
+    
+    async function runAnimation() {
+      const scene = this;
+      if (isAnimating) return;
+      isAnimating = true;
+      
+      // Reset
+      customer.x = POS.start;
+      waiter.x = 220;
+      screen.text = '$0';
+      
+      // Step 1: Pasta
+      step = 1;
+      updateDots(scene, step);
+      
+      await moveTo(scene, customer, POS.pasta, 800);
+      showBubble(scene, 'Pasta!', customer.x, customer.y);
+      await moveTo(scene, waiter, POS.pasta - 30, 600);
+      
+      await delay(500);
+      
+      // Step 2: Chicken
+      step = 2;
+      updateDots(scene, step);
+      
+      await moveTo(scene, customer, POS.chicken, 800);
+      showBubble(scene, 'Chicken!', customer.x, customer.y);
+      await moveTo(scene, waiter, POS.chicken - 30, 600);
+      
+      await delay(500);
+      
+      // Step 3: Veggies
+      step = 3;
+      updateDots(scene, step);
+      
+      await moveTo(scene, customer, POS.veggie, 800);
+      showBubble(scene, 'Veggies!', customer.x, customer.y);
+      await moveTo(scene, waiter, POS.veggie - 30, 600);
+      
+      await delay(500);
+      
+      // Step 4: Cashier
+      step = 4;
+      updateDots(scene, step);
+      
+      await moveTo(scene, customer, POS.cashier, 800);
+      await moveTo(scene, waiter, POS.cashier - 50, 600);
+      
+      screen.text = '$25';
+      await delay(600);
+      screen.text = 'PAID!';
+      showBubble(scene, 'Thanks!', customer.x, customer.y);
+      
+      await delay(1000);
+      
+      // Customer leaves
+      scene.tweens.add({
+        targets: customer,
+        alpha: 0,
+        duration: 500
+      });
+      
+      await delay(500);
+      
+      // Reset
+      customer.alpha = 1;
+      screen.text = '$0';
+      
+      await delay(500);
+      
+      isAnimating = false;
+      runAnimation.call(scene);
+    }
+    
+    function moveTo(scene, obj, targetX, duration) {
+      return new Promise(resolve => {
+        scene.tweens.add({
+          targets: obj,
+          x: targetX,
+          duration: duration,
+          ease: 'Linear',
+          onComplete: resolve
+        });
+      });
+    }
+    
+    function delay(ms) {
+      return new Promise(resolve => {
+        setTimeout(resolve, ms);
+      });
+    }
+
+    function update() {}
   </script>
 </body>
 </html>
