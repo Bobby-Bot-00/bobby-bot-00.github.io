@@ -7,113 +7,238 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
     * { margin: 0; padding: 0; }
-    body { background: linear-gradient(135deg, #1a1a2e, #16213e); min-height: 100vh; display: flex; justify-content: center; align-items: center; font-family: 'Press Start 2P', monospace; }
-    canvas { image-rendering: pixelated; image-rendering: crisp-edges; }
+    body { 
+      background: linear-gradient(135deg, #1a1a2e, #16213e); 
+      min-height: 100vh; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      font-family: 'Press Start 2P', monospace;
+    }
+    canvas { 
+      image-rendering: pixelated; 
+      image-rendering: crisp-edges;
+      border: 4px solid #64477d;
+      border-radius: 8px;
+      box-shadow: 0 0 40px rgba(100,71,125,0.4);
+    }
   </style>
 </head>
 <body>
   <canvas id="g" width="800" height="480"></canvas>
   <script>
-    const chef = new Image(); chef.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAx0lEQVR4nO3YoQ0CQRCF4X9fcBc8lSDxVIEkoQJKoAISJFXgkVSCJ6dBIy+3yx1573ObbGbHzGR2ICKcldoB+75/01DXdVVzFuaEOWGuzL3mW/cEYU6YE+bKv9V87Z4gzAlzwpwwJ8wJc8JcqR3weTs3nRNW20P2ATUJc8LcovUD6/3p6/y4HKveH0uYE+aEuTI2wNT7gewERxLmhLkydLZfbnbM2et+HfR3EOaEOWFOmBPmhDlNnUBERERERERERERERAQ/8gE0ZyFFBBVszgAAAABJRU5ErkJggg==";
-    const waiter = new Image(); waiter.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA2ElEQVR4nO3YIW+CMRSF4dMTfsSCQ03gUbOIuWn0kiV4EgQSsWSehGQaPYfAouYnpuaW/YuhkaT9+Lac93FNmttW9PbeSgAAIFWpDfAyG/+qR4vdR9UZrHBWOCtc+W93vnVOsMJZ4axwpXXAn/2m0xxxcz9vumcrnBXOCjfoeoHJ0/PZ+H27bDq/lhXOCmeFK7UBHjffvfYGr/Mh/wE1rHBWuHJpbb/6etBfth69XdQ7WOGscFa40vrdvz1O1aXPu0PTusAKZ4Vz3xsAAAAAAAAAAAAAAF3BCTXZJDVYSOc5AAAAAElFTkSuQmCC";
-    const customer = new Image(); customer.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAsklEQVR4nO3YwQkCMRSE4XmDRViJPQh24HVBsAJLsAJB2KsdCPZgJXaxnj0n67LM/90C4eXl8AYSCQAApKrWAtNDkxZUx7Y7WOGscFa4WtvM984EK5wVzgpXvQt+XrdZM2K7P3ft2QpnhbPCbeY+YHe6/qzf90vX/a2scFY4K1y1Fhiew6Jvg/Ew8h/Qwgpnhau1zXzvTLDCWeGscFY4K5wVzks3AAAAAAAAAAAAAAD6gy+CjRg26WoxdAAAAABJRU5ErkJggg==";
-    const cashier = new Image(); cashier.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAn0lEQVR4nO3WsRFCIRCE4WULIbcMc8ugLMowtwxzGnnGL9FxgHGc/b+Y2TsC7pAAAECqsjqwXeuhjfpjLO3ZCmeFs8KV1YHHU1tnQLms7dkKZ4WzwpXdBWo9/wvGeL/Hvz0/ywpnhbPCldmAdm9b9/4n/dan7mCFs8JZ4cq/vfnVM8EKZ4WzwlnhrHBWOP+6AQAAAAAAAAAAAAAAAG32AmFLFyw3FTc/AAAAAElFTkSuQmCC";
-    const pasta = new Image(); pasta.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAoUlEQVR4nO3WsRHDMAxDURCzZDQNkREyhEbLLkqvwikk2QX+a31H0gVwkgAAAAAAQJq6e+FobVx9r95vvckKZ4WzwtXugeN7nfFV9drbEVY4K5wVrk4vWO2E3ZmfWeGscH76AAB4Uq0OaO199O3/T++fpX+wwlnhrHC1e+DpTljN/MwKZ4WzwtXpBaudsDvzMyucFc5PHwAAAAAAAAAAutEPYsIYKygfqCEAAAAASUVORK5CYII=";
-    const chicken = new Image(); chicken.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAApklEQVR4nO3WsRHDMAxDURAjZQ6PoSEyQobQGJ4jKzm9C6eQZBf4r/UdCRfgSQIAAAAAAGnq7oV7ex1X37f+vTWTFc4KZ4Wr2QOPvV12fFRtfWpmK5wVzgpXqxeM3oTZnT+zwlnh/HQAAHhSjQ5o7b307f9P75+hf7DCWeGscDV74OqbMNr5MyucFc4KV6sXjN6E2Z0/s8JZ4fx0AAAAAAAAAADQjX46IhgrU2TLFwAAAABJRU5ErkJggg==";
-    const veggie = new Image(); veggie.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAqElEQVR4nO3WoRHDMBBE0dWWZJSChFKBS0gFQSooyC0lXMABkmyw/1HP3K3B3kgCAAAAAABpytULt/f2Pft+PI9LM1nhrHBWuDJ7YP3U046Pao82NbMVzgpnhSurF4zehNmd71nhrHC+OwAA3KmMDqh1X/r2/6e119A/WOGscFa4Mnvg6psw2vmeFc4KZ4UrqxeM3oTZne9Z4axwvjsAAAAAAAAAAOhCP9uzGCuyFD3TAAAAAElFTkSuQmCC";
-
     const c = document.getElementById('g');
     const x = c.getContext('2d');
     x.imageSmoothingEnabled = false;
     
-    const S = 4; // scale
-    const C = { wall: '#2a2a45', floor1: '#252538', floor2: '#1e1e2d', counter: '#5a7a9a', wood: '#8b5a2b' };
-    let st = { cx: 30, wx: 90, step: 0, tray: '', screen: '$0', f: 0 };
-    const P = { s: 30, p: 70, ch: 140, v: 210, ca: 330, wy: 230, cy: 170, kx: 170 };
+    const S = 4;
+    const C = { 
+      wall: '#2a2a45', floor1: '#252538', floor2: '#1e1e2d', 
+      counter: '#5a7a9a', wood: '#8b5a2b', white: '#f5f5f5',
+      skin: '#e8b796', black: '#222', blue: '#6b8fe8',
+      green: '#4ab84a', gold: '#ffd700', orange: '#ff9500'
+    };
     
-    function rect(y, h, c) { x.fillStyle = c; x.fillRect(0, y*2, 800, h*2); }
-    function sprite(img, sx, sy, dx, dy, w=16, h=16) {
-      x.drawImage(img, sx*S, sy*S, w*S, h*S, dx*S, dy*S, w*S, h*S);
+    let st = { cx: 30, wx: 100, step: 0, tray: '', screen: '$0', f: 0 };
+    const P = { s: 30, p: 70, ch: 140, v: 210, ca: 330 };
+    
+    function rect(x, y, w, h, color) {
+      x.fillStyle = color;
+      x.fillRect(Math.floor(x), Math.floor(y), Math.floor(w), Math.floor(h));
     }
-    function txt(t, dx, dy, s=12, c='#fff') {
-      x.fillStyle = c; x.font = s + 'px "Press Start 2P"'; x.fillText(t, dx*2, dy*2);
+    
+    function txt(t, x, y, size=12, color='#fff') {
+      x.fillStyle = color;
+      x.font = size + 'px "Press Start 2P"';
+      x.fillText(t, x, y);
+    }
+    
+    // Draw pixel character
+    function drawChar(cx, cy, type, color, skinColor=C.skin, hasTray='') {
+      const s = S;
+      // Shadow
+      rect(cx-6*s, cy+12*s, 12*s, 3*s, 'rgba(0,0,0,0.3)');
+      
+      if (type === 'chef') {
+        // Hat
+        rect(cx-4*s, cy-10*s, 8*s, 4*s, C.white);
+        rect(cx-5*s, cy-12*s, 10*s, 3*s, C.white);
+        rect(cx-3*s, cy-14*s, 6*s, 3*s, C.white);
+        // Face
+        rect(cx-3*s, cy-8*s, 6*s, 5*s, skinColor);
+        // Eyes
+        rect(cx-2*s, cy-6*s, s, s, C.black);
+        rect(cx+1*s, cy-6*s, s, s, C.black);
+        // Body
+        rect(cx-4*s, cy-2*s, 8*s, 8*s, C.white);
+        rect(cx-3*s, cy, 6*s, 5*s, '#eee');
+        // Arms
+        rect(cx-6*s, cy, 2*s, 6*s, skinColor);
+        rect(cx+4*s, cy, 2*s, 6*s, skinColor);
+      } 
+      else if (type === 'waiter') {
+        // Hair
+        rect(cx-4*s, cy-10*s, 8*s, 3*s, '#4a3728');
+        // Face
+        rect(cx-3*s, cy-7*s, 6*s, 5*s, skinColor);
+        rect(cx-2*s, cy-5*s, s, s, C.black);
+        rect(cx+1*s, cy-5*s, s, s, C.black);
+        // Body
+        rect(cx-4*s, cy-2*s, 8*s, 8*s, '#4a4a6a');
+        rect(cx-3*s, cy, 6*s, 5*s, '#3a3a5a');
+        // Apron
+        rect(cx-3*s, cy+3*s, 6*s, 4*s, C.wood);
+        // Tray
+        if (hasTray) {
+          rect(cx-5*s, cy-12*s, 10*s, 3*s, '#666');
+          txt(hasTray, cx-4*s, cy-10*s, 10, '#fff');
+        }
+      }
+      else if (type === 'customer') {
+        // Hair
+        rect(cx-4*s, cy-10*s, 8*s, 3*s, C.orange);
+        // Face
+        rect(cx-3*s, cy-7*s, 6*s, 5*s, skinColor);
+        rect(cx-2*s, cy-5*s, s, s, C.black);
+        rect(cx+1*s, cy-5*s, s, s, C.black);
+        // Body
+        rect(cx-4*s, cy-2*s, 8*s, 8*s, color);
+        rect(cx-3*s, cy, 6*s, 5*s, color.replace('e8','c0d'));
+        // Legs
+        rect(cx-3*s, cy+6*s, 2*s, 4*s, C.black);
+        rect(cx+1*s, cy+6*s, 2*s, 4*s, C.black);
+      }
+      else if (type === 'cashier') {
+        // Hair
+        rect(cx-3*s, cy-8*s, 6*s, 2*s, '#4a3020');
+        // Face
+        rect(cx-3*s, cy-6*s, 6*s, 5*s, C.gold);
+        rect(cx-2*s, cy-4*s, s, s, C.black);
+        rect(cx+1*s, cy-4*s, s, s, C.black);
+        // Body
+        rect(cx-4*s, cy, 8*s, 8*s, C.green);
+        rect(cx-3*s, cy+2*s, 6*s, 5*s, '#3a983a');
+      }
+    }
+    
+    function drawBubble(cx, cy, text) {
+      const w = 50, h = 20;
+      rect(cx-w-10, cy-h-10, w, h, '#fff');
+      rect(cx-5, cy-3, 8, 8, '#fff');
+      txt(text, cx-w, cy+2, 8, '#000');
     }
     
     function draw() {
-      x.fillStyle = '#1a1a2e'; x.fillRect(0, 0, 800, 480);
+      // Clear
+      rect(0, 0, 800, 480, '#1a1a2e');
       
       // Wall
-      rect(20, 50, C.wall);
-      for(let i=20; i<780; i+=30) { rect(25, 40, '#3d3d5c'); }
+      rect(0, 20, 800, 50, C.wall);
+      for (let i=40; i<780; i+=40) rect(i, 25, 2, 40, '#3d3d5c');
       
       // Floor
-      for(let y=70; y<240; y+=12) {
-        for(let x=0; x<400; x+=12) {
-          x.fillStyle = ((x+y)/12)%2===0 ? C.floor1 : C.floor2;
-          x.fillRect(x*2, y*2, 11*2, 11*2);
+      for (let y=70; y<240; y+=12) {
+        for (let x=0; x<400; x+=12) {
+          rect(x, y, 11, 11, ((x+y)/12)%2===0 ? C.floor1 : C.floor2);
         }
       }
       
       // Counter
-      rect(72, 6, C.counter);
-      x.fillStyle = 'rgba(180,220,255,0.15)'; x.fillRect(44, 81*2, 712*2, 50*2);
+      rect(40, 145, 720, 10, C.counter);
+      rect(40, 155, 720, 40, 'rgba(180,220,255,0.1)');
       
       // Food stations
-      [[60,'🍝','PASTA'],[130,'🍗','CHKN'],[200,'🥬','VEG']].forEach(([x,i,l])=>{
-        rect(82, 22, C.wood); txt(i, x+4, 95, 20);
-        txt(l, x-5, 110, 8, '#888');
+      [[60,'🍝','PASTA'],[130,'🍗','CHKN'],[200,'🥬','VEG']].forEach(([sx,icon,label])=>{
+        rect(sx-15, 160, 30, 25, C.wood);
+        txt(icon, sx-6, 175, 18, '#fff');
+        txt(label, sx-12, 195, 7, '#888');
       });
       
-      // Kitchen
-      [65,135,205].forEach(x=>{ rect(180, 10, '#222'); });
+      // Kitchen stoves
+      [65,135,205].forEach(sx=>{
+        rect(sx-15, 340, 30, 15, '#222');
+        rect(sx-8, 325, 16, 12, '#4a4a5a');
+        // Fire
+        if (Math.floor(st.f/15)%2===0) {
+          rect(sx-3, 358, 4, 6, '#ff6b35');
+          rect(sx+1, 359, 3, 5, '#ffd700');
+        }
+      });
       
-      // Characters (using emoji for simplicity)
-      txt('👨‍🍳', 70, 165, 32); txt('👨‍🍳', 140, 165, 32); txt('👨‍🍳', 210, 165, 32);
-      txt('🧑', st.wx/2+2, 105, 24);
-      txt('🧑', st.cx/2+2, 80, 24);
-      txt('👩', 350, 80, 24);
+      // Characters
+      drawChar(80, 170, 'chef', C.skin);
+      drawChar(150, 170, 'chef', C.skin);
+      drawChar(220, 170, 'chef', C.skin);
+      
+      drawChar(st.wx, 120, 'waiter', C.skin, C.skin, st.tray);
+      drawChar(st.cx, 80, 'customer', C.blue, C.skin);
+      drawChar(360, 80, 'cashier', C.green);
       
       // Register
-      rect(335, 20, '#222');
-      txt(st.screen, 340, 100, 10, '#4ade80');
+      rect(345, 105, 40, 30, '#222');
+      txt(st.screen, 350, 118, 10, '#4ade80');
       
-      // Progress
-      [[80,'PSTA'],[150,'CHKN'],[220,'VEG'],[330,'PAY']].forEach(([dx,l],i)=>{
-        let a = st.step===i+1, d = st.step>i+1;
-        txt(d?'✓':(a?'●':'○'), dx, 15, 10, d?'#4ade80':(a?'#ffd93d':'#666'));
-        txt(l, dx-5, 28, 6, '#666');
+      // Progress dots
+      [[80,'PSTA'],[150,'CHKN'],[220,'VEG'],[330,'PAY']].forEach(([dx,label],i)=>{
+        const active = st.step===i+1, done = st.step>i+1;
+        txt(done?'✓':(active?'●':'○'), dx, 35, 10, done?'#4ade80':(active?'#ffd93d':'#666'));
+        txt(label, dx-8, 50, 7, '#666');
       });
       
-      txt('🍝 PIADA', 150, 15, 16, '#ffd93d');
-      if(st.tray) txt(st.tray, st.wx/2, 95, 12);
+      // Bubble
+      if (st.step>0 && st.step<4) {
+        drawBubble(st.cx+20, 70, ['PSTA','CHKN','VEG'][st.step-1]);
+      }
+      
+      // Title
+      txt('🍝 PIADA', 340, 25, 16, '#ffd93d');
       
       st.f++;
       requestAnimationFrame(draw);
     }
     
     async function run() {
-      while(1) {
-        st.step=0; st.cx=P.s; st.wx=90; st.tray=''; st.screen='$0';
+      while (true) {
+        st.step=0; st.cx=P.s; st.wx=100; st.tray=''; st.screen='$0';
         await sl(1000);
+        
         st.step=1;
         await mv('cx', P.p, 600); await mv('wx', P.p-10, 400);
         st.tray='🍝'; await sl(400);
+        
         st.step=2;
         await mv('cx', P.ch, 600); await mv('wx', P.ch-10, 400);
         st.tray='🍝🍗'; await sl(400);
+        
         st.step=3;
         await mv('cx', P.v, 600); await mv('wx', P.v-10, 400);
         st.tray='🍝🍗🥬'; await sl(400);
+        
         st.step=4;
         await mv('cx', P.ca, 600); await mv('wx', P.ca-20, 400);
         st.screen='$25'; await sl(500);
         st.screen='OK!'; await sl(800);
+        
         await mv('cx', P.ca+30, 300);
         st.screen='$0'; await sl(500);
       }
     }
-    function mv(p, t, d) { return new Promise(r=>{ let s=st[p], T=Date.now(); (function F(){ let q=Math.min((Date.now()-T)/d,1); st[p]=s+(t-s)*(1-Math.pow(1-q,3)); q<1?requestAnimationFrame(F):r(); })(); }); }
+    
+    function mv(prop, target, dur) {
+      return new Promise(r=>{
+        const start=st[prop], T=Date.now();
+        (function F(){
+          const p=Math.min((Date.now()-T)/dur,1);
+          st[prop]=start+(target-start)*(1-Math.pow(1-p,3));
+          p<1?requestAnimationFrame(F):r();
+        })();
+      });
+    }
+    
     function sl(t) { return new Promise(r=>setTimeout(r,t)); }
     
-    draw(); run();
-  </script></body></html>
+    draw();
+    run();
+  </script>
+</body>
+</html>
