@@ -1,383 +1,215 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piada Kitchen - Pixel Restaurant</title>
-  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+  <title>Piada Kitchen</title>
   <style>
-    body {
-      background: #1a1a2e;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    #game-container {
-      image-rendering: pixelated;
-    }
+    body { background: #1a1a2e; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    canvas { image-rendering: pixelated; border: 4px solid #4a4a6a; }
   </style>
 </head>
 <body>
-  <div id="game-container"></div>
-
+  <canvas id="game" width="800" height="500"></canvas>
   <script>
-    // Pixel art scene using Phaser
-    const config = {
-      type: Phaser.AUTO,
-      width: 900,
-      height: 500,
-      parent: 'game-container',
-      backgroundColor: '#1a1a2e',
-      pixelArt: true,
-      scene: {
-        preload: preload,
-        create: create,
-        update: update
-      }
-    };
-
-    const game = new Phaser.Game(config);
-    
-    let customer, waiter, chefs = [];
-    let bubbles = [];
-    let tray = [];
-    let screen;
-    let step = 0;
-    let isAnimating = false;
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
     
     // Colors
     const C = {
-      wall: 0x3d3d5c,
-      floor1: 0x2d2d44,
-      floor2: 0x252538,
-      glass: 0x5a7a9a,
-      wood: 0x8b4513,
-      pot: 0x4a4a5a,
-      fire: 0xff6b35,
-      chefWhite: 0xffffff,
-      chefSkin: 0xdeb887,
-      waiterBlack: 0x2d2d44,
-      waiterApron: 0x8b4513,
-      customerBlue: 0x4169e1,
-      customerSkin: 0xf5deb3,
-      cashierGold: 0xffd700,
-      cashierGreen: 0x228b22
+      wall: '#3d3d5c', floor1: '#2d2d44', floor2: '#252538',
+      glass: '#5a7a9a', wood: '#8b4513', pot: '#4a4a5a',
+      fire: '#ff6b35', chefWhite: '#ffffff', chefSkin: '#deb887',
+      waiterBlack: '#2d2d44', waiterApron: '#8b4513',
+      customerBlue: '#4169e1', customerSkin: '#f5deb3',
+      cashierGold: '#ffd700', cashierGreen: '#228b22'
     };
     
-    // Positions
-    const POS = {
-      start: 80,
-      pasta: 150,
-      chicken: 280,
-      veggie: 410,
-      cashier: 680,
-      waiterY: 220,
-      chefY: 340,
-      customerY: 180
-    };
-
-    function preload() {
-      // Create pixel textures programmatically
-    }
-
-    function create() {
-      const scene = this;
-      
-      // Background wall
-      scene.add.rectangle(450, 80, 900, 120, C.wall);
-      
-      // Floor with tile pattern
-      for (let y = 150; y < 500; y += 30) {
-        for (let x = 0; x < 900; x += 30) {
-          const color = ((x + y) % 60 < 30) ? C.floor1 : C.floor2;
-          scene.add.rectangle(x + 15, y + 15, 30, 30, color);
+    const POS = { start: 80, pasta: 150, chicken: 260, veggie: 370, cashier: 620 };
+    let state = { step: 0, customerX: 80, waiterX: 200, tray: '', screen: '$0' };
+    const foods = ['🍝', '🍗', '🥬'], labels = ['Pasta!', 'Chicken!', 'Veggies!'];
+    
+    function rect(x, y, w, h, c) { ctx.fillStyle = c; ctx.fillRect(x, y, w, h); }
+    function text(t, x, y, s, c) { ctx.fillStyle = c; ctx.font = s + ' monospace'; ctx.fillText(t, x, y); }
+    
+    function drawFloor() {
+      for (let y = 150; y < 500; y += 20) {
+        for (let x = 0; x < 800; x += 20) {
+          rect(x, y, 19, 19, ((x + y) % 40 < 20) ? C.floor1 : C.floor2);
         }
       }
+    }
+    
+    function drawChef(x, y) {
+      rect(x + 6, y - 30, 20, 10, C.chefWhite); // hat
+      rect(x + 4, y - 22, 24, 8, C.chefWhite);
+      rect(x + 8, y - 14, 16, 14, C.chefSkin); // head
+      rect(x + 6, y - 2, 20, 20, C.chefWhite); // body
+      rect(x - 4, y, 8, 16, C.chefSkin); // arm
+      rect(x + 28, y, 8, 16, C.chefSkin);
+    }
+    
+    function drawWaiter(x, y, tray) {
+      rect(x + 4, y - 28, 16, 8, '#4a3728'); // hair
+      rect(x + 6, y - 22, 16, 12, C.chefSkin); // head
+      rect(x + 4, y - 12, 20, 18, C.waiterBlack); // body
+      rect(x + 6, y, 16, 10, C.waiterApron); // apron
+      rect(x - 2, y - 8, 6, 12, C.chefSkin); // arms
+      rect(x + 24, y - 8, 6, 12, C.chefSkin);
+      if (tray) text(tray, x + 10, y - 35, '14', '#fff');
+    }
+    
+    function drawCustomer(x, y, bubble) {
+      rect(x + 4, y - 28, 16, 8, '#4a3728'); // hair
+      rect(x + 6, y - 22, 16, 12, C.customerSkin); // head
+      rect(x + 4, y - 12, 20, 20, C.customerBlue); // body
+      rect(x + 6, y + 6, 7, 8, '#333'); // legs
+      rect(x + 15, y + 6, 7, 8, '#333');
+      if (bubble) {
+        rect(x - 30, y - 55, 60, 22, '#fff');
+        text(bubble, x - 20, y - 40, '12', '#000');
+      }
+    }
+    
+    function drawCashier(x, y) {
+      rect(x + 6, y - 22, 16, 12, C.cashierGold);
+      rect(x + 4, y - 10, 20, 22, C.cashierGreen);
+    }
+    
+    function drawScene() {
+      // Clear
+      ctx.fillStyle = '#1a1a2e';
+      ctx.fillRect(0, 0, 800, 500);
       
-      // Counter (glass)
-      scene.add.rectangle(450, 195, 800, 15, C.glass);
-      scene.add.rectangle(450, 210, 800, 50, 0x5a7a9a, 0.2);
+      // Wall
+      rect(0, 50, 800, 100, C.wall);
+      
+      // Floor
+      drawFloor();
+      
+      // Counter
+      rect(50, 180, 700, 12, C.glass);
+      ctx.fillStyle = 'rgba(150,200,255,0.15)';
+      ctx.fillRect(53, 192, 694, 45);
       
       // Food shelves
-      const foods = [
-        { x: 150, icon: '🍝', label: 'PASTA' },
-        { x: 280, icon: '🍗', label: 'CHICKEN' },
-        { x: 410, icon: '🥬', label: 'VEGGIE' }
-      ];
-      
-      foods.forEach(f => {
-        const shelf = scene.add.rectangle(f.x, 200, 60, 50, C.wood);
-        const text = scene.add.text(f.x, 185, f.label, {
-          fontSize: '12px',
-          color: '#888888'
-        }).setOrigin(0.5);
+      [[120, '🍝', 'PASTA'], [230, '🍗', 'CHICKEN'], [340, '🥬', 'VEGGIE']].forEach(([x, icon, label]) => {
+        rect(x, 190, 50, 45, C.wood);
+        text(icon, x + 18, 218, '22', '#fff');
+        text(label, x + 5, 248, '10', '#888');
       });
       
       // Kitchen stoves
-      for (let i = 0; i < 3; i++) {
-        const x = 150 + i * 130;
-        // Stove
-        scene.add.rectangle(x, 380, 60, 30, 0x333333);
-        // Pot
-        scene.add.rectangle(x, 355, 40, 25, C.pot);
+      [120, 230, 340].forEach(x => {
+        rect(x, 350, 50, 25, '#333');
+        rect(x + 5, 325, 40, 20, C.pot);
         // Fire
-        const fire = scene.add.rectangle(x, 395, 20, 15, C.fire);
-        scene.tweens.add({
-          targets: fire,
-          scaleY: 1.3,
-          y: 393,
-          duration: 200,
-          yoyo: true,
-          repeat: -1
-        });
-      }
+        ctx.fillStyle = C.fire;
+        ctx.beginPath();
+        ctx.moveTo(x + 15, 380);
+        ctx.lineTo(x + 25, 365);
+        ctx.lineTo(x + 35, 380);
+        ctx.fill();
+      });
       
-      // Create characters
-      createChef(scene, 150, POS.chefY);
-      createChef(scene, 280, POS.chefY);
-      createChef(scene, 410, POS.chefY);
+      // Chefs
+      drawChef(130, 360);
+      drawChef(240, 360);
+      drawChef(350, 360);
       
       // Waiter
-      waiter = createCharacter(scene, 220, POS.waiterY, C.waiterBlack, C.waiterApron);
+      drawWaiter(state.waiterX, 200, state.tray);
       
       // Customer
-      customer = createCharacter(scene, POS.start, POS.customerY, C.customerBlue, 0x2850a0);
-      customer.setDepth(10);
+      drawCustomer(state.customerX, 160, state.step > 0 && state.step < 4 ? labels[state.step - 1] : '');
       
       // Cashier
-      createCharacter(scene, 780, POS.customerY, C.cashierGreen, 0x1e6a1e);
-      // Cashier head (gold)
-      scene.add.rectangle(780, POS.customerY - 25, 20, 16, C.cashierGold);
+      drawCashier(680, 160);
       
       // Register
-      scene.add.rectangle(760, POS.customerY + 30, 50, 40, 0x333333);
-      screen = scene.add.text(760, POS.customerY + 22, '$0', {
-        fontSize: '14px',
-        color: '#4ade80',
-        backgroundColor: '#0f380f'
-      }).setOrigin(0.5);
+      rect(660, 185, 45, 35, '#333');
+      text(state.screen, 665, 198, '12', '#4ade80');
       
       // Progress dots
       for (let i = 0; i < 4; i++) {
-        const dot = scene.add.rectangle(400 + i * 30, 30, 16, 16, 0x333333);
-        dot.setStrokeStyle(2, 0x555555);
-        dot.setData('index', i + 1);
-        bubbles.push(dot);
+        const x = 360 + i * 30;
+        rect(x, 25, 14, 14, state.step > i ? '#4ade80' : (state.step === i + 1 ? '#ffd93d' : '#333'));
+        rect(x - 1, 24, 16, 16, 'none');
+        ctx.strokeStyle = state.step > i ? '#22c55e' : (state.step === i + 1 ? '#ffaa00' : '#555');
+        ctx.lineWidth = 2;
+        ctx.strokeRect(x - 1, 24, 16, 16);
       }
-      
-      // Zone labels
-      const labels = ['PASTA', 'CHICKEN', 'VEGGIE', 'CASH'];
-      const labelX = [170, 300, 430, 750];
-      labels.forEach((l, i) => {
-        scene.add.text(labelX[i], 480, l, {
-          fontSize: '12px',
-          color: '#666666'
-        }).setOrigin(0.5);
-      });
       
       // Title
-      scene.add.text(450, 20, '🍝 PIADA KITCHEN', {
-        fontSize: '24px',
-        color: '#ffd93d',
-        fontStyle: 'bold'
-      }).setOrigin(0.5);
+      text('🍝 PIADA KITCHEN', 300, 20, '22', '#ffd93d');
       
-      // Start animation
-      scene.time.delayedCall(1000, runAnimation, [], scene);
+      requestAnimationFrame(drawScene);
     }
     
-    function createChef(scene, x, y) {
-      const chef = scene.add.container(x, y);
-      chef.setDepth(5);
-      
-      // Hat
-      scene.add.rectangle(0, -35, 28, 14, C.chefWhite).setOrigin(0.5);
-      scene.add.rectangle(0, -42, 20, 10, C.chefWhite).setOrigin(0.5);
-      
-      // Head
-      scene.add.rectangle(0, -22, 20, 18, C.chefSkin).setOrigin(0.5);
-      
-      // Body
-      scene.add.rectangle(0, 0, 30, 28, C.chefWhite).setOrigin(0.5);
-      
-      // Arms (animated)
-      const armL = scene.add.rectangle(-18, 2, 10, 20, C.chefSkin).setOrigin(0.5);
-      const armR = scene.add.rectangle(18, 2, 10, 20, C.chefSkin).setOrigin(0.5);
-      
-      scene.tweens.add({
-        targets: armL,
-        angle: { from: -15, to: 15 },
-        duration: 300,
-        yoyo: true,
-        repeat: -1
-      });
-      
-      scene.tweens.add({
-        targets: armR,
-        angle: { from: 15, to: -15 },
-        duration: 300,
-        yoyo: true,
-        repeat: -1
-      });
-      
-      chefs.push(chef);
-      return chef;
-    }
-    
-    function createCharacter(scene, x, y, bodyColor, detailColor) {
-      const char = scene.add.container(x, y);
-      char.setDepth(10);
-      
-      // Hair
-      scene.add.rectangle(0, -32, 24, 10, 0x4a3728).setOrigin(0.5);
-      
-      // Head
-      scene.add.rectangle(0, -20, 22, 18, C.customerSkin).setOrigin(0.5);
-      
-      // Body
-      scene.add.rectangle(0, 0, 28, 26, bodyColor).setOrigin(0.5);
-      if (detailColor) {
-        scene.add.rectangle(0, 3, 22, 20, detailColor).setOrigin(0.5);
-      }
-      
-      // Legs
-      scene.add.rectangle(-6, 20, 8, 10, 0x333333).setOrigin(0.5);
-      scene.add.rectangle(6, 20, 8, 10, 0x333333).setOrigin(0.5);
-      
-      return char;
-    }
-    
-    function showBubble(scene, text, x, y) {
-      const bubble = scene.add.text(x, y - 50, text, {
-        fontSize: '14px',
-        backgroundColor: '#ffffff',
-        color: '#000000',
-        padding: { x: 8, y: 4 },
-        borderRadius: 10
-      }).setOrigin(0.5);
-      
-      // Bubble tail
-      scene.add.triangle(x, y - 35, -5, 0, 5, 0, 0, 10, 0xffffff);
-      
-      scene.tweens.add({
-        targets: bubble,
-        alpha: 0,
-        delay: 600,
-        duration: 300,
-        onComplete: () => bubble.destroy()
-      });
-    }
-    
-    function updateDots(scene, currentStep) {
-      bubbles.forEach((dot, i) => {
-        const idx = dot.getData('index');
-        if (idx < currentStep) {
-          dot.fillColor = 0x4ade80;
-          dot.setStrokeStyle(2, 0x22c55e);
-        } else if (idx === currentStep) {
-          dot.fillColor = 0xffd93d;
-          dot.setStrokeStyle(2, 0xffaa00);
-        } else {
-          dot.fillColor = 0x333333;
-          dot.setStrokeStyle(2, 0x555555);
-        }
-      });
-    }
-    
-    async function runAnimation() {
-      const scene = this;
-      if (isAnimating) return;
-      isAnimating = true;
-      
-      // Reset
-      customer.x = POS.start;
-      waiter.x = 220;
-      screen.text = '$0';
-      
-      // Step 1: Pasta
-      step = 1;
-      updateDots(scene, step);
-      
-      await moveTo(scene, customer, POS.pasta, 800);
-      showBubble(scene, 'Pasta!', customer.x, customer.y);
-      await moveTo(scene, waiter, POS.pasta - 30, 600);
-      
-      await delay(500);
-      
-      // Step 2: Chicken
-      step = 2;
-      updateDots(scene, step);
-      
-      await moveTo(scene, customer, POS.chicken, 800);
-      showBubble(scene, 'Chicken!', customer.x, customer.y);
-      await moveTo(scene, waiter, POS.chicken - 30, 600);
-      
-      await delay(500);
-      
-      // Step 3: Veggies
-      step = 3;
-      updateDots(scene, step);
-      
-      await moveTo(scene, customer, POS.veggie, 800);
-      showBubble(scene, 'Veggies!', customer.x, customer.y);
-      await moveTo(scene, waiter, POS.veggie - 30, 600);
-      
-      await delay(500);
-      
-      // Step 4: Cashier
-      step = 4;
-      updateDots(scene, step);
-      
-      await moveTo(scene, customer, POS.cashier, 800);
-      await moveTo(scene, waiter, POS.cashier - 50, 600);
-      
-      screen.text = '$25';
-      await delay(600);
-      screen.text = 'PAID!';
-      showBubble(scene, 'Thanks!', customer.x, customer.y);
-      
+    async function run() {
+      state = { step: 0, customerX: 80, waiterX: 200, tray: '', screen: '$0' };
       await delay(1000);
       
-      // Customer leaves
-      scene.tweens.add({
-        targets: customer,
-        alpha: 0,
-        duration: 500
-      });
-      
+      // Step 1
+      state.step = 1;
+      await move('customerX', POS.pasta, 800);
+      await move('waiterX', POS.pasta - 20, 500);
+      state.tray = foods[0];
       await delay(500);
+      
+      // Step 2
+      state.step = 2;
+      await move('customerX', POS.chicken, 800);
+      await move('waiterX', POS.chicken - 20, 500);
+      state.tray += foods[1];
+      await delay(500);
+      
+      // Step 3
+      state.step = 3;
+      await move('customerX', POS.veggie, 800);
+      await move('waiterX', POS.veggie - 20, 500);
+      state.tray += foods[2];
+      await delay(500);
+      
+      // Step 4
+      state.step = 4;
+      await move('customerX', POS.cashier, 800);
+      await move('waiterX', POS.cashier - 40, 500);
+      state.screen = '$25';
+      await delay(600);
+      state.screen = 'PAID!';
+      await delay(800);
       
       // Reset
-      customer.alpha = 1;
-      screen.text = '$0';
+      state.step = 0;
+      state.tray = '';
+      state.screen = '$0';
+      state.customerX = POS.start;
+      state.waiterX = 200;
       
       await delay(500);
-      
-      isAnimating = false;
-      runAnimation.call(scene);
+      run();
     }
     
-    function moveTo(scene, obj, targetX, duration) {
-      return new Promise(resolve => {
-        scene.tweens.add({
-          targets: obj,
-          x: targetX,
-          duration: duration,
-          ease: 'Linear',
-          onComplete: resolve
-        });
+    function move(prop, target, duration) {
+      return new Promise(r => {
+        const start = state[prop];
+        const startT = Date.now();
+        function tick() {
+          const p = Math.min((Date.now() - startT) / duration, 1);
+          state[prop] = start + (target - start) * p;
+          if (p < 1) requestAnimationFrame(tick);
+          else r();
+        }
+        tick();
       });
     }
     
-    function delay(ms) {
-      return new Promise(resolve => {
-        setTimeout(resolve, ms);
-      });
-    }
-
-    function update() {}
+    function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+    
+    drawScene();
+    run();
   </script>
 </body>
 </html>
