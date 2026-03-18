@@ -1,112 +1,124 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bobby 的小工具</title>
+  <title>Piada Kitchen - 意式快餐像素动画</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
       background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
       min-height: 100vh;
-      color: #fff;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
       padding: 20px;
     }
     .container {
+      max-width: 800px;
+      width: 100%;
+    }
+    .title {
       text-align: center;
-      max-width: 500px;
-    }
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #ff6b6b, #feca57);
-      margin: 0 auto 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 50px;
-    }
-    h1 {
-      font-size: 28px;
+      color: #fff;
+      font-size: 36px;
       margin-bottom: 10px;
-      background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(99,102,241,0.5);
     }
-    p {
-      font-size: 14px;
-      opacity: 0.7;
+    .subtitle {
+      text-align: center;
+      color: #a0a0b0;
+      font-size: 16px;
       margin-bottom: 40px;
     }
-    .modules {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-    .module {
-      background: rgba(255,255,255,0.1);
-      border-radius: 20px;
-      padding: 30px 20px;
-      text-decoration: none;
-      color: #fff;
-      transition: all 0.3s;
+    .card {
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
     }
-    .module:hover {
+    .card:hover {
       transform: translateY(-5px);
-      background: rgba(255,255,255,0.15);
-      border-color: rgba(255,255,255,0.3);
+      box-shadow: 0 20px 40px rgba(99,102,241,0.3);
+      border-color: rgba(99,102,241,0.5);
     }
-    .module .icon {
-      font-size: 40px;
+    .card-icon {
+      font-size: 48px;
       margin-bottom: 15px;
     }
-    .module .name {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 8px;
+    .card-title {
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 10px;
     }
-    .module .desc {
-      font-size: 12px;
-      opacity: 0.7;
+    .card-desc {
+      color: #a0a0b0;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
     }
-    .module .count {
+    .card-btn {
       display: inline-block;
-      background: rgba(255,107,107,0.2);
-      color: #ff6b6b;
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .card-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(99,102,241,0.4);
+    }
+    .tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .tag {
+      background: rgba(99,102,241,0.2);
+      color: #818cf8;
       padding: 4px 12px;
-      border-radius: 10px;
-      font-size: 11px;
-      margin-top: 12px;
+      border-radius: 15px;
+      font-size: 12px;
+    }
+    .footer {
+      text-align: center;
+      color: #666;
+      margin-top: 40px;
+      font-size: 12px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="avatar">🦉</div>
-    <h1>Bobby 的小工具</h1>
-    <p>让AI做的各种有趣小应用</p>
+    <h1 class="title">🍝 Piada Kitchen</h1>
+    <p class="subtitle">意式快餐 Pixel 动画演示</p>
     
-    <div class="modules">
-      <a href="https://bobby-bot-00.github.io/useless-apps/" class="module">
-        <div class="icon">🎯</div>
-        <div class="name">无用软件100</div>
-        <div class="desc">AI做的有趣小测试</div>
-        <div class="count">第 1 款</div>
-      </a>
-      
-      <a href="skill-news.html" class="module">
-        <div class="icon">📡</div>
-        <div class="name">Agent Skills 新闻</div>
-        <div class="desc">每日AI Agent技能动态</div>
-        <div class="count">NEW</div>
-      </a>
+    <div class="card">
+      <div class="card-icon">🎮</div>
+      <h2 class="card-title">点餐流程动画</h2>
+      <p class="card-desc">
+        这是一个展示 Piada 意式快餐店经营模式的像素动画。<br>
+        客人依次选择意面、鸡肉、蔬菜，服务员在玻璃挡板后同步取餐，
+        厨师在后台持续备餐，最后到收银台结账。
+      </p>
+      <a href="piada-animation.html" class="card-btn" target="_blank">▶️ 查看动画</a>
+      <div class="tags">
+        <span class="tag">Pixel Art</span>
+        <span class="tag">CSS动画</span>
+        <span class="tag">意式快餐</span>
+        <span class="tag">商业计划</span>
+      </div>
     </div>
+    
+    <p class="footer">Made with ❤️ by Bobby</p>
   </div>
 </body>
 </html>
