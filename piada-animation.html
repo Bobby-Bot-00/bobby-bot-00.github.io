@@ -3,813 +3,675 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piada Kitchen - Pixel Animation</title>
+  <title>Piada Kitchen - Pixel Restaurant</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #0f0f1a;
+      background: #1a1a2e;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: 'Courier New', monospace;
+      font-family: 'VT323', monospace;
     }
-    .game-container {
+    @font-face {
+      font-family: 'VT323';
+      src: url('https://fonts.gstatic.com/s/vt323/v17/pxiKyp0ihIEF2isQFjxG.woff2') format('woff2');
+    }
+    .container {
       width: 100%;
-      max-width: 800px;
+      max-width: 900px;
       aspect-ratio: 16/10;
-      background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f0f1a 100%);
+      background: #2d2d44;
       position: relative;
       overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 0 40px rgba(99,102,241,0.3);
+      image-rendering: pixelated;
+      border: 4px solid #4a4a6a;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
     }
     
     /* Title */
     .title {
       position: absolute;
-      top: 20px;
+      top: 8px;
       left: 50%;
       transform: translateX(-50%);
       color: #ffd93d;
-      font-size: 24px;
-      font-weight: bold;
-      text-shadow: 3px 3px 0 #000, 0 0 20px rgba(255,217,61,0.5);
+      font-size: 28px;
+      text-shadow: 2px 2px 0 #000;
       z-index: 100;
-      letter-spacing: 4px;
     }
     
-    /* Progress dots */
+    /* Progress bar */
     .progress {
       position: absolute;
-      top: 60px;
+      top: 42px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
-      gap: 20px;
+      gap: 8px;
       z-index: 100;
     }
-    .dot {
-      width: 16px;
-      height: 16px;
-      background: #2d2d44;
-      border: 3px solid #4a4a6a;
-      border-radius: 50%;
-      transition: all 0.3s;
+    .pbox {
+      width: 20px;
+      height: 20px;
+      background: #222;
+      border: 2px solid #444;
     }
-    .dot.active {
-      background: #ffd93d;
-      border-color: #ffaa00;
-      box-shadow: 0 0 15px #ffd93d;
-    }
-    .dot.done {
-      background: #4ade80;
-      border-color: #22c55e;
-    }
+    .pbox.active { background: #ffd93d; border-color: #ffaa00; }
+    .pbox.done { background: #4ade80; border-color: #22c55e; }
     
-    /* Scene layers */
-    .wall {
+    /* Sky/wall background */
+    .bg {
       position: absolute;
-      top: 90px;
+      top: 60px;
       left: 0;
       right: 0;
-      height: 120px;
-      background: linear-gradient(180deg, #2a2a40 0%, #3d3d5c 100%);
+      height: 100px;
+      background: linear-gradient(180deg, #3d3d5c 0%, #4a4a6a 100%);
     }
-    .wall::after {
+    .bg::after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       height: 4px;
-      background: #4a4a6a;
+      background: #5a5a7a;
     }
     
+    /* Floor tiles */
     .floor {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      height: 55%;
-      background: 
-        repeating-linear-gradient(90deg, #2d2d44 0px, #2d2d44 30px, #252538 30px, #252538 60px),
-        repeating-linear-gradient(0deg, transparent 0px, transparent 28px, rgba(255,255,255,0.02) 28px, rgba(255,255,255,0.02) 30px);
+      height: 60%;
+      background-image: 
+        linear-gradient(30deg, #252538 12%, transparent 12.5%, transparent 87%, #252538 87.5%, #252538),
+        linear-gradient(150deg, #252538 12%, transparent 12.5%, transparent 87%, #252538 87.5%, #252538),
+        linear-gradient(30deg, #252538 12%, transparent 12.5%, transparent 87%, #252538 87.5%, #252538),
+        linear-gradient(150deg, #252538 12%, transparent 12.5%, transparent 87%, #252538 87.5%, #252538),
+        linear-gradient(60deg, #2d2d44 25%, transparent 25.5%, transparent 75%, #2d2d44 75%, #2d2d44),
+        linear-gradient(60deg, #2d2d44 25%, transparent 25.5%, transparent 75%, #2d2d44 75%, #2d2d44);
+      background-size: 40px 70px;
+      background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
     }
     
-    /* Glass counter */
-    .glass {
+    /* Counter (glass) */
+    .counter {
       position: absolute;
-      top: 200px;
+      top: 160px;
       left: 5%;
       right: 5%;
-      height: 80px;
-      background: linear-gradient(180deg, rgba(150,200,255,0.1) 0%, rgba(150,200,255,0.2) 100%);
-      border: 4px solid rgba(150,200,255,0.3);
-      border-radius: 8px;
-      backdrop-filter: blur(4px);
+      height: 12px;
+      background: #5a7a9a;
+      border-radius: 2px;
     }
-    .glass::before {
-      content: '';
+    .counter-glass {
       position: absolute;
-      top: 0;
-      left: 10%;
-      right: 10%;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      top: 172px;
+      left: 5%;
+      right: 5%;
+      height: 60px;
+      background: linear-gradient(180deg, rgba(150,200,255,0.1) 0%, rgba(150,200,255,0.2) 100%);
+      border: 3px solid rgba(150,200,255,0.3);
+      border-top: none;
     }
     
-    /* Food stations */
-    .station {
+    /* Food display */
+    .food-shelf {
       position: absolute;
-      top: 215px;
-      width: 80px;
-      height: 60px;
-      background: linear-gradient(180deg, #8b4513 0%, #6b3410 100%);
-      border-radius: 8px;
+      top: 180px;
+      display: flex;
+      gap: 20px;
+    }
+    .food-item {
+      width: 50px;
+      height: 50px;
+      background: #8b4513;
+      border: 3px solid #6b3410;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 0 #4a2508;
     }
-    .station-icon {
-      font-size: 28px;
-      filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.3));
-    }
-    .station-label {
-      font-size: 10px;
-      color: #ccc;
-      margin-top: 4px;
-      letter-spacing: 1px;
-    }
-    .station:nth-of-type(1) { left: 8%; }
-    .station:nth-of-type(2) { left: 28%; }
-    .station:nth-of-type(3) { left: 48%; }
+    .food-item .icon { font-size: 24px; }
+    .food-item .label { font-size: 10px; color: #aaa; margin-top: 2px; }
     
-    /* Kitchen pots */
-    .pot-area {
+    /* Kitchen area */
+    .kitchen {
       position: absolute;
-      bottom: 80px;
+      bottom: 20px;
       left: 5%;
       right: 5%;
-      height: 100px;
       display: flex;
       justify-content: space-around;
     }
-    .pot {
-      position: relative;
-      width: 70px;
-    }
-    .pot-body {
-      width: 70px;
+    
+    /* Stove */
+    .stove {
+      width: 60px;
       height: 50px;
-      background: linear-gradient(180deg, #5a5a6a 0%, #3a3a4a 100%);
-      border-radius: 0 0 15px 15px;
       position: relative;
+    }
+    .stove-top {
+      width: 60px;
+      height: 35px;
+      background: #444;
+      border: 2px solid #333;
+    }
+    .pot {
+      position: absolute;
+      top: -20px;
+      left: 10px;
+      width: 40px;
+      height: 25px;
+      background: #666;
+      border-radius: 0 0 8px 8px;
     }
     .pot-rim {
       position: absolute;
-      top: -12px;
-      left: -5px;
-      width: 80px;
-      height: 15px;
-      background: linear-gradient(180deg, #6a6a7a 0%, #5a5a6a 100%);
-      border-radius: 8px;
-    }
-    .pot-handle {
-      position: absolute;
-      right: -15px;
-      top: 5px;
-      width: 20px;
-      height: 10px;
-      background: #444;
-      border-radius: 4px;
-    }
-    .stove {
-      position: absolute;
-      bottom: -18px;
-      left: 5px;
-      width: 60px;
-      height: 15px;
-      background: #222;
-      border-radius: 4px;
-    }
-    .flame {
-      position: absolute;
-      bottom: -35px;
-      left: 15px;
-      width: 35px;
-      height: 20px;
-      background: linear-gradient(0deg, #ff6b35, #ffd93d 50%, transparent);
-      border-radius: 50% 50% 30% 30%;
-      animation: flameFlicker 0.2s infinite alternate;
-    }
-    .flame:nth-child(2) { animation-delay: 0.1s; }
-    @keyframes flameFlicker {
-      0% { transform: scaleY(1) scaleX(1); opacity: 0.9; }
-      100% { transform: scaleY(1.2) scaleX(0.9); opacity: 1; }
-    }
-    .bubble {
-      position: absolute;
-      width: 8px;
+      top: -5px;
+      left: -2px;
+      width: 44px;
       height: 8px;
-      background: rgba(255,255,255,0.5);
-      border-radius: 50%;
-      animation: bubbleRise 1s infinite;
+      background: #777;
+      border-radius: 3px;
     }
-    .bubble:nth-child(3) { left: 20px; animation-delay: 0s; }
-    .bubble:nth-child(4) { left: 40px; animation-delay: 0.3s; }
-    @keyframes bubbleRise {
-      0% { bottom: 5px; opacity: 0; }
-      50% { opacity: 1; }
-      100% { bottom: 25px; opacity: 0; }
+    .fire {
+      position: absolute;
+      bottom: -15px;
+      left: 15px;
+      width: 30px;
+      height: 15px;
+    }
+    .fire::before, .fire::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(0deg, #ff6b35, #ffd93d);
+      border-radius: 50% 50% 20% 20%;
+      animation: fire 0.2s infinite alternate;
+    }
+    .fire::before { left: 5px; width: 10px; height: 15px; }
+    .fire::after { left: 15px; width: 8px; height: 12px; animation-delay: 0.1s; }
+    @keyframes fire {
+      0% { transform: scaleY(1); }
+      100% { transform: scaleY(1.2); }
     }
     .steam {
       position: absolute;
-      top: -20px;
-      left: 20px;
-      font-size: 16px;
-      animation: steam 1.5s infinite;
+      top: -35px;
+      left: 15px;
+      font-size: 14px;
+      animation: steam 1s infinite;
     }
     @keyframes steam {
-      0% { transform: translateY(0) scale(1); opacity: 0.8; }
-      100% { transform: translateY(-20px) scale(1.5); opacity: 0; }
+      0% { transform: translateY(0); opacity: 0.8; }
+      100% { transform: translateY(-15px); opacity: 0; }
+    }
+    .stove-base {
+      width: 60px;
+      height: 12px;
+      background: #333;
     }
     
-    /* Chef */
+    /* Pixel characters */
+    .character {
+      position: absolute;
+      width: 32px;
+      height: 40px;
+    }
+    
+    /* Chef pixel art */
     .chef {
-      position: absolute;
-      bottom: 70px;
-      width: 45px;
-      height: 65px;
+      bottom: 60px;
     }
-    .chef-hat {
-      position: absolute;
-      top: -15px;
-      left: 5px;
-      width: 35px;
-      height: 20px;
-      background: #fff;
-      border-radius: 5px 5px 0 0;
-    }
-    .chef-hat::before {
-      content: '';
-      position: absolute;
-      top: -8px;
-      left: 5px;
-      width: 25px;
-      height: 12px;
-      background: #fff;
-      border-radius: 4px;
-    }
-    .chef-head {
+    .chef .head {
       position: absolute;
       top: 0;
-      left: 10px;
-      width: 25px;
-      height: 22px;
+      left: 6px;
+      width: 20px;
+      height: 16px;
       background: #deb887;
-      border-radius: 50%;
     }
-    .chef-eyes {
+    .chef .hat {
       position: absolute;
-      top: 8px;
-      left: 18px;
-      width: 4px;
-      height: 4px;
-      background: #000;
-      border-radius: 50%;
-      box-shadow: 10px 0 0 #000;
+      top: -10px;
+      left: 4px;
+      width: 24px;
+      height: 14px;
+      background: #fff;
     }
-    .chef-body {
+    .chef .hat::after {
+      content: '';
       position: absolute;
-      top: 20px;
-      left: 5px;
-      width: 35px;
-      height: 35px;
-      background: linear-gradient(180deg, #fff 0%, #eee 100%);
-      border-radius: 8px;
+      top: -6px;
+      left: 4px;
+      width: 16px;
+      height: 8px;
+      background: #fff;
     }
-    .chef-arm {
+    .chef .body {
       position: absolute;
-      top: 25px;
-      width: 12px;
-      height: 25px;
+      top: 14px;
+      left: 2px;
+      width: 28px;
+      height: 20px;
+      background: #fff;
+    }
+    .chef .arm {
+      position: absolute;
+      top: 16px;
+      width: 8px;
+      height: 16px;
       background: #deb887;
-      border-radius: 6px;
     }
-    .chef:nth-child(1) .chef-arm { left: -8px; animation: stirLeft 0.4s infinite alternate; }
-    .chef:nth-child(2) .chef-arm { right: -8px; animation: stirRight 0.4s infinite alternate; }
-    .chef:nth-child(3) .chef-arm { left: -8px; animation: stirLeft 0.4s infinite alternate 0.2s; }
-    @keyframes stirLeft {
-      0% { transform: rotate(-15deg); }
-      100% { transform: rotate(15deg); }
+    .chef:nth-of-type(1) .arm { left: -4px; animation: stir 0.3s infinite alternate; }
+    .chef:nth-of-type(2) .arm { right: -4px; animation: stir 0.3s infinite alternate 0.15s; }
+    .chef:nth-of-type(3) .arm { left: -4px; animation: stir 0.3s infinite alternate 0.1s; }
+    @keyframes stir {
+      0% { transform: rotate(-10deg); }
+      100% { transform: rotate(10deg); }
     }
-    @keyframes stirRight {
-      0% { transform: rotate(15deg); }
-      100% { transform: rotate(-15deg); }
-    }
-    .chef:nth-of-type(1) { left: 12%; }
-    .chef:nth-of-type(2) { left: 32%; }
-    .chef:nth-of-type(3) { left: 52%; }
     
     /* Waiter */
     .waiter {
-      position: absolute;
       bottom: 200px;
-      left: 200px;
-      width: 40px;
-      height: 55px;
       transition: left 0.8s ease-in-out;
     }
-    .waiter-hair {
+    .waiter .head {
+      position: absolute;
+      top: 2px;
+      left: 8px;
+      width: 16px;
+      height: 14px;
+      background: #deb887;
+    }
+    .waiter .hair {
       position: absolute;
       top: 0;
-      left: 8px;
-      width: 24px;
-      height: 12px;
-      background: #4a3728;
-      border-radius: 12px 12px 0 0;
-    }
-    .waiter-head {
-      position: absolute;
-      top: 8px;
-      left: 10px;
+      left: 6px;
       width: 20px;
-      height: 18px;
-      background: #deb887;
-      border-radius: 50%;
+      height: 8px;
+      background: #4a3728;
+      border-radius: 4px 4px 0 0;
     }
-    .waiter-eyes {
+    .waiter .body {
       position: absolute;
       top: 14px;
-      left: 15px;
-      width: 3px;
-      height: 3px;
-      background: #000;
-      border-radius: 50%;
-      box-shadow: 7px 0 0 #000;
-    }
-    .waiter-body {
-      position: absolute;
-      top: 24px;
-      left: 5px;
-      width: 30px;
-      height: 25px;
-      background: #1a1a2e;
-      border-radius: 6px;
-    }
-    .waiter-apron {
-      position: absolute;
-      top: 32px;
-      left: 8px;
+      left: 4px;
       width: 24px;
-      height: 15px;
-      background: #8b4513;
-      border-radius: 3px;
+      height: 20px;
+      background: #2d2d44;
     }
-    .waiter-tray {
+    .waiter .apron {
       position: absolute;
-      top: -15px;
-      left: 5px;
-      width: 30px;
-      height: 10px;
+      top: 20px;
+      left: 6px;
+      width: 20px;
+      height: 12px;
+      background: #8b4513;
+    }
+    .waiter .tray {
+      position: absolute;
+      top: -8px;
+      left: 4px;
+      width: 24px;
+      height: 6px;
       background: #666;
-      border-radius: 3px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
-      transition: all 0.3s;
+      font-size: 10px;
     }
     
     /* Customer */
     .customer {
-      position: absolute;
-      bottom: 280px;
-      left: 50px;
-      width: 40px;
-      height: 60px;
+      bottom: 300px;
       transition: left 0.8s ease-in-out;
     }
-    .customer-hair {
+    .customer .head {
+      position: absolute;
+      top: 2px;
+      left: 8px;
+      width: 16px;
+      height: 14px;
+      background: #f5deb3;
+    }
+    .customer .hair {
       position: absolute;
       top: 0;
-      left: 8px;
-      width: 24px;
-      height: 14px;
-      background: #4a3728;
-      border-radius: 12px 12px 0 0;
-    }
-    .customer-head {
-      position: absolute;
-      top: 10px;
-      left: 10px;
+      left: 6px;
       width: 20px;
-      height: 18px;
-      background: #f5deb3;
-      border-radius: 50%;
+      height: 8px;
+      background: #4a3728;
+      border-radius: 4px 4px 0 0;
     }
-    .customer-eyes {
+    .customer .body {
       position: absolute;
-      top: 16px;
-      left: 15px;
-      width: 3px;
-      height: 3px;
-      background: #000;
-      border-radius: 50%;
-      box-shadow: 7px 0 0 #000;
+      top: 14px;
+      left: 4px;
+      width: 24px;
+      height: 22px;
+      background: #4169e1;
     }
-    .customer-body {
+    .customer .legs {
       position: absolute;
-      top: 26px;
-      left: 5px;
-      width: 30px;
-      height: 30px;
-      background: linear-gradient(180deg, #4169e1 0%, #2850a0 100%);
-      border-radius: 8px;
+      bottom: 0;
+      left: 6px;
+      width: 20px;
+      height: 6px;
+      display: flex;
+      justify-content: space-between;
     }
-    .customer-bubble {
+    .customer .legs span {
+      width: 8px;
+      height: 8px;
+      background: #333;
+    }
+    
+    /* Speech bubble */
+    .bubble {
       position: absolute;
-      top: -35px;
-      left: -20px;
+      top: -30px;
+      left: -30px;
       background: #fff;
-      padding: 6px 12px;
-      border-radius: 15px;
+      padding: 4px 8px;
+      border-radius: 8px;
       font-size: 12px;
-      font-weight: bold;
-      color: #000;
       white-space: nowrap;
       opacity: 0;
       transition: opacity 0.3s;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     }
-    .customer-bubble::after {
+    .bubble::after {
       content: '';
       position: absolute;
-      bottom: -8px;
+      bottom: -6px;
       left: 50%;
       transform: translateX(-50%);
-      border: 8px solid transparent;
+      border: 6px solid transparent;
       border-top-color: #fff;
     }
-    .customer-bubble.show { opacity: 1; }
+    .bubble.show { opacity: 1; }
     
     /* Cashier */
     .cashier {
-      position: absolute;
-      bottom: 280px;
+      bottom: 300px;
       right: 8%;
-      width: 40px;
-      height: 55px;
     }
-    .cashier-head {
+    .cashier .head {
       position: absolute;
-      top: 8px;
-      left: 10px;
-      width: 20px;
-      height: 18px;
+      top: 2px;
+      left: 8px;
+      width: 16px;
+      height: 14px;
       background: #ffd700;
-      border-radius: 50%;
     }
-    .cashier-body {
+    .cashier .body {
       position: absolute;
-      top: 24px;
-      left: 5px;
-      width: 30px;
-      height: 28px;
+      top: 14px;
+      left: 4px;
+      width: 24px;
+      height: 22px;
       background: #228b22;
-      border-radius: 6px;
     }
     
     /* Register */
     .register {
       position: absolute;
-      bottom: 255px;
+      bottom: 270px;
       right: 7%;
-      width: 55px;
+      width: 45px;
       height: 40px;
       background: #333;
-      border-radius: 6px;
+      border: 2px solid #222;
     }
     .register-screen {
       position: absolute;
-      top: 5px;
-      left: 5px;
-      width: 45px;
+      top: 4px;
+      left: 4px;
+      width: 37px;
       height: 18px;
       background: #0f380f;
-      border-radius: 3px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 10px;
-      color: #0f0;
-      font-family: monospace;
+      font-size: 12px;
+      color: #4ade80;
     }
-    .register-buttons {
+    .register-btns {
       position: absolute;
       bottom: 4px;
-      left: 8px;
+      left: 6px;
       display: flex;
       gap: 4px;
     }
-    .register-btn {
+    .register-btns span {
       width: 8px;
       height: 8px;
       border-radius: 50%;
     }
     
-    /* Instructions */
-    .instructions {
+    /* Zone labels */
+    .zone {
       position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #666;
+      bottom: 260px;
       font-size: 12px;
+      color: #666;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
-  <div class="game-container">
-    <div class="title">🍝 PIADA KITCHEN 🍝</div>
+  <div class="container">
+    <div class="title">🍝 PIADA KITCHEN</div>
     
     <div class="progress">
-      <div class="dot" id="dot1"></div>
-      <div class="dot" id="dot2"></div>
-      <div class="dot" id="dot3"></div>
-      <div class="dot" id="dot4"></div>
+      <div class="pbox" id="b1"></div>
+      <div class="pbox" id="b2"></div>
+      <div class="pbox" id="b3"></div>
+      <div class="pbox" id="b4"></div>
     </div>
     
-    <div class="wall"></div>
+    <div class="bg"></div>
     <div class="floor"></div>
-    <div class="glass"></div>
     
-    <!-- Food Stations -->
-    <div class="station">
-      <span class="station-icon">🍝</span>
-      <span class="station-label">PASTA</span>
+    <!-- Counter -->
+    <div class="counter"></div>
+    <div class="counter-glass"></div>
+    
+    <!-- Food shelves -->
+    <div class="food-shelf" style="left: 8%;">
+      <div class="food-item">
+        <span class="icon">🍝</span>
+        <span class="label">PASTA</span>
+      </div>
     </div>
-    <div class="station">
-      <span class="station-icon">🍗</span>
-      <span class="station-label">CHICKEN</span>
+    <div class="food-shelf" style="left: 30%;">
+      <div class="food-item">
+        <span class="icon">🍗</span>
+        <span class="label">CHICKEN</span>
+      </div>
     </div>
-    <div class="station">
-      <span class="station-icon">🥬</span>
-      <span class="station-label">VEGGIES</span>
+    <div class="food-shelf" style="left: 52%;">
+      <div class="food-item">
+        <span class="icon">🥬</span>
+        <span class="label">VEGGIE</span>
+      </div>
     </div>
     
-    <!-- Kitchen Pots -->
-    <div class="pot-area">
-      <div class="pot">
-        <div class="pot-rim"></div>
-        <div class="pot-body"></div>
-        <div class="pot-handle"></div>
-        <div class="stove"></div>
-        <div class="flame"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
+    <!-- Kitchen -->
+    <div class="kitchen">
+      <div class="stove">
+        <div class="pot"><div class="pot-rim"></div></div>
+        <div class="fire"></div>
+        <div class="stove-top"></div>
+        <div class="stove-base"></div>
       </div>
-      <div class="pot">
-        <span class="steam">♨️</span>
-        <div class="pot-rim"></div>
-        <div class="pot-body" style="background: linear-gradient(180deg, #4a4a5a 0%, #3a3a4a 100%);"></div>
-        <div class="pot-handle"></div>
-        <div class="stove"></div>
-        <div class="flame"></div>
+      <div class="stove">
+        <span class="steam">♨</span>
+        <div class="pot" style="background:#555;"><div class="pot-rim"></div></div>
+        <div class="fire"></div>
+        <div class="stove-top"></div>
+        <div class="stove-base"></div>
       </div>
-      <div class="pot">
-        <span class="steam">♨️</span>
-        <div class="pot-rim"></div>
-        <div class="pot-body" style="background: linear-gradient(180deg, #5a4a4a 0%, #4a3a3a 100%);"></div>
-        <div class="pot-handle"></div>
-        <div class="stove"></div>
-        <div class="flame"></div>
+      <div class="stove">
+        <span class="steam">♨</span>
+        <div class="pot" style="background:#5a4a4a;"><div class="pot-rim"></div></div>
+        <div class="fire"></div>
+        <div class="stove-top"></div>
+        <div class="stove-base"></div>
       </div>
     </div>
     
     <!-- Chefs -->
-    <div class="chef">
-      <div class="chef-hat"></div>
-      <div class="chef-head"></div>
-      <div class="chef-eyes"></div>
-      <div class="chef-body"></div>
-      <div class="chef-arm"></div>
+    <div class="character chef" style="left: 12%;">
+      <div class="hat"></div>
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="arm"></div>
     </div>
-    <div class="chef">
-      <div class="chef-hat"></div>
-      <div class="chef-head"></div>
-      <div class="chef-eyes"></div>
-      <div class="chef-body"></div>
-      <div class="chef-arm"></div>
+    <div class="character chef" style="left: 32%;">
+      <div class="hat"></div>
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="arm"></div>
     </div>
-    <div class="chef">
-      <div class="chef-hat"></div>
-      <div class="chef-head"></div>
-      <div class="chef-eyes"></div>
-      <div class="chef-body"></div>
-      <div class="chef-arm"></div>
+    <div class="character chef" style="left: 52%;">
+      <div class="hat"></div>
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="arm"></div>
     </div>
     
     <!-- Waiter -->
-    <div class="waiter" id="waiter">
-      <div class="waiter-tray" id="tray"></div>
-      <div class="waiter-hair"></div>
-      <div class="waiter-head"></div>
-      <div class="waiter-eyes"></div>
-      <div class="waiter-body"></div>
-      <div class="waiter-apron"></div>
+    <div class="character waiter" id="waiter">
+      <div class="tray" id="tray"></div>
+      <div class="hair"></div>
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="apron"></div>
     </div>
     
     <!-- Customer -->
-    <div class="customer" id="customer">
-      <div class="customer-bubble" id="bubble"></div>
-      <div class="customer-hair"></div>
-      <div class="customer-head"></div>
-      <div class="customer-eyes"></div>
-      <div class="customer-body"></div>
+    <div class="character customer" id="customer">
+      <div class="bubble" id="bubble"></div>
+      <div class="hair"></div>
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="legs">
+        <span></span><span></span>
+      </div>
     </div>
     
     <!-- Cashier -->
-    <div class="cashier">
-      <div class="cashier-head"></div>
-      <div class="cashier-body"></div>
+    <div class="character cashier" style="right: 8%;">
+      <div class="head"></div>
+      <div class="body"></div>
     </div>
     
     <!-- Register -->
     <div class="register">
-      <div class="register-screen" id="register">$0</div>
-      <div class="register-buttons">
-        <div class="register-btn" style="background:#f00;"></div>
-        <div class="register-btn" style="background:#0f0;"></div>
-        <div class="register-btn" style="background:#00f;"></div>
+      <div class="register-screen" id="screen">$0</div>
+      <div class="register-btns">
+        <span style="background:#f00;"></span>
+        <span style="background:#0f0;"></span>
+        <span style="background:#00f;"></span>
       </div>
     </div>
     
-    <div class="instructions">Animation loops automatically</div>
+    <!-- Zone labels -->
+    <div class="zone" style="left: 10%;">PASTA</div>
+    <div class="zone" style="left: 32%;">CHICKEN</div>
+    <div class="zone" style="left: 54%;">VEGGIE</div>
+    <div class="zone" style="right: 10%;">CASH</div>
   </div>
 
   <script>
-    // Animation Configuration
     const config = {
-      positions: {
-        start: 50,
-        pasta: 120,
-        chicken: 240,
-        veggie: 360,
-        cashier: 550
-      },
+      positions: { start: 50, pasta: 120, chicken: 250, veggie: 380, cashier: 620 },
       foods: ['🍝', '🍗', '🥬'],
-      labels: ['Pasta!', 'Chicken!', 'Veggies!'],
-      delays: {
-        pause: 500,
-        move: 800,
-        bubble: 400
-      }
+      labels: ['Pasta!', 'Chicken!', 'Veggies!']
     };
     
-    // State
-    let state = {
-      step: 0,
-      customerX: config.positions.start,
-      waiterX: 200,
-      tray: [],
-      bubble: '',
-      register: '$0'
-    };
+    let state = { step: 0, customerX: 50, waiterX: 180, tray: '', bubble: '' };
     
-    // Elements
     const customer = document.getElementById('customer');
     const waiter = document.getElementById('waiter');
     const bubble = document.getElementById('bubble');
     const tray = document.getElementById('tray');
-    const register = document.getElementById('register');
-    const dots = [
-      document.getElementById('dot1'),
-      document.getElementById('dot2'),
-      document.getElementById('dot3'),
-      document.getElementById('dot4')
-    ];
+    const screen = document.getElementById('screen');
     
-    // Update dots
     function updateDots() {
-      dots.forEach((dot, i) => {
-        dot.classList.remove('active', 'done');
-        if (i < state.step) dot.classList.add('done');
-        if (i === state.step) dot.classList.add('active');
-      });
+      for (let i = 1; i <= 4; i++) {
+        const b = document.getElementById('b' + i);
+        b.className = 'pbox';
+        if (i < state.step) b.classList.add('done');
+        if (i === state.step) b.classList.add('active');
+      }
     }
     
-    // Move element
-    function moveTo(element, x) {
-      return new Promise(resolve => {
-        element.style.left = x + 'px';
-        setTimeout(resolve, config.delays.move);
-      });
+    function move(el, x) {
+      return new Promise(r => { el.style.left = x + 'px'; setTimeout(r, 800); });
     }
     
-    // Show bubble
-    function showBubble(text) {
-      bubble.textContent = text;
-      bubble.classList.add('show');
-    }
-    
-    function hideBubble() {
-      bubble.classList.remove('show');
-    }
-    
-    // Update tray
-    function updateTray() {
-      tray.textContent = state.tray.join('');
-    }
-    
-    // Animation sequence
-    async function runSequence() {
-      // Reset
-      state = {
-        step: 0,
-        customerX: config.positions.start,
-        waiterX: 200,
-        tray: [],
-        bubble: '',
-        register: '$0'
-      };
-      
+    async function run() {
+      state = { step: 0, customerX: 50, waiterX: 180, tray: '', bubble: '' };
       customer.style.left = state.customerX + 'px';
       waiter.style.left = state.waiterX + 'px';
-      updateTray();
       updateDots();
       
-      await sleep(1000);
+      await new Promise(r => setTimeout(r, 1000));
       
-      // Step 1: Pasta
-      state.step = 1;
-      updateDots();
-      await moveTo(customer, config.positions.pasta);
-      showBubble(config.labels[0]);
-      state.tray.push(config.foods[0]);
-      updateTray();
-      await moveTo(waiter, config.positions.pasta - 30);
-      await sleep(config.delays.pause);
+      // Step 1
+      state.step = 1; updateDots();
+      await move(customer, config.positions.pasta);
+      bubble.textContent = config.labels[0]; bubble.classList.add('show');
+      state.tray = config.foods[0]; tray.textContent = state.tray;
+      await move(waiter, config.positions.pasta - 20);
+      await new Promise(r => setTimeout(r, 500));
       
-      // Step 2: Chicken
-      state.step = 2;
-      hideBubble();
-      updateDots();
-      await moveTo(customer, config.positions.chicken);
-      showBubble(config.labels[1]);
-      state.tray.push(config.foods[1]);
-      updateTray();
-      await moveTo(waiter, config.positions.chicken - 30);
-      await sleep(config.delays.pause);
+      // Step 2
+      state.step = 2; bubble.classList.remove('show');
+      await move(customer, config.positions.chicken);
+      bubble.textContent = config.labels[1]; bubble.classList.add('show');
+      state.tray += config.foods[1]; tray.textContent = state.tray;
+      await move(waiter, config.positions.chicken - 20);
+      await new Promise(r => setTimeout(r, 500));
       
-      // Step 3: Veggies
-      state.step = 3;
-      hideBubble();
-      updateDots();
-      await moveTo(customer, config.positions.veggie);
-      showBubble(config.labels[2]);
-      state.tray.push(config.foods[2]);
-      updateTray();
-      await moveTo(waiter, config.positions.veggie - 30);
-      await sleep(config.delays.pause);
+      // Step 3
+      state.step = 3; bubble.classList.remove('show');
+      await move(customer, config.positions.veggie);
+      bubble.textContent = config.labels[2]; bubble.classList.add('show');
+      state.tray += config.foods[2]; tray.textContent = state.tray;
+      await move(waiter, config.positions.veggie - 20);
+      await new Promise(r => setTimeout(r, 500));
       
-      // Step 4: Checkout
-      state.step = 4;
-      hideBubble();
-      updateDots();
-      await moveTo(customer, config.positions.cashier);
-      await moveTo(waiter, config.positions.cashier - 50);
+      // Step 4
+      state.step = 4; bubble.classList.remove('show');
+      await move(customer, config.positions.cashier);
+      await move(waiter, config.positions.cashier - 40);
       
-      // Payment
-      register.textContent = '$25';
-      await sleep(600);
-      register.textContent = 'PAID!';
-      showBubble('Thanks!');
-      await sleep(1000);
+      screen.textContent = '$25';
+      await new Promise(r => setTimeout(r, 600));
+      screen.textContent = 'OK!';
+      bubble.textContent = 'Thanks!'; bubble.classList.add('show');
+      await new Promise(r => setTimeout(r, 800));
       
-      // Customer leaves
       customer.style.opacity = '0';
-      hideBubble();
-      await sleep(500);
+      bubble.classList.remove('show');
+      await new Promise(r => setTimeout(r, 500));
       
-      // Reset for loop
       customer.style.opacity = '1';
-      register.textContent = '$0';
+      screen.textContent = '$0';
       
-      await sleep(500);
-      runSequence();
+      await new Promise(r => setTimeout(r, 500));
+      run();
     }
     
-    // Helper
-    function sleep(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
-    
-    // Start
-    runSequence();
+    run();
   </script>
 </body>
 </html>
