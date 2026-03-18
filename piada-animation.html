@@ -3,212 +3,415 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piada Kitchen</title>
+  <title>Piada Kitchen - Pixel Restaurant</title>
   <style>
-    body { background: #1a1a2e; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-    canvas { image-rendering: pixelated; border: 4px solid #4a4a6a; }
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    * { margin: 0; padding: 0; }
+    body { 
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); 
+      min-height: 100vh; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      font-family: 'VT323', monospace;
+    }
+    .game-wrapper {
+      position: relative;
+      padding: 20px;
+    }
+    canvas { 
+      display: block;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      border: 4px solid #64477d;
+      border-radius: 8px;
+      box-shadow: 0 0 40px rgba(100, 71, 125, 0.4);
+    }
+    .title {
+      position: absolute;
+      top: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ffd700;
+      font-size: 32px;
+      text-shadow: 3px 3px 0 #000;
+      letter-spacing: 2px;
+    }
   </style>
 </head>
 <body>
-  <canvas id="game" width="800" height="500"></canvas>
+  <div class="game-wrapper">
+    <div class="title">🍝 PIADA KITCHEN</div>
+    <canvas id="game" width="800" height="480"></canvas>
+  </div>
+
   <script>
     const canvas = document.getElementById('game');
     const ctx = canvas.getContext('2d');
     ctx.imageSmoothingEnabled = false;
     
-    // Colors
-    const C = {
-      wall: '#3d3d5c', floor1: '#2d2d44', floor2: '#252538',
-      glass: '#5a7a9a', wood: '#8b4513', pot: '#4a4a5a',
-      fire: '#ff6b35', chefWhite: '#ffffff', chefSkin: '#deb887',
-      waiterBlack: '#2d2d44', waiterApron: '#8b4513',
-      customerBlue: '#4169e1', customerSkin: '#f5deb3',
-      cashierGold: '#ffd700', cashierGreen: '#228b22'
+    // Color palette - warm pixel art colors
+    const PAL = {
+      bgDark: '#151522',
+      bg: '#1a1a2e',
+      wall: '#2a2a45',
+      wallLight: '#3a3a5a',
+      floor1: '#252538',
+      floor2: '#1e1e2d',
+      counter: '#5a7a9a',
+      counterLight: '#7a9aba',
+      wood: '#8b5a2b',
+      woodDark: '#5c3d1e',
+      pot: '#4a4a5a',
+      fire: '#ff6b35',
+      fireInner: '#ffd700',
+      chefWhite: '#f5f5f5',
+      chefSkin: '#e8b796',
+      chefHat: '#ffffff',
+      waiter: '#3d3d5c',
+      waiterApron: '#a0522d',
+      customer: '#4169e1',
+      customerDark: '#2850a0',
+      cashier: '#2d8a2d',
+      gold: '#ffd700',
+      screen: '#0a2810',
+      screenGreen: '#4ade80'
     };
     
-    const POS = { start: 80, pasta: 150, chicken: 260, veggie: 370, cashier: 620 };
-    let state = { step: 0, customerX: 80, waiterX: 200, tray: '', screen: '$0' };
-    const foods = ['🍝', '🍗', '🥬'], labels = ['Pasta!', 'Chicken!', 'Veggies!'];
+    // State
+    let state = {
+      customerX: 60,
+      waiterX: 180,
+      step: 0,
+      tray: [],
+      screen: '$0',
+      frame: 0
+    };
     
-    function rect(x, y, w, h, c) { ctx.fillStyle = c; ctx.fillRect(x, y, w, h); }
-    function text(t, x, y, s, c) { ctx.fillStyle = c; ctx.font = s + ' monospace'; ctx.fillText(t, x, y); }
+    const POS = {
+      start: 60,
+      pasta: 140,
+      chicken: 280,
+      veggie: 420,
+      cashier: 660,
+      waiterY: 240,
+      chefY: 340,
+      customerY: 180
+    };
     
+    // Helper
+    function rect(x, y, w, h, c) {
+      ctx.fillStyle = c;
+      ctx.fillRect(Math.floor(x), Math.floor(y), Math.floor(w), Math.floor(h));
+    }
+    
+    function text(t, x, y, s, c, align) {
+      ctx.fillStyle = c;
+      ctx.font = s + 'px VT323';
+      if (align) ctx.textAlign = align;
+      ctx.fillText(t, Math.floor(x), Math.floor(y));
+      if (align) ctx.textAlign = 'left';
+    }
+    
+    // Draw isometric floor
     function drawFloor() {
-      for (let y = 150; y < 500; y += 20) {
-        for (let x = 0; x < 800; x += 20) {
-          rect(x, y, 19, 19, ((x + y) % 40 < 20) ? C.floor1 : C.floor2);
+      const size = 24;
+      for (let y = 140; y < 480; y += size) {
+        for (let x = 0; x < 800; x += size) {
+          const c = ((x / size + y / size) % 2 === 0) ? PAL.floor1 : PAL.floor2;
+          rect(x, y, size, size, c);
         }
       }
     }
     
+    // Draw wall
+    function drawWall() {
+      rect(0, 40, 800, 100, PAL.wall);
+      // Wall pattern
+      for (let x = 40; x < 780; x += 60) {
+        rect(x, 50, 2, 80, PAL.wallLight);
+      }
+    }
+    
+    // Draw counter with glass
+    function drawCounter() {
+      // Counter top
+      rect(40, 145, 720, 12, PAL.counter);
+      rect(44, 147, 712, 8, PAL.counterLight);
+      
+      // Glass
+      ctx.fillStyle = 'rgba(150, 200, 255, 0.12)';
+      ctx.fillRect(44, 157, 712, 50);
+      // Glass shine
+      rect(50, 160, 100, 3, 'rgba(255,255,255,0.1)');
+    }
+    
+    // Draw food stations
+    function drawStations() {
+      const stations = [
+        { x: 120, icon: '🍝', label: 'PASTA' },
+        { x: 260, icon: '🍗', label: 'CHICKEN' },
+        { x: 400, icon: '🥬', label: 'VEGGIES' }
+      ];
+      
+      stations.forEach(s => {
+        // Shelf
+        rect(s.x - 25, 165, 50, 35, PAL.wood);
+        rect(s.x - 23, 167, 46, 31, '#a06830');
+        // Food
+        text(s.icon, s.x - 8, 185, 24, '#fff');
+        // Label
+        text(s.label, s.x - 22, 212, 10, '#999');
+      });
+    }
+    
+    // Draw kitchen
+    function drawKitchen() {
+      const stoves = [130, 270, 410];
+      
+      stoves.forEach((x, i) => {
+        // Stove base
+        rect(x - 25, 365, 50, 20, '#222');
+        
+        // Pot
+        rect(x - 15, 340, 30, 25, PAL.pot);
+        rect(x - 18, 338, 36, 6, '#5a5a6a');
+        
+        // Fire (animated)
+        const flicker = Math.sin(state.frame * 0.3 + i) * 2;
+        rect(x - 8, 388, 6, 12 + flicker, PAL.fire);
+        rect(x + 2, 390, 5, 10 + flicker, PAL.fireInner);
+        
+        // Steam
+        if (Math.floor(state.frame / 15) % 2 === 0) {
+          text('♨', x - 6, 328, 14, 'rgba(255,255,255,0.4)');
+        }
+      });
+    }
+    
+    // Draw chef (pixel style)
     function drawChef(x, y) {
-      rect(x + 6, y - 30, 20, 10, C.chefWhite); // hat
-      rect(x + 4, y - 22, 24, 8, C.chefWhite);
-      rect(x + 8, y - 14, 16, 14, C.chefSkin); // head
-      rect(x + 6, y - 2, 20, 20, C.chefWhite); // body
-      rect(x - 4, y, 8, 16, C.chefSkin); // arm
-      rect(x + 28, y, 8, 16, C.chefSkin);
+      // Shadow
+      rect(x - 12, y + 30, 24, 4, 'rgba(0,0,0,0.3)');
+      
+      // Body
+      rect(x - 10, y + 5, 20, 22, PAL.chefWhite);
+      rect(x - 8, y + 8, 16, 16, '#eee');
+      
+      // Head
+      rect(x - 8, y - 12, 16, 14, PAL.chefSkin);
+      
+      // Hat
+      rect(x - 10, y - 22, 20, 10, PAL.chefHat);
+      rect(x - 6, y - 28, 12, 8, PAL.chefHat);
+      
+      // Arms (animated)
+      const armSwing = Math.sin(state.frame * 0.15) * 3;
+      rect(x - 14, y + 8 + armSwing, 5, 14, PAL.chefSkin);
+      rect(x + 9, y + 8 - armSwing, 5, 14, PAL.chefSkin);
     }
     
+    // Draw waiter
     function drawWaiter(x, y, tray) {
-      rect(x + 4, y - 28, 16, 8, '#4a3728'); // hair
-      rect(x + 6, y - 22, 16, 12, C.chefSkin); // head
-      rect(x + 4, y - 12, 20, 18, C.waiterBlack); // body
-      rect(x + 6, y, 16, 10, C.waiterApron); // apron
-      rect(x - 2, y - 8, 6, 12, C.chefSkin); // arms
-      rect(x + 24, y - 8, 6, 12, C.chefSkin);
-      if (tray) text(tray, x + 10, y - 35, '14', '#fff');
-    }
-    
-    function drawCustomer(x, y, bubble) {
-      rect(x + 4, y - 28, 16, 8, '#4a3728'); // hair
-      rect(x + 6, y - 22, 16, 12, C.customerSkin); // head
-      rect(x + 4, y - 12, 20, 20, C.customerBlue); // body
-      rect(x + 6, y + 6, 7, 8, '#333'); // legs
-      rect(x + 15, y + 6, 7, 8, '#333');
-      if (bubble) {
-        rect(x - 30, y - 55, 60, 22, '#fff');
-        text(bubble, x - 20, y - 40, '12', '#000');
+      // Shadow
+      rect(x - 10, y + 28, 20, 4, 'rgba(0,0,0,0.3)');
+      
+      // Body
+      rect(x - 8, y + 6, 16, 18, PAL.waiter);
+      rect(x - 6, y + 9, 12, 12, '#2a2a40');
+      
+      // Apron
+      rect(x - 6, y + 14, 12, 8, PAL.waiterApron);
+      
+      // Head
+      rect(x - 6, y - 8, 12, 12, PAL.chefSkin);
+      
+      // Hair
+      rect(x - 8, y - 12, 16, 6, '#3d2817');
+      
+      // Arms
+      rect(x - 12, y + 8, 4, 10, PAL.chefSkin);
+      rect(x + 8, y + 8, 4, 10, PAL.chefSkin);
+      
+      // Tray
+      rect(x - 12, y - 16, 24, 4, '#666');
+      if (tray.length > 0) {
+        text(tray.join(''), x - 8, y - 4, 12, '#fff');
       }
     }
     
+    // Draw customer with bubble
+    function drawCustomer(x, y, label) {
+      // Shadow
+      rect(x - 10, y + 32, 20, 4, 'rgba(0,0,0,0.3)');
+      
+      // Body
+      rect(x - 10, y + 8, 20, 22, PAL.customer);
+      rect(x - 8, y + 11, 16, 16, PAL.customerDark);
+      
+      // Head
+      rect(x - 8, y - 6, 16, 14, PAL.chefSkin);
+      
+      // Hair
+      rect(x - 10, y - 10, 20, 6, '#3d2817');
+      
+      // Legs (walking animation)
+      const legOffset = Math.sin(state.frame * 0.2) * 2;
+      rect(x - 6, y + 28, 5, 6 + legOffset, '#222');
+      rect(x + 1, y + 28, 5, 6 - legOffset, '#222');
+      
+      // Bubble
+      if (label) {
+        const bw = 70, bh = 24;
+        rect(x - bw/2 - 4, y - 45, bw, bh, '#fff');
+        rect(x - 4, y - 25, 8, 8, '#fff');
+        // Bubble content
+        text(label, x - bw/2, y - 28, 14, '#000');
+      }
+    }
+    
+    // Draw cashier
     function drawCashier(x, y) {
-      rect(x + 6, y - 22, 16, 12, C.cashierGold);
-      rect(x + 4, y - 10, 20, 22, C.cashierGreen);
+      // Body
+      rect(x - 10, y + 8, 20, 22, PAL.cashier);
+      rect(x - 8, y + 11, 16, 16, '#1e6a1e');
+      
+      // Head
+      rect(x - 8, y - 6, 16, 14, PAL.gold);
     }
     
-    function drawScene() {
-      // Clear
-      ctx.fillStyle = '#1a1a2e';
-      ctx.fillRect(0, 0, 800, 500);
-      
-      // Wall
-      rect(0, 50, 800, 100, C.wall);
-      
-      // Floor
-      drawFloor();
-      
-      // Counter
-      rect(50, 180, 700, 12, C.glass);
-      ctx.fillStyle = 'rgba(150,200,255,0.15)';
-      ctx.fillRect(53, 192, 694, 45);
-      
-      // Food shelves
-      [[120, '🍝', 'PASTA'], [230, '🍗', 'CHICKEN'], [340, '🥬', 'VEGGIE']].forEach(([x, icon, label]) => {
-        rect(x, 190, 50, 45, C.wood);
-        text(icon, x + 18, 218, '22', '#fff');
-        text(label, x + 5, 248, '10', '#888');
+    // Draw register
+    function drawRegister(x, y) {
+      rect(x - 20, y, 40, 30, '#222');
+      rect(x - 18, y + 3, 36, 14, PAL.screen);
+      text(state.screen, x - 14, y + 12, 12, PAL.screenGreen);
+      // Buttons
+      [[x - 14, y + 20], [x - 6, y + 20], [x + 2, y + 20]].forEach(([bx, by], i) => {
+        rect(bx, by, 6, 6, i === 0 ? '#f44' : i === 1 ? '#4f4' : '#44f');
       });
+    }
+    
+    // Progress indicators
+    function drawProgress() {
+      const dots = [
+        { x: 200, label: 'PASTA' },
+        { x: 340, label: 'CHICKEN' },
+        { x: 480, label: 'VEGGIE' },
+        { x: 660, label: 'CASH' }
+      ];
       
-      // Kitchen stoves
-      [120, 230, 340].forEach(x => {
-        rect(x, 350, 50, 25, '#333');
-        rect(x + 5, 325, 40, 20, C.pot);
-        // Fire
-        ctx.fillStyle = C.fire;
-        ctx.beginPath();
-        ctx.moveTo(x + 15, 380);
-        ctx.lineTo(x + 25, 365);
-        ctx.lineTo(x + 35, 380);
-        ctx.fill();
-      });
-      
-      // Chefs
-      drawChef(130, 360);
-      drawChef(240, 360);
-      drawChef(350, 360);
-      
-      // Waiter
-      drawWaiter(state.waiterX, 200, state.tray);
-      
-      // Customer
-      drawCustomer(state.customerX, 160, state.step > 0 && state.step < 4 ? labels[state.step - 1] : '');
-      
-      // Cashier
-      drawCashier(680, 160);
-      
-      // Register
-      rect(660, 185, 45, 35, '#333');
-      text(state.screen, 665, 198, '12', '#4ade80');
-      
-      // Progress dots
-      for (let i = 0; i < 4; i++) {
-        const x = 360 + i * 30;
-        rect(x, 25, 14, 14, state.step > i ? '#4ade80' : (state.step === i + 1 ? '#ffd93d' : '#333'));
-        rect(x - 1, 24, 16, 16, 'none');
-        ctx.strokeStyle = state.step > i ? '#22c55e' : (state.step === i + 1 ? '#ffaa00' : '#555');
+      dots.forEach((d, i) => {
+        const active = state.step === i + 1;
+        const done = state.step > i + 1;
+        const c = done ? '#22c55e' : active ? '#ffd93d' : '#333';
+        const s = done ? '#166534' : active ? '#a16207' : '#444';
+        rect(d.x - 6, 18, 12, 12, c);
+        rect(d.x - 7, 17, 14, 14, 'none');
+        ctx.strokeStyle = s;
         ctx.lineWidth = 2;
-        ctx.strokeRect(x - 1, 24, 16, 16);
-      }
-      
-      // Title
-      text('🍝 PIADA KITCHEN', 300, 20, '22', '#ffd93d');
-      
-      requestAnimationFrame(drawScene);
-    }
-    
-    async function run() {
-      state = { step: 0, customerX: 80, waiterX: 200, tray: '', screen: '$0' };
-      await delay(1000);
-      
-      // Step 1
-      state.step = 1;
-      await move('customerX', POS.pasta, 800);
-      await move('waiterX', POS.pasta - 20, 500);
-      state.tray = foods[0];
-      await delay(500);
-      
-      // Step 2
-      state.step = 2;
-      await move('customerX', POS.chicken, 800);
-      await move('waiterX', POS.chicken - 20, 500);
-      state.tray += foods[1];
-      await delay(500);
-      
-      // Step 3
-      state.step = 3;
-      await move('customerX', POS.veggie, 800);
-      await move('waiterX', POS.veggie - 20, 500);
-      state.tray += foods[2];
-      await delay(500);
-      
-      // Step 4
-      state.step = 4;
-      await move('customerX', POS.cashier, 800);
-      await move('waiterX', POS.cashier - 40, 500);
-      state.screen = '$25';
-      await delay(600);
-      state.screen = 'PAID!';
-      await delay(800);
-      
-      // Reset
-      state.step = 0;
-      state.tray = '';
-      state.screen = '$0';
-      state.customerX = POS.start;
-      state.waiterX = 200;
-      
-      await delay(500);
-      run();
-    }
-    
-    function move(prop, target, duration) {
-      return new Promise(r => {
-        const start = state[prop];
-        const startT = Date.now();
-        function tick() {
-          const p = Math.min((Date.now() - startT) / duration, 1);
-          state[prop] = start + (target - start) * p;
-          if (p < 1) requestAnimationFrame(tick);
-          else r();
-        }
-        tick();
+        ctx.strokeRect(d.x - 7, 17, 14, 14);
+        text(d.label, d.x - 20, 45, 10, '#666');
       });
     }
     
-    function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+    // Main draw
+    function draw() {
+      // Clear
+      rect(0, 0, 800, 480, PAL.bg);
+      
+      drawWall();
+      drawFloor();
+      drawCounter();
+      drawStations();
+      drawKitchen();
+      
+      // Characters
+      drawChef(145, POS.chefY);
+      drawChef(285, POS.chefY);
+      drawChef(425, POS.chefY);
+      
+      drawWaiter(state.waiterX, POS.waiterY, state.tray);
+      drawCustomer(state.customerX, POS.customerY, state.step > 0 && state.step < 4 ? ['Pasta!', 'Chicken!', 'Veggies!'][state.step - 1] : '');
+      
+      drawCashier(700, POS.customerY);
+      drawRegister(680, POS.customerY + 25);
+      
+      drawProgress();
+      
+      state.frame++;
+      requestAnimationFrame(draw);
+    }
     
-    drawScene();
+    // Animation logic
+    async function run() {
+      const labels = ['Pasta!', 'Chicken!', 'Veggies!'];
+      const foods = ['🍝', '🍗', '🥬'];
+      
+      while (true) {
+        // Reset
+        state.step = 0;
+        state.customerX = POS.start;
+        state.waiterX = 180;
+        state.tray = [];
+        state.screen = '$0';
+        
+        await sleep(1000);
+        
+        // Step 1: Pasta
+        state.step = 1;
+        await move('customerX', POS.pasta, 800);
+        await move('waiterX', POS.pasta - 20, 500);
+        state.tray = [foods[0]];
+        await sleep(500);
+        
+        // Step 2: Chicken
+        state.step = 2;
+        await move('customerX', POS.chicken, 800);
+        await move('waiterX', POS.chicken - 20, 500);
+        state.tray = [foods[0], foods[1]];
+        await sleep(500);
+        
+        // Step 3: Veggies
+        state.step = 3;
+        await move('customerX', POS.veggie, 800);
+        await move('waiterX', POS.veggie - 20, 500);
+        state.tray = [foods[0], foods[1], foods[2]];
+        await sleep(500);
+        
+        // Step 4: Cashier
+        state.step = 4;
+        await move('customerX', POS.cashier, 800);
+        await move('waiterX', POS.cashier - 40, 500);
+        
+        state.screen = '$25';
+        await sleep(600);
+        state.screen = 'PAID!';
+        
+        // Customer leaves
+        await move('customerX', POS.cashier + 50, 300);
+        await sleep(500);
+        
+        state.screen = '$0';
+        await sleep(500);
+      }
+    }
+    
+    function move(prop, target, dur) {
+      return new Promise(r => {
+        const start = state[prop], startT = Date.now();
+        function t() {
+          const p = Math.min((Date.now() - startT) / dur, 1);
+          state[prop] = start + (target - start) * (p < 0.5 ? 2*p*p : 1 - Math.pow(-2*p+2, 2)/2);
+          if (p < 1) requestAnimationFrame(t); else r();
+        }
+        t();
+      });
+    }
+    
+    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+    
+    // Start
+    draw();
     run();
   </script>
 </body>
