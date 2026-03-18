@@ -7,368 +7,113 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
     * { margin: 0; padding: 0; }
-    body { 
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); 
-      min-height: 100vh; 
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      font-family: 'Press Start 2P', monospace;
-      overflow: hidden;
-    }
-    canvas { 
-      display: block;
-      image-rendering: pixelated;
-      image-rendering: crisp-edges;
-    }
+    body { background: linear-gradient(135deg, #1a1a2e, #16213e); min-height: 100vh; display: flex; justify-content: center; align-items: center; font-family: 'Press Start 2P', monospace; }
+    canvas { image-rendering: pixelated; image-rendering: crisp-edges; }
   </style>
 </head>
 <body>
-  <canvas id="game"></canvas>
-
+  <canvas id="g" width="800" height="480"></canvas>
   <script>
-    const canvas = document.getElementById('game');
-    const ctx = canvas.getContext('2d');
+    const chef = new Image(); chef.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAx0lEQVR4nO3YoQ0CQRCF4X9fcBc8lSDxVIEkoQJKoAISJFXgkVSCJ6dBIy+3yx1573ObbGbHzGR2ICKcldoB+75/01DXdVVzFuaEOWGuzL3mW/cEYU6YE+bKv9V87Z4gzAlzwpwwJ8wJc8JcqR3weTs3nRNW20P2ATUJc8LcovUD6/3p6/y4HKveH0uYE+aEuTI2wNT7gewERxLmhLkydLZfbnbM2et+HfR3EOaEOWFOmBPmhDlNnUBERERERERERERERAQ/8gE0ZyFFBBVszgAAAABJRU5ErkJggg==";
+    const waiter = new Image(); waiter.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA2ElEQVR4nO3YIW+CMRSF4dMTfsSCQ03gUbOIuWn0kiV4EgQSsWSehGQaPYfAouYnpuaW/YuhkaT9+Lac93FNmttW9PbeSgAAIFWpDfAyG/+qR4vdR9UZrHBWOCtc+W93vnVOsMJZ4axwpXXAn/2m0xxxcz9vumcrnBXOCjfoeoHJ0/PZ+H27bDq/lhXOCmeFK7UBHjffvfYGr/Mh/wE1rHBWuHJpbb/6etBfth69XdQ7WOGscFa40vrdvz1O1aXPu0PTusAKZ4Vz3xsAAAAAAAAAAAAAAF3BCTXZJDVYSOc5AAAAAElFTkSuQmCC";
+    const customer = new Image(); customer.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAsklEQVR4nO3YwQkCMRSE4XmDRViJPQh24HVBsAJLsAJB2KsdCPZgJXaxnj0n67LM/90C4eXl8AYSCQAApKrWAtNDkxZUx7Y7WOGscFa4WtvM984EK5wVzgpXvQt+XrdZM2K7P3ft2QpnhbPCbeY+YHe6/qzf90vX/a2scFY4K1y1Fhiew6Jvg/Ew8h/Qwgpnhau1zXzvTLDCWeGscFY4K5wVzks3AAAAAAAAAAAAAAD6gy+CjRg26WoxdAAAAABJRU5ErkJggg==";
+    const cashier = new Image(); cashier.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAn0lEQVR4nO3WsRFCIRCE4WULIbcMc8ugLMowtwxzGnnGL9FxgHGc/b+Y2TsC7pAAAECqsjqwXeuhjfpjLO3ZCmeFs8KV1YHHU1tnQLms7dkKZ4WzwpXdBWo9/wvGeL/Hvz0/ywpnhbPCldmAdm9b9/4n/dan7mCFs8JZ4cq/vfnVM8EKZ4WzwlnhrHBWOP+6AQAAAAAAAAAAAAAAAG32AmFLFyw3FTc/AAAAAElFTkSuQmCC";
+    const pasta = new Image(); pasta.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAoUlEQVR4nO3WsRHDMAxDURCzZDQNkREyhEbLLkqvwikk2QX+a31H0gVwkgAAAAAAQJq6e+FobVx9r95vvckKZ4WzwtXugeN7nfFV9drbEVY4K5wVrk4vWO2E3ZmfWeGscH76AAB4Uq0OaO199O3/T++fpX+wwlnhrHC1e+DpTljN/MwKZ4WzwtXpBaudsDvzMyucFc5PHwAAAAAAAAAAutEPYsIYKygfqCEAAAAASUVORK5CYII=";
+    const chicken = new Image(); chicken.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAApklEQVR4nO3WsRHDMAxDURAjZQ6PoSEyQobQGJ4jKzm9C6eQZBf4r/UdCRfgSQIAAAAAAGnq7oV7ex1X37f+vTWTFc4KZ4Wr2QOPvV12fFRtfWpmK5wVzgpXqxeM3oTZnT+zwlnh/HQAAHhSjQ5o7b307f9P75+hf7DCWeGscDV74OqbMNr5MyucFc4KV6sXjN6E2Z0/s8JZ4fx0AAAAAAAAAADQjX46IhgrU2TLFwAAAABJRU5ErkJggg==";
+    const veggie = new Image(); veggie.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAqElEQVR4nO3WoRHDMBBE0dWWZJSChFKBS0gFQSooyC0lXMABkmyw/1HP3K3B3kgCAAAAAABpytULt/f2Pft+PI9LM1nhrHBWuDJ7YP3U046Pao82NbMVzgpnhSurF4zehNmd71nhrHC+OwAA3KmMDqh1X/r2/6e119A/WOGscFa4Mnvg6psw2vmeFc4KZ4UrqxeM3oTZne9Z4axwvjsAAAAAAAAAAOhCP9uzGCuyFD3TAAAAAElFTkSuQmCC";
+
+    const c = document.getElementById('g');
+    const x = c.getContext('2d');
+    x.imageSmoothingEnabled = false;
     
-    // 2x scale for crisp pixels
-    const SCALE = 2;
-    const W = 400, H = 240;
-    canvas.width = W * SCALE;
-    canvas.height = H * SCALE;
-    canvas.style.width = W * 2 + 'px';
-    canvas.style.height = H * 2 + 'px';
-    ctx.imageSmoothingEnabled = false;
+    const S = 4; // scale
+    const C = { wall: '#2a2a45', floor1: '#252538', floor2: '#1e1e2d', counter: '#5a7a9a', wood: '#8b5a2b' };
+    let st = { cx: 30, wx: 90, step: 0, tray: '', screen: '$0', f: 0 };
+    const P = { s: 30, p: 70, ch: 140, v: 210, ca: 330, wy: 230, cy: 170, kx: 170 };
     
-    // Palette - pastel & cozy
-    const C = {
-      bg: '#1a1a2e', bgDark: '#151522',
-      wall: '#2a2a45', wallLine: '#3d3d5c',
-      floor1: '#252538', floor2: '#1e1e2d',
-      counter: '#5a7a9a', counterDark: '#4a6a8a',
-      glass: 'rgba(180,220,255,0.15)',
-      wood: '#8b5a2b', woodLight: '#a06830',
-      pot: '#5a5a6a', potDark: '#4a4a5a',
-      fire: '#ff6b35', fireInner: '#ffd93d',
-      chefWhite: '#f5f5f5', chefSkin: '#e8b796',
-      chefHat: '#ffffff', chefHatDark: '#d0d0d0',
-      waiter: '#4a4a6a', waiterDark: '#3a3a5a',
-      apron: '#a0522d', apronDark: '#804020',
-      customer: '#6b8fe8', customerDark: '#4a6fc8',
-      customerHair: '#c47830',
-      skin: '#e8b796',
-      cashier: '#4ab84a', cashierDark: '#3a983a',
-      gold: '#ffd700', goldDark: '#d0b000',
-      screen: '#0a2010', screenGreen: '#4ade80',
-      outline: '#252538',
-      shadow: 'rgba(0,0,0,0.2)'
-    };
-    
-    // State
-    let state = { customerX: 30, waiterX: 90, step: 0, tray: '', screen: '$0', frame: 0 };
-    const POS = { start: 30, pasta: 70, chicken: 140, veggie: 210, cashier: 330, waiterY: 120, chefY: 170, customerY: 90 };
-    
-    function rect(x, y, w, h, c) {
-      ctx.fillStyle = c;
-      ctx.fillRect(x * SCALE, y * SCALE, w * SCALE, h * SCALE);
+    function rect(y, h, c) { x.fillStyle = c; x.fillRect(0, y*2, 800, h*2); }
+    function sprite(img, sx, sy, dx, dy, w=16, h=16) {
+      x.drawImage(img, sx*S, sy*S, w*S, h*S, dx*S, dy*S, w*S, h*S);
+    }
+    function txt(t, dx, dy, s=12, c='#fff') {
+      x.fillStyle = c; x.font = s + 'px "Press Start 2P"'; x.fillText(t, dx*2, dy*2);
     }
     
-    function text(t, x, y, s, c) {
-      ctx.fillStyle = c;
-      ctx.font = (s * SCALE) + 'px "Press Start 2P"';
-      ctx.fillText(t, x * SCALE, y * SCALE);
-    }
-    
-    function outline(x, y, w, h, c = C.outline) {
-      ctx.fillStyle = c;
-      ctx.fillRect((x-1) * SCALE, (y-1) * SCALE, (w+2) * SCALE, (h+2) * SCALE);
-    }
-    
-    // Draw pixel floor
-    function drawFloor() {
-      for (let y = 70; y < H; y += 12) {
-        for (let x = 0; x < W; x += 12) {
-          rect(x, y, 11, 11, ((x + y) / 12) % 2 === 0 ? C.floor1 : C.floor2);
-        }
-      }
-    }
-    
-    // Draw wall with pattern
-    function drawWall() {
-      rect(0, 20, W, 50, C.wall);
-      for (let x = 20; x < W - 20; x += 30) {
-        rect(x, 25, 1, 40, C.wallLine);
-      }
-    }
-    
-    // Draw counter
-    function drawCounter() {
-      rect(20, 75, 360, 6, C.counterDark);
-      rect(20, 72, 360, 4, C.counter);
-      rect(22, 81, 356, 30, C.glass);
-      // Glass shine
-      rect(30, 84, 40, 2, 'rgba(255,255,255,0.1)');
-    }
-    
-    // Food stations
-    function drawStations() {
-      [[60, '🍝', 'PASTA'], [130, '🍗', 'CHKN'], [200, '🥬', 'VEG']].forEach(([x, icon, label]) => {
-        outline(x-12, 82, 24, 22, C.woodLight);
-        rect(x-12, 82, 24, 22, C.wood);
-        rect(x-10, 84, 20, 18, C.woodLight);
-        text(icon, x-6, 96, 10, '#fff');
-        text(label, x-14, 110, 5, '#888');
-      });
-    }
-    
-    // Kitchen
-    function drawKitchen() {
-      [65, 135, 205].forEach((x, i) => {
-        // Stove
-        rect(x-15, 180, 30, 10, '#222');
-        // Pot
-        rect(x-8, 165, 16, 12, C.potDark);
-        rect(x-8, 165, 16, 10, C.pot);
-        rect(x-10, 163, 20, 4, C.potDark);
-        // Fire
-        if (Math.floor(state.frame / 10) % 2 === 0) {
-          rect(x-3, 193, 3, 4, C.fire);
-          rect(x+1, 194, 2, 3, C.fireInner);
-        }
-        // Steam
-        text('♨', x-4, 158, 8, 'rgba(255,255,255,0.3)');
-      });
-    }
-    
-    // Pixel character - chibi style
-    function char(x, y, skin, hair, body, bodyDark, apronColor, hasApron, trayIcon, isWalking) {
-      const bounce = isWalking ? Math.sin(state.frame * 0.3) * 1 : 0;
-      
-      // Shadow
-      rect(x-6, y+14, 12, 2, C.shadow);
-      
-      // Body
-      outline(x-5, y+4, 10, 10, C.outline);
-      rect(x-5, y+4, 10, 10, body);
-      rect(x-4, y+5, 8, 7, bodyDark);
-      
-      // Apron
-      if (hasApron) {
-        rect(x-4, y+8, 8, 5, apronColor);
-      }
-      
-      // Head
-      outline(x-4, y-4, 8, 8, C.outline);
-      rect(x-4, y-4, 8, 8, skin);
-      
-      // Hair
-      rect(x-5, y-6, 10, 3, hair);
-      rect(x-4, y-5, 2, 2, hair);
-      
-      // Eyes (just 2 dots!)
-      rect(x-2, y-1, 1, 1, '#222');
-      rect(x+1, y-1, 1, 1, '#222');
-      
-      // Tray
-      if (trayIcon) {
-        text(trayIcon, x-4, y-8, 6, '#fff');
-      }
-    }
-    
-    function chef(x, y) {
-      // Shadow
-      rect(x-6, y+14, 12, 2, C.shadow);
-      
-      // Body
-      outline(x-5, y+4, 10, 10, C.outline);
-      rect(x-5, y+4, 10, 10, C.chefWhite);
-      rect(x-4, y+5, 8, 7, '#e8e8e8');
-      
-      // Head
-      outline(x-4, y-4, 8, 8, C.outline);
-      rect(x-4, y-4, 8, 8, C.chefSkin);
-      
-      // Hat
-      rect(x-5, y-9, 10, 5, C.chefHatDark);
-      rect(x-4, y-12, 8, 4, C.chefHat);
-      
-      // Eyes
-      rect(x-2, y-1, 1, 1, '#222');
-      rect(x+1, y-1, 1, 1, '#222');
-      
-      // Arms
-      const swing = Math.sin(state.frame * 0.15) * 2;
-      rect(x-7, y+5 + swing, 2, 6, C.chefSkin);
-      rect(x+5, y+5 - swing, 2, 6, C.chefSkin);
-    }
-    
-    // Customer with bubble
-    function customer(x, y, label) {
-      const walking = state.step > 0 && state.step < 4;
-      const bounce = walking ? Math.sin(state.frame * 0.3) * 1 : 0;
-      
-      // Shadow
-      rect(x-6, y+16, 12, 2, C.shadow);
-      
-      // Body
-      outline(x-5, y+5, 10, 11, C.outline);
-      rect(x-5, y+5, 10, 11, C.customer);
-      rect(x-4, y+6, 8, 8, C.customerDark);
-      
-      // Head
-      outline(x-4, y-4, 8, 8, C.outline);
-      rect(x-4, y-4, 8, 8, C.skin);
-      
-      // Hair
-      rect(x-5, y-6, 10, 3, C.customerHair);
-      
-      // Eyes
-      rect(x-2, y-1, 1, 1, '#222');
-      rect(x+1, y-1, 1, 1, '#222');
-      
-      // Legs
-      const legSwing = walking ? Math.sin(state.frame * 0.2) * 2 : 0;
-      rect(x-3, y+15, 2, 3 + legSwing, '#333');
-      rect(x+1, y+15, 2, 3 - legSwing, '#333');
-      
-      // Bubble
-      if (label) {
-        rect(x-20, y-22, 40, 14, '#fff');
-        rect(x-2, y-10, 4, 4, '#fff');
-        text(label, x-16, y-12, 5, '#000');
-      }
-    }
-    
-    // Cashier
-    function cashier(x, y) {
-      rect(x-6, y+14, 12, 2, C.shadow);
-      outline(x-5, y+4, 10, 11, C.outline);
-      rect(x-5, y+4, 10, 11, C.cashier);
-      rect(x-4, y+5, 8, 8, C.cashierDark);
-      outline(x-4, y-4, 8, 8, C.outline);
-      rect(x-4, y-4, 8, 8, C.gold);
-      rect(x-2, y-1, 1, 1, '#222');
-      rect(x+1, y-1, 1, 1, '#222');
-    }
-    
-    // Register
-    function register(x, y) {
-      rect(x-15, y, 30, 18, '#222');
-      rect(x-13, y+2, 26, 10, C.screen);
-      text(state.screen, x-11, y+9, 5, C.screenGreen);
-    }
-    
-    // Progress
-    function drawProgress() {
-      [[80, 'PSTA'], [150, 'CHKN'], [220, 'VEG'], [330, 'PAY']].forEach(([x, label], i) => {
-        const active = state.step === i + 1;
-        const done = state.step > i + 1;
-        const c = done ? '#22c55e' : active ? '#ffd93d' : '#333';
-        const s = done ? '#166534' : active ? '#a16207' : '#444';
-        outline(x-4, 8, 8, 8, s);
-        rect(x-4, 8, 8, 8, c);
-        text(label, x-12, 24, 4, '#666');
-      });
-    }
-    
-    // Main draw
     function draw() {
-      // Clear
-      ctx.fillStyle = C.bg;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      x.fillStyle = '#1a1a2e'; x.fillRect(0, 0, 800, 480);
       
-      drawWall();
-      drawFloor();
-      drawCounter();
-      drawStations();
-      drawKitchen();
+      // Wall
+      rect(20, 50, C.wall);
+      for(let i=20; i<780; i+=30) { rect(25, 40, '#3d3d5c'); }
       
-      // Characters
-      chef(70, POS.chefY);
-      chef(140, POS.chefY);
-      chef(210, POS.chefY);
+      // Floor
+      for(let y=70; y<240; y+=12) {
+        for(let x=0; x<400; x+=12) {
+          x.fillStyle = ((x+y)/12)%2===0 ? C.floor1 : C.floor2;
+          x.fillRect(x*2, y*2, 11*2, 11*2);
+        }
+      }
       
-      char(state.waiterX, POS.waiterY, C.skin, '#4a3728', C.waiter, C.waiterDark, C.apron, true, state.tray, false);
-      customer(state.customerX, POS.customerY, state.step > 0 && state.step < 4 ? ['PSTA', 'CHKN', 'VEG'][state.step - 1] : '');
+      // Counter
+      rect(72, 6, C.counter);
+      x.fillStyle = 'rgba(180,220,255,0.15)'; x.fillRect(44, 81*2, 712*2, 50*2);
       
-      cashier(350, POS.customerY);
-      register(335, POS.customerY + 20);
+      // Food stations
+      [[60,'🍝','PASTA'],[130,'🍗','CHKN'],[200,'🥬','VEG']].forEach(([x,i,l])=>{
+        rect(82, 22, C.wood); txt(i, x+4, 95, 20);
+        txt(l, x-5, 110, 8, '#888');
+      });
       
-      drawProgress();
+      // Kitchen
+      [65,135,205].forEach(x=>{ rect(180, 10, '#222'); });
       
-      // Title
-      text('PIADA', 150, 14, 8, '#ffd93d');
+      // Characters (using emoji for simplicity)
+      txt('👨‍🍳', 70, 165, 32); txt('👨‍🍳', 140, 165, 32); txt('👨‍🍳', 210, 165, 32);
+      txt('🧑', st.wx/2+2, 105, 24);
+      txt('🧑', st.cx/2+2, 80, 24);
+      txt('👩', 350, 80, 24);
       
-      state.frame++;
+      // Register
+      rect(335, 20, '#222');
+      txt(st.screen, 340, 100, 10, '#4ade80');
+      
+      // Progress
+      [[80,'PSTA'],[150,'CHKN'],[220,'VEG'],[330,'PAY']].forEach(([dx,l],i)=>{
+        let a = st.step===i+1, d = st.step>i+1;
+        txt(d?'✓':(a?'●':'○'), dx, 15, 10, d?'#4ade80':(a?'#ffd93d':'#666'));
+        txt(l, dx-5, 28, 6, '#666');
+      });
+      
+      txt('🍝 PIADA', 150, 15, 16, '#ffd93d');
+      if(st.tray) txt(st.tray, st.wx/2, 95, 12);
+      
+      st.f++;
       requestAnimationFrame(draw);
     }
     
-    // Animation
     async function run() {
-      while (true) {
-        state.step = 0;
-        state.customerX = POS.start;
-        state.waiterX = 90;
-        state.tray = '';
-        state.screen = '$0';
-        
-        await sleep(1000);
-        
-        // Step 1
-        state.step = 1;
-        await move('customerX', POS.pasta, 600);
-        await move('waiterX', POS.pasta - 10, 400);
-        state.tray = '🍝';
-        await sleep(400);
-        
-        // Step 2
-        state.step = 2;
-        await move('customerX', POS.chicken, 600);
-        await move('waiterX', POS.chicken - 10, 400);
-        state.tray = '🍝🍗';
-        await sleep(400);
-        
-        // Step 3
-        state.step = 3;
-        await move('customerX', POS.veggie, 600);
-        await move('waiterX', POS.veggie - 10, 400);
-        state.tray = '🍝🍗🥬';
-        await sleep(400);
-        
-        // Step 4
-        state.step = 4;
-        await move('customerX', POS.cashier, 600);
-        await move('waiterX', POS.cashier - 20, 400);
-        
-        state.screen = '$25';
-        await sleep(500);
-        state.screen = 'OK!';
-        
-        await sleep(800);
-        
-        // Leave
-        await move('customerX', POS.cashier + 30, 300);
-        
-        state.screen = '$0';
-        await sleep(500);
+      while(1) {
+        st.step=0; st.cx=P.s; st.wx=90; st.tray=''; st.screen='$0';
+        await sl(1000);
+        st.step=1;
+        await mv('cx', P.p, 600); await mv('wx', P.p-10, 400);
+        st.tray='🍝'; await sl(400);
+        st.step=2;
+        await mv('cx', P.ch, 600); await mv('wx', P.ch-10, 400);
+        st.tray='🍝🍗'; await sl(400);
+        st.step=3;
+        await mv('cx', P.v, 600); await mv('wx', P.v-10, 400);
+        st.tray='🍝🍗🥬'; await sl(400);
+        st.step=4;
+        await mv('cx', P.ca, 600); await mv('wx', P.ca-20, 400);
+        st.screen='$25'; await sl(500);
+        st.screen='OK!'; await sl(800);
+        await mv('cx', P.ca+30, 300);
+        st.screen='$0'; await sl(500);
       }
     }
+    function mv(p, t, d) { return new Promise(r=>{ let s=st[p], T=Date.now(); (function F(){ let q=Math.min((Date.now()-T)/d,1); st[p]=s+(t-s)*(1-Math.pow(1-q,3)); q<1?requestAnimationFrame(F):r(); })(); }); }
+    function sl(t) { return new Promise(r=>setTimeout(r,t)); }
     
-    function move(prop, target, dur) {
-      return new Promise(r => {
-        const start = state[prop], st = Date.now();
-        function t() {
-          const p = Math.min((Date.now() - st) / dur, 1);
-          state[prop] = start + (target - start) * (1 - Math.pow(1 - p, 3));
-          if (p < 1) requestAnimationFrame(t); else r();
-        }
-        t();
-      });
-    }
-    
-    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-    
-    draw();
-    run();
-  </script>
-</body>
-</html>
+    draw(); run();
+  </script></body></html>
