@@ -4,35 +4,35 @@
   <meta charset="UTF-8">
   <title>Piada Kitchen</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
     * { margin: 0; padding: 0; }
     body { background: #1a1a2e; min-height: 100vh; display: flex; justify-content: center; align-items: center; }
     canvas { image-rendering: pixelated; }
   </style>
 </head>
 <body>
-  <canvas id="g"></canvas>
+  <canvas id="game"></canvas>
+
   <script>
-    const c = document.getElementById('g');
-    const x = c.getContext('2d');
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
     
-    // 关键：pixelSize = 6
-    const pixelSize = 6;
+    // 像素大小
+    const pixelSize = 4;
     const W = 400, H = 240;
-    c.width = W * pixelSize;
-    c.height = H * pixelSize;
-    c.style.width = W * 2 + 'px';
-    c.style.height = H * 2 + 'px';
-    x.imageSmoothingEnabled = false;
+    canvas.width = W * pixelSize;
+    canvas.height = H * pixelSize;
+    canvas.style.width = W * 2 + 'px';
+    canvas.style.height = H * 2 + 'px';
+    ctx.imageSmoothingEnabled = false;
     
-    // 画一个像素点
-    function p(x, y, color) {
-      x.fillStyle = color;
-      x.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
+    // 画一个像素点 - 注意参数名不冲突
+    function drawPixel(px, py, color) {
+      ctx.fillStyle = color;
+      ctx.fillRect(px * pixelSize, py * pixelSize, pixelSize, pixelSize);
     }
     
     // 角色图案数组 - 1表示画，0表示透明
-    // 厨师图案 (10x12)
+    // 厨师图案 (10宽 x 12高)
     const chefPattern = [
       [0,0,0,0,1,1,1,1,0,0],
       [0,0,1,1,1,1,1,1,1,0],
@@ -48,12 +48,12 @@
       [0,0,0,1,1,1,1,0,0,0],
     ];
     
-    // 画角色的函数
+    // 画角色函数
     function drawChar(cx, cy, pattern, color) {
       for(let py = 0; py < pattern.length; py++) {
         for(let px = 0; px < pattern[py].length; px++) {
           if(pattern[py][px]) {
-            p(cx + px, cy + py, color);
+            drawPixel(cx + px, cy + py, color);
           }
         }
       }
@@ -70,55 +70,55 @@
       cashier: '#4ab84a', gold: '#ffd700'
     };
     
-    let st = { cx: 30, wx: 90, step: 0, f: 0 };
-    const POS = { start: 30, p: 70, ch: 140, v: 210, ca: 330 };
+    let state = { customerX: 30, waiterX: 90, step: 0, frame: 0 };
+    const POS = { start: 30, pasta: 70, chicken: 140, veggie: 210, cashier: 330 };
     
-    function rect(y, h, color) {
-      x.fillStyle = color;
-      x.fillRect(0, y*pixelSize, 800*pixelSize, h*pixelSize);
+    function fillRect(x, y, w, h, color) {
+      ctx.fillStyle = color;
+      ctx.fillRect(x * pixelSize, y * pixelSize, w * pixelSize, h * pixelSize);
     }
     
     function draw() {
       // Clear
-      rect(0, 240, C.bg);
+      fillRect(0, 0, 800, 480, C.bg);
       
       // Wall
-      rect(20, 50, C.wall);
+      fillRect(0, 20, 800, 50, C.wall);
       
       // Floor
-      for(let y=70; y<240; y+=12) {
-        for(let ix=0; ix<400; ix+=12) {
-          rect(y, 11, ((ix+y)/12)%2===0 ? C.floor1 : C.floor2);
+      for(let y = 70; y < 240; y += 12) {
+        for(let x = 0; x < 400; x += 12) {
+          fillRect(x, y, 11, 11, ((x + y) / 12) % 2 === 0 ? C.floor1 : C.floor2);
         }
       }
       
       // Counter
-      rect(145, 10, C.counter);
-      x.fillStyle = 'rgba(180,220,255,0.15)';
-      x.fillRect(44*pixelSize, 155*pixelSize, 712*pixelSize, 40*pixelSize);
+      fillRect(40, 145, 720, 10, C.counter);
+      ctx.fillStyle = 'rgba(180,220,255,0.15)';
+      ctx.fillRect(40 * pixelSize, 155 * pixelSize, 720 * pixelSize, 40 * pixelSize);
       
-      // Stations
-      [[60,'PASTA'],[130,'CHICKEN'],[200,'VEG']].forEach(([sx,l])=>{
-        rect(160, 25, C.wood);
+      // Food stations
+      [[60,'PASTA'],[130,'CHICKEN'],[200,'VEG']].forEach(([sx,label])=>{
+        fillRect(sx-15, 160, 30, 25, C.wood);
       });
       
       // Kitchen
       [65,135,205].forEach(sx=>{
-        rect(340, 15, '#222');
+        fillRect(sx-15, 340, 30, 15, '#222');
       });
       
-      // 画厨师 (用数组)
+      // Characters - 用数组画
       drawChar(70, 150, chefPattern, C.chefWhite);
       drawChar(140, 150, chefPattern, C.chefWhite);
       drawChar(210, 150, chefPattern, C.chefWhite);
       
-      // 顾客
-      drawChar(st.cx, 80, chefPattern, C.customer);
+      // Customer
+      drawChar(state.customerX, 80, chefPattern, C.customer);
       
-      // 服务员
-      drawChar(st.wx, 110, chefPattern, C.waiter);
+      // Waiter
+      drawChar(state.waiterX, 110, chefPattern, C.waiter);
       
-      st.f++;
+      state.frame++;
       requestAnimationFrame(draw);
     }
     
