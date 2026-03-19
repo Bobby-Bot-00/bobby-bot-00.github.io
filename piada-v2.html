@@ -31,7 +31,7 @@
     const ctx = canvas.getContext('2d');
     
     // 2x scale for crisp pixels
-    const SCALE = 6;
+    const SCALE = 2;
     const W = 400, H = 240;
     canvas.width = W * SCALE;
     canvas.height = H * SCALE;
@@ -178,20 +178,25 @@
       // Shadow
       rect(x-6, y+14, 12, 2, C.shadow);
       
-      // Body
+      // Body - 保持原位置，加更多小块
       outline(x-5, y+4, 10, 10, C.outline);
-      rect(x-5, y+4, 10, 10, C.chefWhite);
+      rect(x-5, y+4, 4, 4, C.chefWhite);
+      rect(x-1, y+4, 4, 4, C.chefWhite);
+      rect(x-5, y+8, 4, 4, C.chefWhite);
+      rect(x-1, y+8, 4, 4, C.chefWhite);
       rect(x-4, y+5, 8, 7, '#e8e8e8');
       
-      // Head
+      // Head - 保持原位置
       outline(x-4, y-4, 8, 8, C.outline);
       rect(x-4, y-4, 8, 8, C.chefSkin);
       
-      // Hat
+      // Hat - 多层更有层次
       rect(x-5, y-9, 10, 5, C.chefHatDark);
       rect(x-4, y-12, 8, 4, C.chefHat);
+      rect(x-3, y-14, 6, 2, C.chefHat);
+      rect(x-2, y-16, 4, 2, C.chefHat);
       
-      // Eyes
+      // Eyes - 保持
       rect(x-2, y-1, 1, 1, '#222');
       rect(x+1, y-1, 1, 1, '#222');
       
