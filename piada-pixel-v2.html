@@ -75,8 +75,8 @@ function wall() {
   for(let i=25; i<W-20; i+=28) px(i, 10, 2, 30, C.wallL); 
 }
 
-// 地
-function floor() { for(let y=50; y<H; y+=10) for(let i=0; i<W; i+=10) { const e=((i/10)+(y/10))%2===0; px(i, y, 9, 9, e?C.fl1:C.fl2); } }
+// 地 - 从柜台下方开始
+function floor() { for(let y=130; y<H; y+=10) for(let i=0; i<W; i+=10) { const e=((i/10)+(y/10))%2===0; px(i, y, 9, 9, e?C.fl1:C.fl2); } }
 
 // 食物图案
 const pastaP=[[0,0,0,1,1,1,1,0,0],[0,0,1,1,2,2,1,1,0],[0,1,2,2,2,2,2,1,0],[1,1,2,3,3,2,2,1,1],[0,1,2,2,2,2,2,1,0],[0,0,1,1,2,2,1,0,0],[0,0,4,4,4,4,0,0,0],[4,4,4,4,4,4,4,4,0]];
@@ -95,33 +95,30 @@ const foodGrid = [
 ];
 
 function station() {
-  // 大桌子 - 橙色木质
-  px(15, 75, 300, 6, C.woodEdge);
-  px(15, 81, 300, 16, C.wood);
-  px(15, 81, 300, 2, C.woodL);
+  // 大桌子 - 橙色木质，在画面中部偏下
+  px(15, 95, 300, 8, C.woodEdge);
+  px(15, 103, 300, 22, C.wood);
+  px(15, 103, 300, 3, C.woodL);
   
-  // 食物格子 - 2行, 8列
-  const cellW = 18, cellH = 12;
-  const startX = 20, startY = 58;
+  // 食物格子 - 2行, 8列，放在柜台上
+  const cellW = 18, cellH = 14;
+  const startX = 20, startY = 55;
   let idx = 0;
   for(let row = 0; row < 2; row++) {
     for(let col = 0; col < 8; col++) {
       const fx = startX + col * cellW;
       const fy = startY + row * cellH;
-      // 格子边框
+      // 格子背景
       px(fx, fy, cellW, cellH, C.woodD);
-      px(fx+1, fy+1, cellW-2, cellH-2, C.wood);
-      // 食物
+      px(fx+1, fy+1, cellW-2, cellH-2, '#2a1a10');
+      // 食物 - 居中
       if(idx < foodGrid.length) {
         const food = foodGrid[idx];
-        pat(fx + 4, fy + 1, food.pat, food.col);
+        pat(fx + 4, fy + 3, food.pat, food.col);
       }
       idx++;
     }
   }
-  
-  // 桌子标签
-  txt('PIADA COUNTER', 100, 100, 4, C.woodL);
 }
 
 // 厨房
@@ -167,7 +164,7 @@ function progress(v) { STEPS.forEach((s,i) => { const sx=60+i*72,done=v>i+1,acti
 
 // 状态
 let S = {step:0, custX:30, waiterX:100, reg:'$0', bubble:''};
-const POS = {start:30, pasta:70, chicken:145, veggie:220, cash:295};
+const POS = {start:30, pasta:75, chicken:150, veggie:225, cash:295};
 
 function draw() {
   ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W*PX, H*PX);
@@ -194,16 +191,16 @@ function draw() {
   px(130, 172, 16, 2, '#111'); pat(136, 158, chefP, chefC);
   px(204, 172, 16, 2, '#111'); pat(210, 158, chefP, chefC);
 
-  // 服务员 - 柜台和厨房之间移动
+  // 服务员 - 柜子和厨房之间移动
   const waiterBr = Math.sin(f*0.15) * 0.3;
-  px(S.waiterX-5, 132, 10, 2, '#111');
-  pat(S.waiterX-4, 118+waiterBr, waiterP, waiterC);
+  px(S.waiterX-5, 150, 10, 2, '#111');
+  pat(S.waiterX-4, 136+waiterBr, waiterP, waiterC);
   
   // 顾客 - 柜台上方行走
   const custBr = Math.sin(f*0.1) * 0.5;
-  px(S.custX-6, 68, 12, 2, '#111');
-  pat(S.custX-4, 54+custBr, custP, custC);
-  if(S.bubble) bubble(S.custX, 36, S.bubble);
+  px(S.custX-6, 88, 12, 2, '#111');
+  pat(S.custX-4, 74+custBr, custP, custC);
+  if(S.bubble) bubble(S.custX, 56, S.bubble);
 
   progress(S.step);
   txt('PIADA', 155, 6, 7, C.gold);
