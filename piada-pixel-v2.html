@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piada Kitchen - Pixel Art</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      background: #0a0a12; 
+      min-height: 100vh; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      overflow: hidden;
+    }
+    canvas { 
+      display: block;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <script>
+    // ═══════════════════════════════════════════
+    // PIXEL GRID SYSTEM
+    // ═══════════════════════════════════════════
+    const PIXEL = 4;
+    const W = 400, H = 240;
+    
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
+    canvas.width = W * PIXEL;
+    canvas.height = H * PIXEL;
+    canvas.style.width = W * 0.8 + 'px';
+    canvas.style.height = H * 0.8 + 'px';
+    ctx.imageSmoothingEnabled = false;
+    
+    // ═══════════════════════════════════════════
+    // PALETTE - 氛围像素风
+    // ═══════════════════════════════════════════
+    const C = {
+      skyTop:    '#0a0a12',
+      skyBot:    '#12121f',
+      wall:      '#1e1e32',
+      wallLine:  '#2a2a40',
+      floor1:    '#1a1a28',
+      floor2:    '#222230',
+      wood:      '#7a4a20',
+      woodDark:  '#5a3a18',
+      woodLight: '#9a6a30',
+      fire:      '#ff4010',
+      fireInner: '#ffa020',
+      pot:       '#4a4a5a',
+      potDark:   '#3a3a4a',
+      pasta:     '#e8a820',
+      pastaD:    '#c88010',
+      noodle:    '#ffd040',
+      chicken:   '#c8901a',
+      chickenD:  '#a07010',
+      bone:      '#e8d8a0',
+      veg:       '#20a030',
+      vegL:      '#40c050',
+      bowl:      '#a05020',
+      bowlD:     '#703818',
+      skin:      '#e0b090',
+      skinD:     '#c89070',
+      hat:       '#f0f0f0',
+      hatD:      '#c0c0c0',
+      body:      '#e8e8f0',
+      bodyD:     '#c8c8d0',
+      hair:      '#3a2818',
+      hairO:     '#c07020',
+      waiterB:   '#3a3a5a',
+      waiterBD:  '#2a2a4a',
+      apron:     '#8a4020',
+      custB:     '#6080d8',
+      custBD:    '#4060b0',
+      cashB:     '#40a040',
+      reg:       '#181818',
+      scr:       '#081808',
+      scrT:      '#30d060',
+      gold:      '#ffd020',
+      white:     '#f0f0f0',
+    };
+    
+    // ═══════════════════════════════════════════
+    // UTILS
+    // ═══════════════════════════════════════════
+    let frame = 0;
+    
+    function px(x, y, w, h, col) {
+      ctx.fillStyle = col;
+      ctx.fillRect(x * PIXEL, y * PIXEL, (w||1) * PIXEL, (h||1) * PIXEL);
+    }
+    
+    function txt(t, x, y, s, col) {
+      ctx.fillStyle = col;
+      ctx.font = `${s * PIXEL}px "Press Start 2P"`;
+      ctx.fillText(t, x * PIXEL, y * PIXEL);
+    }
+    
+    function drawPat(px, py, pat, cols) {
+      for(let r = 0; r < pat.length; r++) {
+        for(let c = 0; c < pat[r].length; c++) {
+          const v = pat[r][c];
+          if(v > 0 && cols[v]) px(px + c, py + r, 1, 1, cols[v]);
+        }
+      }
+    }
+    
+    // ═══════════════════════════════════════════
+    // BACKGROUND + PARTICLES
+    // ═══════════════════════════════════════════
+    const stars = Array.from({length: 25}, () => ({
+      x: Math.random() * W,
+      y: Math.random() * 60,
+      spd: 0.05 + Math.random() * 0.1,
+      ph: Math.random() * Math.PI * 2,
+      big: Math.random() > 0.8
+    }));
+    
+    function drawBG() {
+      const g = ctx.createLinearGradient(0, 0, 0, H * PIXEL);
+      g.addColorStop(0, C.skyTop);
+      g.addColorStop(1, C.skyBot);
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, W * PIXEL, H * PIXEL);
+      
+      stars.forEach(s => {
+        const a = 0.2 + 0.6 * Math.abs(Math.sin(frame * 0.03 + s.ph));
+        ctx.fillStyle = s.big ? `rgba(255,255,200,${a})` : `rgba(150,150,180,${a * 0.5})`;
+        px(s.x, s.y, 1, 1, ctx.fillStyle);
+        s.y -= s.spd;
+        s.x += Math.sin(frame * 0.015 + s.ph) * 0.05;
+        if(s.y < -3) { s.y = 55; s.x = Math.random() * W; }
+      });
+    }
+    
+    // ═══════════════════════════════════════════
+    // SCENERY
+    // ═══════════════════════════════════════════
+    function drawWall() {
+      px(0, 12, W, 38, C.wall);
+      for(let x = 30; x < W - 20; x += 32) {
+        px(x, 14, 1, 34, C.wallLine);
+      }
+    }
+    
+    function drawFloor() {
+      for(let y = 50; y < H; y += 10) {
+        for(let x = 0; x < W; x += 10) {
+          const e = ((x/10) + (y/10)) % 2 === 0;
+          px(x, y, 9, 9, e ? C.floor1 : C.floor2);
+        }
+      }
+    }
+    
+    // 食物图案
+    const pastaPat = [
+      [0,0,0,1,1,1,1,0,0],
+      [0,0,1,2,2,2,1,0,0],
+      [0,1,2,2,3,2,2,1,0],
+      [1,1,2,3,3,3,2,1,1],
+      [0,1,2,2,3,2,2,1,0],
+      [0,0,1,2,2,2,1,0,0],
+      [0,0,4,4,4,4,0,0,0],
+      [4,4,4,4,4,4,4,4,0],
+    ];
+    const pastaCol = {1:C.pasta, 2:C.noodle, 3:C.pastaD, 4:C.bowl};
+    
+    const chickPat = [
+      [0,0,1,1,1,1,0,0],
+      [0,1,1,2,2,1,1,0],
+      [1,1,2,2,2,2,1,1],
+      [1,2,2,3,3,2,2,1],
+      [1,1,2,2,2,2,1,1],
+      [0,1,1,2,2,1,1,0],
+      [0,0,4,4,4,0,0,0],
+      [0,4,4,4,4,4,0,0],
+      [0,5,5,5,5,5,0,0],
+      [5,5,5,5,5,5,5,0],
+    ];
+    const chickCol = {1:C.chicken, 2:C.chickenD, 3:C.bone, 4:C.chickenD, 5:C.bowl};
+    
+    const vegPat = [
+      [0,1,1,1,1,1,0],
+      [1,2,1,1,1,2,1],
+      [1,1,1,2,1,1,1],
+      [0,1,1,1,1,1,0],
+      [0,3,3,3,3,3,0],
+      [3,3,3,3,3,3,3],
+    ];
+    const vegCol = {1:C.veg, 2:C.vegL, 3:C.bowl};
+    
+    function drawStation() {
+      px(15, 60, 370, 4, C.woodDark);
+      px(15, 64, 370, 18, C.wood);
+      px(15, 64, 370, 2, C.woodLight);
+      
+      drawPat(52, 36, pastaPat, pastaCol);
+      drawPat(100, 36, pastaPat, pastaCol);
+      drawPat(165, 35, chickPat, chickCol);
+      drawPat(210, 35, chickPat, chickCol);
+      drawPat(275, 37, vegPat, vegCol);
+      drawPat(320, 37, vegPat, vegCol);
+    }
+    
+    // ═══════════════════════════════════════════
+    // KITCHEN
+    // ═══════════════════════════════════════════
+    function drawKitchen() {
+      [55, 130, 205].forEach(x => {
+        px(x - 12, 168, 24, 8, C.woodDark);
+        px(x - 6, 155, 12, 10, C.potDark);
+        px(x - 6, 155, 12, 8, C.pot);
+        px(x - 8, 153, 16, 3, C.potDark);
+        
+        const f = Math.floor(frame / 7) % 4;
+        if(f === 0) px(x, 178, 4, 3, C.fire);
+        else if(f === 1) { px(x - 1, 177, 3, 4, C.fire); px(x + 2, 178, 2, 2, C.fireInner); }
+        else if(f === 2) { px(x, 178, 4, 2, C.fire); px(x + 1, 177, 2, 2, C.fireInner); }
+        else px(x, 179, 4, 2, C.fireInner);
+        
+        const sy = 150 - (frame % 22);
+        ctx.fillStyle = 'rgba(255,255,255,0.25)';
+        ctx.fillRect((x + 2) * PIXEL, sy * PIXEL, PIXEL, PIXEL);
+      });
+    }
+    
+    // ═══════════════════════════════════════════
+    // CHARACTERS
+    // ═══════════════════════════════════════════
+    const chefPat = [
+      [0,0,1,1,1,1,1,0,0],
+      [0,1,1,1,1,1,1,1,0],
+      [0,1,1,1,1,1,1,1,0],
+      [0,0,2,2,2,2,2,0,0],
+      [0,0,2,3,3,3,2,0,0],
+      [0,0,2,0,0,0,2,0,0],
+      [0,4,4,4,4,4,4,4,0],
+      [0,4,4,4,4,4,4,4,0],
+      [0,4,4,4,4,4,4,4,0],
+      [0,0,5,5,0,5,5,0,0],
+    ];
+    const chefCol = {1:'#ffffff', 2:'#f8d0b0', 3:'#202030', 4:'#f0f0f8', 5:'#d0d0d8'};
+    
+    const waiterPat = [
+      [0,0,1,1,1,1,1,0,0],
+      [0,1,1,1,1,1,1,1,0],
+      [0,1,1,1,1,1,1,1,0],
+      [0,0,2,2,2,2,2,0,0],
+      [0,0,2,3,3,3,2,0,0],
+      [0,0,2,0,0,0,2,0,0],
+      [0,4,4,4,4,4,4,4,0],
+      [0,4,4,4,4,4,4,4,0],
+      [0,5,5,5,5,5,5,5,0],
+      [0,5,5,5,5,5,5,5,0],
+      [0,0,6,6,0,6,6,0,0],
+    ];
+    const waiterCol = {1:C.hair, 2:C.skin, 3:'#222', 4:C.waiterB, 5:C.apron, 6:C.skin};
+    
+    const custPat = [
+      [0,0,1,1,1,1,1,0,0],
+      [0,1,1,1,1,1,1,1,0],
+      [0,1,1,1,1,1,1,1,0],
+      [0,0,2,2,2,2,2,0,0],
+      [0,0,2,3,3,3,2,0,0],
+      [0,0,2,0,0,0,2,0,0],
+      [0,4,4,4,4,4,4,4,0],
+      [0,4,4,4,4,4,4,4,0],
+      [0,4,4,4,4,4,4,4,0],
+      [0,0,4,4,0,4,4,0,0],
+    ];
+    const custCol = {1:'#e07820', 2:'#f0c8a0', 3:'#1a1a2a', 4:'#5888e8'};
+    
+    const cashPat = [
+      [0,0,1,1,1,1,1,0,0],
+      [0,1,1,1,1,1,1,1,0],
+      [0,1,1,1,1,1,1,1,0],
+      [0,0,2,2,2,2,2,0,0],
+      [0,0,2,3,3,3,2,0,0],
+      [0,0,2,0,0,0,2,0,0],
+      [0,4,4,4,4,4,4,4,0],
+      [0,4,4,4,4,4,4,4,0],
+      [0,4,4,4,4,4,4,4,0],
+      [0,4,4,4,4,4,4,4,0],
+    ];
+    const cashCol = {1:'#5a4030', 2:'#f0c8a0', 3:'#1a1a2a', 4:'#40b040'};
+    
+    // ═══════════════════════════════════════════
+    // REGISTER
+    // ═══════════════════════════════════════════
+    function drawReg(x, y, str) {
+      px(x - 12, y, 24, 14, C.reg);
+      px(x - 10, y + 2, 20, 8, C.scr);
+      txt(str, x - 8, y + 8, 4, C.scrT);
+    }
+    
+    // ═══════════════════════════════════════════
+    // BUBBLE
+    // ═══════════════════════════════════════════
+    function drawBubble(x, y, str) {
+      px(x - 16, y, 32, 12, C.white);
+      px(x - 3, y + 10, 3, 3, C.white);
+      px(x - 1, y + 12, 1, 1, C.white);
+      txt(str, x - 12, y + 9, 4, '#222');
+    }
+    
+    // ═══════════════════════════════════════════
+    // PROGRESS
+    // ═══════════════════════════════════════════
+    const STEPS = ['PSTA', 'CHKN', 'VEG', 'PAY'];
+    
+    function drawProgress(step) {
+      STEPS.forEach((s, i) => {
+        const sx = 65 + i * 72;
+        const done = step > i + 1;
+        const active = step === i + 1;
+        const col = done ? '#28c060' : active ? C.gold : '#333';
+        px(sx - 4, 6, 8, 7, col);
+        txt(s, sx - 9, 20, 3, '#777');
+      });
+    }
+    
+    // ═══════════════════════════════════════════
+    // STATE
+    // ═══════════════════════════════════════════
+    const S = { step: 0, custX: 30, regStr: '$0', bubble: '' };
+    const P = {pasta: 70, chicken: 145, veggie: 215, cash: 330};
+    
+    // ═══════════════════════════════════════════
+    // MAIN DRAW
+    // ═══════════════════════════════════════════
+    function draw() {
+      ctx.fillStyle = C.skyTop;
+      ctx.fillRect(0, 0, W * PIXEL, H * PIXEL);
+      
+      drawBG();
+      drawWall();
+      drawFloor();
+      drawStation();
+      drawKitchen();
+      
+      // 厨师脚下阴影
+      px(52, 175, 16, 2, '#151520');
+      drawPat(58, 162, chefPat, chefCol);
+      px(124, 175, 16, 2, '#151520');
+      drawPat(130, 162, chefPat, chefCol);
+      px(196, 175, 16, 2, '#151520');
+      drawPat(202, 162, chefPat, chefCol);
+      
+      // 顾客脚下阴影
+      px(S.custX - 6, 85, 12, 2, '#181825');
+      const br = Math.sin(frame * 0.08) * 0.3;
+      drawPat(S.custX - 4, 72 + br, custPat, custCol);
+      if(S.bubble) drawBubble(S.custX, 55, S.bubble);
+      
+      // 收银
+      drawPat(325, 72, cashPat, cashCol);
+      drawReg(338, 92, S.regStr);
+      
+      drawProgress(S.step);
+      txt('PIADA', 152, 10, 7, C.gold);
+      
+      frame++;
+      requestAnimationFrame(draw);
+    }
+    
+    // ═══════════════════════════════════════════
+    // ANIMATION
+    // ═══════════════════════════════════════════
+    function moveTo(prop, target, dur) {
+      return new Promise(res => {
+        let start = S[prop], st = Date.now();
+        (function t() {
+          const p = Math.min((Date.now() - st) / dur, 1);
+          S[prop] = start + (target - start) * (1 - Math.pow(1-p, 3));
+          if(p < 1) requestAnimationFrame(t); else res();
+        })();
+      });
+    }
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+    
+    async function run() {
+      while(true) {
+        S.step = 0; S.custX = 30; S.regStr = '$0'; S.bubble = '';
+        await sleep(1200);
+        
+        S.step = 1; S.bubble = 'PSTA';
+        await moveTo('custX', P.pasta, 600);
+        await sleep(500);
+        
+        S.step = 2; S.bubble = 'CHKN';
+        await moveTo('custX', P.chicken, 600);
+        await sleep(500);
+        
+        S.step = 3; S.bubble = 'VEG';
+        await moveTo('custX', P.veggie, 600);
+        await sleep(500);
+        
+        S.step = 4; S.bubble = 'PAY';
+        await moveTo('custX', P.cash, 600);
+        await sleep(400);
+        
+        S.regStr = '$25';
+        await sleep(350);
+        S.regStr = 'OK!';
+        await sleep(600);
+        
+        await moveTo('custX', P.cash + 40, 300);
+        S.bubble = '';
+        S.regStr = '$0';
+        await sleep(500);
+      }
+    }
+    
+    draw();
+    run();
+  </script>
+</body>
+</html>
