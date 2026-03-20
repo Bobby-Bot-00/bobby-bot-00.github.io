@@ -15,25 +15,26 @@
 <script>
 const PX = 4, W = 400, H = 240;
 const cv = document.getElementById('g');
-const cx = cv.getContext('2d');
+const ctx = cv.getContext('2d');
 cv.width = W * PX; cv.height = H * PX;
 cv.style.width = W * 1.2 + 'px'; cv.style.height = H * 1.2 + 'px';
-cx.imageSmoothingEnabled = false;
+ctx.imageSmoothingEnabled = false;
 
-// 高对比度调色板
+// 调色板
 const C = {
-  bg: '#0d0d1a',
-  wall: '#3a3a5a',
-  wallL: '#4a4a7a',
-  fl1: '#1e1e32',
-  fl2: '#282840',
-  wood: '#9a6030',
-  woodD: '#6a4a20',
-  woodL: '#ba8040',
-  fire: '#ff5020',
-  fireY: '#ffcc00',
-  pot: '#6a6a7a',
-  potD: '#5a5a6a',
+  bg: '#0a0a14',
+  wall: '#2a2a48',
+  wallL: '#3a3a60',
+  fl1: '#18182a',
+  fl2: '#202035',
+  wood: '#b07840',
+  woodD: '#805020',
+  woodL: '#d09850',
+  woodEdge: '#503010',
+  fire: '#ff5525',
+  fireY: '#ffcc30',
+  pot: '#5a5a6a',
+  potD: '#4a4a5a',
   pasta: '#ffcc00',
   pastaD: '#cc8800',
   noodle: '#ffbb30',
@@ -50,6 +51,9 @@ const C = {
   hair: '#c07828',
   cust: '#7090e8',
   custD: '#5060b0',
+  waiter: '#5a4a6a',
+  waiterD: '#4a3a5a',
+  apron: '#9a5030',
   cash: '#50c060',
   scr: '#002200',
   scrT: '#40ff80',
@@ -57,21 +61,24 @@ const C = {
 };
 
 let f = 0;
-function px(x, y, w, h, col) { cx.fillStyle = col; cx.fillRect(x * PX, y * PX, (w||1) * PX, (h||1) * PX); }
-function txt(t, x, y, s, col) { cx.fillStyle = col; cx.font = (s * PX) + 'px monospace'; cx.fillText(t, x * PX, y * PX); }
+function px(x, y, w, h, col) { ctx.fillStyle = col; ctx.fillRect(x * PX, y * PX, (w||1) * PX, (h||1) * PX); }
+function txt(t, x, y, s, col) { ctx.fillStyle = col; ctx.font = (s * PX) + 'px monospace'; ctx.fillText(t, x * PX, y * PX); }
 function pat(x, y, p, co) { for(let r=0; r<p.length; r++) for(let c=0; c<p[r].length; c++) { const v=p[r][c]; if(v>0 && co[v]) px(x+c, y+r, 1, 1, co[v]); } }
 
 // 粒子
 const pts = [];
-for(let i=0; i<25; i++) pts.push({x: Math.random()*W, y: Math.random()*50, v: 0.05+Math.random()*0.15, a: Math.random()*6.28});
+for(let i=0; i<30; i++) pts.push({x: Math.random()*W, y: Math.random()*60, v: 0.05+Math.random()*0.12, a: Math.random()*6.28});
 
 // 墙
-function wall() { px(0, 12, W, 40, C.wall); for(let i=28; i<W-20; i+=28) px(i, 14, 2, 36, C.wallL); }
+function wall() { 
+  px(0, 8, W, 35, C.wall); 
+  for(let i=25; i<W-20; i+=28) px(i, 10, 2, 30, C.wallL); 
+}
 
 // 地
-function floor() { for(let y=52; y<H; y+=10) for(let i=0; i<W; i+=10) { const e=((i/10)+(y/10))%2===0; px(i, y, 9, 9, e?C.fl1:C.fl2); } }
+function floor() { for(let y=50; y<H; y+=10) for(let i=0; i<W; i+=10) { const e=((i/10)+(y/10))%2===0; px(i, y, 9, 9, e?C.fl1:C.fl2); } }
 
-// 食物
+// 食物图案
 const pastaP=[[0,0,0,1,1,1,1,0,0],[0,0,1,1,2,2,1,1,0],[0,1,2,2,2,2,2,1,0],[1,1,2,3,3,2,2,1,1],[0,1,2,2,2,2,2,1,0],[0,0,1,1,2,2,1,0,0],[0,0,4,4,4,4,0,0,0],[4,4,4,4,4,4,4,4,0]];
 const pastaC={1:C.pasta, 2:C.noodle, 3:C.pastaD, 4:C.bowl};
 const chickP=[[0,0,1,1,1,1,0,0],[0,1,1,2,2,1,1,0],[1,1,2,2,2,2,1,1],[1,2,2,3,3,2,2,1],[1,1,2,2,2,2,1,1],[0,1,1,2,2,1,1,0],[0,0,4,4,4,0,0,0],[0,4,4,4,4,4,0,0],[0,5,5,5,5,5,0,0],[5,5,5,5,5,5,5,0]];
@@ -79,33 +86,70 @@ const chickC={1:C.chick, 2:C.chickD, 3:C.bowl, 4:C.chickD, 5:C.bowl};
 const vegP=[[0,1,1,1,1,1,0],[1,2,1,1,1,2,1],[1,1,1,2,1,1,1],[0,1,1,1,1,1,0],[0,3,3,3,3,3,0],[3,3,3,3,3,3,3]];
 const vegC={1:C.veg, 2:C.vegL, 3:C.bowl};
 
+// 食物网格 - 2行x8列
+const foodGrid = [
+  {pat: pastaP, col: pastaC}, {pat: pastaP, col: pastaC}, {pat: chickP, col: chickC}, {pat: chickP, col: chickC},
+  {pat: vegP, col: vegC}, {pat: vegP, col: vegC}, {pat: pastaP, col: pastaC}, {pat: chickP, col: chickC},
+  {pat: vegP, col: vegC}, {pat: vegP, col: vegC}, {pat: pastaP, col: pastaC}, {pat: chickP, col: chickC},
+  {pat: vegP, col: vegC}, {pat: pastaP, col: pastaC}, {pat: chickP, col: chickC}, {pat: vegP, col: vegC},
+];
+
 function station() {
-  px(15, 60, 370, 4, C.woodD); px(15, 64, 370, 20, C.wood); px(15, 64, 370, 2, C.woodL);
-  pat(52, 36, pastaP, pastaC); pat(98, 36, pastaP, pastaC);
-  pat(162, 35, chickP, chickC); pat(206, 35, chickP, chickC);
-  pat(268, 37, vegP, vegC); pat(310, 37, vegP, vegC);
+  // 大桌子 - 橙色木质
+  px(15, 75, 300, 6, C.woodEdge);
+  px(15, 81, 300, 16, C.wood);
+  px(15, 81, 300, 2, C.woodL);
+  
+  // 食物格子 - 2行, 8列
+  const cellW = 18, cellH = 12;
+  const startX = 20, startY = 58;
+  let idx = 0;
+  for(let row = 0; row < 2; row++) {
+    for(let col = 0; col < 8; col++) {
+      const fx = startX + col * cellW;
+      const fy = startY + row * cellH;
+      // 格子边框
+      px(fx, fy, cellW, cellH, C.woodD);
+      px(fx+1, fy+1, cellW-2, cellH-2, C.wood);
+      // 食物
+      if(idx < foodGrid.length) {
+        const food = foodGrid[idx];
+        pat(fx + 4, fy + 1, food.pat, food.col);
+      }
+      idx++;
+    }
+  }
+  
+  // 桌子标签
+  txt('PIADA COUNTER', 100, 100, 4, C.woodL);
 }
 
-// 厨房火
+// 厨房
 function kitchen() {
-  [55, 128, 201].forEach(i => {
-    px(i-14, 168, 28, 8, C.woodD);
-    px(i-7, 154, 14, 12, C.potD); px(i-7, 154, 14, 10, C.pot); px(i-10, 152, 20, 3, C.potD);
+  // 灶台
+  [55, 130, 205].forEach(i => {
+    px(i-15, 168, 30, 10, C.woodD);
+    px(i-8, 152, 16, 14, C.potD); px(i-8, 152, 16, 12, C.pot); px(i-11, 150, 22, 3, C.potD);
+    // 火
     const v = Math.floor(f/8) % 4;
     if(v===0) { px(i-2, 180, 4, 4, C.fire); px(i+1, 181, 2, 2, C.fireY); }
     else if(v===1) { px(i-3, 179, 4, 5, C.fire); px(i, 180, 3, 3, C.fireY); }
     else if(v===2) { px(i-1, 180, 4, 3, C.fire); px(i+1, 179, 2, 3, C.fireY); }
     else { px(i-2, 181, 4, 2, C.fire); }
     // 蒸汽
-    const sy = 148 - (f % 24);
-    cx.fillStyle = 'rgba(255,255,200,0.35)'; cx.fillRect((i+4)*PX, sy*PX, PX, PX);
-    cx.fillStyle = 'rgba(255,255,200,0.25)'; cx.fillRect((i+9)*PX, (sy-4)*PX, PX, PX);
+    const sy = 146 - (f % 24);
+    ctx.fillStyle = 'rgba(255,255,200,0.35)'; ctx.fillRect((i+4)*PX, sy*PX, PX, PX);
+    ctx.fillStyle = 'rgba(255,255,200,0.25)'; ctx.fillRect((i+9)*PX, (sy-5)*PX, PX, PX);
   });
 }
 
 // 厨师
 const chefP=[[0,0,1,1,1,1,1,0,0],[0,1,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,1,0],[0,0,2,2,2,2,2,0,0],[0,0,2,3,3,3,2,0,0],[0,0,2,0,0,0,2,0,0],[0,4,4,4,4,4,4,4,0],[0,4,4,4,4,4,4,4,0],[0,4,4,4,4,4,4,4,0],[0,0,5,5,0,5,5,0,0]];
 const chefC={1:C.hat, 2:C.skin, 3:C.eye, 4:C.body, 5:C.bodyD};
+
+// 服务员
+const waiterP=[[0,0,1,1,1,1,1,0,0],[0,1,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,1,0],[0,0,2,2,2,2,2,0,0],[0,0,2,3,3,3,2,0,0],[0,0,2,0,0,0,2,0,0],[0,4,4,4,4,4,4,4,0],[0,4,4,4,4,4,4,4,0],[0,5,5,5,5,5,5,5,0],[0,0,6,6,0,6,6,0,0]];
+const waiterC={1:C.hair, 2:C.skin, 3:C.eye, 4:C.waiter, 5:C.apron, 6:C.waiterD};
 
 // 顾客
 const custP=[[0,0,1,1,1,1,1,0,0],[0,1,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,1,0],[0,0,2,2,2,2,2,0,0],[0,0,2,3,3,3,2,0,0],[0,0,2,0,0,0,2,0,0],[0,4,4,4,4,4,4,4,0],[0,4,4,4,4,4,4,4,0],[0,4,4,4,4,4,4,4,0],[0,0,4,4,0,4,4,0,0]];
@@ -115,45 +159,54 @@ const custC={1:C.hair, 2:C.skin, 3:C.eye, 4:C.cust};
 const cashP=[[0,0,1,1,1,1,1,0,0],[0,1,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,1,0],[0,0,2,2,2,2,2,0,0],[0,0,2,3,3,3,2,0,0],[0,0,2,0,0,0,2,0,0],[0,4,4,4,4,4,4,4,0],[0,4,4,4,4,4,4,4,0],[0,4,4,4,4,4,4,4,0],[0,4,4,4,4,4,4,4,0]];
 const cashC={1:'#5a4030', 2:C.skin, 3:C.eye, 4:C.cash};
 
-function reg(x, y, str) { px(x-12, y, 24, 14, '#111'); px(x-10, y+2, 20, 9, C.scr); txt(str, x-8, y+9, 4, C.scrT); }
-function bubble(x, y, str) { px(x-16, y, 32, 12, C.hat); px(x-4, y+10, 4, 4, C.hat); px(x-1, y+13, 1, 1, C.hat); txt(str, x-12, y+9, 4, '#222'); }
+function reg(x, y, str) { px(x-14, y, 28, 14, '#111'); px(x-12, y+2, 24, 9, C.scr); txt(str, x-10, y+9, 4, C.scrT); }
+function bubble(x, y, str) { px(x-18, y, 36, 12, C.hat); px(x-4, y+10, 4, 4, C.hat); px(x-1, y+13, 1, 1, C.hat); txt(str, x-14, y+9, 4, '#222'); }
 
 const STEPS=['PSTA','CHKN','VEG','PAY'];
-function progress(v) { STEPS.forEach((s,i) => { const sx=60+i*72,done=v>i+1,active=v===i+1; px(sx-4,6,8,6,done?'#28c060':active?C.gold:'#333'); txt(s,sx-9,20,3,'#666'); }); }
+function progress(v) { STEPS.forEach((s,i) => { const sx=60+i*72,done=v>i+1,active=v===i+1; px(sx-4,4,8,6,done?'#28c060':active?C.gold:'#333'); txt(s,sx-9,18,3,'#666'); }); }
 
 // 状态
-let S = {step:0, cx:30, reg:'$0', bubble:''};
-const POS = {pasta:70, chicken:145, veggie:215, cash:330};
+let S = {step:0, custX:30, waiterX:100, reg:'$0', bubble:''};
+const POS = {start:30, pasta:70, chicken:145, veggie:220, cash:295};
 
 function draw() {
-  cx.fillStyle = C.bg; cx.fillRect(0, 0, W*PX, H*PX);
+  ctx.fillStyle = C.bg; ctx.fillRect(0, 0, W*PX, H*PX);
 
   // 粒子
   pts.forEach(p => {
     const a = 0.3 + 0.5 * Math.abs(Math.sin(f*0.04 + p.a));
-    cx.fillStyle = `rgba(255,255,200,${a})`; px(p.x, p.y, 1, 1, cx.fillStyle);
+    ctx.fillStyle = `rgba(255,255,200,${a})`; px(p.x, p.y, 1, 1, ctx.fillStyle);
     p.y -= p.v; p.x += Math.sin(f*0.015 + p.a) * 0.08;
-    if(p.y < -2) { p.y = 48; p.x = Math.random()*W; }
+    if(p.y < -2) { p.y = 55; p.x = Math.random()*W; }
   });
 
-  wall(); floor(); station(); kitchen();
+  wall(); floor();
+  
+  // 收银台 - 右下角靠下
+  px(320, 130, 70, 50, C.woodD);
+  pat(340, 100, cashP, cashC);
+  reg(355, 120, S.reg);
+  
+  station(); kitchen();
 
-  // 厨师脚下的台子
-  px(56, 172, 16, 2, '#222'); pat(62, 158, chefP, chefC);
-  px(130, 172, 16, 2, '#222'); pat(136, 158, chefP, chefC);
-  px(204, 172, 16, 2, '#222'); pat(210, 158, chefP, chefC);
+  // 厨师 - 下排
+  px(56, 172, 16, 2, '#111'); pat(62, 158, chefP, chefC);
+  px(130, 172, 16, 2, '#111'); pat(136, 158, chefP, chefC);
+  px(204, 172, 16, 2, '#111'); pat(210, 158, chefP, chefC);
 
-  // 顾客 + 阴影
-  const br = Math.sin(f*0.1) * 0.5;
-  px(S.cx-6, 84, 12, 2, '#111');
-  pat(S.cx-4, 70+br, custP, custC);
-  if(S.bubble) bubble(S.cx, 52, S.bubble);
-
-  // 收银
-  pat(325, 70, cashP, cashC); reg(340, 92, S.reg);
+  // 服务员 - 柜台和厨房之间移动
+  const waiterBr = Math.sin(f*0.15) * 0.3;
+  px(S.waiterX-5, 132, 10, 2, '#111');
+  pat(S.waiterX-4, 118+waiterBr, waiterP, waiterC);
+  
+  // 顾客 - 柜台上方行走
+  const custBr = Math.sin(f*0.1) * 0.5;
+  px(S.custX-6, 68, 12, 2, '#111');
+  pat(S.custX-4, 54+custBr, custP, custC);
+  if(S.bubble) bubble(S.custX, 36, S.bubble);
 
   progress(S.step);
-  txt('PIADA', 148, 9, 8, C.gold);
+  txt('PIADA', 155, 6, 7, C.gold);
 
   f++;
   requestAnimationFrame(draw);
@@ -173,19 +226,32 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function run() {
   while(1) {
-    S.step=0; S.cx=30; S.reg='$0'; S.bubble='';
+    S.step=0; S.custX=30; S.waiterX=100; S.reg='$0'; S.bubble='';
     await sleep(1200);
+    
+    // 服务员走向厨房
+    await move('waiterX', 90, 400);
+    
     S.step=1; S.bubble='PSTA';
-    await move('cx', POS.pasta, 600); await sleep(500);
+    await move('custX', POS.pasta, 600); await sleep(400);
+    await move('waiterX', POS.pasta - 20, 300); await sleep(300);
+    
     S.step=2; S.bubble='CHKN';
-    await move('cx', POS.chicken, 600); await sleep(500);
+    await move('custX', POS.chicken, 600); await sleep(400);
+    await move('waiterX', POS.chicken - 20, 300); await sleep(300);
+    
     S.step=3; S.bubble='VEG';
-    await move('cx', POS.veggie, 600); await sleep(500);
+    await move('custX', POS.veggie, 600); await sleep(400);
+    await move('waiterX', POS.veggie - 20, 300); await sleep(300);
+    
     S.step=4; S.bubble='PAY';
-    await move('cx', POS.cash, 600); await sleep(400);
+    await move('custX', POS.cash, 600); await sleep(400);
+    await move('waiterX', POS.cash + 20, 300); await sleep(400);
+    
     S.reg='$25'; await sleep(350);
     S.reg='OK!'; await sleep(600);
-    await move('cx', POS.cash+40, 300);
+    
+    await move('custX', POS.cash+50, 300);
     S.bubble=''; S.reg='$0'; await sleep(500);
   }
 }
