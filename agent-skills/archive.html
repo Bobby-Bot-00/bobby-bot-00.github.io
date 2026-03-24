@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📂 历史新闻 - Agent Skills</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #16213e 100%);
+      min-height: 100vh;
+      color: #e4e4e7;
+      padding: 40px 20px;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #71717a;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 30px;
+      transition: color 0.3s;
+    }
+    .back-link:hover { color: #a855f7; }
+    
+    header { text-align: center; margin-bottom: 40px; }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle { color: #71717a; font-size: 16px; }
+    
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .filter-group { display: flex; gap: 8px; align-items: center; }
+    .filter-label { color: #71717a; font-size: 14px; }
+    select {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    select option { background: #1a1a2e; }
+    
+    .archive-list { display: grid; gap: 15px; }
+    .archive-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 25px;
+      transition: all 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .archive-item:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(99,102,241,0.4);
+      transform: translateY(-2px);
+    }
+    .archive-date { font-size: 13px; color: #6366f1; margin-bottom: 8px; }
+    .archive-title { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+    .archive-summary { font-size: 14px; color: #a1a1aa; line-height: 1.5; }
+    .archive-count {
+      display: inline-block;
+      background: rgba(99,102,241,0.2);
+      color: #a855f7;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+    .empty-state { text-align: center; padding: 60px 20px; color: #52525b; }
+    
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px;
+      color: #52525b;
+      font-size: 13px;
+    }
+    footer a { color: #6366f1; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← 返回今日新闻</a>
+    
+    <header>
+      <div class="badge">📂 历史新闻</div>
+      <h1>Agent Skills 新闻库</h1>
+      <p class="subtitle">按时间筛选历史新闻</p>
+    </header>
+
+    <div class="filters">
+      <div class="filter-group">
+        <span class="filter-label">年份</span>
+        <select id="yearFilter" onchange="filterArchive()">
+          <option value="">全部</option>
+          <option value="2026">2026</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">月份</span>
+        <select id="monthFilter" onchange="filterArchive()">
+          <option value="">全部</option>
+          <option value="01">1月</option>
+          <option value="02">2月</option>
+          <option value="03">3月</option>
+        </select>
+        <label style="margin-left: 15px;">
+          <input type="checkbox" id="freshOnly" onchange="filterArchive()" checked> 仅显示最近7天
+        </label>
+      </div>
+    </div>
+
+    <div class="archive-list" id="archiveList">
+      <a href="2026-03-12/index.html" class="archive-item">
+        <div class="archive-date">2026年3月12日 · 周四</div>
+        <div class="archive-title">Microsoft Semantic Kernel 支持 Agent Skills + Google ADK 更新 + shadcn/ui AI Skills</div>
+        <div class="archive-summary">Microsoft 正式支持 portable skill packages，Google ADK 发布 gws CLI，shadcn/ui 更新 AI Agent Skills</div>
+        <div class="archive-count">3 条新闻</div>
+      </a>
+    </div>
+
+    <footer>
+      <p>由 🦉 Bobby 自动生成</p>
+    </footer>
+  </div>
+
+  <script>
+    const archiveData = [
+      { date: '2026-03-23', title: 'Top 6 AI Trends That Will Define 2026 (backed by data) - You', summary: 'Most #AI predictions are speculation. This video c', count: 3 }
+      { date: '2026-03-22', title: 'Top 6 AI Trends That Will Define 2026 (backed by data) - You', summary: 'Most #AI predictions are speculation. This video c', count: 3 }
+      { date: '2026-03-18', title: 'Top 6 AI Trends That Will Define 2026 (backed by data) - You', summary: 'Most #AI predictions are speculation. This video c', count: 3 }
+      { date: '2026-03-17', title: 'Five AI agent predictions for 2026: The year enterprises sto', summary: '2026 is the year of operationalizing AI. Here are ', count: 10 }
+      { date: '2026-03-16', title: 'AI Agents Mastery Guide 2026', summary: 'Level Up Coding', count: 10 }
+      { date: '2026-03-15', title: 'Top 5 AI Agent Frameworks In 2026', summary: '', count: 3 }
+      { date: '2026-03-14', title: 'The Core Skills AI Practitioners Need for Agentic AI in 2026', summary: 'At its core, agentic AI refers to autonomous syste', count: 10 }
+      { date: '2026-03-13', title: 'Top 5 AI Agent Frameworks 2026 + Enterprise Guide + Microsoft Skills', summary: 'Intuz 对比主流框架，Akka 发布企业级指南，Microsoft 正式发布 Agent Skills', count: 3 }
+      { date: '2026-03-12', title: 'Microsoft Semantic Kernel 支持 Agent Skills + Google ADK 更新 + shadcn/ui AI Skills', summary: 'Microsoft 正式支持 portable skill packages，Google ADK 发布 gws CLI，shadcn/ui 更新 AI Agent Skills', count: 3 }
+    ];
+
+    function filterArchive() {
+      const year = document.getElementById('yearFilter').value;
+      const month = document.getElementById('monthFilter').value;
+      const freshOnly = document.getElementById('freshOnly').checked;
+      const list = document.getElementById('archiveList');
+      
+      const now = new Date();
+      const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+      
+      const filtered = archiveData.filter(item => {
+        const itemDate = new Date(item.date);
+        const itemYear = item.date.substring(0, 4);
+        const itemMonth = item.date.substring(5, 7);
+        
+        const freshCheck = !freshOnly || itemDate >= sevenDaysAgo;
+        const yearCheck = !year || itemYear === year;
+        const monthCheck = !month || itemMonth === month;
+        
+        return freshCheck && yearCheck && monthCheck;
+      });
+
+      if (filtered.length === 0) {
+        list.innerHTML = '<div class="empty-state">该时间段暂无新闻</div>';
+        return;
+      }
+
+      list.innerHTML = filtered.map(item => `
+        <a href="skill-news-${item.date}.html" class="archive-item">
+          <div class="archive-date">${item.date.replace(/(\d{4})-(\d{2})-(\d{2})/, '$1年$2月$3日')}</div>
+          <div class="archive-title">${item.title}</div>
+          <div class="archive-summary">${item.summary}</div>
+          <div class="archive-count">${item.count} 条新闻</div>
+        </a>
+      `).join('');
+    }
+  </script>
+  <div class="item"><a href="2026-03-14/index.html">2026-03-14 Agent Skills 新闻</a></div>
+</body>
+</html>
