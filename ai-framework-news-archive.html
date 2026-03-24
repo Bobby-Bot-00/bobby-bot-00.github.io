@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📂 历史新闻 - AI Framework</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #16213e 100%);
+      min-height: 100vh;
+      color: #e4e4e7;
+      padding: 40px 20px;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #71717a;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 30px;
+      transition: color 0.3s;
+    }
+    .back-link:hover { color: #a855f7; }
+
+    header { text-align: center; margin-bottom: 40px; }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle { color: #71717a; font-size: 16px; }
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .filter-group { display: flex; gap: 8px; align-items: center; }
+    .filter-label { color: #71717a; font-size: 14px; }
+    select {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    select option { background: #1a1a2e; }
+
+    .archive-list { display: grid; gap: 15px; }
+    .archive-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 25px;
+      transition: all 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .archive-item:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(99,102,241,0.4);
+      transform: translateY(-2px);
+    }
+    .archive-date { font-size: 13px; color: #6366f1; margin-bottom: 8px; }
+    .archive-title { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+    .archive-summary { font-size: 14px; color: #a1a1aa; line-height: 1.5; }
+    .archive-count {
+      display: inline-block;
+      background: rgba(99,102,241,0.2);
+      color: #a855f7;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+    .empty-state { text-align: center; padding: 60px 20px; color: #52525b; }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px;
+      color: #52525b;
+      font-size: 13px;
+    }
+    footer a { color: #6366f1; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="ai-framework-news.html" class="back-link">← 返回今日新闻</a>
+
+    <header>
+      <div class="badge">📂 历史存档</div>
+      <h1>AI Framework 技术动向</h1>
+      <p class="subtitle">按时间筛选历史新闻</p>
+    </header>
+
+    <div class="filters">
+      <div class="filter-group">
+        <span class="filter-label">年份</span>
+        <select id="yearFilter" onchange="filterArchive()">
+          <option value="">全部</option>
+          <option value="2026">2026</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">月份</span>
+        <select id="monthFilter" onchange="filterArchive()">
+          <option value="">全部</option>
+          <option value="01">1月</option>
+          <option value="02">2月</option>
+          <option value="03">3月</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="archive-list" id="archiveList"></div>
+
+    <footer>
+      <p>由 🦉 Bobby 自动生成</p>
+    </footer>
+  </div>
+
+  <script>
+    const archiveData = [
+      { date: '2026-03-24', title: 'MCP 完整实现指南 + Claude Agent Skills + Google ADK + OpenAI Agent Builder + AI 框架对比 + Google Stitch 语音设计', summary: '涵盖 MCP 架构解析、Anthropic Agent 平台演进、Google 事件驱动框架、OpenAI 无代码构建、框架横向对比及 Stitch Vibe Design 等 7 条新闻', count: 7 },
+      { date: '2026-03-23', title: 'Anthropic Claude Max + MCP 生态爆发 + AutoGen 框架对比', summary: 'Claude Max 订阅权益详解、MCP Server 生态爆发式增长、AutoGen vs CrewAI vs LangChain 深度对比', count: 3 },
+    ];
+
+    function filterArchive() {
+      const year = document.getElementById('yearFilter').value;
+      const month = document.getElementById('monthFilter').value;
+      const list = document.getElementById('archiveList');
+
+      const filtered = archiveData.filter(item => {
+        const itemYear = item.date.substring(0, 4);
+        const itemMonth = item.date.substring(5, 7);
+        const yearCheck = !year || itemYear === year;
+        const monthCheck = !month || itemMonth === month;
+        return yearCheck && monthCheck;
+      });
+
+      if (filtered.length === 0) {
+        list.innerHTML = '<div class="empty-state">该时间段暂无新闻</div>';
+        return;
+      }
+
+      const weekday = ['周日','周一','周二','周三','周四','周五','周六'];
+      list.innerHTML = filtered.map(item => {
+        const d = new Date(item.date);
+        const day = weekday[d.getDay()];
+        return `
+        <a href="ai-framework-news-${item.date}.html" class="archive-item">
+          <div class="archive-date">${item.date.replace(/(\d{4})-(\d{2})-(\d{2})/, '$1年$2月$3日')} · ${day}</div>
+          <div class="archive-title">${item.title}</div>
+          <div class="archive-summary">${item.summary}</div>
+          <div class="archive-count">${item.count} 条新闻</div>
+        </a>`;
+      }).join('');
+    }
+
+    // 初始化
+    filterArchive();
+  </script>
+</body>
+</html>
