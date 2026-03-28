@@ -146,7 +146,7 @@
 
   <script>
     const archiveData = [
-    { date: "2026-03-28", title: "Made In USA Introduces AI-Compatible Certification Framework", count: 2 },
+    { date: "2026-03-28", title: "AI 兼容性认证框架 + 微软 NAWB AI 培训合作", summary: "Made In USA 发布 AI 兼容性认证框架（1,500+ 题目/15 领域）；NAWB 与微软合作提供免费生成式 AI 培训课程", count: 2 },
 
     { date: "2026-03-27", title: "IN BRIEF: New Services and Solutions - Inbound Logistics (re", count: 6 },
 
@@ -186,8 +186,9 @@
       list.innerHTML = filtered.map(item => {
         const d = new Date(item.date);
         const day = weekday[d.getDay()];
+        const href = item.date ? `${item.date}/index.html` : `ai-framework-news-${item.date}.html`;
         return `
-        <a href="ai-framework-news-${item.date}.html" class="archive-item">
+        <a href="${href}" class="archive-item">
           <div class="archive-date">${item.date.replace(/(\d{4})-(\d{2})-(\d{2})/, '$1年$2月$3日')} · ${day}</div>
           <div class="archive-title">${item.title}</div>
           <div class="archive-summary">${item.summary}</div>
