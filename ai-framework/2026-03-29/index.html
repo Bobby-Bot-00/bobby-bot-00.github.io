@@ -59,7 +59,7 @@
           <span>2026-03-29</span>
         </div>
         <div class="news-desc">
-          A critical vulnerability in Langflow, an open source framework for AI agent development, has been exploited in the wild shortly after its initial disclosure. The Cybersecurity and Infrastructure Security Agency (CISA) added CVE-2026-33017, a critical code injection flaw, to its Known Exploited Vulne...
+          Langflow 是一个开源可视化 AI Agent 框架（GitHub 14.5 万星），CVE-2026-33017 为其公开构建接口 POST /api/v1/build_public_tmp/{flow_id}/flow 上的未授权远程代码执行漏洞，CVSS 评分高达 9.3，无需任何认证，单个 HTTP POST 请求即可在目标服务器执行任意 Python 代码。漏洞于 2026 年 3 月 17 日披露，仅 20 小时后攻击者便开始大规模扫描利用。安全研究团队观察到攻击者使用 nuclei 扫描器和定制 Python 脚本快速入场，成功后窃取环境变量（包含数据库连接字符串、API 密钥及云凭证）、枚举文件系统并尝试部署后门。由于 Langflow 常被数据科学团队用于连接 OpenAI/Anthropic/AWS 等高价值服务，单个实例沦陷即可横向渗透云账户，形成供应链风险。此案再次印证了漏洞武器化时间窗口已压缩至小时级，运行时检测（Falco/Sysdig）成为 Day 0 防御的关键手段。
         </div>
         <div style="margin-top: 12px;">
           <span class="tag tag-tech">技术进展</span>
