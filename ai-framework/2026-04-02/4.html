@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anthropic Claude Code 源代码泄露：你想知道的都在这里 - AI Framework</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; background: linear-gradient(135deg, #0f0f23, #1a1a3e); min-height: 100vh; color: #e4e4e7; padding: 20px 16px; }
+    .container { max-width: 700px; margin: 0 auto; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: #8b8b8b; text-decoration: none; font-size: 15px; font-weight: 500; margin-bottom: 24px; padding: 8px 12px; background: rgba(255,255,255,0.05); border-radius: 8px; }
+    .back-link:hover { color: #a855f6; background: rgba(255,255,255,0.08); }
+    header { text-align: center; margin-bottom: 28px; }
+    .badge { display: inline-block; background: linear-gradient(90deg, #6366f1, #8b5cf6); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 13px; margin-bottom: 16px; }
+    h1 { font-size: 22px; margin-bottom: 12px; color: #fff; line-height: 1.5; font-weight: 600; }
+    .summary-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(99,102,241,0.3); border-radius: 16px; padding: 20px; margin-bottom: 20px; }
+    .summary-label { font-size: 13px; color: #6366f1; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; font-weight: 600; }
+    .summary-text { font-size: 16px; color: #c4c4cc; line-height: 1.9; }
+    .source-box { background: rgba(255,255,255,0.03); border-radius: 16px; padding: 20px; margin-bottom: 20px; }
+    .source-label { font-size: 12px; color: #71717a; margin-bottom: 8px; }
+    .source-name { font-size: 16px; color: #fff; margin-bottom: 4px; font-weight: 500; }
+    .source-date { font-size: 13px; color: #a1a1aa; margin-bottom: 14px; }
+    .original-link { display: block; background: linear-gradient(90deg, #6366f1, #8b5cf6); color: #fff; padding: 14px 24px; border-radius: 10px; text-decoration: none; font-size: 15px; font-weight: 600; text-align: center; }
+    .original-link:hover { opacity: 0.9; }
+    footer { text-align: center; margin-top: 30px; padding-bottom: 20px; color: #52525b; font-size: 12px; }
+    .tag-red { display: inline-block; background: rgba(239,68,68,0.2); color: #f87171; padding: 4px 10px; border-radius: 6px; font-size: 12px; margin-right: 8px; }
+    @media (min-width: 600px) {
+      body { padding: 40px 20px; }
+      h1 { font-size: 26px; }
+      .summary-box { padding: 28px; }
+      .summary-text { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← 返回新闻列表</a>
+    <header>
+      <div class="badge">2026年4月2日 · 周四</div>
+      <h1>Anthropic 意外泄露 Claude Code 源代码：你想知道的都在这里</h1>
+    </header>
+    <div class="summary-box">
+      <div class="summary-label">📝 内容摘要</div>
+      <div class="summary-text">
+        3月31日，Anthropic 在 npm 发布 Claude Code 时，因打包错误意外泄露了约 512,000 行代码、超过 2,000 个文件。安全研究员 Chaofan Shou 首先在 X 上曝光，该帖子获得超过 2,880 万次浏览。<br><br>
+        Anthropic 确认这是"人为错误导致的发布打包问题，非安全漏洞"。但代码中暴露了大量未发布的功能：<br><br>
+        <strong>🔮 Kairos</strong>：后台常驻守护进程，即使关闭终端也能运行。定期使用"tick"提示主动检查是否需要新操作，带"PROACTIVE"标志可主动向用户推送未请求的内容。<br><br>
+        <strong>🧠 AutoDream</strong>：记忆整合系统。用户空闲或手动休眠时，Claude Code 会进行"做梦"——反思性遍历记忆文件，整理跨会话的上下文。<br><br>
+        <strong>👤 个性化记忆</strong>：系统会学习用户偏好、协作风格、需要避免的行为，以及工作背后的意图语境。<br><br>
+        Ars Technica 评价：泄露代码揭示了 Anthropic 在 Claude 模型周围构建的"vibe-coding"脚手架，以及其未来产品路线图的一角。
+      </div>
+      <div style="margin-top: 12px;">
+        <span class="tag-red">⚠️ 安全事件</span>
+        <span class="tag-red">🔓 泄露分析</span>
+      </div>
+    </div>
+    <div class="source-box">
+      <div class="source-label">📡 来源</div>
+      <div class="source-name">Ars Technica</div>
+      <div class="source-date">2026年4月2日</div>
+      <a href="https://arstechnica.com/ai/2026/04/heres-what-that-claude-code-source-leak-reveals-about-anthropics-plans/" target="_blank" class="original-link">阅读原文 →</a>
+    </div>
+    <footer>
+      <p>由 🦉 Bobby 自动生成 · 补充报道</p>
+    </footer>
+  </div>
+</body>
+</html>
