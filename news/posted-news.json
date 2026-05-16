@@ -1,46 +1,6 @@
 {
   "news": [
     {
-      "title": "Introducing the Model Context Protocol - Anthropic",
-      "url": "https://www.anthropic.com/news/model-context-protocol",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "2026: The Year for Enterprise-Ready MCP Adoption - CData Software",
-      "url": "https://www.cdata.com/blog/2026-year-enterprise-ready-mcp-adoption",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "What is the Model Context Protocol (MCP)? - Model Context Protocol",
-      "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "[PDF] The Complete Guide to Building Skills for Claude | Anthropic",
-      "url": "https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "[PDF] 2026 Agentic Coding Trends Report - Anthropic",
-      "url": "https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "5 agent skills I'd install before starting any new agent project in 2026",
-      "url": "https://www.reddit.com/r/AI_Agents/comments/1roe8k8/5_agent_skills_id_install_before_starting_any_new/",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Google ADK Course - Agent Development Kit End-to-end ... - YouTube",
-      "url": "https://www.youtube.com/playlist?list=PL6tW9BrhiPTAZts0W5nQS9dbW6VMnLKab",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Supercharge your AI agents: The New ADK Integrations Ecosystem",
-      "url": "https://developers.googleblog.com/en/supercharge-your-ai-agents-adk-integrations-ecosystem/",
-      "date": "2026-03-23"
-    },
-    {
       "title": "Google ADK in 2026: The Complete Beginner's Guide to Building AI ...",
       "url": "https://medium.com/@simranjeetsingh1497/google-adk-in-2026-the-complete-beginners-guide-to-building-ai-agents-part-1-2aca04ddf6ff",
       "date": "2026-03-23"
@@ -2489,6 +2449,56 @@
       "title": "Microsoft starts canceling Claude Code licenses - The Verge (relevance: 7%)",
       "url": "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
       "date": "2026-05-15"
+    },
+    {
+      "title": "Claude Platform On AWS Rewrites The Hyperscaler AI Bargain - Forbes (relevance: 93%)",
+      "url": "https://www.forbes.com/sites/janakirammsv/2026/05/11/claude-platform-on-aws-rewrites-the-hyperscaler-ai-bargain/",
+      "date": "2026-05-16"
+    },
+    {
+      "title": "Google Introduces New Line Of AI-Enabled Laptops 05/13/2026 - MediaPost (relevance: 100%)",
+      "url": "https://www.mediapost.com/publications/article/415047/google-introduces-new-line-of-ai-enabled-laptops.html",
+      "date": "2026-05-16"
+    },
+    {
+      "title": "Can Google Wow Us at I/O 2026? Here's What It Has to Get Right - CNET (relevance: 100%)",
+      "url": "https://www.cnet.com/tech/services-and-software/can-google-wow-us-at-io-2026-heres-what-it-has-to-get-right/",
+      "date": "2026-05-16"
+    },
+    {
+      "title": "Government AI‑vetting announcement page is missing from website - Let's Data Science (relevance: 100%)",
+      "url": "https://letsdatascience.com/news/government-aivetting-announcement-page-is-missing-from-websi-9932122e",
+      "date": "2026-05-16"
+    },
+    {
+      "title": "Oracle Workers Face Denied Severance Negotiations Amid Mass Layoffs - Startup Ecosystem Canada (relevance: 100%)",
+      "url": "https://www.startupecosystem.ca/news/oracle-workers-face-denied-severance-negotiations-amid-mass-layoffs/",
+      "date": "2026-05-16"
+    },
+    {
+      "title": "European Defense Tech Startup Helsing to Raise $1.2B at $18B Valuation - Startup Ecosystem Canada (relevance: 92%)",
+      "url": "https://www.startupecosystem.ca/news/european-defense-tech-startup-helsing-to-raise-1-2b-at-18b-valuation/",
+      "date": "2026-05-16"
+    },
+    {
+      "title": "Cerebras Systems’ IPO Marks a Milestone in Tech Industry - Startup Ecosystem Canada (relevance: 89%)",
+      "url": "https://www.startupecosystem.ca/news/cerebras-systems-ipo-marks-a-milestone-in-tech-industry/",
+      "date": "2026-05-16"
+    },
+    {
+      "title": "Google announces its Chromebook successor: the Googlebook - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/928479/google-googlebook-laptops-android-tease-aluminium-chromebook",
+      "date": "2026-05-16"
+    },
+    {
+      "title": "Google’s Aluminium OS revealed in 16-minute leaked video - The Verge (relevance: 79%)",
+      "url": "https://www.theverge.com/tech/928598/google-aluminium-os-mystic-leaks-video",
+      "date": "2026-05-16"
+    },
+    {
+      "title": "Apple brings encrypted RCS chats to iPhone - The Verge (relevance: 52%)",
+      "url": "https://www.theverge.com/tech/928141/apple-ios-26-5-rcs-messages-iphone-google-android",
+      "date": "2026-05-16"
     }
   ]
 }
