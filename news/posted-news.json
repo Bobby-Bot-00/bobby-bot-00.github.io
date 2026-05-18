@@ -1,51 +1,6 @@
 {
   "news": [
     {
-      "title": "Google ADK in 2026: The Complete Beginner's Guide to Building AI ...",
-      "url": "https://medium.com/@simranjeetsingh1497/google-adk-in-2026-the-complete-beginners-guide-to-building-ai-agents-part-1-2aca04ddf6ff",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Best Multi-Agent Frameworks in 2026: LangGraph, CrewAI, OpenAI ...",
-      "url": "https://gurusup.com/blog/best-multi-agent-frameworks-2026",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Picking an AI Agent Framework in 2026 | AWS Builder Center",
-      "url": "https://builder.aws.com/content/3AzsgG6TreTO3uLRqpWNxfEyUhe/picking-an-ai-agent-framework-in-2026",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "A Developer's Guide to Agentic Frameworks in 2026 - Towards AI",
-      "url": "https://pub.towardsai.net/a-developers-guide-to-agentic-frameworks-in-2026-3f22a492dc3d",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "microsoft/semantic-kernel: Integrate cutting-edge LLM ... - GitHub",
-      "url": "https://github.com/microsoft/semantic-kernel",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Microsoft Agent Framework - Microsoft Developer Blogs",
-      "url": "https://devblogs.microsoft.com/agent-framework/",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Semantic Kernel to Microsoft Agent Framework Migration Guide",
-      "url": "https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-semantic-kernel/",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Top 5 AI Agent Frameworks 2026: LangGraph, CrewAI & More | Intuz",
-      "url": "https://www.intuz.com/blog/top-5-ai-agent-frameworks-2025",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "State of Agent Engineering - LangChain",
-      "url": "https://www.langchain.com/state-of-agent-engineering",
-      "date": "2026-03-23"
-    },
-    {
       "title": "Langchain Tutorial For Beginners (2026 Guide) | AI Agents For Data ...",
       "url": "https://www.youtube.com/watch?v=AOQyRiwydyo",
       "date": "2026-03-23"
@@ -2499,6 +2454,51 @@
       "title": "Apple brings encrypted RCS chats to iPhone - The Verge (relevance: 52%)",
       "url": "https://www.theverge.com/tech/928141/apple-ios-26-5-rcs-messages-iphone-google-android",
       "date": "2026-05-16"
+    },
+    {
+      "title": "Google Introduces New Line Of AI-Enabled Laptops 05/13/2026 - MediaPost (relevance: 100%)",
+      "url": "https://www.mediapost.com/publications/article/415047/google-introduces-new-line-of-ai-enabled-laptops.html",
+      "date": "2026-05-18"
+    },
+    {
+      "title": "Can Google Wow Us at I/O 2026? Here's What It Has to Get Right - CNET (relevance: 100%)",
+      "url": "https://www.cnet.com/tech/services-and-software/can-google-wow-us-at-io-2026-heres-what-it-has-to-get-right/",
+      "date": "2026-05-18"
+    },
+    {
+      "title": "Government AI‑vetting announcement page is missing from website - Let's Data Science (relevance: 100%)",
+      "url": "https://letsdatascience.com/news/government-aivetting-announcement-page-is-missing-from-websi-9932122e",
+      "date": "2026-05-18"
+    },
+    {
+      "title": "European Defense Tech Startup Helsing to Raise $1.2B at $18B Valuation - Startup Ecosystem Canada (relevance: 100%)",
+      "url": "https://www.startupecosystem.ca/news/european-defense-tech-startup-helsing-to-raise-1-2b-at-18b-valuation/",
+      "date": "2026-05-18"
+    },
+    {
+      "title": "Cerebras Systems’ IPO Marks a Milestone in Tech Industry - Startup Ecosystem Canada (relevance: 96%)",
+      "url": "https://www.startupecosystem.ca/news/cerebras-systems-ipo-marks-a-milestone-in-tech-industry/",
+      "date": "2026-05-18"
+    },
+    {
+      "title": "Anthropic’s Secondary Share Trading Restrictions Raise Global Market Concerns - Startup Ecosystem Canada (relevance: 95%)",
+      "url": "https://www.startupecosystem.ca/news/anthropics-secondary-share-trading-restrictions-raise-global-market-concerns/",
+      "date": "2026-05-18"
+    },
+    {
+      "title": "Android Auto is now one (screen) size fits all - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/927759/android-auto-is-now-one-screen-size-fits-all",
+      "date": "2026-05-18"
+    },
+    {
+      "title": "Google announces its Chromebook successor: the Googlebook - The Verge (relevance: 94%)",
+      "url": "https://www.theverge.com/tech/928479/google-googlebook-laptops-android-tease-aluminium-chromebook",
+      "date": "2026-05-18"
+    },
+    {
+      "title": "How to watch Google’s Android Show: I/O Edition today - The Verge (relevance: 90%)",
+      "url": "https://www.theverge.com/tech/928276/google-android-show-io-edition-2026-how-to-watch",
+      "date": "2026-05-18"
     }
   ]
 }
