@@ -1,56 +1,6 @@
 {
   "news": [
     {
-      "title": "Langchain Tutorial For Beginners (2026 Guide) | AI Agents For Data ...",
-      "url": "https://www.youtube.com/watch?v=AOQyRiwydyo",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Top 5 Agentic AI Frameworks to Watch in 2026 - Future AGI",
-      "url": "https://futureagi.substack.com/p/top-5-agentic-ai-frameworks-to-watch",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "A Detailed Comparison of Top 6 AI Agent Frameworks in 2026 - Turing",
-      "url": "https://www.turing.com/resources/ai-agent-frameworks",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Agentic AI Frameworks: Top 8 Options in 2026 - NetApp Instaclustr",
-      "url": "https://www.instaclustr.com/education/agentic-ai/agentic-ai-frameworks-top-8-options-in-2026/",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Google Stitch 2026: The End of the Designer? (Vibe Design Tutorial)",
-      "url": "https://www.youtube.com/watch?v=zlRI9zV3ROg",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Google Stitch for UI Design - UX Planet",
-      "url": "https://uxplanet.org/google-stitch-for-ui-design-544cf8b42d52",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "Introducing “vibe design” with Stitch - Google Blog",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/",
-      "date": "2026-03-23"
-    },
-    {
-      "title": "MCP (Model Context Protocol): Complete 2026 Guide for AI Integration",
-      "url": "https://www.sitepoint.com/model-context-protocol-mcp/",
-      "date": "2026-03-24"
-    },
-    {
-      "title": "Agent Skills - Claude API Docs",
-      "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
-      "date": "2026-03-24"
-    },
-    {
-      "title": "What Is Google's Agent Development Kit? An Architectural Tour",
-      "url": "https://thenewstack.io/what-is-googles-agent-development-kit-an-architectural-tour/",
-      "date": "2026-03-24"
-    },
-    {
       "title": "The 2026 Guide to OpenAI's Agent Builder (Step-by-Step) - Generect",
       "url": "https://generect.com/blog/openai-agent-builder/",
       "date": "2026-03-24"
@@ -2499,6 +2449,56 @@
       "title": "How to watch Google’s Android Show: I/O Edition today - The Verge (relevance: 90%)",
       "url": "https://www.theverge.com/tech/928276/google-android-show-io-edition-2026-how-to-watch",
       "date": "2026-05-18"
+    },
+    {
+      "title": "Meet LiteLLM Agent Platform: A Kubernetes-Based, Self-Hosted Infrastructure Layer for Isolated Agent Sandboxes and Persistent Session Management in Production - MarkTechPost (relevance: 100%)",
+      "url": "https://www.marktechpost.com/2026/05/16/meet-litellm-agent-platform-a-kubernetes-based-self-hosted-infrastructure-layer-for-isolated-agent-sandboxes-and-persistent-session-management-in-production/",
+      "date": "2026-05-19"
+    },
+    {
+      "title": "How to Watch Google I/O 2026 - WIRED (relevance: 100%)",
+      "url": "https://www.wired.com/story/how-to-watch-google-io/",
+      "date": "2026-05-19"
+    },
+    {
+      "title": "Government AI‑vetting announcement page is missing from website - Let's Data Science (relevance: 55%)",
+      "url": "https://letsdatascience.com/news/government-aivetting-announcement-page-is-missing-from-websi-9932122e",
+      "date": "2026-05-19"
+    },
+    {
+      "title": "Google Integrates Gemini Across Android and Chrome - Let's Data Science (relevance: 54%)",
+      "url": "https://letsdatascience.com/news/google-integrates-gemini-across-android-and-chrome-f3925f9d",
+      "date": "2026-05-19"
+    },
+    {
+      "title": "Cerebras Systems’ IPO Marks a Milestone in Tech Industry - Startup Ecosystem Canada (relevance: 100%)",
+      "url": "https://www.startupecosystem.ca/news/cerebras-systems-ipo-marks-a-milestone-in-tech-industry/",
+      "date": "2026-05-19"
+    },
+    {
+      "title": "Anthropic’s Secondary Share Trading Restrictions Raise Global Market Concerns - Startup Ecosystem Canada (relevance: 99%)",
+      "url": "https://www.startupecosystem.ca/news/anthropics-secondary-share-trading-restrictions-raise-global-market-concerns/",
+      "date": "2026-05-19"
+    },
+    {
+      "title": "A* Closes $450 Million Fund III for Early-Stage Startups - Startup Ecosystem Canada (relevance: 97%)",
+      "url": "https://www.startupecosystem.ca/news/a-closes-450-million-fund-iii-for-early-stage-startups/",
+      "date": "2026-05-19"
+    },
+    {
+      "title": "Google is rolling out its redesigned Workspace app icons - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/932417/google-gmail-docs-cal-sheets-workspace-icon-redesign",
+      "date": "2026-05-19"
+    },
+    {
+      "title": "Google announces its Chromebook successor: the Googlebook - The Verge (relevance: 91%)",
+      "url": "https://www.theverge.com/tech/928479/google-googlebook-laptops-android-tease-aluminium-chromebook",
+      "date": "2026-05-19"
+    },
+    {
+      "title": "How to watch Google’s Android Show: I/O Edition today - The Verge (relevance: 87%)",
+      "url": "https://www.theverge.com/tech/928276/google-android-show-io-edition-2026-how-to-watch",
+      "date": "2026-05-19"
     }
   ]
 }
