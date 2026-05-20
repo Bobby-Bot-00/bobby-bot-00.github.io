@@ -1,51 +1,6 @@
 {
   "news": [
     {
-      "title": "The 2026 Guide to OpenAI's Agent Builder (Step-by-Step) - Generect",
-      "url": "https://generect.com/blog/openai-agent-builder/",
-      "date": "2026-03-24"
-    },
-    {
-      "title": "Comprehensive comparison of every AI agent framework in 2026 ...",
-      "url": "https://www.reddit.com/r/LangChain/comments/1rnc2u9/comprehensive_comparison_of_every_ai_agent/",
-      "date": "2026-03-24"
-    },
-    {
-      "title": "Creating a UI can now be done with AI through Google's Stitch ...",
-      "url": "https://www.androidheadlines.com/2026/03/creating-a-ui-can-now-be-done-with-ai-through-googles-stitch-software.html",
-      "date": "2026-03-24"
-    },
-    {
-      "title": "Vibe Design, Voice Canvas & Free AI UI Tool (2026) - NxCode",
-      "url": "https://www.nxcode.io/resources/news/google-stitch-complete-guide-vibe-design-2026",
-      "date": "2026-03-24"
-    },
-    {
-      "title": "Anthropic updated the skill-creator skill. Has anyone tried the new ...",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1rj8xao/anthropic_updated_the_skillcreator_skill_has/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Building agents with the ADK and the new Interactions API",
-      "url": "https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "My guide on what tools to use to build AI agents in 2026 (if ... - Reddit",
-      "url": "https://www.reddit.com/r/AI_Agents/comments/1rdf5v7/my_guide_on_what_tools_to_use_to_build_ai_agents/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Introduction to Semantic Kernel | Microsoft Learn",
-      "url": "https://learn.microsoft.com/en-us/semantic-kernel/overview/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Generative AI with Large Language Models in C# in 2026 - .NET Blog",
-      "url": "https://devblogs.microsoft.com/dotnet/generative-ai-with-large-language-models-in-dotnet-and-csharp/",
-      "date": "2026-03-25"
-    },
-    {
       "title": "Microsoft's Semantic Kernel Hits 27K Stars in 2026 - is4.ai",
       "url": "https://is4.ai/blog/our-blog-1/semantic-kernel-microsoft-ai-framework-2026-241",
       "date": "2026-03-25"
@@ -2499,6 +2454,51 @@
       "title": "How to watch Google’s Android Show: I/O Edition today - The Verge (relevance: 87%)",
       "url": "https://www.theverge.com/tech/928276/google-android-show-io-edition-2026-how-to-watch",
       "date": "2026-05-19"
+    },
+    {
+      "title": "SAP AI Agent Hub and Agent Governance - IgniteSAP (relevance: 72%)",
+      "url": "https://ignitesap.com/sap-ai-agent-hub-and-agent-governance/",
+      "date": "2026-05-20"
+    },
+    {
+      "title": "Google I/O 2026 Live Updates: Latest News on Android 17 and Gemini - CNET (relevance: 100%)",
+      "url": "https://www.cnet.com/news-live/google-io-2026-live-news-updates/",
+      "date": "2026-05-20"
+    },
+    {
+      "title": "Google I/O 2026 live: Gemini AI, Android 17, Android XR updates and more - Yahoo Tech (relevance: 100%)",
+      "url": "https://tech.yahoo.com/general/live/google-io-2026-live-gemini-ai-android-17-android-xr-updates-and-more-135626963.html",
+      "date": "2026-05-20"
+    },
+    {
+      "title": "Tech Editors Talk Generative AI Announcements at Google I/O 2026 - CNET (relevance: 100%)",
+      "url": "https://www.cnet.com/videos/tech-editors-talk-generative-ai-announcements-at-google-io-2026/",
+      "date": "2026-05-20"
+    },
+    {
+      "title": "Anthropic, OpenAI Hold Majority Of Startup AI Revenue 05/19/2026 - MediaPost (relevance: 99%)",
+      "url": "https://www.mediapost.com/publications/article/415163/anthropic-openai-hold-majority-of-startup-ai-reve.html",
+      "date": "2026-05-20"
+    },
+    {
+      "title": "OpenAI Cofounder And Former Tesla AI Leader Andrej Karpathy Joins Anthropic - Forbes (relevance: 99%)",
+      "url": "https://www.forbes.com/sites/aliciapark/2026/05/19/openai-cofounder-and-former-tesla-ai-leader-andrej-karpathy-joins-anthropic/",
+      "date": "2026-05-20"
+    },
+    {
+      "title": "Plex is tripling the price of a lifetime pass to $750 after doubling it last year - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/934269/plex-pass-lifetime-subscription-triple-750-price-hike",
+      "date": "2026-05-20"
+    },
+    {
+      "title": "Google is rolling out its redesigned Workspace app icons - The Verge (relevance: 88%)",
+      "url": "https://www.theverge.com/tech/932417/google-gmail-docs-cal-sheets-workspace-icon-redesign",
+      "date": "2026-05-20"
+    },
+    {
+      "title": "Gemini is in danger of going full Copilot - The Verge (relevance: 77%)",
+      "url": "https://www.theverge.com/tech/931752/google-io-2026-gemini-icon-docs-workspace",
+      "date": "2026-05-20"
     }
   ]
 }
