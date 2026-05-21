@@ -1,46 +1,6 @@
 {
   "news": [
     {
-      "title": "Microsoft's Semantic Kernel Hits 27K Stars in 2026 - is4.ai",
-      "url": "https://is4.ai/blog/our-blog-1/semantic-kernel-microsoft-ai-framework-2026-241",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "LangGraph Explained (2026 Edition) | by Dewasheesh Rana | Medium",
-      "url": "https://medium.com/@dewasheesh.rana/langgraph-explained-2026-edition-ea8f725abff3",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Google just changed the future of UI/UX design... - YouTube",
-      "url": "https://www.youtube.com/watch?v=qaB5HF4ax9M",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Model Context Protocol (MCP): The Standard That's Changing AI ...",
-      "url": "https://devstarsj.github.io/2026/03/18/model-context-protocol-mcp-complete-guide-2026/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Responsible Agents and the Future of AI \\ Anthropic",
-      "url": "https://www.anthropic.com/events/agentic-ai-in-action",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Picking an agentic framework in 2026: what actually matters",
-      "url": "https://rhesis.ai/post/picking-agentic-framework-2026",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Best AI Agent Frameworks 2026: Developer Guide",
-      "url": "https://www.alphacorp.ai/blog/the-8-best-ai-agent-frameworks-in-2026-a-developers-guide",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Semantic Kernel vs LangChain: What to Choose in 2026? - Kanerika",
-      "url": "https://kanerika.com/blogs/semantic-kernel-vs-langchain/",
-      "date": "2026-03-25"
-    },
-    {
       "title": "Microsoft 365 & Power Platform community call - 5th of March 2026",
       "url": "https://www.youtube.com/watch?v=65E8HB7B7i4",
       "date": "2026-03-25"
@@ -2499,6 +2459,46 @@
       "title": "Gemini is in danger of going full Copilot - The Verge (relevance: 77%)",
       "url": "https://www.theverge.com/tech/931752/google-io-2026-gemini-icon-docs-workspace",
       "date": "2026-05-20"
+    },
+    {
+      "title": "Bristol Myers Squibb Announces Strategic Agreement with Anthropic to Position Claude Enterprise as the Shared Intelligence Platform Across Its Global Operations - Bristol Myers Squibb (relevance: 100%)",
+      "url": "https://news.bms.com/news/details/2026/Bristol-Myers-Squibb-Announces-Strategic-Agreement-with-Anthropic-to-Position-Claude-Enterprise-as-the-Shared-Intelligence-Platform-Across-Its-Global-Operations/default.aspx",
+      "date": "2026-05-21"
+    },
+    {
+      "title": "FANUC Accelerates Physical AI Through Collaboration with Google – Company Announcement - Financial Times (relevance: 100%)",
+      "url": "https://markets.ft.com/data/announce/detail?dockey=600-202605190800PR_NEWS_USPRX____DE61842-1",
+      "date": "2026-05-21"
+    },
+    {
+      "title": "How to Watch Google I/O 2026 - WIRED (relevance: 61%)",
+      "url": "https://www.wired.com/story/how-to-watch-google-io/",
+      "date": "2026-05-21"
+    },
+    {
+      "title": "Anthropic, OpenAI Hold Majority Of Startup AI Revenue 05/19/2026 - MediaPost (relevance: 99%)",
+      "url": "https://www.mediapost.com/publications/article/415163/anthropic-openai-hold-majority-of-startup-ai-reve.html",
+      "date": "2026-05-21"
+    },
+    {
+      "title": "OpenAI Cofounder And Former Tesla AI Leader Andrej Karpathy Joins Anthropic - Forbes (relevance: 99%)",
+      "url": "https://www.forbes.com/sites/aliciapark/2026/05/19/openai-cofounder-and-former-tesla-ai-leader-andrej-karpathy-joins-anthropic/",
+      "date": "2026-05-21"
+    },
+    {
+      "title": "Google’s AI future demands trust — and your personal data - The Verge (relevance: 83%)",
+      "url": "https://www.theverge.com/tech/934172/google-io-gemini-ai-trust-personal-data",
+      "date": "2026-05-21"
+    },
+    {
+      "title": "The 13 biggest announcements at Google I/O 2026 - The Verge (relevance: 64%)",
+      "url": "https://www.theverge.com/tech/933415/google-io-2026-biggest-announcements-ai-gemini",
+      "date": "2026-05-21"
+    },
+    {
+      "title": "Google is launching an Android version of its AI Studio vibe coding tool. - The Verge (relevance: 15%)",
+      "url": "https://www.theverge.com/tech/934354/google-is-launching-an-ai-studio-app-for-android",
+      "date": "2026-05-21"
     }
   ]
 }
