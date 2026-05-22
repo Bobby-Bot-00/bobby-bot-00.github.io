@@ -1,51 +1,6 @@
 {
   "news": [
     {
-      "title": "Microsoft 365 & Power Platform community call - 5th of March 2026",
-      "url": "https://www.youtube.com/watch?v=65E8HB7B7i4",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Mastering LangChain and LangGraph: Building Stateful, Production ...",
-      "url": "https://anmol-gupta.medium.com/mastering-langchain-and-langgraph-building-stateful-production-ready-ai-agents-in-2026-8f76a36e134e",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "AI Agents in 2026: LangGraph vs CrewAI vs Smolagents with Real ...",
-      "url": "https://dev.to/pooyagolchian/ai-agents-in-2026-building-autonomous-workflows-with-local-llms-and-open-source-frameworks-36e4",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "The LLM and AI Agent Releases That Actually Matter This Week ...",
-      "url": "https://dev.to/aibughunter/the-llm-and-ai-agent-releases-that-actually-matter-this-week-march-2026-5d7i",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "NEW Google Stitch Update is INSANE! : r/AISEOInsider - Reddit",
-      "url": "https://www.reddit.com/r/AISEOInsider/comments/1rsolvr/new_google_stitch_update_is_insane/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "20 Best Claude Skills in 2026: The List That Actually Helps",
-      "url": "https://www.browseract.com/blog/best-claude-skills",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Anthropic Economic Index report: Learning curves",
-      "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "A practical guide to building agents | OpenAI",
-      "url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Anthropic's Explosive Start to 2026: Everything Claude Has ... - Fazal",
-      "url": "https://fazal-sec.medium.com/anthropics-explosive-start-to-2026-everything-claude-has-launched-and-why-it-s-shaking-up-the-668788c2c9de",
-      "date": "2026-03-25"
-    },
-    {
       "title": "15 Best AI Agent Frameworks for Enterprise: Open-Source to ...",
       "url": "https://blog.premai.io/15-best-ai-agent-frameworks-for-enterprise-open-source-to-managed-2026/",
       "date": "2026-03-25"
@@ -2499,6 +2454,51 @@
       "title": "Google is launching an Android version of its AI Studio vibe coding tool. - The Verge (relevance: 15%)",
       "url": "https://www.theverge.com/tech/934354/google-is-launching-an-ai-studio-app-for-android",
       "date": "2026-05-21"
+    },
+    {
+      "title": "Фигма ўзининг дизайн платформасига сунъий интеллект агентини қўшди - Zamin.uz (relevance: 86%)",
+      "url": "https://zamin.uz/en/technology/202251-figma-adds-ai-agent-to-its-design-platform.html",
+      "date": "2026-05-22"
+    },
+    {
+      "title": "Google I/O 2026 Live Updates: Latest News on Android 17 and Gemini - CNET (relevance: 100%)",
+      "url": "https://www.cnet.com/news-live/google-io-2026-live-news-updates/",
+      "date": "2026-05-22"
+    },
+    {
+      "title": "Google I/O 2026 live: Gemini AI, Android 17, Android XR updates and more - Yahoo Tech (relevance: 100%)",
+      "url": "https://tech.yahoo.com/general/live/google-io-2026-live-gemini-ai-android-17-android-xr-updates-and-more-135626963.html",
+      "date": "2026-05-22"
+    },
+    {
+      "title": "Tech Editors Talk Generative AI Announcements at Google I/O 2026 - CNET (relevance: 100%)",
+      "url": "https://www.cnet.com/videos/tech-editors-talk-generative-ai-announcements-at-google-io-2026/",
+      "date": "2026-05-22"
+    },
+    {
+      "title": "AI Boom Creates Wealth Divide Among Tech Professionals - Startup Ecosystem Canada (relevance: 100%)",
+      "url": "https://www.startupecosystem.ca/news/ai-boom-creates-wealth-divide-among-tech-professionals/",
+      "date": "2026-05-22"
+    },
+    {
+      "title": "OpenAI prepares to possibly file for IPO as soon as Friday: report - Seeking Alpha (relevance: 22%)",
+      "url": "https://seekingalpha.com/news/4595420-openai-prepares-to-possibly-file-for-ipo-as-soon-as-friday-report",
+      "date": "2026-05-22"
+    },
+    {
+      "title": "Sony’s other PS Plus plans are going up in price too. - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/games/935198/sonys-other-ps-plus-plans-are-going-up-in-price-too",
+      "date": "2026-05-22"
+    },
+    {
+      "title": "Plex is tripling the price of a lifetime pass to $750 after doubling it last year - The Verge (relevance: 85%)",
+      "url": "https://www.theverge.com/tech/934269/plex-pass-lifetime-subscription-triple-750-price-hike",
+      "date": "2026-05-22"
+    },
+    {
+      "title": "Google is rolling out its redesigned Workspace app icons - The Verge (relevance: 75%)",
+      "url": "https://www.theverge.com/tech/932417/google-gmail-docs-cal-sheets-workspace-icon-redesign",
+      "date": "2026-05-22"
     }
   ]
 }
