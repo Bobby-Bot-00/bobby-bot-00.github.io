@@ -1,46 +1,6 @@
 {
   "news": [
     {
-      "title": "Anthropic says Claude can now use your computer to finish tasks for you in AI agent push - CNBC (relevance: 84%)",
-      "url": "https://www.cnbc.com/2026/03/24/anthropic-claude-ai-agent-use-computer-finish-tasks.html",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Claude Code can now take over your computer to complete tasks - Ars Technica (relevance: 82%)",
-      "url": "https://arstechnica.com/ai/2026/03/claude-code-can-now-take-over-your-computer-to-complete-tasks/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Anthropic is giving Claude the ability to use your Mac for you - 9to5Mac (relevance: 80%)",
-      "url": "https://9to5mac.com/2026/03/23/anthropic-is-giving-claude-the-ability-to-use-your-mac-for-you/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Google creates installation path for unverified Android apps - theregister.com (relevance: 78%)",
-      "url": "https://www.theregister.com/2026/03/19/google_android_unverified_apps/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Google Preparing For AI Agents To Leave The Building 03/18/2026 - MediaPost (relevance: 68%)",
-      "url": "https://www.mediapost.com/publications/article/413557/google-preparing-for-ai-agents-to-leave-the-buildi.html",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Google Shakes Up Its Browser Agent Team Amid OpenClaw Craze - WIRED (relevance: 22%)",
-      "url": "https://www.wired.com/story/google-shakes-up-project-mariner-team-web-browsing-agents/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "Google Adds New Agentic Shopping Features as OpenAI Pivots, Amazon Enters the Mix - Retail TouchPoints (relevance: 78%)",
-      "url": "https://www.retailtouchpoints.com/news/google-adds-new-agentic-shopping-features-as-openai-pivots-amazon-enters-the-mix/618095/",
-      "date": "2026-03-25"
-    },
-    {
-      "title": "OpenClaw's Viral Surge Mirrors ChatGPT Launch, Fueling Fears of AI Model Commoditization - MLQ.ai (relevance: 75%)",
-      "url": "https://mlq.ai/news/openclaws-viral-surge-mirrors-chatgpt-launch-fueling-fears-of-ai-model-commoditization/",
-      "date": "2026-03-25"
-    },
-    {
       "title": "OpenAI Courts Private-Equity Firms, Ads Showing Initial Intent 03/16/2026 - MediaPost (relevance: 63%)",
       "url": "https://www.mediapost.com/publications/article/413515/openai-courts-private-equity-firms-ads-showing-in.html?edition=141948",
       "date": "2026-03-25"
@@ -2499,6 +2459,46 @@
       "title": "Google is launching an Android version of its AI Studio vibe coding tool. - The Verge (relevance: 32%)",
       "url": "https://www.theverge.com/tech/934354/google-is-launching-an-ai-studio-app-for-android",
       "date": "2026-05-23"
+    },
+    {
+      "title": "AI Agent Traps: 20 Real-Life Incidents - AIMultiple (relevance: 100%)",
+      "url": "https://aimultiple.com/ai-agent-traps",
+      "date": "2026-05-24"
+    },
+    {
+      "title": "FANUC Accelerates Physical AI Through Collaboration with Google – Company Announcement - Financial Times (relevance: 100%)",
+      "url": "https://markets.ft.com/data/announce/detail?dockey=600-202605190800PR_NEWS_USPRX____DE61842-1",
+      "date": "2026-05-24"
+    },
+    {
+      "title": "How to Watch Google I/O 2026 - WIRED (relevance: 61%)",
+      "url": "https://www.wired.com/story/how-to-watch-google-io/",
+      "date": "2026-05-24"
+    },
+    {
+      "title": "OpenAI prepares to possibly file for IPO as soon as Friday: report - Seeking Alpha (relevance: 72%)",
+      "url": "https://seekingalpha.com/news/4595420-openai-prepares-to-possibly-file-for-ipo-as-soon-as-friday-report",
+      "date": "2026-05-24"
+    },
+    {
+      "title": "2026 CNBC Disruptor 50 list: Why Anthropic was No. 1 in this year's rankings - CNBC (relevance: 68%)",
+      "url": "https://www.cnbc.com/2026/05/19/2026-cnbc-disruptor-50-rankings-anthropic-no-1.html",
+      "date": "2026-05-24"
+    },
+    {
+      "title": "Sony’s other PS Plus plans are going up in price too. - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/games/935198/sonys-other-ps-plus-plans-are-going-up-in-price-too",
+      "date": "2026-05-24"
+    },
+    {
+      "title": "Plex is tripling the price of a lifetime pass to $750 after doubling it last year - The Verge (relevance: 85%)",
+      "url": "https://www.theverge.com/tech/934269/plex-pass-lifetime-subscription-triple-750-price-hike",
+      "date": "2026-05-24"
+    },
+    {
+      "title": "Google is rolling out its redesigned Workspace app icons - The Verge (relevance: 75%)",
+      "url": "https://www.theverge.com/tech/932417/google-gmail-docs-cal-sheets-workspace-icon-redesign",
+      "date": "2026-05-24"
     }
   ]
 }
