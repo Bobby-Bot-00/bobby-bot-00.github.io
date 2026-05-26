@@ -1,41 +1,6 @@
 {
   "news": [
     {
-      "title": "OpenAI to nearly double workforce to 8,000 by end 2026 while layoffs persist everywhere - DesignTAXI Community (relevance: 100%)",
-      "url": "https://community.designtaxi.com/topic/25501-openai-to-nearly-double-workforce-to-8000-by-end-2026-while-layoffs-persist-everywhere/",
-      "date": "2026-03-27"
-    },
-    {
-      "title": "Xbox CEO wants cheaper Game Pass sub & Netflix bundle deal: Report - Dexerto (relevance: 100%)",
-      "url": "https://www.dexerto.com/gaming/xbox-ceo-wants-cheaper-game-pass-sub-netflix-bundle-deal-report-3340301/",
-      "date": "2026-03-27"
-    },
-    {
-      "title": "Microsoft outs Windows 11 KB5085516 to fix internet access to OneDrive, Edge, Teams, Copilot - Neowin (relevance: 44%)",
-      "url": "https://www.neowin.net/news/microsoft-outs-windows-11-kb5085516-to-fix-internet-access-to-onedrive-edge-teams-copilot/",
-      "date": "2026-03-27"
-    },
-    {
-      "title": "Made In USA Introduces AI-Compatible Certification Framework - Let's Data Science (relevance: 51%)",
-      "url": "https://letsdatascience.com/news/made-in-usa-introduces-ai-compatible-certification-framework-b0b018ac",
-      "date": "2026-03-28"
-    },
-    {
-      "title": "National Association of Workforce Boards and Microsoft - GlobeNewswire (relevance: 6%)",
-      "url": "https://www.globenewswire.com/news-release/2026/03/26/3263330/0/en/National-Association-of-Workforce-Boards-and-Microsoft-Elevate-Partner-to-Build-AI-Skills-Across-the-American-Workforce.html",
-      "date": "2026-03-28"
-    },
-    {
-      "title": "Critical Flaw in Langflow AI Platform Under Attack - Dark Reading (relevance: 2%)",
-      "url": "https://www.darkreading.com/vulnerabilities-threats/critical-flaw-langflow-ai-platform-under-attack",
-      "date": "2026-03-29"
-    },
-    {
-      "title": "The number of paid subscribers to Anthropic, the company that operates Claude, has more than doubled in the first six months of 2026. - GIGAZINE (relevance: 100%)",
-      "url": "https://gigazine.net/gsc_news/en/20260330-anthropics-claude-popularity/",
-      "date": "2026-03-31"
-    },
-    {
       "title": "\"We have the same agent. That's why she said it.\" - Yahoo Sports Canada (relevance: 1%)",
       "url": "https://ca.sports.yahoo.com/news/same-agent-thats-why-she-110348636.html",
       "date": "2026-03-31"
@@ -2499,6 +2464,41 @@
       "title": "Google is rolling out its redesigned Workspace app icons - The Verge (relevance: 75%)",
       "url": "https://www.theverge.com/tech/932417/google-gmail-docs-cal-sheets-workspace-icon-redesign",
       "date": "2026-05-25"
+    },
+    {
+      "title": "Google is launching an Android version of its AI Studio vibe coding tool. - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/934354/google-is-launching-an-ai-studio-app-for-android",
+      "date": "2026-05-26"
+    },
+    {
+      "title": "Google I/O 2026 live: Gemini AI, Android 17, Android XR updates and more - Yahoo Tech (relevance: 100%)",
+      "url": "https://tech.yahoo.com/general/live/google-io-2026-live-gemini-ai-android-17-android-xr-updates-and-more-135626963.html",
+      "date": "2026-05-26"
+    },
+    {
+      "title": "Tech Editors Talk Generative AI Announcements at Google I/O 2026 - CNET (relevance: 100%)",
+      "url": "https://www.cnet.com/videos/tech-editors-talk-generative-ai-announcements-at-google-io-2026/",
+      "date": "2026-05-26"
+    },
+    {
+      "title": "Anthropic, Microsoft in talks for AI chip deal after $5 billion investment - CNBC (relevance: 99%)",
+      "url": "https://www.cnbc.com/2026/05/21/anthropic-microsoft-maia-200-ai-chip.html",
+      "date": "2026-05-26"
+    },
+    {
+      "title": "OpenAI Prepares Confidential IPO Filing, Targets September Public Debut - OpenTools (relevance: 99%)",
+      "url": "https://opentools.ai/news/openai-confidential-ipo-filing-september-2026",
+      "date": "2026-05-26"
+    },
+    {
+      "title": "Sony’s other PS Plus plans are going up in price too. - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/games/935198/sonys-other-ps-plus-plans-are-going-up-in-price-too",
+      "date": "2026-05-26"
+    },
+    {
+      "title": "Plex is tripling the price of a lifetime pass to $750 after doubling it last year - The Verge (relevance: 85%)",
+      "url": "https://www.theverge.com/tech/934269/plex-pass-lifetime-subscription-triple-750-price-hike",
+      "date": "2026-05-26"
     }
   ]
 }
