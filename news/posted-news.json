@@ -1,56 +1,6 @@
 {
   "news": [
     {
-      "title": "April 2026 update arrives for Galaxy S26 series, setting foundation for One UI 8.5 - Sammy Fans (relevance: 12%)",
-      "url": "https://www.sammyfans.com/2026/04/01/april-2026-update-arrives-for-galaxy-s26-series/",
-      "date": "2026-04-03"
-    },
-    {
-      "title": "Microsoft takes on AI rivals with three new foundational models - TechCrunch (relevance: 19%)",
-      "url": "https://techcrunch.com/2026/04/02/microsoft-takes-on-ai-rivals-with-three-new-foundational-models/",
-      "date": "2026-04-03"
-    },
-    {
-      "title": "Google commits to video generation, announces Veo 3.1 Lite - 9to5Google (relevance: 88%)",
-      "url": "https://9to5google.com/2026/03/31/veo-3-1-lite/",
-      "date": "2026-04-03"
-    },
-    {
-      "title": "Google AI Pro now comes with 5 TB of storage, no price increase - 9to5Google (relevance: 86%)",
-      "url": "https://9to5google.com/2026/04/01/google-ai-pro-5-tb/",
-      "date": "2026-04-03"
-    },
-    {
-      "title": "Apple hires Google exec to lead AI marketing - Axios (relevance: 79%)",
-      "url": "https://www.axios.com/2026/03/27/apple-google-ai-marketing",
-      "date": "2026-04-03"
-    },
-    {
-      "title": "Microsoft Set for Worst Quarter Since 2008 as AI Takes Two Bites - Bloomberg.com (relevance: 60%)",
-      "url": "https://www.bloomberg.com/news/articles/2026-03-27/microsoft-set-for-worst-quarter-since-2008-as-ai-takes-two-bites",
-      "date": "2026-04-03"
-    },
-    {
-      "title": "Sora isn’t the only thing OpenAI shut down this month - 9to5Mac (relevance: 52%)",
-      "url": "https://9to5mac.com/2026/03/29/sora-isnt-the-only-thing-openai-shut-down-this-month/",
-      "date": "2026-04-03"
-    },
-    {
-      "title": "Claude Code leak exposes a Tamagotchi-style ‘pet’ and an always-on agent - The Verge (relevance: 37%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/904776/anthropic-claude-source-code-leak",
-      "date": "2026-04-03"
-    },
-    {
-      "title": "OpenAI just bought TBPN - The Verge (relevance: 3%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/906022/openai-buys-tbpn",
-      "date": "2026-04-03"
-    },
-    {
-      "title": "Why OpenAI killed Sora - The Verge (relevance: 2%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/902368/openai-sora-dead-ai-video-generation-competition",
-      "date": "2026-04-03"
-    },
-    {
       "title": "FDB Launches MedProof MCP to Ground AI Agents in Clinical Drug Knowledge - HIT Consultant (relevance: 87%)",
       "url": "https://hitconsultant.net/2026/04/03/fdb-medproof-mcp-launch-model-context-protocol-ai-medication/",
       "date": "2026-04-04"
@@ -2499,6 +2449,56 @@
       "title": "AI warfare is already here - The Verge (relevance: 1%)",
       "url": "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines",
       "date": "2026-05-27"
+    },
+    {
+      "title": "Top 10: AML Software Providers - FinTech Magazine (relevance: 88%)",
+      "url": "https://fintechmagazine.com/top10/top-10-aml-software-providers",
+      "date": "2026-05-28"
+    },
+    {
+      "title": "How to self-host LibreChat with Docker - Hostinger (relevance: 84%)",
+      "url": "https://www.hostinger.com/uk/tutorials/how-to-self-host-librechat-with-docker",
+      "date": "2026-05-28"
+    },
+    {
+      "title": "Top five fintech partnership stories from May 2026 - FinTech Futures (relevance: 21%)",
+      "url": "https://www.fintechfutures.com/partnerships/may-2026-top-five-fintech-partnership-stories-of-the-month",
+      "date": "2026-05-28"
+    },
+    {
+      "title": "Google Search can now do a lot of things, but ‘searching’ isn't really one of them - The Times of India (relevance: 100%)",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/google-search-can-now-do-a-lot-of-things-but-searching-isnt-really-one-of-them/articleshow/131306732.cms",
+      "date": "2026-05-28"
+    },
+    {
+      "title": "Small Business Technology News From Epicor, Google, Microsoft, Boston Dynamics And Claude - Forbes (relevance: 95%)",
+      "url": "https://www.forbes.com/sites/quickerbettertech/2026/05/24/small-business-technology-news-from-epicor-google-microsoft-boston-dynamics-and-claude/",
+      "date": "2026-05-28"
+    },
+    {
+      "title": "Anthropic, Microsoft in talks for AI chip deal after $5 billion investment - CNBC (relevance: 99%)",
+      "url": "https://www.cnbc.com/2026/05/21/anthropic-microsoft-maia-200-ai-chip.html",
+      "date": "2026-05-28"
+    },
+    {
+      "title": "OpenAI Prepares Confidential IPO Filing, Targets September Public Debut - OpenTools (relevance: 99%)",
+      "url": "https://opentools.ai/news/openai-confidential-ipo-filing-september-2026",
+      "date": "2026-05-28"
+    },
+    {
+      "title": "Sony’s other PS Plus plans are going up in price too. - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/games/935198/sonys-other-ps-plus-plans-are-going-up-in-price-too",
+      "date": "2026-05-28"
+    },
+    {
+      "title": "Here’s how Google is responding to Fitbit users who don’t like the new Health app - The Verge (relevance: 86%)",
+      "url": "https://www.theverge.com/tech/938179/google-health-fitbit-roadmap",
+      "date": "2026-05-28"
+    },
+    {
+      "title": "Google Health is here, but a lot of people want their Fitbit app back instead - The Verge (relevance: 73%)",
+      "url": "https://www.theverge.com/gadgets/937534/google-health-fitbit-app-ai",
+      "date": "2026-05-28"
     }
   ]
 }
