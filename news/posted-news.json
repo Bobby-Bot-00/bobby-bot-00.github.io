@@ -1,51 +1,6 @@
 {
   "news": [
     {
-      "title": "FDB Launches MedProof MCP to Ground AI Agents in Clinical Drug Knowledge - HIT Consultant (relevance: 87%)",
-      "url": "https://hitconsultant.net/2026/04/03/fdb-medproof-mcp-launch-model-context-protocol-ai-medication/",
-      "date": "2026-04-04"
-    },
-    {
-      "title": "Google commits to video generation, announces Veo 3.1 Lite - 9to5Google (relevance: 100%)",
-      "url": "https://9to5google.com/2026/03/31/veo-3-1-lite/",
-      "date": "2026-04-04"
-    },
-    {
-      "title": "Google announces Gemma 4 open AI models, switches to Apache 2.0 license - Ars Technica (relevance: 100%)",
-      "url": "https://arstechnica.com/ai/2026/04/google-announces-gemma-4-open-ai-models-switches-to-apache-2-0-license/",
-      "date": "2026-04-04"
-    },
-    {
-      "title": "Google AI Pro now comes with 5 TB of storage, no price increase - 9to5Google (relevance: 100%)",
-      "url": "https://9to5google.com/2026/04/01/google-ai-pro-5-tb/",
-      "date": "2026-04-04"
-    },
-    {
-      "title": "Anthropic employees bet on midterms - Axios (relevance: 70%)",
-      "url": "https://www.axios.com/2026/04/03/anthropic-midterms-pac",
-      "date": "2026-04-04"
-    },
-    {
-      "title": "Sora isn’t the only thing OpenAI shut down this month - 9to5Mac (relevance: 52%)",
-      "url": "https://9to5mac.com/2026/03/29/sora-isnt-the-only-thing-openai-shut-down-this-month/",
-      "date": "2026-04-04"
-    },
-    {
-      "title": "Claude Code leak exposes a Tamagotchi-style ‘pet’ and an always-on agent - The Verge (relevance: 37%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/904776/anthropic-claude-source-code-leak",
-      "date": "2026-04-04"
-    },
-    {
-      "title": "OpenAI just bought TBPN - The Verge (relevance: 3%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/906022/openai-buys-tbpn",
-      "date": "2026-04-04"
-    },
-    {
-      "title": "Why OpenAI killed Sora - The Verge (relevance: 2%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/902368/openai-sora-dead-ai-video-generation-competition",
-      "date": "2026-04-04"
-    },
-    {
       "title": "New Chrome Zero-Day CVE-2026-5281 Under Active Exploitation — Patch Released - The Hacker News (relevance: 72%)",
       "url": "https://thehackernews.com/2026/04/new-chrome-zero-day-cve-2026-5281-under.html",
       "date": "2026-04-05"
@@ -2499,6 +2454,51 @@
       "title": "Google Health is here, but a lot of people want their Fitbit app back instead - The Verge (relevance: 73%)",
       "url": "https://www.theverge.com/gadgets/937534/google-health-fitbit-app-ai",
       "date": "2026-05-28"
+    },
+    {
+      "title": "Google AI Smart Glasses 2026: Gemini, iPhone Support, Meta Rival - Memeburn (relevance: 100%)",
+      "url": "https://memeburn.com/google-ai-smart-glasses-2026-gemini-iphone-meta/",
+      "date": "2026-05-29"
+    },
+    {
+      "title": "Google I/O 2026: tech giant launches autonomous AI era, transforming search at cost to core business - ynetnews (relevance: 99%)",
+      "url": "https://www.ynetnews.com/tech-and-digital/article/ry3qypmlzl",
+      "date": "2026-05-29"
+    },
+    {
+      "title": "Redefine the Internet: new AI agents spark major shift in search and online work - ynetnews (relevance: 99%)",
+      "url": "https://www.ynetnews.com/tech-and-digital/article/hkf53gjxze",
+      "date": "2026-05-29"
+    },
+    {
+      "title": "Anthropic overtakes OpenAI as the most valuable AI startup - Axios (relevance: 100%)",
+      "url": "https://www.axios.com/2026/05/28/anthropic-ai-fundraising-openai",
+      "date": "2026-05-29"
+    },
+    {
+      "title": "Anthropic Is Now Worth More Than OpenAI—Exceeds $900 Billion Valuation - Forbes (relevance: 99%)",
+      "url": "https://www.forbes.com/sites/antoniopequenoiv/2026/05/28/anthropic-is-now-worth-almost-1-trillion-more-than-openai/",
+      "date": "2026-05-29"
+    },
+    {
+      "title": "Anthropic Raises at $965 Billion Valuation, Eclipsing OpenAI - Bloomberg.com (relevance: 99%)",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-28/anthropic-raises-at-965-billion-valuation-eclipsing-openai",
+      "date": "2026-05-29"
+    },
+    {
+      "title": "Here’s how Google is responding to Fitbit users who don’t like the new Health app - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/938179/google-health-fitbit-roadmap",
+      "date": "2026-05-29"
+    },
+    {
+      "title": "Google Health is here, but a lot of people want their Fitbit app back instead - The Verge (relevance: 86%)",
+      "url": "https://www.theverge.com/gadgets/937534/google-health-fitbit-app-ai",
+      "date": "2026-05-29"
+    },
+    {
+      "title": "If I could only have one laptop for work and gaming, I’d get this one - The Verge (relevance: 27%)",
+      "url": "https://www.theverge.com/tech/935898/asus-rog-zephyrus-g14-2026-intel-nvidia-review",
+      "date": "2026-05-29"
     }
   ]
 }
