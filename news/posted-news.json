@@ -1,51 +1,6 @@
 {
   "news": [
     {
-      "title": "New Chrome Zero-Day CVE-2026-5281 Under Active Exploitation — Patch Released - The Hacker News (relevance: 72%)",
-      "url": "https://thehackernews.com/2026/04/new-chrome-zero-day-cve-2026-5281-under.html",
-      "date": "2026-04-05"
-    },
-    {
-      "title": "Framework unifies the classical and quantum Mpemba effects - Phys.org (relevance: 60%)",
-      "url": "https://phys.org/news/2026-03-framework-classical-quantum-mpemba-effects.html",
-      "date": "2026-04-05"
-    },
-    {
-      "title": "Google commits to video generation, announces Veo 3.1 Lite - 9to5Google (relevance: 100%)",
-      "url": "https://9to5google.com/2026/03/31/veo-3-1-lite/",
-      "date": "2026-04-05"
-    },
-    {
-      "title": "Google announces Gemma 4 open AI models, switches to Apache 2.0 license - Ars Technica (relevance: 100%)",
-      "url": "https://arstechnica.com/ai/2026/04/google-announces-gemma-4-open-ai-models-switches-to-apache-2-0-license/",
-      "date": "2026-04-05"
-    },
-    {
-      "title": "Google AI Pro now comes with 5 TB of storage, no price increase - 9to5Google (relevance: 100%)",
-      "url": "https://9to5google.com/2026/04/01/google-ai-pro-5-tb/",
-      "date": "2026-04-05"
-    },
-    {
-      "title": "Anthropic employees bet on midterms - Axios (relevance: 100%)",
-      "url": "https://www.axios.com/2026/04/03/anthropic-midterms-pac",
-      "date": "2026-04-05"
-    },
-    {
-      "title": "If Microsoft Get This One Thing Right, the Stock Could Explode - The Motley Fool (relevance: 54%)",
-      "url": "https://www.fool.com/investing/2026/04/03/if-microsoft-get-this-one-thing-right-the-stock-co/",
-      "date": "2026-04-05"
-    },
-    {
-      "title": "Iran Threatens to Attack U.S. Tech Companies Starting April 1 - Gizmodo (relevance: 43%)",
-      "url": "https://gizmodo.com/iran-threatens-to-attack-u-s-tech-companies-starting-april-1-2000740363",
-      "date": "2026-04-05"
-    },
-    {
-      "title": "Hisense’s 75-inch U6 mini-LED TV is cheaper than its 65-inch model - The Verge (relevance: 100%)",
-      "url": "https://www.theverge.com/gadgets/904372/hisense-u6-mini-led-tv-4k-amazon-big-spring-sale-2026-deal",
-      "date": "2026-04-05"
-    },
-    {
       "title": "Amazon’s Big Spring Sale is a great time to get a fancy, AI-powered bird feeder - The Verge (relevance: 81%)",
       "url": "https://www.theverge.com/gadgets/902829/birdbuddy-netvue-smart-bird-feeders-amazon-big-spring-sale-2026-deals",
       "date": "2026-04-05"
@@ -2499,6 +2454,51 @@
       "title": "If I could only have one laptop for work and gaming, I’d get this one - The Verge (relevance: 27%)",
       "url": "https://www.theverge.com/tech/935898/asus-rog-zephyrus-g14-2026-intel-nvidia-review",
       "date": "2026-05-29"
+    },
+    {
+      "title": "Microsoft Condemns \"Uncoordinated\" Zero Day Disclosures - Infosecurity Magazine (relevance: 59%)",
+      "url": "https://www.infosecurity-magazine.com/news/microsoft-uncoordinated-zeroday/",
+      "date": "2026-05-30"
+    },
+    {
+      "title": "Retail Technology News: May Update - Chain Store Age (relevance: 100%)",
+      "url": "https://chainstoreage.com/retail-technology-news-may-update-1",
+      "date": "2026-05-30"
+    },
+    {
+      "title": "Google Search can now do a lot of things, but ‘searching’ isn't really one of them - The Times of India (relevance: 79%)",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/google-search-can-now-do-a-lot-of-things-but-searching-isnt-really-one-of-them/articleshow/131306732.cms",
+      "date": "2026-05-30"
+    },
+    {
+      "title": "Anthropic overtakes OpenAI as the most valuable AI startup - Axios (relevance: 100%)",
+      "url": "https://www.axios.com/2026/05/28/anthropic-ai-fundraising-openai",
+      "date": "2026-05-30"
+    },
+    {
+      "title": "Anthropic soars to $965bn valuation, leapfrogging OpenAI - Al Jazeera (relevance: 99%)",
+      "url": "https://www.aljazeera.com/economy/2026/5/29/anthropic-soars-to-965bn-valuation-leapfrogging-openai",
+      "date": "2026-05-30"
+    },
+    {
+      "title": "Anthropic Is Now Worth More Than OpenAI—Exceeds $900 Billion Valuation - Forbes (relevance: 99%)",
+      "url": "https://www.forbes.com/sites/antoniopequenoiv/2026/05/28/anthropic-is-now-worth-almost-1-trillion-more-than-openai/",
+      "date": "2026-05-30"
+    },
+    {
+      "title": "Claude’s new model is more ‘honest’ when it messes up - The Verge (relevance: 61%)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/939094/anthropic-claude-4-8-opus-honesty-effort",
+      "date": "2026-05-30"
+    },
+    {
+      "title": "AI warfare is already here - The Verge (relevance: 1%)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines",
+      "date": "2026-05-30"
+    },
+    {
+      "title": "Google Health is here, but a lot of people want their Fitbit app back instead - The Verge (relevance: 0%)",
+      "url": "https://www.theverge.com/gadgets/937534/google-health-fitbit-app-ai",
+      "date": "2026-05-30"
     }
   ]
 }
