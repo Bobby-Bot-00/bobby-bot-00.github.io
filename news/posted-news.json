@@ -1,41 +1,6 @@
 {
   "news": [
     {
-      "title": "Amazon’s Big Spring Sale is a great time to get a fancy, AI-powered bird feeder - The Verge (relevance: 81%)",
-      "url": "https://www.theverge.com/gadgets/902829/birdbuddy-netvue-smart-bird-feeders-amazon-big-spring-sale-2026-deals",
-      "date": "2026-04-05"
-    },
-    {
-      "title": "The first Apple Home Key-ready smart lock with UWB is cheaper during Amazon’s Big Spring Sale - The Verge (relevance: 81%)",
-      "url": "https://www.theverge.com/gadgets/903555/aqara-u400-apple-home-key-uwb-smart-lock-amazon-big-spring-sale-2026-deal",
-      "date": "2026-04-05"
-    },
-    {
-      "title": "Tech news: Oracle expands NetSuite AI Connector Service - Accounting Today (relevance: 100%)",
-      "url": "https://www.accountingtoday.com/list/tech-news-oracle-expands-netsuite-ai-connector-service",
-      "date": "2026-04-06"
-    },
-    {
-      "title": "Google AI Pro now comes with 5 TB of storage, no price increase - 9to5Google (relevance: 100%)",
-      "url": "https://9to5google.com/2026/04/01/google-ai-pro-5-tb/",
-      "date": "2026-04-06"
-    },
-    {
-      "title": "Android Developer Verification Rollout Begins Ahead of September Enforcement - The Hacker News (relevance: 57%)",
-      "url": "https://thehackernews.com/2026/03/android-developer-verification-rollout.html",
-      "date": "2026-04-06"
-    },
-    {
-      "title": "Anthropic employees bet on midterms - Axios (relevance: 100%)",
-      "url": "https://www.axios.com/2026/04/03/anthropic-midterms-pac",
-      "date": "2026-04-06"
-    },
-    {
-      "title": "If Microsoft Get This One Thing Right, the Stock Could Explode - The Motley Fool (relevance: 55%)",
-      "url": "https://www.fool.com/investing/2026/04/03/if-microsoft-get-this-one-thing-right-the-stock-co/",
-      "date": "2026-04-06"
-    },
-    {
       "title": "Iran Threatens to Attack U.S. Tech Companies Starting April 1 - Gizmodo (relevance: 43%)",
       "url": "https://gizmodo.com/iran-threatens-to-attack-u-s-tech-companies-starting-april-1-2000740363",
       "date": "2026-04-06"
@@ -2499,6 +2464,41 @@
       "title": "Google Health is here, but a lot of people want their Fitbit app back instead - The Verge (relevance: 0%)",
       "url": "https://www.theverge.com/gadgets/937534/google-health-fitbit-app-ai",
       "date": "2026-05-30"
+    },
+    {
+      "title": "Google DeepMind CEO Demis Hassabis stated that while he predicts the realization of artificial general intelligence (AGI) will occur around 2030, he is also considering the possibility of it happening as early as 2029. - GIGAZINE (relevance: 99%)",
+      "url": "https://gigazine.net/gsc_news/en/20260528-google-deepmind-ceo-demis-hassabis-agi-2030",
+      "date": "2026-05-31"
+    },
+    {
+      "title": "Where is the new Google Home? - Android Police (relevance: 98%)",
+      "url": "https://www.androidpolice.com/one-month-spring-2026-google-hasnt-announced-new-google-home-speaker/",
+      "date": "2026-05-31"
+    },
+    {
+      "title": "Anthropic overtakes OpenAI as the most valuable AI startup - Axios (relevance: 100%)",
+      "url": "https://www.axios.com/2026/05/28/anthropic-ai-fundraising-openai",
+      "date": "2026-05-31"
+    },
+    {
+      "title": "Anthropic soars to $965bn valuation, leapfrogging OpenAI - Al Jazeera (relevance: 99%)",
+      "url": "https://www.aljazeera.com/economy/2026/5/29/anthropic-soars-to-965bn-valuation-leapfrogging-openai",
+      "date": "2026-05-31"
+    },
+    {
+      "title": "Claude’s new model is more ‘honest’ when it messes up - The Verge (relevance: 61%)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/939094/anthropic-claude-4-8-opus-honesty-effort",
+      "date": "2026-05-31"
+    },
+    {
+      "title": "AI warfare is already here - The Verge (relevance: 1%)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/937028/military-ai-warfare-red-lines",
+      "date": "2026-05-31"
+    },
+    {
+      "title": "Google Health is here, but a lot of people want their Fitbit app back instead - The Verge (relevance: 0%)",
+      "url": "https://www.theverge.com/gadgets/937534/google-health-fitbit-app-ai",
+      "date": "2026-05-31"
     }
   ]
 }
