@@ -1,56 +1,6 @@
 {
   "news": [
     {
-      "title": "Iran Threatens to Attack U.S. Tech Companies Starting April 1 - Gizmodo (relevance: 43%)",
-      "url": "https://gizmodo.com/iran-threatens-to-attack-u-s-tech-companies-starting-april-1-2000740363",
-      "date": "2026-04-06"
-    },
-    {
-      "title": "Hisense’s 75-inch U6 mini-LED TV is cheaper than its 65-inch model - The Verge (relevance: 100%)",
-      "url": "https://www.theverge.com/gadgets/904372/hisense-u6-mini-led-tv-4k-amazon-big-spring-sale-2026-deal",
-      "date": "2026-04-06"
-    },
-    {
-      "title": "The first Apple Home Key-ready smart lock with UWB is cheaper during Amazon’s Big Spring Sale - The Verge (relevance: 81%)",
-      "url": "https://www.theverge.com/gadgets/903555/aqara-u400-apple-home-key-uwb-smart-lock-amazon-big-spring-sale-2026-deal",
-      "date": "2026-04-06"
-    },
-    {
-      "title": "Sony’s WH-1000XM5 headphones are a whopping 39 percent off - The Verge (relevance: 78%)",
-      "url": "https://www.theverge.com/gadgets/904119/sony-xm5-noise-canceling-headphones-amazon-big-spring-sale-2026-deal",
-      "date": "2026-04-06"
-    },
-    {
-      "title": "METATRON - Open-Source AI Penetration Testing Assistant Brings Local LLM Analysis to Linux - CyberSecurityNews (relevance: 61%)",
-      "url": "https://cybersecuritynews.com/metatron-ai-penetration-testing/",
-      "date": "2026-04-07"
-    },
-    {
-      "title": "iOS 18.7.7—All iPhone Users Suddenly Given New Upgrade Choice - Forbes (relevance: 75%)",
-      "url": "https://www.forbes.com/sites/kateoflahertyuk/2026/04/02/ios-1877-all-iphone-users-suddenly-given-new-upgrade-choice/",
-      "date": "2026-04-07"
-    },
-    {
-      "title": "Google commits to video generation, announces Veo 3.1 Lite - 9to5Google (relevance: 100%)",
-      "url": "https://9to5google.com/2026/03/31/veo-3-1-lite/",
-      "date": "2026-04-07"
-    },
-    {
-      "title": "Google announces Gemma 4 open AI models, switches to Apache 2.0 license - Ars Technica (relevance: 100%)",
-      "url": "https://arstechnica.com/ai/2026/04/google-announces-gemma-4-open-ai-models-switches-to-apache-2-0-license/",
-      "date": "2026-04-07"
-    },
-    {
-      "title": "Google AI Pro now comes with 5 TB of storage, no price increase - 9to5Google (relevance: 100%)",
-      "url": "https://9to5google.com/2026/04/01/google-ai-pro-5-tb/",
-      "date": "2026-04-07"
-    },
-    {
-      "title": "Anthropic employees bet on midterms - Axios (relevance: 99%)",
-      "url": "https://www.axios.com/2026/04/03/anthropic-midterms-pac",
-      "date": "2026-04-07"
-    },
-    {
       "title": "OpenAI, Anthropic, Google Unite to Combat Model Copying in China - Bloomberg.com (relevance: 99%)",
       "url": "https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china",
       "date": "2026-04-07"
@@ -2499,6 +2449,56 @@
       "title": "Google Health is here, but a lot of people want their Fitbit app back instead - The Verge (relevance: 0%)",
       "url": "https://www.theverge.com/gadgets/937534/google-health-fitbit-app-ai",
       "date": "2026-05-31"
+    },
+    {
+      "title": "Microsoft Patches SharePoint RCE Flaw CVE-2026-45659 Across Server Versions - The Hacker News (relevance: 45%)",
+      "url": "https://thehackernews.com/2026/05/microsoft-patches-sharepoint-rce-flaw.html",
+      "date": "2026-06-01"
+    },
+    {
+      "title": "Retail Technology News: May Update - Chain Store Age (relevance: 100%)",
+      "url": "https://chainstoreage.com/retail-technology-news-may-update-1",
+      "date": "2026-06-01"
+    },
+    {
+      "title": "Google Search can now do a lot of things, but ‘searching’ isn't really one of them - The Times of India (relevance: 82%)",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/google-search-can-now-do-a-lot-of-things-but-searching-isnt-really-one-of-them/articleshow/131306732.cms",
+      "date": "2026-06-01"
+    },
+    {
+      "title": "DuckDuckGo is growing thanks to Google users frustrated by AI features - Mashable (relevance: 65%)",
+      "url": "https://mashable.com/tech/duckduckgo-growth-as-a-result-of-google-io-ai-search-announcements",
+      "date": "2026-06-01"
+    },
+    {
+      "title": "Apple Maintains Workforce Stability as Global Tech Layoffs Top 92,000 Amidst AI Spending Frenzy: Report - LatestLY (relevance: 100%)",
+      "url": "https://www.latestly.com/technology/apple-maintains-workforce-stability-as-global-tech-layoffs-top-92000-amidst-ai-spending-frenzy-report-7452105.html",
+      "date": "2026-06-01"
+    },
+    {
+      "title": "How Did Anthropic Become More Valuable Than OpenAI? Here’s the Answer, in Just 1 Word - inc.com (relevance: 95%)",
+      "url": "https://www.inc.com/justin-bariso/how-did-anthropic-become-more-valuable-than-openai-heres-the-answer-in-just-1-word/91353078",
+      "date": "2026-06-01"
+    },
+    {
+      "title": "Microsoft Should Be Thrown Out Of Magnificent 7 - 24/7 Wall St. (relevance: 94%)",
+      "url": "https://247wallst.com/investing/2026/05/26/microsoft-should-be-thrown-out-of-magnificent-7/",
+      "date": "2026-06-01"
+    },
+    {
+      "title": "Here’s how Google is responding to Fitbit users who don’t like the new Health app - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/938179/google-health-fitbit-roadmap",
+      "date": "2026-06-01"
+    },
+    {
+      "title": "Gemini for Google Home can now use your cameras to trigger automations - The Verge (relevance: 91%)",
+      "url": "https://www.theverge.com/tech/938771/google-home-gemini-ai-camera-automations",
+      "date": "2026-06-01"
+    },
+    {
+      "title": "Google Health is here, but a lot of people want their Fitbit app back instead - The Verge (relevance: 85%)",
+      "url": "https://www.theverge.com/gadgets/937534/google-health-fitbit-app-ai",
+      "date": "2026-06-01"
     }
   ]
 }
