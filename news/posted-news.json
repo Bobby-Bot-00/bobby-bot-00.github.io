@@ -1,51 +1,6 @@
 {
   "news": [
     {
-      "title": "Anthropic limits Mythos AI rollout over fears hackers could use model for cyberattacks - CNBC (relevance: 100%)",
-      "url": "https://www.cnbc.com/2026/04/07/anthropic-claude-mythos-ai-hackers-cyberattacks.html",
-      "date": "2026-04-08"
-    },
-    {
-      "title": "Claude is having a moment. Meet the Anthropic chatbot capturing Wall Street's attention. - Business Insider (relevance: 99%)",
-      "url": "https://www.businessinsider.com/claude",
-      "date": "2026-04-08"
-    },
-    {
-      "title": "Anthropic employees bet on midterms - Axios (relevance: 99%)",
-      "url": "https://www.axios.com/2026/04/03/anthropic-midterms-pac",
-      "date": "2026-04-08"
-    },
-    {
-      "title": "YouTube removes Nvidia’s own DLSS 5 trailer after a takedown request from an Italian TV channel. - The Verge (relevance: 100%)",
-      "url": "https://www.theverge.com/streaming/907280/youtubes-copyright-system-strikes-again",
-      "date": "2026-04-08"
-    },
-    {
-      "title": "The Moto Pad is Motorola’s first US-bound tablet in over a decade - The Verge (relevance: 76%)",
-      "url": "https://www.theverge.com/tech/908068/motorola-moto-pad-2026-tablet-g-stylus-smartphone-pricing-availability",
-      "date": "2026-04-08"
-    },
-    {
-      "title": "Samsung announces 2026 Frame TVs and the Pro costs less than last year’s - The Verge (relevance: 73%)",
-      "url": "https://www.theverge.com/tech/905652/samsung-announces-2026-frame-and-oled-tvs",
-      "date": "2026-04-08"
-    },
-    {
-      "title": "Microsoft's Agent Stack Confuses Developers While Rivals Simplify - Forbes (relevance: 58%)",
-      "url": "https://www.forbes.com/sites/janakirammsv/2026/04/06/microsofts-agent-stack-confuses-developers-while-rivals-simplify/",
-      "date": "2026-04-09"
-    },
-    {
-      "title": "Hope for a U.S.-Iran deal, Apple's anniversary, OpenAI's podcast deal and more in Morning Squawk - CNBC (relevance: 19%)",
-      "url": "https://www.cnbc.com/2026/04/06/5-things-to-know-before-the-bell-monday.html",
-      "date": "2026-04-09"
-    },
-    {
-      "title": "Microsoft makes huge move in a crucial market - thestreet.com (relevance: 2%)",
-      "url": "https://www.thestreet.com/investing/stocks/microsoft-makes-huge-move-in-a-crucial-market",
-      "date": "2026-04-09"
-    },
-    {
       "title": "Google announces Gemma 4 open AI models, switches to Apache 2.0 license - Ars Technica (relevance: 100%)",
       "url": "https://arstechnica.com/ai/2026/04/google-announces-gemma-4-open-ai-models-switches-to-apache-2-0-license/",
       "date": "2026-04-09"
@@ -2499,6 +2454,51 @@
       "title": "The Pixel Watch 5 may have been spoiled by… the creator of Borderlands - The Verge (relevance: 83%)",
       "url": "https://www.theverge.com/tech/941293/google-pixel-watch-5-randy-pitchford-borderlands",
       "date": "2026-06-02"
+    },
+    {
+      "title": "Semantic Knowledge Is Key to Human Innovation - Neuroscience News (relevance: 38%)",
+      "url": "https://neurosciencenews.com/semantic-knowledge-innovation-creativity-30798/",
+      "date": "2026-06-03"
+    },
+    {
+      "title": "Google DeepMind CEO Demis Hassabis stated that while he predicts the realization of artificial general intelligence (AGI) will occur around 2030, he is also considering the possibility of it happening as early as 2029. - GIGAZINE (relevance: 99%)",
+      "url": "https://gigazine.net/gsc_news/en/20260528-google-deepmind-ceo-demis-hassabis-agi-2030",
+      "date": "2026-06-03"
+    },
+    {
+      "title": "Qualcomm's Computex Keynote in 12 Minutes - Video - CNET (relevance: 95%)",
+      "url": "https://www.cnet.com/videos/qualcomms-computex-keynote-in-12-minutes/",
+      "date": "2026-06-03"
+    },
+    {
+      "title": "The 'Mystery Meat' of Google Gemini - CNET (relevance: 95%)",
+      "url": "https://www.cnet.com/videos/the-mystery-meat-of-google-gemini/",
+      "date": "2026-06-03"
+    },
+    {
+      "title": "Apple Maintains Workforce Stability as Global Tech Layoffs Top 92,000 Amidst AI Spending Frenzy: Report - LatestLY (relevance: 100%)",
+      "url": "https://www.latestly.com/technology/apple-maintains-workforce-stability-as-global-tech-layoffs-top-92000-amidst-ai-spending-frenzy-report-7452105.html",
+      "date": "2026-06-03"
+    },
+    {
+      "title": "How Did Anthropic Become More Valuable Than OpenAI? Here’s the Answer, in Just 1 Word - inc.com (relevance: 76%)",
+      "url": "https://www.inc.com/justin-bariso/how-did-anthropic-become-more-valuable-than-openai-heres-the-answer-in-just-1-word/91353078",
+      "date": "2026-06-03"
+    },
+    {
+      "title": "Here’s how Google is responding to Fitbit users who don’t like the new Health app - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/938179/google-health-fitbit-roadmap",
+      "date": "2026-06-03"
+    },
+    {
+      "title": "Gemini for Google Home can now use your cameras to trigger automations - The Verge (relevance: 91%)",
+      "url": "https://www.theverge.com/tech/938771/google-home-gemini-ai-camera-automations",
+      "date": "2026-06-03"
+    },
+    {
+      "title": "The Pixel Watch 5 may have been spoiled by… the creator of Borderlands - The Verge (relevance: 87%)",
+      "url": "https://www.theverge.com/tech/941293/google-pixel-watch-5-randy-pitchford-borderlands",
+      "date": "2026-06-03"
     }
   ]
 }
