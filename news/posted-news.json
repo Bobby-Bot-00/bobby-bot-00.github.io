@@ -1,46 +1,6 @@
 {
   "news": [
     {
-      "title": "Google announces Gemma 4 open AI models, switches to Apache 2.0 license - Ars Technica (relevance: 100%)",
-      "url": "https://arstechnica.com/ai/2026/04/google-announces-gemma-4-open-ai-models-switches-to-apache-2-0-license/",
-      "date": "2026-04-09"
-    },
-    {
-      "title": "Google quietly releases free offline AI dictation app for iPhone - The Next Web (relevance: 100%)",
-      "url": "https://thenextweb.com/news/google-offline-dictation-app-ios",
-      "date": "2026-04-09"
-    },
-    {
-      "title": "Google AI Overtakes Perplexity, Becomes No. 2 Referral To Websites 04/03/2026 - MediaPost (relevance: 99%)",
-      "url": "https://www.mediapost.com/publications/article/414030/google-ai-overtakes-perplexity-becomes-no-2-refe.html?edition=142153",
-      "date": "2026-04-09"
-    },
-    {
-      "title": "Anthropic Debuts Claude Mythos For Cybersecurity - letsdatascience.com (relevance: 100%)",
-      "url": "https://letsdatascience.com/news/anthropic-debuts-claude-mythos-for-cybersecurity-398b6c0d",
-      "date": "2026-04-09"
-    },
-    {
-      "title": "Anthropic employees bet on midterms - Axios (relevance: 65%)",
-      "url": "https://www.axios.com/2026/04/03/anthropic-midterms-pac",
-      "date": "2026-04-09"
-    },
-    {
-      "title": "Anthropic essentially bans OpenClaw from Claude by making subscribers pay extra - The Verge (relevance: 19%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/907074/anthropic-openclaw-claude-subscription-ban",
-      "date": "2026-04-09"
-    },
-    {
-      "title": "OpenAI just bought TBPN - The Verge (relevance: 3%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/906022/openai-buys-tbpn",
-      "date": "2026-04-09"
-    },
-    {
-      "title": "Pixel 8 Pro owners are literally icing their phones to fix broken Wi-Fi - Android Authority (relevance: 28%)",
-      "url": "https://www.androidauthority.com/google-pixel-8-pro-wi-fi-bluetooth-march-update-issues-3654983/",
-      "date": "2026-04-10"
-    },
-    {
       "title": "OpenAI’s vision for the AI economy: public wealth funds, robot taxes, and a four-day work week - TechCrunch (relevance: 71%)",
       "url": "https://techcrunch.com/2026/04/06/openais-vision-for-the-ai-economy-public-wealth-funds-robot-taxes-and-a-four-day-work-week/",
       "date": "2026-04-10"
@@ -2499,6 +2459,46 @@
       "title": "The Pixel Watch 5 may have been spoiled by… the creator of Borderlands - The Verge (relevance: 87%)",
       "url": "https://www.theverge.com/tech/941293/google-pixel-watch-5-randy-pitchford-borderlands",
       "date": "2026-06-03"
+    },
+    {
+      "title": "Google's new Gemma 4 open AI model is sized for your laptop - Ars Technica (relevance: 100%)",
+      "url": "https://arstechnica.com/google/2026/06/googles-new-gemma-4-open-ai-model-is-sized-for-your-laptop/",
+      "date": "2026-06-04"
+    },
+    {
+      "title": "Google DeepMind CEO Demis Hassabis stated that while he predicts the realization of artificial general intelligence (AGI) will occur around 2030, he is also considering the possibility of it happening as early as 2029. - GIGAZINE (relevance: 99%)",
+      "url": "https://gigazine.net/gsc_news/en/20260528-google-deepmind-ceo-demis-hassabis-agi-2030",
+      "date": "2026-06-04"
+    },
+    {
+      "title": "Skift Marriott Google AI Search Summit 2026: Hospitality's Transformation - Nomad Lawyer (relevance: 99%)",
+      "url": "https://nomadlawyer.org/skift-marriott-google-ai-search-summit-2026",
+      "date": "2026-06-04"
+    },
+    {
+      "title": "Reports indicate that Meta is developing an AI pendant. - GIGAZINE (relevance: 67%)",
+      "url": "https://gigazine.net/gsc_news/en/20260531-meta-reportedly-developing-ai-pendant/",
+      "date": "2026-06-04"
+    },
+    {
+      "title": "Anthropic Is Now Worth Almost $1 Trillion—More Than OpenAI - Forbes Africa (relevance: 58%)",
+      "url": "https://www.forbesafrica.com/current-affairs/2026/05/29/anthropic-is-now-worth-almost-1-trillion-more-than-openai",
+      "date": "2026-06-04"
+    },
+    {
+      "title": "Anthropic Hits $965B Valuation, Overtakes OpenAI as Most Valuable AI Startup - OpenTools (relevance: 57%)",
+      "url": "https://opentools.ai/news/anthropic-965-billion-valuation-overtakes-openai-2026",
+      "date": "2026-06-04"
+    },
+    {
+      "title": "Claude’s new model is more ‘honest’ when it messes up - The Verge (relevance: 9%)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/939094/anthropic-claude-4-8-opus-honesty-effort",
+      "date": "2026-06-04"
+    },
+    {
+      "title": "Microsoft Build 2026: the 7 biggest announcements - The Verge (relevance: 8%)",
+      "url": "https://www.theverge.com/tech/941738/microsoft-build-2026-biggest-announcements",
+      "date": "2026-06-04"
     }
   ]
 }
