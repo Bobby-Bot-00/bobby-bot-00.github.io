@@ -1,51 +1,6 @@
 {
   "news": [
     {
-      "title": "OpenAI’s vision for the AI economy: public wealth funds, robot taxes, and a four-day work week - TechCrunch (relevance: 71%)",
-      "url": "https://techcrunch.com/2026/04/06/openais-vision-for-the-ai-economy-public-wealth-funds-robot-taxes-and-a-four-day-work-week/",
-      "date": "2026-04-10"
-    },
-    {
-      "title": "Google quietly releases free offline AI dictation app for iPhone - The Next Web (relevance: 83%)",
-      "url": "https://thenextweb.com/news/google-offline-dictation-app-ios",
-      "date": "2026-04-10"
-    },
-    {
-      "title": "Google Photos adding 'AI Enhance' button and video playback speed controls, rolling out now - 9to5Google (relevance: 71%)",
-      "url": "https://9to5google.com/2026/04/06/google-photos-adding-ai-enhance-video-playback-speed-control/",
-      "date": "2026-04-10"
-    },
-    {
-      "title": "Google AI Shopping Features: How to Maximize Your Visibility (2026) - Shopify (relevance: 67%)",
-      "url": "https://www.shopify.com/blog/google-ai-shopping",
-      "date": "2026-04-10"
-    },
-    {
-      "title": "Anthropic Touts AI Cybersecurity Project With Big Tech Partners - Insurance Journal (relevance: 100%)",
-      "url": "https://www.insurancejournal.com/news/national/2026/04/09/865062.htm",
-      "date": "2026-04-10"
-    },
-    {
-      "title": "Anthropic limits Mythos AI rollout over fears hackers could use model for cyberattacks - CNBC (relevance: 100%)",
-      "url": "https://www.cnbc.com/2026/04/07/anthropic-claude-mythos-ai-hackers-cyberattacks.html",
-      "date": "2026-04-10"
-    },
-    {
-      "title": "Anthropic Debuts Claude Mythos For Cybersecurity - letsdatascience.com (relevance: 100%)",
-      "url": "https://letsdatascience.com/news/anthropic-debuts-claude-mythos-for-cybersecurity-398b6c0d",
-      "date": "2026-04-10"
-    },
-    {
-      "title": "Anthropic essentially bans OpenClaw from Claude by making subscribers pay extra - The Verge (relevance: 19%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/907074/anthropic-openclaw-claude-subscription-ban",
-      "date": "2026-04-10"
-    },
-    {
-      "title": "Google makes it easy to deepfake yourself - The Verge (relevance: 4%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/909104/youtube-shorts-make-ai-avatar",
-      "date": "2026-04-10"
-    },
-    {
       "title": "How Meta Used AI to Map Tribal Knowledge in Large-Scale Data Pipelines - Engineering at Meta Blog (relevance: 97%)",
       "url": "https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/",
       "date": "2026-04-11"
@@ -2499,6 +2454,51 @@
       "title": "Microsoft Build 2026: the 7 biggest announcements - The Verge (relevance: 8%)",
       "url": "https://www.theverge.com/tech/941738/microsoft-build-2026-biggest-announcements",
       "date": "2026-06-04"
+    },
+    {
+      "title": "Register Now! Large Liability Models? Emerging Tort and Privacy Risks in Chatbots and Generative AI - retailconsumerproductslaw.com (relevance: 100%)",
+      "url": "https://www.retailconsumerproductslaw.com/2026/06/register-now-large-liability-models-emerging-tort-and-privacy-risks-in-chatbots-and-generative-ai/",
+      "date": "2026-06-05"
+    },
+    {
+      "title": "Retail Technology News: May Update - Chain Store Age (relevance: 99%)",
+      "url": "https://chainstoreage.com/retail-technology-news-may-update-1",
+      "date": "2026-06-05"
+    },
+    {
+      "title": "DuckDuckGo makes its ‘no-AI’ search engine easier to access as its traffic booms - TechCrunch (relevance: 87%)",
+      "url": "https://techcrunch.com/2026/06/01/duckduckgo-makes-its-no-ai-search-engine-easier-to-access-as-its-traffic-booms/",
+      "date": "2026-06-05"
+    },
+    {
+      "title": "Apple Maintains Workforce Stability as Global Tech Layoffs Top 92,000 Amidst AI Spending Frenzy: Report - LatestLY (relevance: 100%)",
+      "url": "https://www.latestly.com/technology/apple-maintains-workforce-stability-as-global-tech-layoffs-top-92000-amidst-ai-spending-frenzy-report-7452105.html",
+      "date": "2026-06-05"
+    },
+    {
+      "title": "AI giants race toward IPOs at trillion-dollar valuations amid bubble fears - Ynetnews (relevance: 92%)",
+      "url": "https://www.ynetnews.com/business/article/bkkdmt0lfg",
+      "date": "2026-06-05"
+    },
+    {
+      "title": "How Did Anthropic Become More Valuable Than OpenAI? Here’s the Answer, in Just 1 Word - inc.com (relevance: 79%)",
+      "url": "https://www.inc.com/justin-bariso/how-did-anthropic-become-more-valuable-than-openai-heres-the-answer-in-just-1-word/91353078",
+      "date": "2026-06-05"
+    },
+    {
+      "title": "Google’s Phone app will tell you if a scammer is impersonating one of your contacts - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/941517/google-phone-scammer-ai-impersonation",
+      "date": "2026-06-05"
+    },
+    {
+      "title": "The Pixel Watch 5 may have been spoiled by… the creator of Borderlands - The Verge (relevance: 99%)",
+      "url": "https://www.theverge.com/tech/941293/google-pixel-watch-5-randy-pitchford-borderlands",
+      "date": "2026-06-05"
+    },
+    {
+      "title": "Google is letting social media stars customize their search result page - The Verge (relevance: 89%)",
+      "url": "https://www.theverge.com/tech/943233/google-search-profiles-custom-page",
+      "date": "2026-06-05"
     }
   ]
 }
