@@ -1,46 +1,6 @@
 {
   "news": [
     {
-      "title": "Google makes it easy to deepfake yourself - The Verge (relevance: 4%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/909104/youtube-shorts-make-ai-avatar",
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Iran threatens OpenAI’s Stargate data center in Abu Dhabi - The Verge (relevance: 2%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/907427/iran-openai-stargate-datacenter-uae-abu-dhabi-threat",
-      "date": "2026-04-11"
-    },
-    {
-      "title": "Claude was down – here's everything we know - TechRadar (relevance: 92%)",
-      "url": "https://www.techradar.com/news/live/claude-anthropic-down-outage-april-6-2026",
-      "date": "2026-04-12"
-    },
-    {
-      "title": "Linux 7.1 Expected To Begin Removing i486 CPU Support - Phoronix (relevance: 93%)",
-      "url": "https://www.phoronix.com/news/Linux-7.1-Phasing-Out-i486",
-      "date": "2026-04-12"
-    },
-    {
-      "title": "Google quietly releases free offline AI dictation app for iPhone - The Next Web (relevance: 100%)",
-      "url": "https://thenextweb.com/news/google-offline-dictation-app-ios",
-      "date": "2026-04-12"
-    },
-    {
-      "title": "Google Photos adding 'AI Enhance' button and video playback speed controls, rolling out now - 9to5Google (relevance: 98%)",
-      "url": "https://9to5google.com/2026/04/06/google-photos-adding-ai-enhance-video-playback-speed-control/",
-      "date": "2026-04-12"
-    },
-    {
-      "title": "7 AR Glasses In 2026 That Could Remake How You See The World – Here’s Why - Glass Almanac (relevance: 87%)",
-      "url": "https://glassalmanac.com/7-ar-glasses-in-2026-that-could-remake-how-you-see-the-world-heres-why/",
-      "date": "2026-04-12"
-    },
-    {
-      "title": "Anthropic Touts AI Cybersecurity Project With Big Tech Partners - Insurance Journal (relevance: 100%)",
-      "url": "https://www.insurancejournal.com/news/national/2026/04/09/865062.htm",
-      "date": "2026-04-12"
-    },
-    {
       "title": "Anthropic Debuts Claude Mythos For Cybersecurity - letsdatascience.com (relevance: 100%)",
       "url": "https://letsdatascience.com/news/anthropic-debuts-claude-mythos-for-cybersecurity-398b6c0d",
       "date": "2026-04-12"
@@ -2499,6 +2459,46 @@
       "title": "Windows is back on the Microsoft menu - The Verge (relevance: 1%)",
       "url": "https://www.theverge.com/tech/943108/microsoft-build-2026-windows-love-notepad",
       "date": "2026-06-06"
+    },
+    {
+      "title": "Is it a date? A retailer might've revealed the Google Home Speaker's launch - Android Central (relevance: 100%)",
+      "url": "https://www.androidcentral.com/accessories/smart-home/the-launch-date-for-googles-home-speaker-mightve-broken-cover",
+      "date": "2026-06-07"
+    },
+    {
+      "title": "Register Now! Large Liability Models? Emerging Tort and Privacy Risks in Chatbots and Generative AI - retailconsumerproductslaw.com (relevance: 41%)",
+      "url": "https://www.retailconsumerproductslaw.com/2026/06/register-now-large-liability-models-emerging-tort-and-privacy-risks-in-chatbots-and-generative-ai/",
+      "date": "2026-06-07"
+    },
+    {
+      "title": "DuckDuckGo makes its ‘no-AI’ search engine easier to access as its traffic booms - TechCrunch (relevance: 14%)",
+      "url": "https://techcrunch.com/2026/06/01/duckduckgo-makes-its-no-ai-search-engine-easier-to-access-as-its-traffic-booms/",
+      "date": "2026-06-07"
+    },
+    {
+      "title": "Microsoft AI CEO says lower prices give its models advantage over Anthropic: report - Seeking Alpha (relevance: 100%)",
+      "url": "https://seekingalpha.com/news/4600688-microsoft-ai-ceo-says-lower-prices-give-its-models-advantage-over-anthropic-report",
+      "date": "2026-06-07"
+    },
+    {
+      "title": "Anthropic confidentially files to go public - CNN (relevance: 100%)",
+      "url": "https://www.cnn.com/2026/06/01/tech/anthropic-ipo-filing",
+      "date": "2026-06-07"
+    },
+    {
+      "title": "Anthropic Hits $965B Valuation, Overtakes OpenAI as Most Valuable AI Startup - OpenTools (relevance: 100%)",
+      "url": "https://opentools.ai/news/anthropic-965-billion-valuation-overtakes-openai-2026",
+      "date": "2026-06-07"
+    },
+    {
+      "title": "Microsoft Build 2026: the 7 biggest announcements - The Verge (relevance: 1%)",
+      "url": "https://www.theverge.com/tech/941738/microsoft-build-2026-biggest-announcements",
+      "date": "2026-06-07"
+    },
+    {
+      "title": "Windows is back on the Microsoft menu - The Verge (relevance: 1%)",
+      "url": "https://www.theverge.com/tech/943108/microsoft-build-2026-windows-love-notepad",
+      "date": "2026-06-07"
     }
   ]
 }
