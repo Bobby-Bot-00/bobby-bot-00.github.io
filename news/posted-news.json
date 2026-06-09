@@ -1,41 +1,6 @@
 {
   "news": [
     {
-      "title": "Google makes it easy to deepfake yourself - The Verge (relevance: 4%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/909104/youtube-shorts-make-ai-avatar",
-      "date": "2026-04-13"
-    },
-    {
-      "title": "Iran threatens OpenAI’s Stargate data center in Abu Dhabi - The Verge (relevance: 2%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/907427/iran-openai-stargate-datacenter-uae-abu-dhabi-threat",
-      "date": "2026-04-13"
-    },
-    {
-      "title": "7 AR Glasses In 2026 That Could Remake How You See The World – Here’s Why - Glass Almanac (relevance: 63%)",
-      "url": "https://glassalmanac.com/7-ar-glasses-in-2026-that-could-remake-how-you-see-the-world-heres-why/",
-      "date": "2026-04-14"
-    },
-    {
-      "title": "Meta is reentering the AI race with a new model called Muse Spark - The Verge (relevance: 61%)",
-      "url": "https://www.theverge.com/tech/908769/meta-muse-spark-ai-model-launch-rollout",
-      "date": "2026-04-14"
-    },
-    {
-      "title": "OpenAI embraces Amazon, says Microsoft partnership was problematic - Axios (relevance: 63%)",
-      "url": "https://www.axios.com/2026/04/13/openai-microsoft-anthropic-amazon",
-      "date": "2026-04-14"
-    },
-    {
-      "title": "Google says Polymarket bets showing up in News was an ‘error’ - The Verge (relevance: 100%)",
-      "url": "https://www.theverge.com/tech/910691/google-news-polymarket-bets-error",
-      "date": "2026-04-14"
-    },
-    {
-      "title": "Google’s latest Nest Doorbells just hit their lowest prices of the year - The Verge (relevance: 96%)",
-      "url": "https://www.theverge.com/gadgets/910472/google-nest-doorbell-wired-battery-powered-deal-sale",
-      "date": "2026-04-14"
-    },
-    {
       "title": "Apple adds MacBook Neo parts to its Self Service Repair Store. - The Verge (relevance: 69%)",
       "url": "https://www.theverge.com/tech/909136/apple-macbook-neo-parts-self-service-repair-store",
       "date": "2026-04-14"
@@ -2499,6 +2464,41 @@
       "title": "Google is letting social media stars customize their search result page - The Verge (relevance: 89%)",
       "url": "https://www.theverge.com/tech/943233/google-search-profiles-custom-page",
       "date": "2026-06-08"
+    },
+    {
+      "title": "Microsoft Announces Coreutils For Windows: Derived From Rust Coreutils - Phoronix (relevance: 14%)",
+      "url": "https://www.phoronix.com/news/MS-Coreutils-For-Windows",
+      "date": "2026-06-09"
+    },
+    {
+      "title": "Register Now! Large Liability Models? Emerging Tort and Privacy Risks in Chatbots and Generative AI - retailconsumerproductslaw.com (relevance: 100%)",
+      "url": "https://www.retailconsumerproductslaw.com/2026/06/register-now-large-liability-models-emerging-tort-and-privacy-risks-in-chatbots-and-generative-ai/",
+      "date": "2026-06-09"
+    },
+    {
+      "title": "Travelport SVP of Product Fahim Khan at Skift Data and AI Summit 2026 - Skift (relevance: 32%)",
+      "url": "https://skift.com/2026/06/04/travelport-svp-of-product-fahim-khan-at-skift-data-and-ai-summit-2026/",
+      "date": "2026-06-09"
+    },
+    {
+      "title": "7 Smart Glasses In 2026 That Reveal What Finally Makes AR Wearable - Glass Almanac (relevance: 31%)",
+      "url": "https://glassalmanac.com/7-smart-glasses-in-2026-that-reveal-what-finally-makes-ar-wearable/",
+      "date": "2026-06-09"
+    },
+    {
+      "title": "Microsoft AI CEO says lower prices give its models advantage over Anthropic: report - Seeking Alpha (relevance: 100%)",
+      "url": "https://seekingalpha.com/news/4600688-microsoft-ai-ceo-says-lower-prices-give-its-models-advantage-over-anthropic-report",
+      "date": "2026-06-09"
+    },
+    {
+      "title": "Google’s Phone app will tell you if a scammer is impersonating one of your contacts - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/941517/google-phone-scammer-ai-impersonation",
+      "date": "2026-06-09"
+    },
+    {
+      "title": "Google is letting social media stars customize their search result page - The Verge (relevance: 89%)",
+      "url": "https://www.theverge.com/tech/943233/google-search-profiles-custom-page",
+      "date": "2026-06-09"
     }
   ]
 }
