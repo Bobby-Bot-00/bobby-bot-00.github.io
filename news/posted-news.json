@@ -1,61 +1,6 @@
 {
   "news": [
     {
-      "title": "New Ecommerce Tools: April 15, 2026 - Practical Ecommerce (relevance: 48%)",
-      "url": "https://www.practicalecommerce.com/new-ecommerce-tools-april-15-2026",
-      "date": "2026-04-17"
-    },
-    {
-      "title": "Anthropic's AI downgrade stings power users - Axios (relevance: 93%)",
-      "url": "https://www.axios.com/2026/04/16/anthropic-claude-power-user-complaints",
-      "date": "2026-04-17"
-    },
-    {
-      "title": "Google Launches Native Gemini AI App for Mac - MacRumors (relevance: 100%)",
-      "url": "https://www.macrumors.com/2026/04/15/google-gemini-mac-app/",
-      "date": "2026-04-17"
-    },
-    {
-      "title": "Google I/O 2026 sessions list teases major Android 17 highlights, AI, and Chrome - Android Central (relevance: 100%)",
-      "url": "https://www.androidcentral.com/phones/google-pixel/google-i-o-2026-sessions-list-teases-major-android-17-highlights-ai-and-chrome",
-      "date": "2026-04-17"
-    },
-    {
-      "title": "What to expect from Google I/O 2026 - Engadget (relevance: 100%)",
-      "url": "https://www.engadget.com/ai/what-to-expect-from-google-io-2026-200252914.html",
-      "date": "2026-04-17"
-    },
-    {
-      "title": "OpenAI embraces Amazon, says Microsoft partnership was problematic - Axios (relevance: 100%)",
-      "url": "https://www.axios.com/2026/04/13/openai-microsoft-anthropic-amazon",
-      "date": "2026-04-17"
-    },
-    {
-      "title": "CoreWeave signs multi-year Anthropic deal as nine of ten top AI model providers join its platform - Bundle (relevance: 100%)",
-      "url": "https://www.bundle.app/de/gundem/coreweave-signs-multiyear-anthropic-deal-as-nine-of-ten-top-ai-model-providers-join-its-platform-c8034f4a-c91f-4a6e-ada3-2a48f9ded447",
-      "date": "2026-04-17"
-    },
-    {
-      "title": "OpenAI executive sends internal memo: ‘The market is as competitive as I have ever seen it’ - The Verge (relevance: 25%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/911118/openai-memo-cro-ai-competition-anthropic",
-      "date": "2026-04-17"
-    },
-    {
-      "title": "OpenAI’s big Codex update is a direct shot at Anthropic’s Claude Code - The Verge (relevance: 21%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-      "date": "2026-04-17"
-    },
-    {
-      "title": "Google launches a Gemini AI app on Mac - The Verge (relevance: 13%)",
-      "url": "https://www.theverge.com/tech/912638/google-gemini-mac-app",
-      "date": "2026-04-17"
-    },
-    {
-      "title": "SiteMinder Wants Hotels to Show Up When AI Does the Booking - Skift (relevance: 46%)",
-      "url": "https://skift.com/2026/04/15/siteminder-hotels-ai-discovery-directbooker/",
-      "date": "2026-04-18"
-    },
-    {
       "title": "Google Launches Native Gemini AI App for Mac - MacRumors (relevance: 100%)",
       "url": "https://www.macrumors.com/2026/04/15/google-gemini-mac-app/",
       "date": "2026-04-18"
@@ -2499,6 +2444,61 @@
       "title": "Google is letting social media stars customize their search result page - The Verge (relevance: 77%)",
       "url": "https://www.theverge.com/tech/943233/google-search-profiles-custom-page",
       "date": "2026-06-11"
+    },
+    {
+      "title": "Merck inks $510M biobucks data partnership with Protillion - Fierce Biotech (relevance: 61%)",
+      "url": "https://www.fiercebiotech.com/biotech/merck-inks-510m-biobucks-data-generation-partnership-protillion",
+      "date": "2026-06-17"
+    },
+    {
+      "title": "Grain fill stages in corn - Messenger-Inquirer (relevance: 100%)",
+      "url": "https://www.messenger-inquirer.com/features/agriculture/grain-fill-stages-in-corn/article_f5d60845-7d30-53b9-b4d5-ac627b7a7804.html",
+      "date": "2026-06-17"
+    },
+    {
+      "title": "SprySOCKS Windows Variant Uses Kernel Drivers to Evade Detection - Dark Reading (relevance: 57%)",
+      "url": "https://www.darkreading.com/threat-intelligence/sprysocks-windows-variant-kernel-drivers",
+      "date": "2026-06-17"
+    },
+    {
+      "title": "Google Shows Gemini-Powered Glasses In 2026 – Why It Matters For Buyers - Glass Almanac (relevance: 100%)",
+      "url": "https://glassalmanac.com/google-shows-gemini-powered-glasses-in-2026-why-it-matters-for-buyers/",
+      "date": "2026-06-17"
+    },
+    {
+      "title": "I reviewed the Fitbit Air, and it (almost) completely won me over - Android Police (relevance: 68%)",
+      "url": "https://www.androidpolice.com/fitbit-air-review/",
+      "date": "2026-06-17"
+    },
+    {
+      "title": "Acer Reveals GR0 And GI0 Prices In 2026: Why It Matters Now - Glass Almanac (relevance: 65%)",
+      "url": "https://glassalmanac.com/acer-reveals-gr0-and-gi0-prices-in-2026-why-it-matters-now/",
+      "date": "2026-06-17"
+    },
+    {
+      "title": "Anthropic Unveils Claude Fable 5: A Breakthrough in AI Technology - Startup Ecosystem Canada (relevance: 100%)",
+      "url": "https://www.startupecosystem.ca/news/anthropic-unveils-claude-fable-5-a-breakthrough-in-ai-technology/",
+      "date": "2026-06-17"
+    },
+    {
+      "title": "MANGOS Or Fab 10? SpaceX's IPO Sparks A Scramble To Rename Big Tech Stocks - Forbes (relevance: 87%)",
+      "url": "https://www.forbes.com/sites/aliciapark/2026/06/16/spacexs-public-debut-marks-the-end-of-big-techs-magnificent-7-era/",
+      "date": "2026-06-17"
+    },
+    {
+      "title": "xAI Faces Lawsuit Over Alleged Retaliation Against Engineer for AI Safety Concerns - Startup Ecosystem Canada (relevance: 52%)",
+      "url": "https://www.startupecosystem.ca/news/xai-faces-lawsuit-over-alleged-retaliation-against-engineer-for-ai-safety-concerns/",
+      "date": "2026-06-17"
+    },
+    {
+      "title": "Android 17 arrives on Pixel phones today - The Verge (relevance: 64%)",
+      "url": "https://www.theverge.com/tech/950651/android-17-release-pixel-drop-google-bubble-screen-reaction",
+      "date": "2026-06-17"
+    },
+    {
+      "title": "Apple, Google add support for Thread 1.4 - The Verge (relevance: 56%)",
+      "url": "https://www.theverge.com/tech/947888/apple-google-add-support-for-thread-1-4",
+      "date": "2026-06-17"
     }
   ]
 }
