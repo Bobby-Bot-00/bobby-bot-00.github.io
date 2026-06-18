@@ -1,46 +1,6 @@
 {
   "news": [
     {
-      "title": "Google Launches Native Gemini AI App for Mac - MacRumors (relevance: 100%)",
-      "url": "https://www.macrumors.com/2026/04/15/google-gemini-mac-app/",
-      "date": "2026-04-18"
-    },
-    {
-      "title": "Google I/O 2026 sessions list teases major Android 17 highlights, AI, and Chrome - Android Central (relevance: 100%)",
-      "url": "https://www.androidcentral.com/phones/google-pixel/google-i-o-2026-sessions-list-teases-major-android-17-highlights-ai-and-chrome",
-      "date": "2026-04-18"
-    },
-    {
-      "title": "What to expect from Google I/O 2026 - Engadget (relevance: 100%)",
-      "url": "https://www.engadget.com/ai/what-to-expect-from-google-io-2026-200252914.html",
-      "date": "2026-04-18"
-    },
-    {
-      "title": "OpenAI embraces Amazon, says Microsoft partnership was problematic - Axios (relevance: 100%)",
-      "url": "https://www.axios.com/2026/04/13/openai-microsoft-anthropic-amazon",
-      "date": "2026-04-18"
-    },
-    {
-      "title": "Anthropic releases Claude Opus 4.7, narrowly retaking lead for most powerful generally available LLM - VentureBeat (relevance: 100%)",
-      "url": "https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm",
-      "date": "2026-04-18"
-    },
-    {
-      "title": "Anthropic unveils plans for major UK expansion after OpenAI announces first permanent London office - CNBC (relevance: 99%)",
-      "url": "https://www.cnbc.com/2026/04/16/anthropic-london-office-800-staff-openai-expansion.html",
-      "date": "2026-04-18"
-    },
-    {
-      "title": "OpenAI executive sends internal memo: ‘The market is as competitive as I have ever seen it’ - The Verge (relevance: 25%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/911118/openai-memo-cro-ai-competition-anthropic",
-      "date": "2026-04-18"
-    },
-    {
-      "title": "OpenAI’s big Codex update is a direct shot at Anthropic’s Claude Code - The Verge (relevance: 21%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-      "date": "2026-04-18"
-    },
-    {
       "title": "Google launches a Gemini AI app on Mac - The Verge (relevance: 13%)",
       "url": "https://www.theverge.com/tech/912638/google-gemini-mac-app",
       "date": "2026-04-18"
@@ -2499,6 +2459,46 @@
       "title": "Apple, Google add support for Thread 1.4 - The Verge (relevance: 56%)",
       "url": "https://www.theverge.com/tech/947888/apple-google-add-support-for-thread-1-4",
       "date": "2026-06-17"
+    },
+    {
+      "title": "Google Shows Gemini-Powered Glasses In 2026 – Why It Matters For Buyers - Glass Almanac (relevance: 100%)",
+      "url": "https://glassalmanac.com/google-shows-gemini-powered-glasses-in-2026-why-it-matters-for-buyers/",
+      "date": "2026-06-18"
+    },
+    {
+      "title": "I reviewed the Fitbit Air, and it (almost) completely won me over - Android Police (relevance: 70%)",
+      "url": "https://www.androidpolice.com/fitbit-air-review/",
+      "date": "2026-06-18"
+    },
+    {
+      "title": "Acer Reveals GR0 And GI0 Prices In 2026: Why It Matters Now - Glass Almanac (relevance: 67%)",
+      "url": "https://glassalmanac.com/acer-reveals-gr0-and-gi0-prices-in-2026-why-it-matters-now/",
+      "date": "2026-06-18"
+    },
+    {
+      "title": "MANGOS Or Fab 10? SpaceX's IPO Sparks A Scramble To Rename Big Tech Stocks - Forbes (relevance: 100%)",
+      "url": "https://www.forbes.com/sites/aliciapark/2026/06/16/spacexs-public-debut-marks-the-end-of-big-techs-magnificent-7-era/",
+      "date": "2026-06-18"
+    },
+    {
+      "title": "SpaceX Sets Record with Largest IPO at $135 Per Share - Startup Ecosystem Canada (relevance: 63%)",
+      "url": "https://www.startupecosystem.ca/news/spacex-sets-record-with-largest-ipo-at-135-per-share/",
+      "date": "2026-06-18"
+    },
+    {
+      "title": "Google Chrome is closing the loopholes that let old ad blockers keep working - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/950005/google-chrome-removing-ad-blocker-loopholes",
+      "date": "2026-06-18"
+    },
+    {
+      "title": "Google Earth’s flight simulator is now available in your browser - The Verge (relevance: 98%)",
+      "url": "https://www.theverge.com/tech/949749/google-earth-flight-simulator-browser-experimental",
+      "date": "2026-06-18"
+    },
+    {
+      "title": "Google launches Wear OS 7 with Live Updates and a battery life boost - The Verge (relevance: 90%)",
+      "url": "https://www.theverge.com/gadgets/950671/wear-os-7-pixel-watches-launch",
+      "date": "2026-06-18"
     }
   ]
 }
