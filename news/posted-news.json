@@ -1,46 +1,6 @@
 {
   "news": [
     {
-      "title": "Pacvue Enters AI Agent Race With Amazon-Focused Tool - ADWEEK (relevance: 48%)",
-      "url": "https://www.adweek.com/commerce/pacvue-enters-ai-agent-race-with-amazon-focused-tool/",
-      "date": "2026-04-21"
-    },
-    {
-      "title": "David Soria Parra on the Future of AI Agents - StartupHub.ai (relevance: 100%)",
-      "url": "https://www.startuphub.ai/ai-news/technology/2026/david-soria-parra-on-the-future-of-ai-agents",
-      "date": "2026-04-21"
-    },
-    {
-      "title": "Muse Spark Reveals Meta’s Plan For Smart Glasses In 2026 – Here’s Why It Matters - Glass Almanac (relevance: 100%)",
-      "url": "https://glassalmanac.com/muse-spark-reveals-metas-plan-for-smart-glasses-in-2026-heres-why-it-matters/",
-      "date": "2026-04-21"
-    },
-    {
-      "title": "All The Major Company Layoffs Because Of AI In 2026 So Far - Forbes (relevance: 86%)",
-      "url": "https://www.forbes.com/sites/maryroeloffs/2026/04/15/snap-blames-1000-layoffs-on-ai-and-these-companies-have-done-the-same/",
-      "date": "2026-04-21"
-    },
-    {
-      "title": "Google Launches Native Gemini AI App for Mac - MacRumors (relevance: 39%)",
-      "url": "https://www.macrumors.com/2026/04/15/google-gemini-mac-app/",
-      "date": "2026-04-21"
-    },
-    {
-      "title": "Anthropic unveils plans for major UK expansion after OpenAI announces first permanent London office - CNBC (relevance: 99%)",
-      "url": "https://www.cnbc.com/2026/04/16/anthropic-london-office-800-staff-openai-expansion.html",
-      "date": "2026-04-21"
-    },
-    {
-      "title": "Anthropic releases Claude Opus 4.7, concedes it trails unreleased Mythos - Axios (relevance: 99%)",
-      "url": "https://www.axios.com/2026/04/16/anthropic-claude-opus-model-mythos",
-      "date": "2026-04-21"
-    },
-    {
-      "title": "Anthropic’s rise is giving some OpenAI investors second thoughts - TechCrunch (relevance: 98%)",
-      "url": "https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/",
-      "date": "2026-04-21"
-    },
-    {
       "title": "OpenAI’s big Codex update is a direct shot at Anthropic’s Claude Code - The Verge (relevance: 92%)",
       "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
       "date": "2026-04-21"
@@ -2499,6 +2459,46 @@
       "title": "Google Chrome is closing the loopholes that let old ad blockers keep working - The Verge (relevance: 75%)",
       "url": "https://www.theverge.com/tech/950005/google-chrome-removing-ad-blocker-loopholes",
       "date": "2026-06-20"
+    },
+    {
+      "title": "Acer Reveals GR0 And GI0 Prices In 2026: Why It Matters Now - Glass Almanac (relevance: 100%)",
+      "url": "https://glassalmanac.com/acer-reveals-gr0-and-gi0-prices-in-2026-why-it-matters-now/",
+      "date": "2026-06-21"
+    },
+    {
+      "title": "Driving innovation in lab automation and life sciences at SLAS Europe 2026 - BioTechniques (relevance: 76%)",
+      "url": "https://www.biotechniques.com/lab-design-machinery/driving-innovation-in-lab-automation-and-life-sciences-at-slas-europe-2026/",
+      "date": "2026-06-21"
+    },
+    {
+      "title": "Relativity Acquires Gavel to Integrate AI Drafting into Word - Let's Data Science (relevance: 57%)",
+      "url": "https://letsdatascience.com/news/relativity-acquires-gavel-to-integrate-ai-drafting-into-word-91a7d0ef",
+      "date": "2026-06-21"
+    },
+    {
+      "title": "MANGOS Or Fab 10? SpaceX's IPO Sparks A Scramble To Rename Big Tech Stocks - Forbes (relevance: 100%)",
+      "url": "https://www.forbes.com/sites/aliciapark/2026/06/16/spacexs-public-debut-marks-the-end-of-big-techs-magnificent-7-era/",
+      "date": "2026-06-21"
+    },
+    {
+      "title": "The 'Magnificent 7' is so last year. SpaceX, OpenAI, and Anthropic are ushering in the FAB 10. - Yahoo Finance (relevance: 45%)",
+      "url": "https://finance.yahoo.com/markets/article/the-magnificent-7-is-so-last-year-spacex-openai-and-anthropic-are-ushering-in-the-fab-10-120409551.html",
+      "date": "2026-06-21"
+    },
+    {
+      "title": "Google’s first smart speaker in six years arrives next week - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/951147/google-home-speaker-gemini-launch-date-price-specs-features",
+      "date": "2026-06-21"
+    },
+    {
+      "title": "Google Chrome is closing the loopholes that let old ad blockers keep working - The Verge (relevance: 85%)",
+      "url": "https://www.theverge.com/tech/950005/google-chrome-removing-ad-blocker-loopholes",
+      "date": "2026-06-21"
+    },
+    {
+      "title": "Google Earth’s flight simulator is now available in your browser - The Verge (relevance: 83%)",
+      "url": "https://www.theverge.com/tech/949749/google-earth-flight-simulator-browser-experimental",
+      "date": "2026-06-21"
     }
   ]
 }
