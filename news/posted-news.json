@@ -1,46 +1,6 @@
 {
   "news": [
     {
-      "title": "Anthropic unveils plans for major UK expansion after OpenAI announces first permanent London office - CNBC (relevance: 99%)",
-      "url": "https://www.cnbc.com/2026/04/16/anthropic-london-office-800-staff-openai-expansion.html",
-      "date": "2026-04-22"
-    },
-    {
-      "title": "OpenAI’s big Codex update is a direct shot at Anthropic’s Claude Code - The Verge (relevance: 92%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-      "date": "2026-04-22"
-    },
-    {
-      "title": "Anthropic releases a new Opus model amid Mythos Preview buzz - The Verge (relevance: 66%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/913184/anthropic-claude-opus-4-7-cybersecurity",
-      "date": "2026-04-22"
-    },
-    {
-      "title": "Google launches a Gemini AI app on Mac - The Verge (relevance: 11%)",
-      "url": "https://www.theverge.com/tech/912638/google-gemini-mac-app",
-      "date": "2026-04-22"
-    },
-    {
-      "title": "Agentic Hospitality: AI-Driven Discovery + TravelOS + New Tracking Models from Google are Signaling a Shift Beyond Traditional Hotel Metrics - Hospitality Net (relevance: 100%)",
-      "url": "https://www.hospitalitynet.org/news/4131989/agentic-hospitality-ai-driven-discovery-travelos-new-tracking-models-from-google-are-signaling-a-shift-beyond-traditional-hotel-metrics",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "Opera Adds Browser Connector Feature to Integrate AI Chatbots Into Browsers - CNET (relevance: 20%)",
-      "url": "https://www.cnet.com/tech/opera-adds-browser-connector-feature-to-integrate-ai-chatbots-into-browsers/",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "Magnificent irony as Meta staff unhappy about running surveillance software on work PCs - theregister.com (relevance: 42%)",
-      "url": "https://www.theregister.com/2026/04/22/meta_employee_surveillance_software/",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "OpenAI's partner has started selling advertising space within ChatGPT. - GIGAZINE (relevance: 60%)",
-      "url": "https://gigazine.net/gsc_news/en/20260421-stackadapt-playbook-chatgpt-ads/",
-      "date": "2026-04-23"
-    },
-    {
       "title": "OpenAI to commit up to $1.5bn to PE-linked venture - Private Equity Wire (relevance: 51%)",
       "url": "https://www.privateequitywire.co.uk/openai-to-commit-up-to-1-5bn-to-pe-linked-venture/",
       "date": "2026-04-23"
@@ -2499,6 +2459,46 @@
       "title": "Google launches Wear OS 7 with Live Updates and a battery life boost - The Verge (relevance: 77%)",
       "url": "https://www.theverge.com/gadgets/950671/wear-os-7-pixel-watches-launch",
       "date": "2026-06-22"
+    },
+    {
+      "title": "5W Publishes Airlines and Hotels AI Visibility Index 2026 - Let's Data Science (relevance: 100%)",
+      "url": "https://letsdatascience.com/news/5w-publishes-airlines-and-hotels-ai-visibility-index-2026-e0622b91",
+      "date": "2026-06-23"
+    },
+    {
+      "title": "SpaceX to ​buy ⁠Cursor AI parent Anysphere ⁠for $60 billion - CNBC (relevance: 42%)",
+      "url": "https://www.cnbc.com/2026/06/16/-spacex-to-buy-cursor-ai-parent-anysphere-for-60-billion.html",
+      "date": "2026-06-23"
+    },
+    {
+      "title": "From Search to Synthesis: Visibility in an Answer-Based Internet - Hospitality Net (relevance: 33%)",
+      "url": "https://www.hospitalitynet.org/article/122000565/from-search-to-synthesis-visibility-in-an-answer-based-internet",
+      "date": "2026-06-23"
+    },
+    {
+      "title": "The 'Magnificent 7' is so last year. SpaceX, OpenAI, and Anthropic are ushering in the FAB 10. - Yahoo Finance (relevance: 100%)",
+      "url": "https://finance.yahoo.com/markets/article/the-magnificent-7-is-so-last-year-spacex-openai-and-anthropic-are-ushering-in-the-fab-10-120409551.html",
+      "date": "2026-06-23"
+    },
+    {
+      "title": "Alphabet Shares Drop After Second AI Star Departs for Rival - Yahoo Finance (relevance: 85%)",
+      "url": "https://finance.yahoo.com/technology/ai/articles/alphabet-shares-drop-second-ai-163538654.html",
+      "date": "2026-06-23"
+    },
+    {
+      "title": "Google’s first smart speaker in six years arrives next week - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/951147/google-home-speaker-gemini-launch-date-price-specs-features",
+      "date": "2026-06-23"
+    },
+    {
+      "title": "Google launches Wear OS 7 with Live Updates and a battery life boost - The Verge (relevance: 76%)",
+      "url": "https://www.theverge.com/gadgets/950671/wear-os-7-pixel-watches-launch",
+      "date": "2026-06-23"
+    },
+    {
+      "title": "Google Calendar finally has more color options for events - The Verge (relevance: 76%)",
+      "url": "https://www.theverge.com/tech/952123/google-calendar-event-color-options-expansion",
+      "date": "2026-06-23"
     }
   ]
 }
