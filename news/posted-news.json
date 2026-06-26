@@ -1,61 +1,6 @@
 {
   "news": [
     {
-      "title": "OpenAI to commit up to $1.5bn to PE-linked venture - Private Equity Wire (relevance: 51%)",
-      "url": "https://www.privateequitywire.co.uk/openai-to-commit-up-to-1-5bn-to-pe-linked-venture/",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "Google now lets you explore the web side-by-side with AI Mode - TechCrunch (relevance: 99%)",
-      "url": "https://techcrunch.com/2026/04/16/google-now-lets-you-explore-the-web-side-by-side-with-ai-mode/",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "Google Cloud Pushes Hard on AI Agents and Hardcore Computing - CNET (relevance: 98%)",
-      "url": "https://www.cnet.com/tech/services-and-software/google-cloud-next-2026-ai-agents-computing-chips-news/",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "Google Eyes New Chips to Speed Up AI Results, Challenging Nvidia - Bloomberg.com (relevance: 96%)",
-      "url": "https://www.bloomberg.com/news/features/2026-04-20/google-eyes-new-chips-to-speed-up-ai-results-challenging-nvidia",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "Anthropic releases Claude Opus 4.7, narrowly retaking lead for most powerful generally available LLM - VentureBeat (relevance: 100%)",
-      "url": "https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "Anthropic outspends OpenAI in biggest-ever lobbying quarter - Axios (relevance: 100%)",
-      "url": "https://www.axios.com/2026/04/21/anthropic-outspends-openai-biggest-lobbying-quarter",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "Anthropic unveils plans for major UK expansion after OpenAI announces first permanent London office - CNBC (relevance: 99%)",
-      "url": "https://www.cnbc.com/2026/04/16/anthropic-london-office-800-staff-openai-expansion.html",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "OpenAI’s big Codex update is a direct shot at Anthropic’s Claude Code - The Verge (relevance: 92%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "Anthropic releases a new Opus model amid Mythos Preview buzz - The Verge (relevance: 66%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/913184/anthropic-claude-opus-4-7-cybersecurity",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "Anthropic’s most dangerous AI model just fell into the wrong hands - The Verge (relevance: 25%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/916501/anthropic-mythos-unauthorized-users-access-security",
-      "date": "2026-04-23"
-    },
-    {
-      "title": "Terminal headed for $13.6M expansion as Chermak hints he might want to run airport - WVIA Public Media (relevance: 92%)",
-      "url": "https://www.wvia.org/news/local/2026-04-23/terminal-headed-for-13-6m-expansion-as-chermak-hints-he-might-want-to-run-airport",
-      "date": "2026-04-24"
-    },
-    {
       "title": "Uthmeier investigating whether ChatGPT is criminally liable for FSU shooting - Florida Phoenix (relevance: 49%)",
       "url": "https://floridaphoenix.com/2026/04/21/uthmeier-investigating-whether-chatgpt-is-criminally-liable-for-fsu-shooting/",
       "date": "2026-04-24"
@@ -2499,6 +2444,61 @@
       "title": "Google Calendar finally has more color options for events - The Verge (relevance: 76%)",
       "url": "https://www.theverge.com/tech/952123/google-calendar-event-color-options-expansion",
       "date": "2026-06-23"
+    },
+    {
+      "title": "Morningstar (NASDAQ: MORN) details MCP adoption and PitchBook client mix - Stock Titan (relevance: 100%)",
+      "url": "https://www.stocktitan.net/sec-filings/MORN/8-k-morningstar-inc-reports-material-event-f60128754ae2.html",
+      "date": "2026-06-26"
+    },
+    {
+      "title": "Morningstar publishes investor Q&A, details MCP connector adoption and PitchBook client mix - TradingView (relevance: 48%)",
+      "url": "https://www.tradingview.com/news/tradingview:e617811aeb844:0-morningstar-publishes-investor-q-a-details-mcp-connector-adoption-and-pitchbook-client-mix/",
+      "date": "2026-06-26"
+    },
+    {
+      "title": "Nokia preps a larger dose of AI for autonomous networks - Telecoms (relevance: 14%)",
+      "url": "https://www.telecoms.com/automation/nokia-preps-a-larger-dose-of-ai-for-autonomous-networks",
+      "date": "2026-06-26"
+    },
+    {
+      "title": "OpenAI Launches Patch the Planet Initiative to Protect Open Source Software - Zamin.uz (relevance: 31%)",
+      "url": "https://zamin.uz/en/technology/208626-openai-launches-patch-the-planet-initiative-to-protect-open-source-software.html",
+      "date": "2026-06-26"
+    },
+    {
+      "title": "Ministry of New and Renewable Energy Extends ALMM Framework to Cover Solar Ingots and Wafers from June 1, 2028 - Newsonair (relevance: 23%)",
+      "url": "https://newsonair.gov.in/ministry-of-new-and-renewable-energy-extends-almm-framework-to-cover-solar-ingots-and-wafers-from-june-1-2028/",
+      "date": "2026-06-26"
+    },
+    {
+      "title": "Eight-Year-Old Samsung KNOX Flaw Exposed Millions of Galaxy Devices to Kernel Attacks - SecurityWeek (relevance: 100%)",
+      "url": "https://www.securityweek.com/eight-year-old-samsung-knox-flaw-exposed-millions-of-galaxy-devices-to-kernel-attacks/",
+      "date": "2026-06-26"
+    },
+    {
+      "title": "Google Universal Cart: Retail Experts Weigh In - Retail TouchPoints (relevance: 100%)",
+      "url": "https://www.retailtouchpoints.com/features/google-universal-cart-retail-experts-weigh-in/620149/",
+      "date": "2026-06-26"
+    },
+    {
+      "title": "5W Publishes Airlines and Hotels AI Visibility Index 2026 - Let's Data Science (relevance: 56%)",
+      "url": "https://letsdatascience.com/news/5w-publishes-airlines-and-hotels-ai-visibility-index-2026-e0622b91",
+      "date": "2026-06-26"
+    },
+    {
+      "title": "K Street AI Spending Boom Fueled by Startups and Big Tech - Bloomberg Law News (relevance: 83%)",
+      "url": "https://news.bloomberglaw.com/business-and-practice/k-street-ai-spending-boom-fueled-by-startups-and-big-tech",
+      "date": "2026-06-26"
+    },
+    {
+      "title": "Wyze’s new smart scale can break down your body composition for less than $80 - The Verge (relevance: 62%)",
+      "url": "https://www.theverge.com/tech/952512/wyze-smart-scale-bodyscan-electrodes-handle-body-composition",
+      "date": "2026-06-26"
+    },
+    {
+      "title": "Xteink’s tiny e-readers are 20 percent off for Prime Day - The Verge (relevance: 36%)",
+      "url": "https://www.theverge.com/gadgets/955139/xteink-x3-x4-e-ink-reader-amazon-prime-day-deal-sale",
+      "date": "2026-06-26"
     }
   ]
 }
