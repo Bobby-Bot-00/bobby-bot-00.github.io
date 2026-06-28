@@ -1,36 +1,6 @@
 {
   "news": [
     {
-      "title": "Uthmeier investigating whether ChatGPT is criminally liable for FSU shooting - Florida Phoenix (relevance: 49%)",
-      "url": "https://floridaphoenix.com/2026/04/21/uthmeier-investigating-whether-chatgpt-is-criminally-liable-for-fsu-shooting/",
-      "date": "2026-04-24"
-    },
-    {
-      "title": "Emerging technology trends brands and agencies need to know about - Ad Age (relevance: 40%)",
-      "url": "https://adage.com/technology/ai/aa-emerging-news-and-trends-openai-adobe-summit-wpp/",
-      "date": "2026-04-24"
-    },
-    {
-      "title": "Google Cloud Pushes Hard on AI Agents and Hardcore Computing - CNET (relevance: 98%)",
-      "url": "https://www.cnet.com/tech/services-and-software/google-cloud-next-2026-ai-agents-computing-chips-news/",
-      "date": "2026-04-24"
-    },
-    {
-      "title": "Google Cloud Commits $750 Million to Accelerate Partners' Agentic AI Development - Google Cloud Press Corner (relevance: 98%)",
-      "url": "https://www.googlecloudpresscorner.com/2026-04-22-Google-Cloud-Commits-750-Million-to-Accelerate-Partners-Agentic-AI-Development",
-      "date": "2026-04-24"
-    },
-    {
-      "title": "Google Eyes New Chips to Speed Up AI Results, Challenging Nvidia - Bloomberg.com (relevance: 96%)",
-      "url": "https://www.bloomberg.com/news/features/2026-04-20/google-eyes-new-chips-to-speed-up-ai-results-challenging-nvidia",
-      "date": "2026-04-24"
-    },
-    {
-      "title": "Anthropic outspends OpenAI in biggest-ever lobbying quarter - Axios (relevance: 100%)",
-      "url": "https://www.axios.com/2026/04/21/anthropic-outspends-openai-biggest-lobbying-quarter",
-      "date": "2026-04-24"
-    },
-    {
       "title": "With jaw-dropping $1 trillion valuation, Anthropic overtakes OpenAI in market cap race - New York Post (relevance: 98%)",
       "url": "https://nypost.com/2026/04/23/business/with-jaw-dropping-1-trillion-valuation-anthropic-overtakes-openai-in-market-cap-race/",
       "date": "2026-04-24"
@@ -2499,6 +2469,36 @@
       "title": "Xteink’s tiny e-readers are 20 percent off for Prime Day - The Verge (relevance: 36%)",
       "url": "https://www.theverge.com/gadgets/955139/xteink-x3-x4-e-ink-reader-amazon-prime-day-deal-sale",
       "date": "2026-06-26"
+    },
+    {
+      "title": "Google Universal Cart: Retail Experts Weigh In - Retail TouchPoints (relevance: 100%)",
+      "url": "https://www.retailtouchpoints.com/features/google-universal-cart-retail-experts-weigh-in/620149/",
+      "date": "2026-06-28"
+    },
+    {
+      "title": "5W Publishes Airlines and Hotels AI Visibility Index 2026 - Let's Data Science (relevance: 56%)",
+      "url": "https://letsdatascience.com/news/5w-publishes-airlines-and-hotels-ai-visibility-index-2026-e0622b91",
+      "date": "2026-06-28"
+    },
+    {
+      "title": "Google Admin Enhances Agency Protections - TV News Check (relevance: 48%)",
+      "url": "https://tvnewscheck.com/business/article/google-admin-enhances-agency-protections/",
+      "date": "2026-06-28"
+    },
+    {
+      "title": "K Street AI Spending Boom Fueled by Startups and Big Tech - Bloomberg Law News (relevance: 82%)",
+      "url": "https://news.bloomberglaw.com/business-and-practice/k-street-ai-spending-boom-fueled-by-startups-and-big-tech",
+      "date": "2026-06-28"
+    },
+    {
+      "title": "The Fitbit Air takes a smarter approach to the AI health dumpster fire - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/954768/google-fitbit-air-review-fitness-tracker-wearable-ai-health-coach",
+      "date": "2026-06-28"
+    },
+    {
+      "title": "Wyze’s new smart scale can break down your body composition for less than $80 - The Verge (relevance: 45%)",
+      "url": "https://www.theverge.com/tech/952512/wyze-smart-scale-bodyscan-electrodes-handle-body-composition",
+      "date": "2026-06-28"
     }
   ]
 }
