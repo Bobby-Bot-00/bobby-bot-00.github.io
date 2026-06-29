@@ -1,41 +1,6 @@
 {
   "news": [
     {
-      "title": "With jaw-dropping $1 trillion valuation, Anthropic overtakes OpenAI in market cap race - New York Post (relevance: 98%)",
-      "url": "https://nypost.com/2026/04/23/business/with-jaw-dropping-1-trillion-valuation-anthropic-overtakes-openai-in-market-cap-race/",
-      "date": "2026-04-24"
-    },
-    {
-      "title": "Anthropic’s most dangerous AI model just fell into the wrong hands - The Verge (relevance: 25%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/916501/anthropic-mythos-unauthorized-users-access-security",
-      "date": "2026-04-24"
-    },
-    {
-      "title": "OpenAI says its new GPT-5.5 model is more efficient and better at coding - The Verge (relevance: 6%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/917612/openai-gpt-5-5-chatgpt",
-      "date": "2026-04-24"
-    },
-    {
-      "title": "Anthropic’s Mythos breach was humiliating - The Verge (relevance: 6%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation",
-      "date": "2026-04-24"
-    },
-    {
-      "title": "Google Cloud Next 2026: Here’s How Alphabet Plans to Fire Up GOOGL Stock with AI - TipRanks (relevance: 99%)",
-      "url": "https://www.tipranks.com/news/google-cloud-next-2026-heres-how-alphabet-plans-to-fire-up-googl-stock-with-ai",
-      "date": "2026-04-25"
-    },
-    {
-      "title": "Google Cloud Pushes Hard on AI Agents and Hardcore Computing - CNET (relevance: 98%)",
-      "url": "https://www.cnet.com/tech/services-and-software/google-cloud-next-2026-ai-agents-computing-chips-news/",
-      "date": "2026-04-25"
-    },
-    {
-      "title": "Google Cloud Commits $750 Million to Accelerate Partners' Agentic AI Development - Google Cloud Press Corner (relevance: 98%)",
-      "url": "https://www.googlecloudpresscorner.com/2026-04-22-Google-Cloud-Commits-750-Million-to-Accelerate-Partners-Agentic-AI-Development",
-      "date": "2026-04-25"
-    },
-    {
       "title": "Anthropic outspends OpenAI in biggest-ever lobbying quarter - Axios (relevance: 100%)",
       "url": "https://www.axios.com/2026/04/21/anthropic-outspends-openai-biggest-lobbying-quarter",
       "date": "2026-04-25"
@@ -2499,6 +2464,41 @@
       "title": "Wyze’s new smart scale can break down your body composition for less than $80 - The Verge (relevance: 45%)",
       "url": "https://www.theverge.com/tech/952512/wyze-smart-scale-bodyscan-electrodes-handle-body-composition",
       "date": "2026-06-28"
+    },
+    {
+      "title": "Google Universal Cart: Retail Experts Weigh In - Retail TouchPoints (relevance: 100%)",
+      "url": "https://www.retailtouchpoints.com/features/google-universal-cart-retail-experts-weigh-in/620149/",
+      "date": "2026-06-29"
+    },
+    {
+      "title": "5W Publishes Airlines and Hotels AI Visibility Index 2026 - Let's Data Science (relevance: 58%)",
+      "url": "https://letsdatascience.com/news/5w-publishes-airlines-and-hotels-ai-visibility-index-2026-e0622b91",
+      "date": "2026-06-29"
+    },
+    {
+      "title": "Google Admin Enhances Agency Protections - TV News Check (relevance: 50%)",
+      "url": "https://tvnewscheck.com/business/article/google-admin-enhances-agency-protections/",
+      "date": "2026-06-29"
+    },
+    {
+      "title": "K Street AI Spending Boom Fueled by Startups and Big Tech - Bloomberg Law News (relevance: 78%)",
+      "url": "https://news.bloomberglaw.com/business-and-practice/k-street-ai-spending-boom-fueled-by-startups-and-big-tech",
+      "date": "2026-06-29"
+    },
+    {
+      "title": "The Verge (relevance: 99%)",
+      "url": "https://www.theverge.com/",
+      "date": "2026-06-29"
+    },
+    {
+      "title": "Disney agrees to pay $50 million to YouTube TV and DirecTV subscribers (relevance: 98%)",
+      "url": "https://www.theverge.com/streaming/956712/disney-youtube-tv-directv-streaming-settlement",
+      "date": "2026-06-29"
+    },
+    {
+      "title": "A new paper argues Microsoft exaggerated its quantum claims a year ago (relevance: 98%)",
+      "url": "https://www.theverge.com/tech/956450/nature-microsoft-quantum-computing-majorana-1-claims",
+      "date": "2026-06-29"
     }
   ]
 }
