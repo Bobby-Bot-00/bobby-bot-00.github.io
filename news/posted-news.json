@@ -1,51 +1,6 @@
 {
   "news": [
     {
-      "title": "Anthropic outspends OpenAI in biggest-ever lobbying quarter - Axios (relevance: 77%)",
-      "url": "https://www.axios.com/2026/04/21/anthropic-outspends-openai-biggest-lobbying-quarter",
-      "date": "2026-04-27"
-    },
-    {
-      "title": "AI Fears Keep Hammering Software Stocks—Even Those With Strong Earnings - Forbes (relevance: 62%)",
-      "url": "https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/",
-      "date": "2026-04-27"
-    },
-    {
-      "title": "Google will invest as much as $40 billion in Anthropic - Ars Technica (relevance: 57%)",
-      "url": "https://arstechnica.com/ai/2026/04/google-will-invest-as-much-as-40-billion-in-anthropic/",
-      "date": "2026-04-27"
-    },
-    {
-      "title": "China’s DeepSeek previews new AI model a year after jolting US rivals - The Verge (relevance: 59%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model",
-      "date": "2026-04-27"
-    },
-    {
-      "title": "Claude is connecting directly to your personal apps like Spotify, Uber Eats, and TurboTax - The Verge (relevance: 29%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/917871/anthropic-claude-personal-app-connectors",
-      "date": "2026-04-27"
-    },
-    {
-      "title": "Anthropic’s most dangerous AI model just fell into the wrong hands - The Verge (relevance: 25%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/916501/anthropic-mythos-unauthorized-users-access-security",
-      "date": "2026-04-27"
-    },
-    {
-      "title": "Google I/O 2026: What to Expect - CNET (relevance: 100%)",
-      "url": "https://www.cnet.com/tech/services-and-software/google-io-2026-everything-to-know/",
-      "date": "2026-04-28"
-    },
-    {
-      "title": "Google Cloud Next 2026: Here’s How Alphabet Plans to Fire Up GOOGL Stock with AI - TipRanks (relevance: 99%)",
-      "url": "https://www.tipranks.com/news/google-cloud-next-2026-heres-how-alphabet-plans-to-fire-up-googl-stock-with-ai",
-      "date": "2026-04-28"
-    },
-    {
-      "title": "Google Cloud Pushes Hard on AI Agents and Hardcore Computing - CNET (relevance: 98%)",
-      "url": "https://www.cnet.com/tech/services-and-software/google-cloud-next-2026-ai-agents-computing-chips-news/",
-      "date": "2026-04-28"
-    },
-    {
       "title": "Anthropic outspends OpenAI in biggest-ever lobbying quarter - Axios (relevance: 100%)",
       "url": "https://www.axios.com/2026/04/21/anthropic-outspends-openai-biggest-lobbying-quarter",
       "date": "2026-04-28"
@@ -2499,6 +2454,51 @@
       "title": "Comcast’s split could make or break Peacock - The Verge (relevance: 30%)",
       "url": "https://www.theverge.com/streaming/960235/comcast-breakup-peacock-streaming",
       "date": "2026-07-02"
+    },
+    {
+      "title": "Mobilint Partners With ADLINK and Getac on Industrial AI Solutions - thelec.net (relevance: 83%)",
+      "url": "https://www.thelec.net/news/articleView.html?idxno=11782",
+      "date": "2026-07-03"
+    },
+    {
+      "title": "Google Admin Enhances Agency Protections - TV News Check (relevance: 100%)",
+      "url": "https://tvnewscheck.com/business/article/google-admin-enhances-agency-protections/",
+      "date": "2026-07-03"
+    },
+    {
+      "title": "Anthropic Ships Claude Sonnet 5 and a Self-Hosted Code Gateway — Rewriting the Enterprise AI Stack - FourWeekMBA (relevance: 62%)",
+      "url": "https://fourweekmba.com/ai-anthropic-claude-sonnet-5-bedrock-google-cloud/",
+      "date": "2026-07-03"
+    },
+    {
+      "title": "DeepSeek Looks to Double Workforce as Fresh Funding Fuels Growth - marketscreener.com (relevance: 100%)",
+      "url": "https://www.marketscreener.com/news/deepseek-looks-to-double-workforce-as-fresh-funding-fuels-growth-ce7f5fd9d88af226",
+      "date": "2026-07-03"
+    },
+    {
+      "title": "OpenAI and Anthropic face new AI reality as companies shift from tokenmaxxing to efficiency - CNBC (relevance: 86%)",
+      "url": "https://www.cnbc.com/2026/06/26/openai-anthropic-new-ai-spending-reality-as-users-shift-to-efficiency.html",
+      "date": "2026-07-03"
+    },
+    {
+      "title": "SpaceX is already in your 401(k). Here's what's next - moneywise.com (relevance: 64%)",
+      "url": "https://moneywise.com/news/top-stories/spacex-401k-anthropic-openai-ipo-index-fund-rules",
+      "date": "2026-07-03"
+    },
+    {
+      "title": "Google built a great smart speaker, but Gemini isn’t ready for it - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/959503/google-home-speaker-review-gemini-for-home",
+      "date": "2026-07-03"
+    },
+    {
+      "title": "Google’s killing off Tenor GIF searches in other apps - The Verge (relevance: 37%)",
+      "url": "https://www.theverge.com/tech/959658/google-tenor-api-shutdown-gif-picker",
+      "date": "2026-07-03"
+    },
+    {
+      "title": "Comcast’s split could make or break Peacock - The Verge (relevance: 30%)",
+      "url": "https://www.theverge.com/streaming/960235/comcast-breakup-peacock-streaming",
+      "date": "2026-07-03"
     }
   ]
 }
