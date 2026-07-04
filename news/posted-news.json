@@ -1,46 +1,6 @@
 {
   "news": [
     {
-      "title": "Anthropic outspends OpenAI in biggest-ever lobbying quarter - Axios (relevance: 100%)",
-      "url": "https://www.axios.com/2026/04/21/anthropic-outspends-openai-biggest-lobbying-quarter",
-      "date": "2026-04-28"
-    },
-    {
-      "title": "Microsoft cuts OpenAI revenue share in a fresh step to loosen their AI alliance - The Washington Post (relevance: 97%)",
-      "url": "https://www.washingtonpost.com/business/2026/04/27/openai-microsoft-chatgpt-copilot-ai/7d3ee934-4246-11f1-b19d-32431046b5b4_story.html",
-      "date": "2026-04-28"
-    },
-    {
-      "title": "China’s DeepSeek previews new AI model a year after jolting US rivals - The Verge (relevance: 24%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model",
-      "date": "2026-04-28"
-    },
-    {
-      "title": "Claude is connecting directly to your personal apps like Spotify, Uber Eats, and TurboTax - The Verge (relevance: 13%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/917871/anthropic-claude-personal-app-connectors",
-      "date": "2026-04-28"
-    },
-    {
-      "title": "Google I/O 2026: What to Expect - CNET (relevance: 100%)",
-      "url": "https://www.cnet.com/tech/services-and-software/google-io-2026-everything-to-know/",
-      "date": "2026-04-29"
-    },
-    {
-      "title": "Google Cloud Next 2026: Here’s How Alphabet Plans to Fire Up GOOGL Stock with AI - TipRanks (relevance: 99%)",
-      "url": "https://www.tipranks.com/news/google-cloud-next-2026-heres-how-alphabet-plans-to-fire-up-googl-stock-with-ai",
-      "date": "2026-04-29"
-    },
-    {
-      "title": "Google Cloud Pushes Hard on AI Agents and Hardcore Computing - CNET (relevance: 98%)",
-      "url": "https://www.cnet.com/tech/services-and-software/google-cloud-next-2026-ai-agents-computing-chips-news/",
-      "date": "2026-04-29"
-    },
-    {
-      "title": "Amazon is already offering new OpenAI products on AWS - TechCrunch (relevance: 94%)",
-      "url": "https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/",
-      "date": "2026-04-29"
-    },
-    {
       "title": "OpenAI loosens Microsoft’s grip ahead of IPO push - PitchBook (relevance: 89%)",
       "url": "https://pitchbook.com/news/articles/openai-loosens-microsofts-grip-ahead-of-ipo-push",
       "date": "2026-04-29"
@@ -2499,6 +2459,46 @@
       "title": "Comcast’s split could make or break Peacock - The Verge (relevance: 30%)",
       "url": "https://www.theverge.com/streaming/960235/comcast-breakup-peacock-streaming",
       "date": "2026-07-03"
+    },
+    {
+      "title": "Anthropic Ships Claude Sonnet 5 and a Self-Hosted Code Gateway — Rewriting the Enterprise AI Stack - FourWeekMBA (relevance: 100%)",
+      "url": "https://fourweekmba.com/ai-anthropic-claude-sonnet-5-bedrock-google-cloud/",
+      "date": "2026-07-04"
+    },
+    {
+      "title": "Meta Reportedly Got Too Addicted to Google AI Tokens and Had to Be Cut Off - Gizmodo (relevance: 65%)",
+      "url": "https://gizmodo.com/meta-reportedly-got-too-addicted-to-google-ai-tokens-and-had-to-be-cut-off-2000778727",
+      "date": "2026-07-04"
+    },
+    {
+      "title": "SpaceX is already in your 401(k). Here's what's next - moneywise.com (relevance: 100%)",
+      "url": "https://moneywise.com/news/top-stories/spacex-401k-anthropic-openai-ipo-index-fund-rules",
+      "date": "2026-07-04"
+    },
+    {
+      "title": "Microsoft plans to cut under 2.5% of workforce next week - Crypto Briefing (relevance: 78%)",
+      "url": "https://cryptobriefing.com/microsoft-workforce-cuts-july-2026/",
+      "date": "2026-07-04"
+    },
+    {
+      "title": "Meta Compute: Everyone Wants To Be A Neocloud - SemiAnalysis (relevance: 67%)",
+      "url": "https://newsletter.semianalysis.com/p/meta-compute-everyone-wants-to-be",
+      "date": "2026-07-04"
+    },
+    {
+      "title": "Google built a great smart speaker, but Gemini isn’t ready for it - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/959503/google-home-speaker-review-gemini-for-home",
+      "date": "2026-07-04"
+    },
+    {
+      "title": "Comcast’s split could make or break Peacock - The Verge (relevance: 33%)",
+      "url": "https://www.theverge.com/streaming/960235/comcast-breakup-peacock-streaming",
+      "date": "2026-07-04"
+    },
+    {
+      "title": "Dish files for bankruptcy, but not shutting down - The Verge (relevance: 22%)",
+      "url": "https://www.theverge.com/tech/959894/dish-chapter-11-bankruptcy",
+      "date": "2026-07-04"
     }
   ]
 }
