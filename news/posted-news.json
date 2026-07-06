@@ -1,41 +1,6 @@
 {
   "news": [
     {
-      "title": "Google Cloud Next 2026: Here’s How Alphabet Plans to Fire Up GOOGL Stock with AI - TipRanks (relevance: 99%)",
-      "url": "https://www.tipranks.com/news/google-cloud-next-2026-heres-how-alphabet-plans-to-fire-up-googl-stock-with-ai",
-      "date": "2026-04-30"
-    },
-    {
-      "title": "Anthropic in talks with investors to raise funds at $900 billion valuation, higher than OpenAI - CNBC (relevance: 99%)",
-      "url": "https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html",
-      "date": "2026-04-30"
-    },
-    {
-      "title": "OpenAI Rattles Big Tech as Microsoft (MSFT), Amazon (AMZN) and Alphabet (GOOGL) Face Earnings Test - TipRanks (relevance: 96%)",
-      "url": "https://www.tipranks.com/news/openai-rattles-big-tech-as-microsoft-msft-amazon-amzn-and-alphabet-googl-face-earnings-test",
-      "date": "2026-04-30"
-    },
-    {
-      "title": "Amazon is already offering new OpenAI products on AWS - TechCrunch (relevance: 94%)",
-      "url": "https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/",
-      "date": "2026-04-30"
-    },
-    {
-      "title": "China’s DeepSeek previews new AI model a year after jolting US rivals - The Verge (relevance: 24%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model",
-      "date": "2026-04-30"
-    },
-    {
-      "title": "Claude is connecting directly to your personal apps like Spotify, Uber Eats, and TurboTax - The Verge (relevance: 13%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/917871/anthropic-claude-personal-app-connectors",
-      "date": "2026-04-30"
-    },
-    {
-      "title": "Anthropic’s Mythos breach was humiliating - The Verge (relevance: 11%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation",
-      "date": "2026-04-30"
-    },
-    {
       "title": "Google’s AI Max Positions Travel Ads for AI Overviews and AI Mode - Skift (relevance: 0%)",
       "url": "https://skift.com/2026/04/30/google-ai-max-ads-travel/",
       "date": "2026-05-01"
@@ -2499,6 +2464,41 @@
       "title": "Dish files for bankruptcy, but not shutting down - The Verge (relevance: 22%)",
       "url": "https://www.theverge.com/tech/959894/dish-chapter-11-bankruptcy",
       "date": "2026-07-05"
+    },
+    {
+      "title": "Anthropic Ships Claude Sonnet 5 and a Self-Hosted Code Gateway — Rewriting the Enterprise AI Stack - FourWeekMBA (relevance: 100%)",
+      "url": "https://fourweekmba.com/ai-anthropic-claude-sonnet-5-bedrock-google-cloud/",
+      "date": "2026-07-06"
+    },
+    {
+      "title": "Meta Reportedly Got Too Addicted to Google AI Tokens and Had to Be Cut Off - Gizmodo (relevance: 71%)",
+      "url": "https://gizmodo.com/meta-reportedly-got-too-addicted-to-google-ai-tokens-and-had-to-be-cut-off-2000778727",
+      "date": "2026-07-06"
+    },
+    {
+      "title": "Microsoft plans to cut under 2.5% of workforce next week - Crypto Briefing (relevance: 61%)",
+      "url": "https://cryptobriefing.com/microsoft-workforce-cuts-july-2026/",
+      "date": "2026-07-06"
+    },
+    {
+      "title": "Meta Compute: Everyone Wants To Be A Neocloud - SemiAnalysis (relevance: 53%)",
+      "url": "https://newsletter.semianalysis.com/p/meta-compute-everyone-wants-to-be",
+      "date": "2026-07-06"
+    },
+    {
+      "title": "Google built a great smart speaker, but Gemini isn’t ready for it - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/959503/google-home-speaker-review-gemini-for-home",
+      "date": "2026-07-06"
+    },
+    {
+      "title": "Comcast’s split could make or break Peacock - The Verge (relevance: 33%)",
+      "url": "https://www.theverge.com/streaming/960235/comcast-breakup-peacock-streaming",
+      "date": "2026-07-06"
+    },
+    {
+      "title": "Dish files for bankruptcy, but not shutting down - The Verge (relevance: 22%)",
+      "url": "https://www.theverge.com/tech/959894/dish-chapter-11-bankruptcy",
+      "date": "2026-07-06"
     }
   ]
 }
