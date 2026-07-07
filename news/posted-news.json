@@ -1,41 +1,6 @@
 {
   "news": [
     {
-      "title": "Here’s how the new Microsoft and OpenAI deal breaks down - The Verge (relevance: 28%)",
-      "url": "https://www.theverge.com/tech/921210/microsoft-openai-partnership-divorce-notepad",
-      "date": "2026-05-01"
-    },
-    {
-      "title": "Claude can now plug directly into Photoshop, Blender, and Ableton - The Verge (relevance: 6%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/919648/anthropic-claude-creative-connectors-adobe-blender",
-      "date": "2026-05-01"
-    },
-    {
-      "title": "Google I/O 2026: What to Expect - CNET (relevance: 100%)",
-      "url": "https://www.cnet.com/tech/services-and-software/google-io-2026-everything-to-know/",
-      "date": "2026-05-02"
-    },
-    {
-      "title": "Google’s AI Max Positions Travel Ads for AI Overviews and AI Mode - Skift (relevance: 100%)",
-      "url": "https://skift.com/2026/04/30/google-ai-max-ads-travel/",
-      "date": "2026-05-02"
-    },
-    {
-      "title": "Google expands Pentagon’s access to its AI after Anthropic’s refusal - TechCrunch (relevance: 98%)",
-      "url": "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/",
-      "date": "2026-05-02"
-    },
-    {
-      "title": "Meta Faces EU Law Violation for Inadequate Child Protection on Platforms - Startup Ecosystem Canada (relevance: 100%)",
-      "url": "https://www.startupecosystem.ca/news/meta-faces-eu-law-violation-for-inadequate-child-protection-on-platforms/",
-      "date": "2026-05-02"
-    },
-    {
-      "title": "Lachy Groom Backs Indian Startup Pronto at $200 Million Valuation - Startup Ecosystem Canada (relevance: 57%)",
-      "url": "https://www.startupecosystem.ca/news/lachy-groom-backs-indian-startup-pronto-at-200-million-valuation/",
-      "date": "2026-05-02"
-    },
-    {
       "title": "The Late Morning Rundown: April 30, 2026 - CNBC (relevance: 47%)",
       "url": "https://www.cnbc.com/video/2026/04/30/the-late-morning-rundown-april-30-2026.html",
       "date": "2026-05-02"
@@ -2464,6 +2429,41 @@
       "title": "Dish files for bankruptcy, but not shutting down - The Verge (relevance: 22%)",
       "url": "https://www.theverge.com/tech/959894/dish-chapter-11-bankruptcy",
       "date": "2026-07-06"
+    },
+    {
+      "title": "Anthropic Ships Claude Sonnet 5 and a Self-Hosted Code Gateway — Rewriting the Enterprise AI Stack - FourWeekMBA (relevance: 100%)",
+      "url": "https://fourweekmba.com/ai-anthropic-claude-sonnet-5-bedrock-google-cloud/",
+      "date": "2026-07-07"
+    },
+    {
+      "title": "Semrush: 36 brands win AI visibility everywhere, 1,200 vanish on one - PPC Land (relevance: 44%)",
+      "url": "https://ppc.land/semrush-36-brands-win-ai-visibility-everywhere-1-200-vanish-on-one/",
+      "date": "2026-07-07"
+    },
+    {
+      "title": "Google Loses AI Talent Amid Broader Workforce Shift - Let's Data Science (relevance: 76%)",
+      "url": "https://letsdatascience.com/news/google-loses-ai-talent-amid-broader-workforce-shift-3e3f4cdf",
+      "date": "2026-07-07"
+    },
+    {
+      "title": "Microsoft plans to cut under 2.5% of workforce next week - Crypto Briefing (relevance: 59%)",
+      "url": "https://cryptobriefing.com/microsoft-workforce-cuts-july-2026/",
+      "date": "2026-07-07"
+    },
+    {
+      "title": "Google built a great smart speaker, but Gemini isn’t ready for it - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/959503/google-home-speaker-review-gemini-for-home",
+      "date": "2026-07-07"
+    },
+    {
+      "title": "Comcast’s split could make or break Peacock - The Verge (relevance: 32%)",
+      "url": "https://www.theverge.com/streaming/960235/comcast-breakup-peacock-streaming",
+      "date": "2026-07-07"
+    },
+    {
+      "title": "Nintendo will stop selling the original Switch in Europe next year - The Verge (relevance: 30%)",
+      "url": "https://www.theverge.com/games/961632/nintendo-switch-europe-discontinued",
+      "date": "2026-07-07"
     },
     {
       "title": "Anthropic Ships Claude Sonnet 5 and a Self-Hosted Code Gateway — Rewriting the Enterprise AI Stack - FourWeekMBA (relevance: 100%)",
