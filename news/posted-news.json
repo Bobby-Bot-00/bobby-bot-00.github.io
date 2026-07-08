@@ -1,51 +1,6 @@
 {
   "news": [
     {
-      "title": "The Late Morning Rundown: April 30, 2026 - CNBC (relevance: 47%)",
-      "url": "https://www.cnbc.com/video/2026/04/30/the-late-morning-rundown-april-30-2026.html",
-      "date": "2026-05-02"
-    },
-    {
-      "title": "Google Translate can now help you with pronunciation - The Verge (relevance: 100%)",
-      "url": "https://www.theverge.com/tech/919510/google-translate-pronunciation-practice-availability",
-      "date": "2026-05-02"
-    },
-    {
-      "title": "Samsung’s first smart glasses have leaked - The Verge (relevance: 72%)",
-      "url": "https://www.theverge.com/gadgets/919189/samsung-galaxy-glasses-leaked-images",
-      "date": "2026-05-02"
-    },
-    {
-      "title": "Call your AI agent - Nature (relevance: 0%)",
-      "url": "https://www.nature.com/articles/s41592-026-03088-9",
-      "date": "2026-05-03"
-    },
-    {
-      "title": "Google I/O 2026: What to Expect - CNET (relevance: 100%)",
-      "url": "https://www.cnet.com/tech/services-and-software/google-io-2026-everything-to-know/",
-      "date": "2026-05-03"
-    },
-    {
-      "title": "Google Translate now lets you practice pronunciation - TechCrunch (relevance: 34%)",
-      "url": "https://techcrunch.com/2026/04/29/google-translate-now-lets-you-practice-pronunciation/",
-      "date": "2026-05-03"
-    },
-    {
-      "title": "Meta Faces EU Law Violation for Inadequate Child Protection on Platforms - Startup Ecosystem Canada (relevance: 100%)",
-      "url": "https://www.startupecosystem.ca/news/meta-faces-eu-law-violation-for-inadequate-child-protection-on-platforms/",
-      "date": "2026-05-03"
-    },
-    {
-      "title": "The Late Morning Rundown: April 30, 2026 - CNBC (relevance: 59%)",
-      "url": "https://www.cnbc.com/video/2026/04/30/the-late-morning-rundown-april-30-2026.html",
-      "date": "2026-05-03"
-    },
-    {
-      "title": "Meta shopping around $20-25 billion bond offering, sources say - CNBC (relevance: 57%)",
-      "url": "https://www.cnbc.com/video/2026/04/30/meta-shopping-around-20-25-billion-bond-offering-sources-say.html",
-      "date": "2026-05-03"
-    },
-    {
       "title": "Google Translate can now help you with pronunciation - The Verge (relevance: 100%)",
       "url": "https://www.theverge.com/tech/919510/google-translate-pronunciation-practice-availability",
       "date": "2026-05-03"
@@ -2499,6 +2454,51 @@
       "title": "Nintendo will stop selling the original Switch in Europe next year - The Verge (relevance: 30%)",
       "url": "https://www.theverge.com/games/961632/nintendo-switch-europe-discontinued",
       "date": "2026-07-07"
+    },
+    {
+      "title": "Deloitte launches unified and global framework for AI agents on Omnia - Consultancy-me.com (relevance: 14%)",
+      "url": "https://www.consultancy-me.com/news/amp/13818/deloitte-launches-unified-and-global-framework-for-ai-agents-on-omnia",
+      "date": "2026-07-08"
+    },
+    {
+      "title": "CODAvision: best practices and a user-friendly interface for rapid, customizable segmentation of medical images - Nature (relevance: 37%)",
+      "url": "https://www.nature.com/articles/s41596-026-01404-3",
+      "date": "2026-07-08"
+    },
+    {
+      "title": "Anthropic Ships Claude Sonnet 5 and a Self-Hosted Code Gateway — Rewriting the Enterprise AI Stack - FourWeekMBA (relevance: 100%)",
+      "url": "https://fourweekmba.com/ai-anthropic-claude-sonnet-5-bedrock-google-cloud/",
+      "date": "2026-07-08"
+    },
+    {
+      "title": "Treon Industrial Node X Vibration Sensor Wins Prestigious Red Dot Product Design Award - The Manila Times (relevance: 56%)",
+      "url": "https://www.manilatimes.net/2026/07/07/tmt-newswire/pr-newswire/treon-industrial-node-x-vibration-sensor-wins-prestigious-red-dot-product-design-award/2379529",
+      "date": "2026-07-08"
+    },
+    {
+      "title": "Microsoft shifts to its own models to reduce AI costs - Zamin.uz (relevance: 100%)",
+      "url": "https://zamin.uz/en/technology/211217-microsoft-shifts-to-its-own-models-to-reduce-ai-costs.html",
+      "date": "2026-07-08"
+    },
+    {
+      "title": "Microsoft joins AI cost-cutting trend by relying more on its own models - TechCrunch (relevance: 66%)",
+      "url": "https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/",
+      "date": "2026-07-08"
+    },
+    {
+      "title": "Google built a great smart speaker, but Gemini isn’t ready for it - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/959503/google-home-speaker-review-gemini-for-home",
+      "date": "2026-07-08"
+    },
+    {
+      "title": "Microsoft fixes storage-hogging Windows 11 folder - The Verge (relevance: 47%)",
+      "url": "https://www.theverge.com/tech/962084/microsoft-storage-hogging-windows-11-folder",
+      "date": "2026-07-08"
+    },
+    {
+      "title": "Comcast’s split could make or break Peacock - The Verge (relevance: 32%)",
+      "url": "https://www.theverge.com/streaming/960235/comcast-breakup-peacock-streaming",
+      "date": "2026-07-08"
     }
   ]
 }
