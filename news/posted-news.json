@@ -1,51 +1,6 @@
 {
   "news": [
     {
-      "title": "Google Translate can now help you with pronunciation - The Verge (relevance: 100%)",
-      "url": "https://www.theverge.com/tech/919510/google-translate-pronunciation-practice-availability",
-      "date": "2026-05-03"
-    },
-    {
-      "title": "Samsung’s first smart glasses have leaked - The Verge (relevance: 72%)",
-      "url": "https://www.theverge.com/gadgets/919189/samsung-galaxy-glasses-leaked-images",
-      "date": "2026-05-03"
-    },
-    {
-      "title": "Microsoft finally open sources DOS 1.0 - and it's so much more than the code - ZDNET (relevance: 62%)",
-      "url": "https://www.zdnet.com/article/microsoft-open-sources-dos-1-0-much-more-than-the-code/",
-      "date": "2026-05-04"
-    },
-    {
-      "title": "Google I/O 2026: What to Expect - CNET (relevance: 100%)",
-      "url": "https://www.cnet.com/tech/services-and-software/google-io-2026-everything-to-know/",
-      "date": "2026-05-04"
-    },
-    {
-      "title": "Google’s AI Max Positions Travel Ads for AI Overviews and AI Mode - Skift (relevance: 100%)",
-      "url": "https://skift.com/2026/04/30/google-ai-max-ads-travel/",
-      "date": "2026-05-04"
-    },
-    {
-      "title": "Google expands Pentagon’s access to its AI after Anthropic’s refusal - TechCrunch (relevance: 98%)",
-      "url": "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/",
-      "date": "2026-05-04"
-    },
-    {
-      "title": "The Late Morning Rundown: April 30, 2026 - CNBC (relevance: 99%)",
-      "url": "https://www.cnbc.com/video/2026/04/30/the-late-morning-rundown-april-30-2026.html",
-      "date": "2026-05-04"
-    },
-    {
-      "title": "Meta shopping around $20-25 billion bond offering, sources say - CNBC (relevance: 99%)",
-      "url": "https://www.cnbc.com/video/2026/04/30/meta-shopping-around-20-25-billion-bond-offering-sources-say.html",
-      "date": "2026-05-04"
-    },
-    {
-      "title": "Meta shares sink as capex grows: Here's what investors need to know - CNBC (relevance: 99%)",
-      "url": "https://www.cnbc.com/video/2026/04/30/meta-shares-sink-as-capex-grows-heres-what-investors-need-to-know.html",
-      "date": "2026-05-04"
-    },
-    {
       "title": "Pentagon strikes classified AI deals with OpenAI, Google, and Nvidia — but not Anthropic - The Verge (relevance: 83%)",
       "url": "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia",
       "date": "2026-05-04"
@@ -2499,6 +2454,51 @@
       "title": "Comcast’s split could make or break Peacock - The Verge (relevance: 32%)",
       "url": "https://www.theverge.com/streaming/960235/comcast-breakup-peacock-streaming",
       "date": "2026-07-08"
+    },
+    {
+      "title": "US judge approves Elon Musk settlement with SEC despite misgivings, 'red flags' - Reuters (relevance: 36%)",
+      "url": "https://www.reuters.com/world/judge-approves-elon-musk-settlement-with-us-sec-over-twitter-disclosures-2026-07-08/",
+      "date": "2026-07-09"
+    },
+    {
+      "title": "Treon Industrial Node X Vibration Sensor Wins Prestigious Red Dot Product Design Award - The Manila Times (relevance: 100%)",
+      "url": "https://www.manilatimes.net/2026/07/07/tmt-newswire/pr-newswire/treon-industrial-node-x-vibration-sensor-wins-prestigious-red-dot-product-design-award/2379529",
+      "date": "2026-07-09"
+    },
+    {
+      "title": "Google Loses AI Talent Amid Broader Workforce Shift - Let's Data Science (relevance: 79%)",
+      "url": "https://letsdatascience.com/news/google-loses-ai-talent-amid-broader-workforce-shift-3e3f4cdf",
+      "date": "2026-07-09"
+    },
+    {
+      "title": "Satya Patel - Forbes (relevance: 74%)",
+      "url": "https://www.forbes.com/profile/satya-patel/",
+      "date": "2026-07-09"
+    },
+    {
+      "title": "Microsoft Adopts MAI Models to Reduce Token Costs - Let's Data Science (relevance: 100%)",
+      "url": "https://letsdatascience.com/news/microsoft-adopts-mai-models-to-reduce-token-costs-daf0f1e9",
+      "date": "2026-07-09"
+    },
+    {
+      "title": "Microsoft shifts to its own models to reduce AI costs - Zamin.uz (relevance: 79%)",
+      "url": "https://zamin.uz/en/technology/211217-microsoft-shifts-to-its-own-models-to-reduce-ai-costs.html",
+      "date": "2026-07-09"
+    },
+    {
+      "title": "Microsoft is working to reduce AI costs by increasing its reliance on its own AI models. - GIGAZINE (relevance: 77%)",
+      "url": "https://gigazine.net/gsc_news/en/20260708-microsoft-ai-cost-cutting-relying-more-own-models/",
+      "date": "2026-07-09"
+    },
+    {
+      "title": "Microsoft fixes storage-hogging Windows 11 folder - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/962084/microsoft-storage-hogging-windows-11-folder",
+      "date": "2026-07-09"
+    },
+    {
+      "title": "Nintendo will stop selling the original Switch in Europe next year - The Verge (relevance: 64%)",
+      "url": "https://www.theverge.com/games/961632/nintendo-switch-europe-discontinued",
+      "date": "2026-07-09"
     }
   ]
 }
