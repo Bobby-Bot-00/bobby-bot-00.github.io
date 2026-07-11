@@ -1,56 +1,6 @@
 {
   "news": [
     {
-      "title": "All the evidence unveiled so far in Musk v. Altman - The Verge (relevance: 10%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial",
-      "date": "2026-05-05"
-    },
-    {
-      "title": "ServiceNow just unveiled an AI workforce that can run your entire company - Fortune (relevance: 100%)",
-      "url": "https://fortune.com/2026/05/05/servicenow-knowledge-2026-autonomous-workforce-microsoft-nvidia-ai-announcements/",
-      "date": "2026-05-06"
-    },
-    {
-      "title": "Google Translate now lets you practice pronunciation - TechCrunch (relevance: 70%)",
-      "url": "https://techcrunch.com/2026/04/29/google-translate-now-lets-you-practice-pronunciation/",
-      "date": "2026-05-06"
-    },
-    {
-      "title": "Meta Faces EU Law Violation for Inadequate Child Protection on Platforms - Startup Ecosystem Canada (relevance: 100%)",
-      "url": "https://www.startupecosystem.ca/news/meta-faces-eu-law-violation-for-inadequate-child-protection-on-platforms/",
-      "date": "2026-05-06"
-    },
-    {
-      "title": "The Late Morning Rundown: April 30, 2026 - CNBC (relevance: 66%)",
-      "url": "https://www.cnbc.com/video/2026/04/30/the-late-morning-rundown-april-30-2026.html",
-      "date": "2026-05-06"
-    },
-    {
-      "title": "Meta shopping around $20-25 billion bond offering, sources say - CNBC (relevance: 64%)",
-      "url": "https://www.cnbc.com/video/2026/04/30/meta-shopping-around-20-25-billion-bond-offering-sources-say.html",
-      "date": "2026-05-06"
-    },
-    {
-      "title": "Google Photos launches an AI try-on feature for clothes you already have - The Verge (relevance: 90%)",
-      "url": "https://www.theverge.com/tech/920420/google-photos-ai-try-on-wardrobe",
-      "date": "2026-05-06"
-    },
-    {
-      "title": "Google’s AI Max Positions Travel Ads for AI Overviews and AI Mode - Skift (relevance: 100%)",
-      "url": "https://skift.com/2026/04/30/google-ai-max-ads-travel/",
-      "date": "2026-05-07"
-    },
-    {
-      "title": "Google Unveils Brand 'Brief' Feature In AI Max 04/30/2026 - MediaPost (relevance: 99%)",
-      "url": "https://www.mediapost.com/publications/article/414714/google-unveils-brand-brief-feature-in-ai-max.html?edition=142454",
-      "date": "2026-05-07"
-    },
-    {
-      "title": "Google readies ‘AI Ultra Lite’ plan and explicit ‘usage limits’ for Gemini - 9to5Google (relevance: 98%)",
-      "url": "https://9to5google.com/2026/05/05/google-ai-ultra-lite-gemini-usage-limits/",
-      "date": "2026-05-07"
-    },
-    {
       "title": "Meta Faces EU Law Violation for Inadequate Child Protection on Platforms - Startup Ecosystem Canada (relevance: 100%)",
       "url": "https://www.startupecosystem.ca/news/meta-faces-eu-law-violation-for-inadequate-child-protection-on-platforms/",
       "date": "2026-05-07"
@@ -2499,6 +2449,56 @@
       "title": "Google’s Nest Thermostat has hit its best price of the year - The Verge (relevance: 60%)",
       "url": "https://www.theverge.com/gadgets/963475/google-nest-thermostat-deal-sale",
       "date": "2026-07-10"
+    },
+    {
+      "title": "Rams linked to free-agent All-Pro WR who'd be perfect fit for Sean McVay - sportingnews.com (relevance: 39%)",
+      "url": "https://www.sportingnews.com/ca/nfl/los-angeles-rams/news/rams-linked-free-agent-all-pro-wr-be-perfect-fit-sean-mcvay/75268caa2a11465f4d1777af",
+      "date": "2026-07-11"
+    },
+    {
+      "title": "You have until 2027 to download Google Earth Pro. Do it now - PCWorld (relevance: 100%)",
+      "url": "https://www.pcworld.com/article/3186820/you-have-until-2027-to-download-google-earth-pro-do-it-now.html",
+      "date": "2026-07-11"
+    },
+    {
+      "title": "Marks & Spencer enlists AI to sharpen online product discovery - Retail Gazette (relevance: 77%)",
+      "url": "https://www.retailgazette.co.uk/blog/2026/07/marks-spencer-enlists-ai-to-sharpen-online-product-discovery/",
+      "date": "2026-07-11"
+    },
+    {
+      "title": "Treon Industrial Node X Vibration Sensor Wins Prestigious Red Dot Product Design Award - The Manila Times (relevance: 44%)",
+      "url": "https://www.manilatimes.net/2026/07/07/tmt-newswire/pr-newswire/treon-industrial-node-x-vibration-sensor-wins-prestigious-red-dot-product-design-award/2379529",
+      "date": "2026-07-11"
+    },
+    {
+      "title": "Meta jumps into AI coding market in effort to chase Anthropic and OpenAI - CNBC (relevance: 100%)",
+      "url": "https://www.cnbc.com/2026/07/09/meta-jumps-into-ai-coding-market-to-chase-anthropic-and-openai.html",
+      "date": "2026-07-11"
+    },
+    {
+      "title": "Microsoft Adopts MAI Models to Reduce Token Costs - Let's Data Science (relevance: 96%)",
+      "url": "https://letsdatascience.com/news/microsoft-adopts-mai-models-to-reduce-token-costs-daf0f1e9",
+      "date": "2026-07-11"
+    },
+    {
+      "title": "Meta Takes Aim at Google and OpenAI - Yahoo Finance (relevance: 72%)",
+      "url": "https://finance.yahoo.com/technology/ai/articles/meta-takes-aim-google-openai-185601327.html",
+      "date": "2026-07-11"
+    },
+    {
+      "title": "Google announces Pixel 11 launch event in August - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/962313/made-by-google-pixel-11-launch-event",
+      "date": "2026-07-11"
+    },
+    {
+      "title": "Meta is reportedly working on smart glasses that would be recording all the time - The Verge (relevance: 89%)",
+      "url": "https://www.theverge.com/tech/963138/meta-smart-glasses-recording-super-sensing-ai",
+      "date": "2026-07-11"
+    },
+    {
+      "title": "The whole Pixel line could get more expensive this year - The Verge (relevance: 71%)",
+      "url": "https://www.theverge.com/tech/962781/google-pixel-11-lineup-price-increase",
+      "date": "2026-07-11"
     }
   ]
 }
