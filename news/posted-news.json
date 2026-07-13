@@ -1,46 +1,6 @@
 {
   "news": [
     {
-      "title": "Meta Faces EU Law Violation for Inadequate Child Protection on Platforms - Startup Ecosystem Canada (relevance: 100%)",
-      "url": "https://www.startupecosystem.ca/news/meta-faces-eu-law-violation-for-inadequate-child-protection-on-platforms/",
-      "date": "2026-05-07"
-    },
-    {
-      "title": "The Late Morning Rundown: April 30, 2026 - CNBC (relevance: 70%)",
-      "url": "https://www.cnbc.com/video/2026/04/30/the-late-morning-rundown-april-30-2026.html",
-      "date": "2026-05-07"
-    },
-    {
-      "title": "Meta shopping around $20-25 billion bond offering, sources say - CNBC (relevance: 68%)",
-      "url": "https://www.cnbc.com/video/2026/04/30/meta-shopping-around-20-25-billion-bond-offering-sources-say.html",
-      "date": "2026-05-07"
-    },
-    {
-      "title": "Pentagon strikes classified AI deals with OpenAI, Google, and Nvidia — but not Anthropic - The Verge (relevance: 83%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia",
-      "date": "2026-05-07"
-    },
-    {
-      "title": "Here’s how the new Microsoft and OpenAI deal breaks down - The Verge (relevance: 28%)",
-      "url": "https://www.theverge.com/tech/921210/microsoft-openai-partnership-divorce-notepad",
-      "date": "2026-05-07"
-    },
-    {
-      "title": "Google shuts down Project Mariner - The Verge (relevance: 10%)",
-      "url": "https://www.theverge.com/tech/925559/google-project-mariner-shut-down",
-      "date": "2026-05-07"
-    },
-    {
-      "title": "X restructures its advertising platform, introducing the latest AI models in the largest system overhaul in the company's history. - GIGAZINE (relevance: 64%)",
-      "url": "https://gigazine.net/gsc_news/en/20260502-x-ai-powered-ad-platform/",
-      "date": "2026-05-08"
-    },
-    {
-      "title": "Google Unveils Brand 'Brief' Feature In AI Max 04/30/2026 - MediaPost (relevance: 62%)",
-      "url": "https://www.mediapost.com/publications/article/414714/google-unveils-brand-brief-feature-in-ai-max.html?edition=142454",
-      "date": "2026-05-08"
-    },
-    {
       "title": "Google’s Gemma 4 open AI models use “speculative decoding” to get up to 3x faster - Ars Technica (relevance: 60%)",
       "url": "https://arstechnica.com/ai/2026/05/googles-gemma-4-open-ai-models-use-speculative-decoding-to-get-up-to-3x-faster/",
       "date": "2026-05-08"
@@ -2499,6 +2459,46 @@
       "title": "The whole Pixel line could get more expensive this year - The Verge (relevance: 71%)",
       "url": "https://www.theverge.com/tech/962781/google-pixel-11-lineup-price-increase",
       "date": "2026-07-11"
+    },
+    {
+      "title": "You have until 2027 to download Google Earth Pro. Do it now - PCWorld (relevance: 100%)",
+      "url": "https://www.pcworld.com/article/3186820/you-have-until-2027-to-download-google-earth-pro-do-it-now.html",
+      "date": "2026-07-13"
+    },
+    {
+      "title": "Marks & Spencer enlists AI to sharpen online product discovery - Retail Gazette (relevance: 78%)",
+      "url": "https://www.retailgazette.co.uk/blog/2026/07/marks-spencer-enlists-ai-to-sharpen-online-product-discovery/",
+      "date": "2026-07-13"
+    },
+    {
+      "title": "Meta jumps into AI coding market in effort to chase Anthropic and OpenAI - CNBC (relevance: 100%)",
+      "url": "https://www.cnbc.com/2026/07/09/meta-jumps-into-ai-coding-market-to-chase-anthropic-and-openai.html",
+      "date": "2026-07-13"
+    },
+    {
+      "title": "Microsoft Adopts MAI Models to Reduce Token Costs - Let's Data Science (relevance: 95%)",
+      "url": "https://letsdatascience.com/news/microsoft-adopts-mai-models-to-reduce-token-costs-daf0f1e9",
+      "date": "2026-07-13"
+    },
+    {
+      "title": "Meta Takes Aim at Google and OpenAI - Yahoo Finance (relevance: 69%)",
+      "url": "https://finance.yahoo.com/technology/ai/articles/meta-takes-aim-google-openai-185601327.html",
+      "date": "2026-07-13"
+    },
+    {
+      "title": "Google announces Pixel 11 launch event in August - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/962313/made-by-google-pixel-11-launch-event",
+      "date": "2026-07-13"
+    },
+    {
+      "title": "The whole Pixel line could get more expensive this year - The Verge (relevance: 71%)",
+      "url": "https://www.theverge.com/tech/962781/google-pixel-11-lineup-price-increase",
+      "date": "2026-07-13"
+    },
+    {
+      "title": "Microsoft fixes storage-hogging Windows 11 folder - The Verge (relevance: 54%)",
+      "url": "https://www.theverge.com/tech/962084/microsoft-storage-hogging-windows-11-folder",
+      "date": "2026-07-13"
     }
   ]
 }
