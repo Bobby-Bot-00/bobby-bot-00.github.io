@@ -1,41 +1,6 @@
 {
   "news": [
     {
-      "title": "Google Fitbit Air preorders come with a second band for free - The Verge (relevance: 83%)",
-      "url": "https://www.theverge.com/gadgets/926766/google-fitbit-air-preorder-free-band-deal-sale",
-      "date": "2026-05-09"
-    },
-    {
-      "title": "StackAdapt Announces AI-Powered Marketing Capabilities Through Ads in ChatGPT Pilot - Business Wire (relevance: 69%)",
-      "url": "https://www.businesswire.com/news/home/20260505143235/en/StackAdapt-Announces-AI-Powered-Marketing-Capabilities-Through-Ads-in-ChatGPT-Pilot",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "OwlTing Group (NASDAQ: OWLS) Launches OwlPay Agent Wallet, Targeting the Emerging Multi-Trillion-Dollar Agentic Commerce Economy - FinTech Magazine (relevance: 23%)",
-      "url": "https://fintechmagazine.com/globenewswire/3286859",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "UK Government's Fraud Strategy Framework: 2026 to 2029 - The National Law Review (relevance: 11%)",
-      "url": "https://natlawreview.com/article/uk-governments-fraud-strategy-framework-2026-2029",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "Google I/O 2026: New Gemini, Smart Glasses, and a Whole New Laptop OS. Here's What to Expect - CNET (relevance: 100%)",
-      "url": "https://www.cnet.com/videos/google-io-2026-new-gemini-smart-glasses-and-a-whole-new-laptop-os-heres-what-to-expect/",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "Google Unveils Brand 'Brief' Feature In AI Max 04/30/2026 - MediaPost (relevance: 99%)",
-      "url": "https://www.mediapost.com/publications/article/414714/google-unveils-brand-brief-feature-in-ai-max.html?edition=142454",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "Google readies ‘AI Ultra Lite’ plan and explicit ‘usage limits’ for Gemini - 9to5Google (relevance: 98%)",
-      "url": "https://9to5google.com/2026/05/05/google-ai-ultra-lite-gemini-usage-limits/",
-      "date": "2026-05-10"
-    },
-    {
       "title": "Anthropic and OpenAI are both launching joint ventures for enterprise AI services - TechCrunch (relevance: 76%)",
       "url": "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/",
       "date": "2026-05-10"
@@ -2499,6 +2464,41 @@
       "title": "Waze is getting a bunch of new AI-powered features - The Verge (relevance: 65%)",
       "url": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty",
       "date": "2026-07-17"
+    },
+    {
+      "title": "Google continues its renaming streak by turning NotebookLM to Gemini Notebook - TechCrunch (relevance: 100%)",
+      "url": "https://techcrunch.com/2026/07/16/google-continues-its-renaming-streak-by-turning-notebooklm-to-gemini-notebook/",
+      "date": "2026-07-19"
+    },
+    {
+      "title": "Google Rebrands NotebookLM to Gemini Notebook with Drive Sync - Geeky Gadgets (relevance: 81%)",
+      "url": "https://www.geeky-gadgets.com/ai-news-gemini-notebook-update/",
+      "date": "2026-07-19"
+    },
+    {
+      "title": "Google's latest Pixel AI push keeps your data on your phone - Android Authority (relevance: 65%)",
+      "url": "https://www.androidauthority.com/google-gemma-4-e2b-for-tpu-unveiled-3687531/",
+      "date": "2026-07-19"
+    },
+    {
+      "title": "Silicon Valley Has Lost Its Biggest Advantage - The Atlantic (relevance: 77%)",
+      "url": "https://www.theatlantic.com/technology/2026/07/data-center-ai-heavy-industry/687990/?utm_medium=offsite&utm_source=google&utm_campaign=newsstand-technology",
+      "date": "2026-07-19"
+    },
+    {
+      "title": "Candriam S.C.A. Makes New $7.13 Million Investment in Simpson Manufacturing Company, Inc. $SSD - MarketBeat (relevance: 63%)",
+      "url": "https://www.marketbeat.com/instant-alerts/filing-candriam-sca-makes-new-713-million-investment-in-simpson-manufacturing-company-inc-ssd-2026-07-13/",
+      "date": "2026-07-19"
+    },
+    {
+      "title": "Sam Altman didn’t need another lawsuit - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965294/openai-apple-trade-secrets-lawsuit-sam-altman-ipo",
+      "date": "2026-07-19"
+    },
+    {
+      "title": "The Google Images homepage will recommend photos even before you search - The Verge (relevance: 71%)",
+      "url": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana",
+      "date": "2026-07-19"
     }
   ]
 }
