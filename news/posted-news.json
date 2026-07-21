@@ -1,51 +1,6 @@
 {
   "news": [
     {
-      "title": "Google readies ‘AI Ultra Lite’ plan and explicit ‘usage limits’ for Gemini - 9to5Google (relevance: 98%)",
-      "url": "https://9to5google.com/2026/05/05/google-ai-ultra-lite-gemini-usage-limits/",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "Anthropic and OpenAI are both launching joint ventures for enterprise AI services - TechCrunch (relevance: 76%)",
-      "url": "https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "Big Tech earnings show how big, smart spending can be rewarded by the market - CNBC (relevance: 63%)",
-      "url": "https://www.cnbc.com/2026/05/03/big-tech-earnings-show-how-big-smart-spending-can-be-rewarded-by-the-market.html",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "Major publishers sue Meta for copyright infringement over AI training - The Guardian (relevance: 61%)",
-      "url": "https://www.theguardian.com/technology/2026/may/05/publishers-sue-meta-copyright-ai",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "OpenAI is reportedly launching a phone for ChatGPT - The Verge (relevance: 11%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/924063/openai-phone-rumors-2027-ming-chi-kuo",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "Google shuts down Project Mariner - The Verge (relevance: 9%)",
-      "url": "https://www.theverge.com/tech/925559/google-project-mariner-shut-down",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "Mira Murati tells the court that she couldn’t trust Sam Altman’s words - The Verge (relevance: 6%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/925338/openai-musk-v-altman-mira-murati",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "Quarterly wrap: Western Australian gold producers continue to shine - Australian Mining (relevance: 93%)",
-      "url": "https://www.australianmining.com.au/quarterly-wrap-western-australian-gold-producers-continue-to-shine/",
-      "date": "2026-05-11"
-    },
-    {
-      "title": "GetDandy Launches Autonomous AI Workforce for Local - GlobeNewswire (relevance: 100%)",
-      "url": "https://www.globenewswire.com/news-release/2026/05/07/3290213/0/en/GetDandy-Launches-Autonomous-AI-Workforce-for-Local-Businesses-Delivering-24-7-Customer-Engagement-With-No-Setup-Required.html",
-      "date": "2026-05-11"
-    },
-    {
       "title": "ServiceNow just unveiled an AI workforce that can run your entire company - Fortune (relevance: 96%)",
       "url": "https://fortune.com/2026/05/05/servicenow-knowledge-2026-autonomous-workforce-microsoft-nvidia-ai-announcements/",
       "date": "2026-05-11"
@@ -2499,6 +2454,51 @@
       "title": "Waze is getting a bunch of new AI-powered features - The Verge (relevance: 65%)",
       "url": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty",
       "date": "2026-07-20"
+    },
+    {
+      "title": "Build a Self-Improving Second Brain on Oracle AI Database - Oracle Blogs (relevance: 41%)",
+      "url": "https://blogs.oracle.com/developers/build-a-self-improving-second-brain-on-oracle-ai-database",
+      "date": "2026-07-21"
+    },
+    {
+      "title": "Hatchette and Elsevier Sue Google for Using Their Work to ... (relevance: 98%)",
+      "url": "https://gizmodo.com/hatchette-and-elsevier-sue-google-for-using-their-work-to-train-ai-2000785480",
+      "date": "2026-07-21"
+    },
+    {
+      "title": "OpenAI, public interest and the problem of tech governance (relevance: 98%)",
+      "url": "https://www.gisreportsonline.com/r/openai-ai-governance",
+      "date": "2026-07-21"
+    },
+    {
+      "title": "The AI Stack: How Vendors Are Composing AI Strategy (relevance: 97%)",
+      "url": "https://futurumgroup.com/insights/the-ai-stack-how-vendors-are-composing-ai-strategy",
+      "date": "2026-07-21"
+    },
+    {
+      "title": "Bitcoin’s Progress Holds The Secret To The AI Boom - Forbes (relevance: 100%)",
+      "url": "https://www.forbes.com/sites/digital-assets/2026/07/19/bitcoins-progress--holds-the-secret-to-the-ai-boom/",
+      "date": "2026-07-21"
+    },
+    {
+      "title": "Anthropic, Authors’ $1.5 Billion Deal Receives Final Approval - Bloomberg Law News (relevance: 63%)",
+      "url": "https://news.bloomberglaw.com/ip-law/anthropic-authors-1-5-billion-deal-receives-final-approval",
+      "date": "2026-07-21"
+    },
+    {
+      "title": "Silicon Valley Has Lost Its Biggest Advantage - The Atlantic (relevance: 53%)",
+      "url": "https://www.theatlantic.com/technology/2026/07/data-center-ai-heavy-industry/687990/?utm_medium=offsite&utm_source=google&utm_campaign=newsstand-technology",
+      "date": "2026-07-21"
+    },
+    {
+      "title": "The Google Images homepage will recommend photos even before you search - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana",
+      "date": "2026-07-21"
+    },
+    {
+      "title": "The Motorola Edge 70 Max is all about power - The Verge (relevance: 42%)",
+      "url": "https://www.theverge.com/tech/965884/motorola-edge-70-max-qi2-wireless-price-availability",
+      "date": "2026-07-21"
     }
   ]
 }
