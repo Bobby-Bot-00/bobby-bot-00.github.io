@@ -1,56 +1,6 @@
 {
   "news": [
     {
-      "title": "ServiceNow just unveiled an AI workforce that can run your entire company - Fortune (relevance: 96%)",
-      "url": "https://fortune.com/2026/05/05/servicenow-knowledge-2026-autonomous-workforce-microsoft-nvidia-ai-announcements/",
-      "date": "2026-05-11"
-    },
-    {
-      "title": "ImmunityBio Reports Record Q1 2026 Results: Net Product Revenue Increased Nearly 2.7x Year-Over-Year to $44 Million in Q1 2026 Expanding on the 2025 Full Year 700% Year-Over-Year Revenue Growth; Cash and Marketable Securities Total $381 Millio - BioSpace (relevance: 50%)",
-      "url": "https://www.biospace.com/press-releases/immunitybio-reports-record-q1-2026-results-net-product-revenue-increased-nearly-2-7x-year-over-year-to-44-million-in-q1-2026-expanding-on-the-2025-full-year-700-year-over-year-revenue-growth-cash-and-marketable-securities-total-381-million",
-      "date": "2026-05-11"
-    },
-    {
-      "title": "Oracle Workers Face Denied Severance Negotiations Amid Mass Layoffs - Startup Ecosystem Canada (relevance: 100%)",
-      "url": "https://www.startupecosystem.ca/news/oracle-workers-face-denied-severance-negotiations-amid-mass-layoffs/",
-      "date": "2026-05-11"
-    },
-    {
-      "title": "Ramp’s Ambitious Fundraising Plans to Reach $40B+ Valuation - Startup Ecosystem Canada (relevance: 76%)",
-      "url": "https://www.startupecosystem.ca/news/ramps-ambitious-fundraising-plans-to-reach-40b-valuation/",
-      "date": "2026-05-11"
-    },
-    {
-      "title": "Major publishers sue Meta for copyright infringement over AI training - The Guardian (relevance: 34%)",
-      "url": "https://www.theguardian.com/technology/2026/may/05/publishers-sue-meta-copyright-ai",
-      "date": "2026-05-11"
-    },
-    {
-      "title": "Google’s taking a big swing at AI health with the Fitbit Air - The Verge (relevance: 100%)",
-      "url": "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers",
-      "date": "2026-05-11"
-    },
-    {
-      "title": "Google Fitbit Air preorders come with a second band for free - The Verge (relevance: 83%)",
-      "url": "https://www.theverge.com/gadgets/926766/google-fitbit-air-preorder-free-band-deal-sale",
-      "date": "2026-05-11"
-    },
-    {
-      "title": "Chrome’s AI features may be hogging 4GB of your computer storage - The Verge (relevance: 83%)",
-      "url": "https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features",
-      "date": "2026-05-11"
-    },
-    {
-      "title": "More Links Are Coming to AI Overviews - Practical Ecommerce (relevance: 100%)",
-      "url": "https://www.practicalecommerce.com/more-links-are-coming-to-ai-overviews",
-      "date": "2026-05-12"
-    },
-    {
-      "title": "GetDandy Launches Autonomous AI Workforce for Local - GlobeNewswire (relevance: 41%)",
-      "url": "https://www.globenewswire.com/news-release/2026/05/07/3290213/0/en/GetDandy-Launches-Autonomous-AI-Workforce-for-Local-Businesses-Delivering-24-7-Customer-Engagement-With-No-Setup-Required.html",
-      "date": "2026-05-12"
-    },
-    {
       "title": "ServiceNow just unveiled an AI workforce that can run your entire company - Fortune (relevance: 39%)",
       "url": "https://fortune.com/2026/05/05/servicenow-knowledge-2026-autonomous-workforce-microsoft-nvidia-ai-announcements/",
       "date": "2026-05-12"
@@ -2499,6 +2449,56 @@
       "title": "The Motorola Edge 70 Max is all about power - The Verge (relevance: 42%)",
       "url": "https://www.theverge.com/tech/965884/motorola-edge-70-max-qi2-wireless-price-availability",
       "date": "2026-07-21"
+    },
+    {
+      "title": "Microsoft's July security patch fest brings on the 'bug apocalypse' - iTnews (relevance: 6%)",
+      "url": "https://www.itnews.com.au/news/microsofts-july-security-patch-fest-brings-on-the-bug-apocalypse-627379",
+      "date": "2026-07-22"
+    },
+    {
+      "title": "Google continues its renaming streak by turning NotebookLM to Gemini Notebook - TechCrunch (relevance: 63%)",
+      "url": "https://techcrunch.com/2026/07/16/google-continues-its-renaming-streak-by-turning-notebooklm-to-gemini-notebook/",
+      "date": "2026-07-22"
+    },
+    {
+      "title": "Google reveals faster and cheaper Gemini 3.6 Flash, says 3.5 Pro is still in testing - Ars Technica (relevance: 50%)",
+      "url": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/",
+      "date": "2026-07-22"
+    },
+    {
+      "title": "NotebookLM is now Gemini Notebook, with 3.5 + Antigravity upgrade coming to AI Pro - 9to5Google (relevance: 43%)",
+      "url": "https://9to5google.com/2026/07/16/notebooklm-gemini-notebook/",
+      "date": "2026-07-22"
+    },
+    {
+      "title": "OpenAI, Anthropic boost lobbying as legacy tech and defense spending slips - CNBC (relevance: 100%)",
+      "url": "https://www.cnbc.com/2026/07/21/openai-anthropic-ai-lobbying-spending-q2-2026.html",
+      "date": "2026-07-22"
+    },
+    {
+      "title": "Bitcoin’s Progress Holds The Secret To The AI Boom - Forbes (relevance: 47%)",
+      "url": "https://www.forbes.com/sites/digital-assets/2026/07/19/bitcoins-progress--holds-the-secret-to-the-ai-boom/",
+      "date": "2026-07-22"
+    },
+    {
+      "title": "Anthropic, Authors’ $1.5 Billion Deal Receives Final Approval - Bloomberg Law News (relevance: 28%)",
+      "url": "https://news.bloomberglaw.com/ip-law/anthropic-authors-1-5-billion-deal-receives-final-approval",
+      "date": "2026-07-22"
+    },
+    {
+      "title": "Anthropic’s $1.5 billion book piracy settlement approved by judge - The Verge (relevance: 21%)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved",
+      "date": "2026-07-22"
+    },
+    {
+      "title": "China delivers a one-two punch to America’s AI dominance - The Verge (relevance: 14%)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
+      "date": "2026-07-22"
+    },
+    {
+      "title": "Google launches a cheaper alternative to large AI security models like Mythos - The Verge (relevance: 10%)",
+      "url": "https://www.theverge.com/tech/968572/google-gemini-flash-cyber-ai-security-model",
+      "date": "2026-07-22"
     }
   ]
 }
