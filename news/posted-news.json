@@ -1,46 +1,6 @@
 {
   "news": [
     {
-      "title": "Google Android AI Features Emerge Ahead Of Apple Siri's 05/13/2026 - MediaPost (relevance: 100%)",
-      "url": "https://www.mediapost.com/publications/article/415033/google-android-ai-features-emerge-ahead-of-apple-s.html",
-      "date": "2026-05-15"
-    },
-    {
-      "title": "Anthropic now has more business customers than OpenAI, according to Ramp data - TechCrunch (relevance: 99%)",
-      "url": "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/",
-      "date": "2026-05-15"
-    },
-    {
-      "title": "OpenAI and Anthropic Are Trying to Out-Freebie Each Other - Business Insider (relevance: 99%)",
-      "url": "https://www.businessinsider.com/openai-anthropic-out-freebie-each-other-codex-claude-code-2026-5",
-      "date": "2026-05-15"
-    },
-    {
-      "title": "Anthropic бизнес мижозлари сони бўйича OpenAIдан ўзиб кетди - Zamin.uz (relevance: 98%)",
-      "url": "https://zamin.uz/en/technology/200771-anthropic-overtakes-openai-in-number-of-business-customers.html",
-      "date": "2026-05-15"
-    },
-    {
-      "title": "OpenAI just released its answer to Claude Mythos - The Verge (relevance: 16%)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/928342/openai-daybreak-security-ai",
-      "date": "2026-05-15"
-    },
-    {
-      "title": "Microsoft starts canceling Claude Code licenses - The Verge (relevance: 7%)",
-      "url": "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
-      "date": "2026-05-15"
-    },
-    {
-      "title": "Claude Platform On AWS Rewrites The Hyperscaler AI Bargain - Forbes (relevance: 93%)",
-      "url": "https://www.forbes.com/sites/janakirammsv/2026/05/11/claude-platform-on-aws-rewrites-the-hyperscaler-ai-bargain/",
-      "date": "2026-05-16"
-    },
-    {
-      "title": "Google Introduces New Line Of AI-Enabled Laptops 05/13/2026 - MediaPost (relevance: 100%)",
-      "url": "https://www.mediapost.com/publications/article/415047/google-introduces-new-line-of-ai-enabled-laptops.html",
-      "date": "2026-05-16"
-    },
-    {
       "title": "Can Google Wow Us at I/O 2026? Here's What It Has to Get Right - CNET (relevance: 100%)",
       "url": "https://www.cnet.com/tech/services-and-software/can-google-wow-us-at-io-2026-heres-what-it-has-to-get-right/",
       "date": "2026-05-16"
@@ -2499,6 +2459,46 @@
       "title": "Nearly every Kindle is steeply discounted at Best Buy - The Verge (relevance: 72%)",
       "url": "https://www.theverge.com/gadgets/968356/kindle-paperwhite-colorsoft-scribe-deal-sale",
       "date": "2026-07-25"
+    },
+    {
+      "title": "TCS study reveals Physical AI is now mainstream as manufacturers scale AI implementation - Tata Consultancy Services (relevance: 100%)",
+      "url": "https://www.tcs.com/who-we-are/newsroom/press-release/tcs-study-reveals-physical-ai-is-now-mainstream-as-manufacturers-scale-ai-implementation",
+      "date": "2026-07-26"
+    },
+    {
+      "title": "EU hits Google with $1 billion fine over its Play app store and search - The Sun Chronicle (relevance: 73%)",
+      "url": "https://www.thesunchronicle.com/business/eu-hits-google-with-1-billion-fine-over-its-play-app-store-and-search/article_1ec5eee1-05eb-5ddd-b266-313f8392d4ca.html",
+      "date": "2026-07-26"
+    },
+    {
+      "title": "Browser Wars: Will AI End the Dominance of Chrome and Safari? - Zamin.uz (relevance: 56%)",
+      "url": "https://zamin.uz/en/technology/213833-browser-wars-will-ai-end-the-dominance-of-chrome-and-safari.html",
+      "date": "2026-07-26"
+    },
+    {
+      "title": "OpenAI Signs the Open-Weights Letter It Skipped at Launch — and the Coalition Grew to 35 in a Day - FourWeekMBA (relevance: 100%)",
+      "url": "https://fourweekmba.com/ai-openai-open-weights-coalition-letter-signed/",
+      "date": "2026-07-26"
+    },
+    {
+      "title": "OpenAI, Anthropic boost lobbying as legacy tech and defense spending slips - CNBC (relevance: 98%)",
+      "url": "https://www.cnbc.com/2026/07/21/openai-anthropic-ai-lobbying-spending-q2-2026.html",
+      "date": "2026-07-26"
+    },
+    {
+      "title": "Meta made its own AI detection system. It should have just used Google’s (relevance: 99%)",
+      "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
+      "date": "2026-07-26"
+    },
+    {
+      "title": "Google hit with $1 billion fine for breaking EU antitrust rules (relevance: 98%)",
+      "url": "https://www.theverge.com/tech/943866/google-alphabet-eu-dma-fine-search-services-play-store-steering",
+      "date": "2026-07-26"
+    },
+    {
+      "title": "Price-hiked iPads are a little cheaper right now (relevance: 98%)",
+      "url": "https://www.theverge.com/gadgets/969003/apple-ipad-air-pro-airtag-deal-sale",
+      "date": "2026-07-26"
     }
   ]
 }
