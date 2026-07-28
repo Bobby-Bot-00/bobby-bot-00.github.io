@@ -1,61 +1,6 @@
 {
   "news": [
     {
-      "title": "Government AI‑vetting announcement page is missing from website - Let's Data Science (relevance: 100%)",
-      "url": "https://letsdatascience.com/news/government-aivetting-announcement-page-is-missing-from-websi-9932122e",
-      "date": "2026-05-18"
-    },
-    {
-      "title": "European Defense Tech Startup Helsing to Raise $1.2B at $18B Valuation - Startup Ecosystem Canada (relevance: 100%)",
-      "url": "https://www.startupecosystem.ca/news/european-defense-tech-startup-helsing-to-raise-1-2b-at-18b-valuation/",
-      "date": "2026-05-18"
-    },
-    {
-      "title": "Cerebras Systems’ IPO Marks a Milestone in Tech Industry - Startup Ecosystem Canada (relevance: 96%)",
-      "url": "https://www.startupecosystem.ca/news/cerebras-systems-ipo-marks-a-milestone-in-tech-industry/",
-      "date": "2026-05-18"
-    },
-    {
-      "title": "Anthropic’s Secondary Share Trading Restrictions Raise Global Market Concerns - Startup Ecosystem Canada (relevance: 95%)",
-      "url": "https://www.startupecosystem.ca/news/anthropics-secondary-share-trading-restrictions-raise-global-market-concerns/",
-      "date": "2026-05-18"
-    },
-    {
-      "title": "Android Auto is now one (screen) size fits all - The Verge (relevance: 100%)",
-      "url": "https://www.theverge.com/tech/927759/android-auto-is-now-one-screen-size-fits-all",
-      "date": "2026-05-18"
-    },
-    {
-      "title": "Google announces its Chromebook successor: the Googlebook - The Verge (relevance: 94%)",
-      "url": "https://www.theverge.com/tech/928479/google-googlebook-laptops-android-tease-aluminium-chromebook",
-      "date": "2026-05-18"
-    },
-    {
-      "title": "How to watch Google’s Android Show: I/O Edition today - The Verge (relevance: 90%)",
-      "url": "https://www.theverge.com/tech/928276/google-android-show-io-edition-2026-how-to-watch",
-      "date": "2026-05-18"
-    },
-    {
-      "title": "Meet LiteLLM Agent Platform: A Kubernetes-Based, Self-Hosted Infrastructure Layer for Isolated Agent Sandboxes and Persistent Session Management in Production - MarkTechPost (relevance: 100%)",
-      "url": "https://www.marktechpost.com/2026/05/16/meet-litellm-agent-platform-a-kubernetes-based-self-hosted-infrastructure-layer-for-isolated-agent-sandboxes-and-persistent-session-management-in-production/",
-      "date": "2026-05-19"
-    },
-    {
-      "title": "How to Watch Google I/O 2026 - WIRED (relevance: 100%)",
-      "url": "https://www.wired.com/story/how-to-watch-google-io/",
-      "date": "2026-05-19"
-    },
-    {
-      "title": "Government AI‑vetting announcement page is missing from website - Let's Data Science (relevance: 55%)",
-      "url": "https://letsdatascience.com/news/government-aivetting-announcement-page-is-missing-from-websi-9932122e",
-      "date": "2026-05-19"
-    },
-    {
-      "title": "Google Integrates Gemini Across Android and Chrome - Let's Data Science (relevance: 54%)",
-      "url": "https://letsdatascience.com/news/google-integrates-gemini-across-android-and-chrome-f3925f9d",
-      "date": "2026-05-19"
-    },
-    {
       "title": "Cerebras Systems’ IPO Marks a Milestone in Tech Industry - Startup Ecosystem Canada (relevance: 100%)",
       "url": "https://www.startupecosystem.ca/news/cerebras-systems-ipo-marks-a-milestone-in-tech-industry/",
       "date": "2026-05-19"
@@ -2499,6 +2444,61 @@
       "title": "Meta made its own AI detection system. It should have just used Google’s (relevance: 98%)",
       "url": "https://www.google.com/goto?url=CAESlwEB7keqTTolJUhbr00W0hylRJY88wuJxiGcffSgLBkKF2cAkOAQiESFArXxzj1zuZ2lXvw4usOOLel__dU8W4slVxN2xycTDgQlSQQSSqNZGihdarii35XfcQMVQsWUelAK586zMHwMsI4hl9NbqajGJrAJVCHQz6_hiEMayUKQgc_G4Lt3faX2-irob2mnJOek414v8FdB",
       "date": "2026-07-27"
+    },
+    {
+      "title": "What Model Context Protocol Actually Does (relevance: 93%)",
+      "url": "https://tech-insider.org/au/what-model-context-protocol-actually-does",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "MCP Hits 10,000+ Servers as Biggest Update Ships [2026] (relevance: 90%)",
+      "url": "https://tech-insider.org/ie/model-context-protocol-mcp-update-2026",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "TCS study reveals Physical AI is now mainstream as manufacturers scale AI implementation - Tata Consultancy Services (relevance: 100%)",
+      "url": "https://www.tcs.com/who-we-are/newsroom/press-release/tcs-study-reveals-physical-ai-is-now-mainstream-as-manufacturers-scale-ai-implementation",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "EU hits Google with $1 billion fine over its Play app store and search - The Sun Chronicle (relevance: 73%)",
+      "url": "https://www.thesunchronicle.com/business/eu-hits-google-with-1-billion-fine-over-its-play-app-store-and-search/article_1ec5eee1-05eb-5ddd-b266-313f8392d4ca.html",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "Browser Wars: Will AI End the Dominance of Chrome and Safari? - Zamin.uz (relevance: 56%)",
+      "url": "https://zamin.uz/en/technology/213833-browser-wars-will-ai-end-the-dominance-of-chrome-and-safari.html",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "The rise of the military-technology complex (relevance: 98%)",
+      "url": "https://thebulletin.org/2026/07/the-rise-of-the-military-technology-complex",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others - TechCrunch (relevance: 97%)",
+      "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "Anthropic Nearly Tripled Its Lobbying Bill to $3.53 Million in Six Months (relevance: 97%)",
+      "url": "https://beincrypto.com/ai-lobbying-spending-anthropic-openai-record",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "Google hit with $1 billion fine for breaking EU antitrust rules - The Verge (relevance: 100%)",
+      "url": "https://www.theverge.com/tech/943866/google-alphabet-eu-dma-fine-search-services-play-store-steering",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "Google now lets you sign in to your account using a selfie video - The Verge (relevance: 78%)",
+      "url": "https://www.theverge.com/tech/969361/google-account-sign-in-selfie-video-security",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "Nearly every Kindle is steeply discounted at Best Buy - The Verge (relevance: 72%)",
+      "url": "https://www.theverge.com/gadgets/968356/kindle-paperwhite-colorsoft-scribe-deal-sale",
+      "date": "2026-07-28"
     }
   ]
 }
