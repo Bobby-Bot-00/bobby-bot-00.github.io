@@ -1,76 +1,6 @@
 {
   "news": [
     {
-      "title": "Cerebras Systems’ IPO Marks a Milestone in Tech Industry - Startup Ecosystem Canada (relevance: 100%)",
-      "url": "https://www.startupecosystem.ca/news/cerebras-systems-ipo-marks-a-milestone-in-tech-industry/",
-      "date": "2026-05-19"
-    },
-    {
-      "title": "Anthropic’s Secondary Share Trading Restrictions Raise Global Market Concerns - Startup Ecosystem Canada (relevance: 99%)",
-      "url": "https://www.startupecosystem.ca/news/anthropics-secondary-share-trading-restrictions-raise-global-market-concerns/",
-      "date": "2026-05-19"
-    },
-    {
-      "title": "A* Closes $450 Million Fund III for Early-Stage Startups - Startup Ecosystem Canada (relevance: 97%)",
-      "url": "https://www.startupecosystem.ca/news/a-closes-450-million-fund-iii-for-early-stage-startups/",
-      "date": "2026-05-19"
-    },
-    {
-      "title": "Google is rolling out its redesigned Workspace app icons - The Verge (relevance: 100%)",
-      "url": "https://www.theverge.com/tech/932417/google-gmail-docs-cal-sheets-workspace-icon-redesign",
-      "date": "2026-05-19"
-    },
-    {
-      "title": "Google announces its Chromebook successor: the Googlebook - The Verge (relevance: 91%)",
-      "url": "https://www.theverge.com/tech/928479/google-googlebook-laptops-android-tease-aluminium-chromebook",
-      "date": "2026-05-19"
-    },
-    {
-      "title": "How to watch Google’s Android Show: I/O Edition today - The Verge (relevance: 87%)",
-      "url": "https://www.theverge.com/tech/928276/google-android-show-io-edition-2026-how-to-watch",
-      "date": "2026-05-19"
-    },
-    {
-      "title": "SAP AI Agent Hub and Agent Governance - IgniteSAP (relevance: 72%)",
-      "url": "https://ignitesap.com/sap-ai-agent-hub-and-agent-governance/",
-      "date": "2026-05-20"
-    },
-    {
-      "title": "Google I/O 2026 Live Updates: Latest News on Android 17 and Gemini - CNET (relevance: 100%)",
-      "url": "https://www.cnet.com/news-live/google-io-2026-live-news-updates/",
-      "date": "2026-05-20"
-    },
-    {
-      "title": "Google I/O 2026 live: Gemini AI, Android 17, Android XR updates and more - Yahoo Tech (relevance: 100%)",
-      "url": "https://tech.yahoo.com/general/live/google-io-2026-live-gemini-ai-android-17-android-xr-updates-and-more-135626963.html",
-      "date": "2026-05-20"
-    },
-    {
-      "title": "Tech Editors Talk Generative AI Announcements at Google I/O 2026 - CNET (relevance: 100%)",
-      "url": "https://www.cnet.com/videos/tech-editors-talk-generative-ai-announcements-at-google-io-2026/",
-      "date": "2026-05-20"
-    },
-    {
-      "title": "Anthropic, OpenAI Hold Majority Of Startup AI Revenue 05/19/2026 - MediaPost (relevance: 99%)",
-      "url": "https://www.mediapost.com/publications/article/415163/anthropic-openai-hold-majority-of-startup-ai-reve.html",
-      "date": "2026-05-20"
-    },
-    {
-      "title": "OpenAI Cofounder And Former Tesla AI Leader Andrej Karpathy Joins Anthropic - Forbes (relevance: 99%)",
-      "url": "https://www.forbes.com/sites/aliciapark/2026/05/19/openai-cofounder-and-former-tesla-ai-leader-andrej-karpathy-joins-anthropic/",
-      "date": "2026-05-20"
-    },
-    {
-      "title": "Plex is tripling the price of a lifetime pass to $750 after doubling it last year - The Verge (relevance: 100%)",
-      "url": "https://www.theverge.com/tech/934269/plex-pass-lifetime-subscription-triple-750-price-hike",
-      "date": "2026-05-20"
-    },
-    {
-      "title": "Google is rolling out its redesigned Workspace app icons - The Verge (relevance: 88%)",
-      "url": "https://www.theverge.com/tech/932417/google-gmail-docs-cal-sheets-workspace-icon-redesign",
-      "date": "2026-05-20"
-    },
-    {
       "title": "Gemini is in danger of going full Copilot - The Verge (relevance: 77%)",
       "url": "https://www.theverge.com/tech/931752/google-io-2026-gemini-icon-docs-workspace",
       "date": "2026-05-20"
@@ -2499,6 +2429,76 @@
       "title": "Nearly every Kindle is steeply discounted at Best Buy - The Verge (relevance: 72%)",
       "url": "https://www.theverge.com/gadgets/968356/kindle-paperwhite-colorsoft-scribe-deal-sale",
       "date": "2026-07-28"
+    },
+    {
+      "title": "Microsoft Enlists 7 MCP Partners to Serve Customer Insights Into Dynamics 365 Sales (relevance: 92%)",
+      "url": "https://cloudwars.com/ai/microsoft-enlists-7-mcp-partners-to-serve-customer-insights-into-dynamics-365-sales",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "OpenAI, Google, Anthropic Control 84% of AI Agents [2026] (relevance: 91%)",
+      "url": "https://tech-insider.org/au/openai-google-anthropic-84-percent-ai-agents-2026",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "The Agent Identity Problem: Non-Human ... (relevance: 89%)",
+      "url": "https://securityboulevard.com/2026/07/the-agent-identity-problem-non-human-identities-outnumber-humans-45-to-1-and-ai-agents-are-making-it-worse",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "OpenAI Knew GPT-5 Posed Bioweapon Risk and Downgraded the Rating Anyway (relevance: 89%)",
+      "url": "https://www.techtimes.com/articles/321651/20260727/openai-knew-gpt-5-posed-bioweapon-risk-downgraded-rating-anyway.htm",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "Semantic Kernel: Enterprise Agent Framework for .NET, Python, and Java | Agent DevPro (relevance: 94%)",
+      "url": "https://agentdevpro.com/frameworks/semantic-kernel",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "C# projects worth your weekend. 5 of them, 254.6k stars ... (relevance: 94%)",
+      "url": "https://www.instagram.com/p/DbHNxjiCQQE",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "Google Is Now Citing Itself More Than Ever In AI Mode (relevance: 93%)",
+      "url": "https://almcorp.com/news/google-ai-mode-self-citation-surge-2026",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "FinancialContent - MarketRank Names Ryze AI the Best AI Tool for Managing Google and Meta Ads in 2026 (relevance: 92%)",
+      "url": "https://markets.financialcontent.com/stocks/article/newsfile-2026-7-28-marketrank-names-ryze-ai-the-best-ai-tool-for-managing-google-and-meta-ads-in-2026",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "Upcoming Apple Products Guide: What's Coming in 2026 (relevance: 91%)",
+      "url": "https://www.macrumors.com/guide/upcoming-apple-products",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "OpenAI Dublin EU Headquarters: 88,000 Sq Ft Lease and 250 Jobs as AI Fines Near (relevance: 94%)",
+      "url": "https://www.techtimes.com/articles/321771/20260728/openai-dublin-eu-headquarters-88000-sq-ft-lease-250-jobs-ai-fines-near.htm",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "Amazon, Meta and Microsoft face skeptical investors this ... (relevance: 93%)",
+      "url": "https://www.cnbc.com/2026/07/28/hyperscalers-face-higher-capex-scrutiny-after-alphabet-report-panned.html",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "Utility companies promise to spare us from AI's energy bill (relevance: 94%)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/969137/us-utility-ai-electricty-data-center-rate-pledge-trump",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "Google hit with $1 billion fine for breaking EU antitrust rules | The Verge (relevance: 92%)",
+      "url": "https://www.theverge.com/tech/943866/google-alphabet-eu-dma-fine-search-services-play-store-steering",
+      "date": "2026-07-29"
+    },
+    {
+      "title": "Altana’s Evan Smith on the new normal of global trade (relevance: 89%)",
+      "url": "https://www.theverge.com/podcast/971306/tariffs-liberation-day-ai-trade-shipping-jobs-canada",
+      "date": "2026-07-29"
     }
   ]
 }
