@@ -1,91 +1,6 @@
 {
   "news": [
     {
-      "title": "Gemini is in danger of going full Copilot - The Verge (relevance: 77%)",
-      "url": "https://www.theverge.com/tech/931752/google-io-2026-gemini-icon-docs-workspace",
-      "date": "2026-05-20"
-    },
-    {
-      "title": "Bristol Myers Squibb Announces Strategic Agreement with Anthropic to Position Claude Enterprise as the Shared Intelligence Platform Across Its Global Operations - Bristol Myers Squibb (relevance: 100%)",
-      "url": "https://news.bms.com/news/details/2026/Bristol-Myers-Squibb-Announces-Strategic-Agreement-with-Anthropic-to-Position-Claude-Enterprise-as-the-Shared-Intelligence-Platform-Across-Its-Global-Operations/default.aspx",
-      "date": "2026-05-21"
-    },
-    {
-      "title": "FANUC Accelerates Physical AI Through Collaboration with Google – Company Announcement - Financial Times (relevance: 100%)",
-      "url": "https://markets.ft.com/data/announce/detail?dockey=600-202605190800PR_NEWS_USPRX____DE61842-1",
-      "date": "2026-05-21"
-    },
-    {
-      "title": "How to Watch Google I/O 2026 - WIRED (relevance: 61%)",
-      "url": "https://www.wired.com/story/how-to-watch-google-io/",
-      "date": "2026-05-21"
-    },
-    {
-      "title": "Anthropic, OpenAI Hold Majority Of Startup AI Revenue 05/19/2026 - MediaPost (relevance: 99%)",
-      "url": "https://www.mediapost.com/publications/article/415163/anthropic-openai-hold-majority-of-startup-ai-reve.html",
-      "date": "2026-05-21"
-    },
-    {
-      "title": "OpenAI Cofounder And Former Tesla AI Leader Andrej Karpathy Joins Anthropic - Forbes (relevance: 99%)",
-      "url": "https://www.forbes.com/sites/aliciapark/2026/05/19/openai-cofounder-and-former-tesla-ai-leader-andrej-karpathy-joins-anthropic/",
-      "date": "2026-05-21"
-    },
-    {
-      "title": "Google’s AI future demands trust — and your personal data - The Verge (relevance: 83%)",
-      "url": "https://www.theverge.com/tech/934172/google-io-gemini-ai-trust-personal-data",
-      "date": "2026-05-21"
-    },
-    {
-      "title": "The 13 biggest announcements at Google I/O 2026 - The Verge (relevance: 64%)",
-      "url": "https://www.theverge.com/tech/933415/google-io-2026-biggest-announcements-ai-gemini",
-      "date": "2026-05-21"
-    },
-    {
-      "title": "Google is launching an Android version of its AI Studio vibe coding tool. - The Verge (relevance: 15%)",
-      "url": "https://www.theverge.com/tech/934354/google-is-launching-an-ai-studio-app-for-android",
-      "date": "2026-05-21"
-    },
-    {
-      "title": "Фигма ўзининг дизайн платформасига сунъий интеллект агентини қўшди - Zamin.uz (relevance: 86%)",
-      "url": "https://zamin.uz/en/technology/202251-figma-adds-ai-agent-to-its-design-platform.html",
-      "date": "2026-05-22"
-    },
-    {
-      "title": "Google I/O 2026 Live Updates: Latest News on Android 17 and Gemini - CNET (relevance: 100%)",
-      "url": "https://www.cnet.com/news-live/google-io-2026-live-news-updates/",
-      "date": "2026-05-22"
-    },
-    {
-      "title": "Google I/O 2026 live: Gemini AI, Android 17, Android XR updates and more - Yahoo Tech (relevance: 100%)",
-      "url": "https://tech.yahoo.com/general/live/google-io-2026-live-gemini-ai-android-17-android-xr-updates-and-more-135626963.html",
-      "date": "2026-05-22"
-    },
-    {
-      "title": "Tech Editors Talk Generative AI Announcements at Google I/O 2026 - CNET (relevance: 100%)",
-      "url": "https://www.cnet.com/videos/tech-editors-talk-generative-ai-announcements-at-google-io-2026/",
-      "date": "2026-05-22"
-    },
-    {
-      "title": "AI Boom Creates Wealth Divide Among Tech Professionals - Startup Ecosystem Canada (relevance: 100%)",
-      "url": "https://www.startupecosystem.ca/news/ai-boom-creates-wealth-divide-among-tech-professionals/",
-      "date": "2026-05-22"
-    },
-    {
-      "title": "OpenAI prepares to possibly file for IPO as soon as Friday: report - Seeking Alpha (relevance: 22%)",
-      "url": "https://seekingalpha.com/news/4595420-openai-prepares-to-possibly-file-for-ipo-as-soon-as-friday-report",
-      "date": "2026-05-22"
-    },
-    {
-      "title": "Sony’s other PS Plus plans are going up in price too. - The Verge (relevance: 100%)",
-      "url": "https://www.theverge.com/games/935198/sonys-other-ps-plus-plans-are-going-up-in-price-too",
-      "date": "2026-05-22"
-    },
-    {
-      "title": "Plex is tripling the price of a lifetime pass to $750 after doubling it last year - The Verge (relevance: 85%)",
-      "url": "https://www.theverge.com/tech/934269/plex-pass-lifetime-subscription-triple-750-price-hike",
-      "date": "2026-05-22"
-    },
-    {
       "title": "Google is rolling out its redesigned Workspace app icons - The Verge (relevance: 75%)",
       "url": "https://www.theverge.com/tech/932417/google-gmail-docs-cal-sheets-workspace-icon-redesign",
       "date": "2026-05-22"
@@ -2499,6 +2414,91 @@
       "title": "Altana’s Evan Smith on the new normal of global trade (relevance: 89%)",
       "url": "https://www.theverge.com/podcast/971306/tariffs-liberation-day-ai-trade-shipping-jobs-canada",
       "date": "2026-07-29"
+    },
+    {
+      "title": "MCP Server Setup: Connect Claude Code in 13 Steps [2026] (relevance: 93%)",
+      "url": "https://tech-insider.org/ca/mcp-server-setup-2026",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "The Security Risks Hiding Behind Exposed MCP Servers | Wiz Blog (relevance: 92%)",
+      "url": "https://www.wiz.io/blog/the-risk-hiding-behind-exposed-mcp-servers",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "How is Anthropic's Certification Program Building AI Skills? (relevance: 94%)",
+      "url": "https://aimagazine.com/news/how-is-anthropics-certification-program-building-ai-skills",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "Learn With Anthropic in 2026: Free Courses on Claude, AI Fluency, and MCP With Certificates - Global South Opportunities (relevance: 91%)",
+      "url": "https://www.globalsouthopportunities.com/2026/07/26/courses-4",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "Anthropic says Claude found new weaknesses in cryptographic algorithms (relevance: 90%)",
+      "url": "https://cryptobriefing.com/anthropic-says-claude-found-new-weaknesses-in-cryptographic-algorithms",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "The Agent Identity Problem: Non-Human Identities Outnumber Humans 45 to 1 and AI Agents Are Making It Worse (relevance: 89%)",
+      "url": "https://securityboulevard.com/2026/07/the-agent-identity-problem-non-human-identities-outnumber-humans-45-to-1-and-ai-agents-are-making-it-worse",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "OpenAI, Anthropic Formally Back Plan to Slow AI That Writes Its Own Code (relevance: 88%)",
+      "url": "https://www.techtimes.com/articles/322125/20260729/openai-anthropic-formally-back-plan-slow-ai-that-writes-its-own-code.htm",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "Microsoft Copilot Studio vs OpenAI Agents SDK for ... (relevance: 87%)",
+      "url": "https://www.facebook.com/technovez/posts/microsoft-copilot-studio-vs-openai-agents-sdk-which-enterprise-ai-platform-shoul/1053347197210826",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "12 Free Google AI Tools That Do The Work Of Paid Software (relevance: 92%)",
+      "url": "https://manofmany.com/tech/free-google-ai-tools",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "FinancialContent - MarketRank Names Ryze AI the Best AI Tool for Managing Google and Meta Ads in 2026 (relevance: 91%)",
+      "url": "https://markets.financialcontent.com/stocks/article/newsfile-2026-7-28-marketrank-names-ryze-ai-the-best-ai-tool-for-managing-google-and-meta-ads-in-2026",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "Google Is Now Citing Itself More Than Ever In AI Mode (relevance: 91%)",
+      "url": "https://almcorp.com/news/google-ai-mode-self-citation-surge-2026",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "Apple touches $5 trillion market cap and one of the reasons is what has made Wall Street ‘unhappy’ with G (relevance: 94%)",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/apple-touches-5-trillion-market-cap-and-one-of-the-reasons-is-what-has-made-wall-street-unhappy-with-google-microsoft-meta-and-amazon/articleshow/132703934.cms",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "OpenAI Dublin EU Headquarters: 88000 Sq Ft Lease and ... (relevance: 93%)",
+      "url": "https://www.techtimes.com/articles/321771/20260728/openai-dublin-eu-headquarters-88000-sq-ft-lease-250-jobs-ai-fines-near.htm",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "Amazon, Meta and Microsoft face skeptical investors this ... (relevance: 93%)",
+      "url": "https://www.cnbc.com/2026/07/28/hyperscalers-face-higher-capex-scrutiny-after-alphabet-report-panned.html",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "Google hit with $1 billion fine for breaking EU antitrust rules | The Verge (relevance: 92%)",
+      "url": "https://www.theverge.com/tech/943866/google-alphabet-eu-dma-fine-search-services-play-store-steering",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "Altana’s Evan Smith on the new normal of global trade (relevance: 90%)",
+      "url": "https://www.theverge.com/podcast/971306/tariffs-liberation-day-ai-trade-shipping-jobs-canada",
+      "date": "2026-07-30"
+    },
+    {
+      "title": "Tech Archive for July 2026 - Page 24 | The Verge (relevance: 90%)",
+      "url": "https://www.theverge.com/archives/tech/2026/7/24",
+      "date": "2026-07-30"
     }
   ]
 }
